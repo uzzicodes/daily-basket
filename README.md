@@ -1,6 +1,6 @@
 # Askari Departmental Store — Lahore Groceries
 
-A Next.js App Router grocery storefront with a mobile-first Quick Basket layout, the user’s original Askari logo, 18 Pakistani supermarket essentials, live search, department and brand filtering, four sorting modes, persistent cart, COD checkout, WhatsApp receipts and grocery-list sharing. The counter dashboard provides order stages, thermal packing slips and daily metrics. Discord is deferred as requested.
+A Next.js App Router grocery storefront with a mobile-first Quick Basket layout, a refined navy/gold theme and accessible basket/overlay animations, the user’s original Askari logo, 18 Pakistani supermarket essentials, live search, department and brand filtering, four sorting modes, persistent cart, COD checkout, WhatsApp receipts and grocery-list sharing. The counter dashboard provides order stages, thermal packing slips and daily metrics. Discord is deferred as requested.
 
 ## Run locally
 

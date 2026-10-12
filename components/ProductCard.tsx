@@ -5,7 +5,7 @@ import { money } from '@/lib/constants';
 import type { Product } from '@/lib/types';
 export function QuantityControl({product,compact=false}: {product:Product;compact?:boolean}) {
   const {quantities,change}=useCart(); const quantity=quantities[product.id] || 0;
-  return quantity ? <div className={`quantity ${compact?'compact':''}`}><button aria-label={`Remove one ${product.name}`} onClick={()=>change(product.id,-1)}><Minus size={16}/></button><span aria-live="polite">{quantity}</span><button aria-label={`Add one ${product.name}`} disabled={quantity>=99 || !product.in_stock} onClick={()=>change(product.id,1)}><Plus size={16}/></button></div> : <button className={`add-button ${compact?'compact':''}`} disabled={!product.in_stock} onClick={()=>change(product.id,1)}><Plus size={17}/>{compact?'Add':'Add to Basket'}</button>;
+  return quantity ? <div className={`quantity ${compact?'compact':''}`}><button aria-label={`Remove one ${product.name}`} onClick={()=>change(product.id,-1)}><Minus size={16}/></button><span aria-live="polite"><b key={quantity} className="quantity-value">{quantity}</b></span><button aria-label={`Add one ${product.name}`} disabled={quantity>=99 || !product.in_stock} onClick={()=>change(product.id,1)}><Plus size={16}/></button></div> : <button className={`add-button ${compact?'compact':''}`} disabled={!product.in_stock} onClick={()=>change(product.id,1)}><Plus size={17}/>{compact?'Add':'Add to Basket'}</button>;
 }
 export default function ProductCard({product}: {product:Product}) {
   const discount=Math.max(0,Math.round((1-product.price/product.original_price)*100));
