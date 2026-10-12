@@ -2,30 +2,30 @@
 name: Askari Departmental Store
 description: Real grocery shelves with a confident navy and gold basket, refined for the user's requested professional theme.
 colors:
-  navy: "#0d1723"
-  action: "#e9bc6d"
-  action-hover: "#f1cf92"
-  canvas: "#0d1723"
-  white: "#152537"
-  ink: "#edf2f6"
-  secondary: "#b3c1ce"
-  metadata: "#b6c5d3"
-  line: "#304256"
-  surface: "#1c3044"
-  gold: "#e9bc6d"
-  gold-fill: "#e9bc6d"
-  success: "#8cd9b5"
-  quantity-surface: "#27445b"
-  quantity-border: "#6d7b7c"
-  discount-surface: "#594629"
-  discount-text: "#ffe0a0"
+  navy: "#ffffff"
+  action: "#087e78"
+  action-hover: "#066761"
+  canvas: "#ffffff"
+  white: "#ffffff"
+  ink: "#021c19"
+  secondary: "#536460"
+  metadata: "#63726d"
+  line: "#d9e4e2"
+  surface: "#e7f7f6"
+  gold: "#087e78"
+  gold-fill: "#087e78"
+  success: "#207353"
+  quantity-surface: "#e7f7f6"
+  quantity-border: "#a4d9d2"
+  discount-surface: "#087e78"
+  discount-text: "#ffffff"
 typography:
-  headline: { fontFamily: "Figtree, sans-serif", fontSize: "38px", fontWeight: 700, lineHeight: 1.22, letterSpacing: "-0.035em" }
-  headline-mobile: { fontFamily: "Figtree, sans-serif", fontSize: "29px", fontWeight: 700, lineHeight: 1.25 }
-  body: { fontFamily: "Figtree, sans-serif", fontSize: "14px", fontWeight: 400, lineHeight: 1.5 }
-  product-title: { fontFamily: "Figtree, sans-serif", fontSize: "14px", fontWeight: 650, lineHeight: 1.45 }
-  price: { fontFamily: "Figtree, sans-serif", fontSize: "18px", fontWeight: 750, letterSpacing: "-0.025em" }
-  metadata: { fontFamily: "Figtree, sans-serif", fontSize: "11px", fontWeight: 400 }
+  headline: { fontFamily: "Poppins, sans-serif", fontSize: "28px", fontWeight: 600, lineHeight: 1.22, letterSpacing: "-0.035em" }
+  headline-mobile: { fontFamily: "Poppins, sans-serif", fontSize: "24px", fontWeight: 700, lineHeight: 1.25 }
+  body: { fontFamily: "Poppins, sans-serif", fontSize: "14px", fontWeight: 400, lineHeight: 1.5 }
+  product-title: { fontFamily: "Poppins, sans-serif", fontSize: "14px", fontWeight: 650, lineHeight: 1.45 }
+  price: { fontFamily: "Poppins, sans-serif", fontSize: "18px", fontWeight: 750, letterSpacing: "-0.025em" }
+  metadata: { fontFamily: "Poppins, sans-serif", fontSize: "11px", fontWeight: 400 }
 rounded:
   control: "7px"
   search: "10px"
@@ -36,7 +36,7 @@ spacing:
   desktop-gutter: "56px"
   mobile-gutter: "18px"
 components:
-  button-primary: { backgroundColor: "{colors.action}", textColor: "{colors.navy}", rounded: "{rounded.control}", height: "42px" }
+  button-primary: { backgroundColor: "{colors.action}", textColor: "#ffffff", rounded: "{rounded.control}", height: "42px" }
   button-basket: { backgroundColor: "{colors.gold-fill}", textColor: "{colors.navy}", rounded: "{rounded.control}" }
   product-card: { backgroundColor: "{colors.white}", textColor: "{colors.ink}", rounded: "{rounded.card}" }
   basket-rail: { backgroundColor: "{colors.navy}", textColor: "{colors.white}", rounded: "{rounded.card}", padding: "23px 21px 21px" }
@@ -46,29 +46,27 @@ components:
 # Design System: Askari Departmental Store
 
 ## Overview
-The user's requested dark grocery store keeps the Quick Basket layout and supplied logo. The interface makes finding and pricing everyday essentials the main task.
+The user explicitly selected Al-Fatah's current storefront styling. A live inspection confirmed white surfaces, pale aqua fields, teal actions and Poppins typography. Askari's own logo and grocery content remain authoritative.
 
 ## Colors
-Charcoal navy carries the page, dark shelf panels group products, and raised slate controls establish elevation. Warm gold marks actions and keyboard focus. Off-white body text and supporting slate remain readable on each dark surface. Success uses mint plus explicit text. Product photographs sit on bright backgrounds so labels stay legible.
+White owns the page and product shelves. Teal owns actions, focus and selected departments; pale aqua groups search, delivery and basket surfaces. Dark green-black is the main text, with readable gray-green supporting text. Success retains explicit stock labels alongside semantic green.
 
 ## Typography
-Figtree remains the storefront and counter voice. Headlines are38px desktop and29px mobile; product titles14px, prices18px and metadata11px. Long product names wrap within three lines. Totals use tabular numerals.
+Poppins is self-hosted from the official Google Fonts distributions, matching the observed reference. Headings use28px/600 desktop and24px on phones, with normal letter spacing. Product names use13px/500 desktop and12px on phones. Footer text uses Inter with Open Sans supporting copy, also observed in the reference. Font licenses and source URLs accompany the files.
 
 ## Layout
-The desktop filter/catalog/basket arrangement and two-column phone shelves remain. Products load48 at a time. Brand search handles the expanded catalog. On phones the availability control follows the heading; drawers and filter dialogs preserve the shopping context.
+Preserve Askari's department/catalog/basket structure and two-column phone shelves. The Find a brand interface is removed, including its search, checkbox list and active brand chips. Product brand labels remain part of product identity. The header uses a pale aqua announcement, white navigation, pill-shaped teal delivery selection and pale aqua search. Catalog pages contain48 products.
 
 ## Elevation & Depth
-Shelves use a thin border at rest. Hover lifts the card gently and contained photography enlarges. Dialog backdrops use a dark tint, and raised controls remain distinct without glass effects.
+Product cards carry a thin border at rest, then a soft offset shadow on hover. Basket and informational regions use pale aqua without decorative effects.
 
 ## Shapes
-Cards and the basket use14px corners. Controls use7px and search10px. The checkout drawer retains square outer edges. The logo viewport crops transparent padding only.
+Cards use12px corners; controls use8px. Search and desktop delivery selection use pill shapes as in the selected reference. The original logo artwork is unchanged.
 
 ## Components
-Unpriced cards say Price pending and Out of stock; unavailable items cannot be added. Stock status has explicit text alongside color. Exact Excel matches preview their result before an atomic import.
-
-Existing quantity confirmations, image hover and native overlay transitions remain bounded to150–350ms. Reduced-motion removes spatial movement and animations while retaining state feedback. Focus returns to the invoking control when dialogs close. Error, loading, empty and disabled states use the same dark system.
+Stock and pending prices are explicit. Buttons, dialogs, forms, search results, counter metrics and Excel previews share the white/teal system. Existing bounded basket and overlay animations remain; reduced-motion retains immediate state feedback.
 
 ## Do's and Don'ts
-Preserve the supplied logo, real package photos and product identity. Keep actions gold and stock semantic. Never show retailer prices or invented ratings as Askari inventory. Do not add looping decoration or make shopping wait for motion.
+Preserve Askari identity and verified product photography. Match the observed typography and color relationships without importing Al-Fatah's name, logo, promotions or unrelated departments. Keep staff tools authenticated. Show only Askari's imported prices as selling prices.
 
-The inherited seed-reference metadata verification limitation remains documented in the surface brief. Desktop, intermediate and phone captures informed one correction batch and a final confirmation.
+The inherited seed-reference metadata verification limit remains documented.
