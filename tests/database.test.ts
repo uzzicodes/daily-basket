@@ -27,7 +27,7 @@ before(async()=>{
   const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')).sort();
   for(const file of files)await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
 });
-beforeEach(async()=>{await db.exec(`reset role;delete from orders;delete from api_limits;
+beforeEach(async()=>{await db.exec(`reset role;delete from orders;delete from api_limits;delete from inventory_imports;update inventory_state set revision=1;update products set is_archived=false;
   update products set price=1000,original_price=1000,in_stock=true where id='${productId}';`);});
 after(async()=>{await db.close();});
 
@@ -106,4 +106,30 @@ test('Durable rate limits reset only after the window ends',async()=>{
 });
 test('Pagination rejects malformed cursors and preserves sub-millisecond timestamps',()=>{
   for(const invalid of ['2026-10-12','!!!!','a'.repeat(401),Buffer.from(JSON.stringify({created_at:'2026-10-12T00:00:00Z',id:'not-an-order'})).toString('base64url')])assert.throws(()=>decodeOrderCursor(invalid));
+});
+
+async function inventory(rows:unknown,key=crypto.randomUUID(),revision=1,hash='inventory-test'){
+ return (await db.query<{result:{revision:number;stock_count:number;rows_count:number}}>('select apply_inventory_prices($1::jsonb,$2::uuid,$3,$4,$5::bigint) as result',[JSON.stringify(rows),key,'test.xlsx',hash,revision])).rows[0].result;
+}
+test('Price imports replace stock, preserve order snapshots and retry exactly once',async()=>{
+ const order=await checkout();const key=crypto.randomUUID();const rows=[{product_id:productId,price:1234.50}];
+ const first=await inventory(rows,key);assert.equal(first.stock_count,1);assert.equal(first.revision,2);
+ assert.deepEqual(await inventory(rows,key),first);await assert.rejects(()=>inventory(rows,key,1,'changed'),/file changed/);
+ const state=await db.query<{stock:number;price:number}>('select count(*) filter(where in_stock)::int as stock,max(price) filter(where id=$1) as price from products',[productId]);assert.equal(state.rows[0].stock,1);assert.equal(Number(state.rows[0].price),1234.5);
+ const saved=await db.query<{price:number}>('select (items->0->>\'price\')::numeric as price from orders where id=$1',[order.id]);assert.equal(Number(saved.rows[0].price),1000);
+ await inventory([{product_id:productId,price:null}],crypto.randomUUID(),2);assert.equal((await db.query<{stock:number}>('select count(*) filter(where in_stock)::int as stock from products')).rows[0].stock,0);
+});
+test('Invalid or stale inventory imports leave the entire catalog unchanged',async()=>{
+ for(const rows of [[],null,[{product_id:productId,price:0}],[{product_id:productId,price:1.001}],[{product_id:productId,price:100},{product_id:crypto.randomUUID(),price:1}],[{product_id:productId,price:100},{product_id:productId,price:200}]])await assert.rejects(()=>inventory(rows));
+ await assert.rejects(()=>inventory([{product_id:productId,price:1}],crypto.randomUUID(),999),/Inventory changed/);
+ assert.equal(Number((await db.query<{price:number}>('select price from products where id=$1',[productId])).rows[0].price),1000);
+ assert.equal((await db.query<{count:number}>('select count(*)::int as count from inventory_imports')).rows[0].count,0);
+});
+test('Catalog filters, private inventory and paged null prices work through API roles',async()=>{
+ await db.exec(`update products set in_stock=false;update products set price=null,original_price=null,rating=null where id='${productId}';`);
+ const page=(await db.query<{catalog:{products:{id:string;price:number|null}[];total:number;next_offset:number}}>("select browse_catalog(p_limit=>5) as catalog")).rows[0].catalog;
+ assert.equal(page.products.length,5);assert.equal(page.total,18);assert.equal(page.next_offset,5);
+ const selected=(await db.query<{catalog:{products:{price:number|null}[]}}>('select browse_catalog(p_ids=>$1::uuid[]) as catalog',[[productId]])).rows[0].catalog;assert.equal(selected.products[0].price,null);
+ for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(()=>db.query('select inventory_snapshot()'),/permission denied/);await assert.rejects(()=>db.query('select browse_catalog()'),/permission denied/);await assert.rejects(()=>inventory([{product_id:productId,price:1}]),/permission denied/);await db.exec('reset role');}
+ await db.exec('set role service_role');assert.equal((await inventory([{product_id:productId,price:100}])).stock_count,1);await db.exec('reset role');
 });

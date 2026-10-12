@@ -18,7 +18,7 @@ export function priceOrder(request: {product_id: string; quantity: number}[], pr
     if (seen.has(item.product_id)) throw new Error('Duplicate product in basket.');
     seen.add(item.product_id);
     const product = products.find(p => p.id === item.product_id);
-    if (!product || !product.in_stock) throw new Error('An item is unavailable. Refresh your basket.');
+    if (!product || !product.in_stock || product.price===null || product.price<=0) throw new Error('An item is unavailable. Refresh your basket.');
     if (!Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 99) throw new Error('Invalid item quantity.');
     return {product_id: product.id, name: product.name, unit: product.unit, image_url: product.image_url, quantity: item.quantity, price: product.price};
   });

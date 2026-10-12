@@ -72,3 +72,11 @@ Review seed prices, discount reference prices, ratings and stock against the sto
 ## Hosted private preview
 
 The workspace also includes optional Sites/Vinext tooling for the private preview. The downloadable source uses standard Next.js for local development and Vercel. No credentials are embedded in the source. Discord integration is intentionally deferred.
+
+## Full catalog and price-list inventory
+
+The registered catalog contains18,700 grocery/household/personal-care variants across9 departments, collected from50 public Al-Fatah collections across151 pages. All18,643 unique photo URLs were verified on2026-10-12. Naheed.pk returned403 and was not bypassed. Source titles, URLs, IDs and barcode candidate provenance are retained in data/catalog. Images remain hosted by their source CDN.
+
+No external retailer prices or ratings are used. All newly registered products start unpriced and out of stock. In Store counter → Inventory, download the Excel template, fill Price with positive PKR amounts, upload .xlsx or .csv, review matches, then Apply prices & replace stock. Each upload represents the complete current price list. Omitted products and blank prices are out of stock. Unknown, ambiguous and duplicate rows block import until resolved with a catalog code.
+
+The server pages products, so the full catalog is never sent to the homepage at once. Inventory is authenticated, same-origin and transactional, with revision checks and idempotent retries. Service credentials remain server-only. Run scripts/register-catalog.mjs with server environment variables after all migrations. It adds missing variants without overwriting existing prices. scripts/fetch-catalog.mjs reproduces the source collection into work/catalog.

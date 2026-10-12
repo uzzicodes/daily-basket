@@ -2,23 +2,23 @@
 name: Askari Departmental Store
 description: Real grocery shelves with a confident navy and gold basket, refined for the user's requested professional theme.
 colors:
-  navy: "#10283f"
-  action: "#143c56"
-  action-hover: "#1c506f"
-  canvas: "#f6f8fb"
-  white: "#ffffff"
-  ink: "#203548"
-  secondary: "#607184"
-  metadata: "#627387"
-  line: "#dce4eb"
-  surface: "#edf3f7"
-  gold: "#ad7318"
-  gold-fill: "#efc678"
-  success: "#1d7554"
-  quantity-surface: "#e4eff7"
-  quantity-border: "#b9cfdf"
-  discount-surface: "#fff0cd"
-  discount-text: "#825c14"
+  navy: "#0d1723"
+  action: "#e9bc6d"
+  action-hover: "#f1cf92"
+  canvas: "#0d1723"
+  white: "#152537"
+  ink: "#edf2f6"
+  secondary: "#b3c1ce"
+  metadata: "#b6c5d3"
+  line: "#304256"
+  surface: "#1c3044"
+  gold: "#e9bc6d"
+  gold-fill: "#e9bc6d"
+  success: "#8cd9b5"
+  quantity-surface: "#27445b"
+  quantity-border: "#6d7b7c"
+  discount-surface: "#594629"
+  discount-text: "#ffe0a0"
 typography:
   headline: { fontFamily: "Figtree, sans-serif", fontSize: "36px", fontWeight: 700, lineHeight: 1.22, letterSpacing: "-0.035em" }
   headline-mobile: { fontFamily: "Figtree, sans-serif", fontSize: "27px", fontWeight: 700, lineHeight: 1.25 }
@@ -45,41 +45,14 @@ components:
 
 # Design System: Askari Departmental Store
 
-## Overview
-The existing Quick Basket experience is preserved. At the user's request, the interface now draws navy and gold from the supplied logo while keeping real packaging photographs on bright white shelves. The logo artwork is unchanged. Cool neutral surfaces and a dark basket rail strengthen task hierarchy without adding new claims, content or workflows.
+The user requested a dark, professional grocery store. Charcoal navy (#0d1723) carries the page; shelves use #152537, raised controls #1c3044, and dividers #304256. Warm gold (#e9bc6d) identifies actions and keyboard focus. Body text is #edf2f6 and supporting text #b3c1ce. Real package photographs retain bright backgrounds so packaging stays legible; the supplied logo is unchanged.
 
-## Colors
-Navy owns the delivery strip and desktop basket region. Action Blue owns the shopping controls and selected filters. Warm gold marks the dark-rail checkout, savings and keyboard focus. Stock remains semantically green with explicit text. White product cards sit on a cool-white canvas; supporting text is slate-blue. The legacy `--green` CSS property aliases Action Blue for compatibility, rather than representing a separate palette.
+The incumbent filter/catalog/basket layout remains. Products are paged 48 at a time; brand search supports the expanded catalog. Stock always has explicit text. Unpriced products say Price pending and cannot enter the basket. No retailer prices, fake ratings or discounts are presented as Askari inventory.
 
-Body and metadata foreground/background pairs were measured at desktop, tablet and phone widths. Product brands, units and crossed-out prices use `#627387` with 4.86:1 contrast on white; gold savings text uses 5.33:1 on its pale background. Dark-rail supporting text uses `#c3d4e2` with 9.9:1 on navy. Disabled controls are clearly disabled and do not define active contrast targets.
+Figtree is retained. Headlines are38px desktop/29px mobile; product titles14px, prices18px and metadata11px. Cards use14px corners. Dialogs, search, forms, checkout, order counter and inventory imports share the dark palette.
 
-## Typography
-Figtree remains the shared storefront/counter voice. Hierarchy comes from weight and spacing: introduction 36px/700, mobile 27px/700, product name 14px/650, catalog price 18px/750 (17px mobile), metadata 11px. No decorative eyebrow labels are introduced. Basket totals use tabular numerals.
+Existing hover lift, contained image zoom, quantity confirmations and native overlay transitions are retained. Motion lasts150–350ms; reduced-motion removes spatial movement and animations. Loading blocks product additions until the current query completes.
 
-## Layout
-Preserve the incumbent desktop filter/catalog/basket topology and two-column mobile shelf. Desktop container gutters remain 56px and mobile gutters 18px. The product gap is 17px desktop and 13px mobile. Desktop basket rail has a navy surface and internal padding; it remains sticky and disappears below 850px. Mobile keeps the sticky search and delivery selector, and shows a navy basket bar only when nonempty. The mobile logo row is kept clear of search by the existing 155px header with 87px bottom padding.
+Excel imports require exact product IDs, catalog codes, barcodes or unambiguous product names. A matched positive price makes a product available; blank prices and omitted products are out of stock. Ambiguous, invalid and duplicate rows require correction before an atomic import.
 
-## Elevation & Depth
-Product cards use one thin border at rest. On hover-capable devices, the border becomes transparent and a soft offset shadow takes over as the card lifts 3px; contained photographs enlarge to 1.05. Overlays and the fixed mobile basket use restrained navy-tinted shadows. No glass effects or loops are used.
-
-## Shapes
-White shelves and dark basket use 14px corners. Shopping controls and native fields use 7px corners; search uses 10px desktop and 8px mobile. The checkout drawer keeps square outer edges. Package images remain contained. The logo viewport crops only transparent padding and never recolors the artwork.
-
-## Components
-Primary actions use Action Blue/white; the dark basket's primary checkout uses gold/navy. Add becomes a blue stepper. Each changed count receives a 200ms confirmation; the stepper briefly acknowledges the initial addition with a warm fill, while totals respond over 280ms. The dark rail has its own confirmation fill to preserve contrast throughout animation.
-
-Native dialogs and the drawer use CSS `@starting-style` plus discrete display/overlay transitions: centered dialogs settle 8px, checkout slides along the right edge, and the backdrop dims to navy. Closing uses the same spatial relationship. Browsers without discrete-transition support retain native immediate-close behavior. All controls remain usable during repeated interactions.
-
-Animations use `cubic-bezier(.16,1,.3,1)` and durations from 150–350ms. There is no page-load choreography or infinite motion. Reduced-motion preference removes spatial movement/animations; changed quantities, colors and totals still communicate the action. Keyboard focus returns to the invoking control when a dialog closes; fields have visible blue focus rings.
-
-The catalog and empty administrator preview retain explicit demonstration notices. Supabase credentials are still required for live COD/admin operations. WhatsApp remains the user-provided 923084555567. Discord stays deferred.
-
-## Do's and Don'ts
-- Preserve the supplied logo and real package photographs.
-- Keep primary shopping actions blue, dark-basket checkout gold, and stock green.
-- Keep metadata readable and use text alongside state colors.
-- Preserve the existing shopping routes, quantities and checkout behavior.
-- Use motion to confirm basket state or overlay continuity; never make shopping wait.
-- Do not add looping decoration, recolor the logo, or claim demonstration values are live inventory.
-
-The inherited seed-reference verification limitation remains documented in the surface brief. This refinement adds no new direction roll and does not assert that unsupported metadata check passed.
+The inherited seed-reference metadata verification limit remains. This refinement makes no unsupported claim that that check passed. Local browser inspection was blocked by the browser URL policy during this pass; production inspection and automated checks are recorded separately.

@@ -1,0 +1,395 @@
+{
+  "retrieved_at": "2026-10-12T17:14:10.358Z",
+  "source_site": "Al-Fatah Pakistan",
+  "source_url": "https://alfatah.pk",
+  "source_products": 22031,
+  "photo_candidate_variants": 18700,
+  "verified_photo_variants": 18700,
+  "unique_images": 18643,
+  "rejected_photo_variants": 0,
+  "excluded_variants_or_products": 3406,
+  "category_counts": {
+    "Cooking & Pantry": 3392,
+    "Dairy, Milk & Breakfast": 1424,
+    "Tea, Coffee & Beverages": 1528,
+    "Spices & Recipe Mixes": 337,
+    "Snacks & Confectionery": 4150,
+    "Laundry & Detergents": 632,
+    "Household & Cleaning": 1352,
+    "Baby Care": 660,
+    "Personal Care & Hygiene": 5225
+  },
+  "collections": [
+    {
+      "handle": "cooking-ingredients",
+      "category": "Cooking & Pantry",
+      "pages": 5,
+      "products": 1143,
+      "url": "https://alfatah.pk/collections/cooking-ingredients"
+    },
+    {
+      "handle": "oil-ghee",
+      "category": "Cooking & Pantry",
+      "pages": 2,
+      "products": 296,
+      "url": "https://alfatah.pk/collections/oil-ghee"
+    },
+    {
+      "handle": "flour-price-in-pakistan",
+      "category": "Cooking & Pantry",
+      "pages": 1,
+      "products": 62,
+      "url": "https://alfatah.pk/collections/flour-price-in-pakistan"
+    },
+    {
+      "handle": "rice-price-in-pakistan",
+      "category": "Cooking & Pantry",
+      "pages": 1,
+      "products": 71,
+      "url": "https://alfatah.pk/collections/rice-price-in-pakistan"
+    },
+    {
+      "handle": "pulses",
+      "category": "Cooking & Pantry",
+      "pages": 1,
+      "products": 119,
+      "url": "https://alfatah.pk/collections/pulses"
+    },
+    {
+      "handle": "noodles-price-in-pakistan",
+      "category": "Cooking & Pantry",
+      "pages": 2,
+      "products": 355,
+      "url": "https://alfatah.pk/collections/noodles-price-in-pakistan"
+    },
+    {
+      "handle": "condiments-sauces",
+      "category": "Cooking & Pantry",
+      "pages": 2,
+      "products": 469,
+      "url": "https://alfatah.pk/collections/condiments-sauces"
+    },
+    {
+      "handle": "pickle-price-in-pakistan",
+      "category": "Cooking & Pantry",
+      "pages": 2,
+      "products": 296,
+      "url": "https://alfatah.pk/collections/pickle-price-in-pakistan"
+    },
+    {
+      "handle": "tin-food-price-in-pakistan",
+      "category": "Cooking & Pantry",
+      "pages": 1,
+      "products": 229,
+      "url": "https://alfatah.pk/collections/tin-food-price-in-pakistan"
+    },
+    {
+      "handle": "baking-items-online-pakistan",
+      "category": "Cooking & Pantry",
+      "pages": 2,
+      "products": 414,
+      "url": "https://alfatah.pk/collections/baking-items-online-pakistan"
+    },
+    {
+      "handle": "frozen-packaged-foods",
+      "category": "Cooking & Pantry",
+      "pages": 3,
+      "products": 695,
+      "url": "https://alfatah.pk/collections/frozen-packaged-foods"
+    },
+    {
+      "handle": "nuts-dry-fruits",
+      "category": "Cooking & Pantry",
+      "pages": 1,
+      "products": 172,
+      "url": "https://alfatah.pk/collections/nuts-dry-fruits"
+    },
+    {
+      "handle": "dairy-fresh-bakery",
+      "category": "Dairy, Milk & Breakfast",
+      "pages": 2,
+      "products": 334,
+      "url": "https://alfatah.pk/collections/dairy-fresh-bakery"
+    },
+    {
+      "handle": "dairy",
+      "category": "Dairy, Milk & Breakfast",
+      "pages": 2,
+      "products": 484,
+      "url": "https://alfatah.pk/collections/dairy"
+    },
+    {
+      "handle": "breakfast",
+      "category": "Dairy, Milk & Breakfast",
+      "pages": 4,
+      "products": 760,
+      "url": "https://alfatah.pk/collections/breakfast"
+    },
+    {
+      "handle": "bread-buns-eggs",
+      "category": "Dairy, Milk & Breakfast",
+      "pages": 1,
+      "products": 61,
+      "url": "https://alfatah.pk/collections/bread-buns-eggs"
+    },
+    {
+      "handle": "cereal-price-in-pakistan",
+      "category": "Dairy, Milk & Breakfast",
+      "pages": 3,
+      "products": 516,
+      "url": "https://alfatah.pk/collections/cereal-price-in-pakistan"
+    },
+    {
+      "handle": "jams-spreads",
+      "category": "Dairy, Milk & Breakfast",
+      "pages": 2,
+      "products": 255,
+      "url": "https://alfatah.pk/collections/jams-spreads"
+    },
+    {
+      "handle": "tea-cofee",
+      "category": "Tea, Coffee & Beverages",
+      "pages": 3,
+      "products": 570,
+      "url": "https://alfatah.pk/collections/tea-cofee"
+    },
+    {
+      "handle": "beverages",
+      "category": "Tea, Coffee & Beverages",
+      "pages": 5,
+      "products": 1126,
+      "url": "https://alfatah.pk/collections/beverages"
+    },
+    {
+      "handle": "drinks-beverages",
+      "category": "Tea, Coffee & Beverages",
+      "pages": 5,
+      "products": 1126,
+      "url": "https://alfatah.pk/collections/drinks-beverages"
+    },
+    {
+      "handle": "spices-seasonings",
+      "category": "Spices & Recipe Mixes",
+      "pages": 2,
+      "products": 442,
+      "url": "https://alfatah.pk/collections/spices-seasonings"
+    },
+    {
+      "handle": "spices",
+      "category": "Spices & Recipe Mixes",
+      "pages": 2,
+      "products": 500,
+      "url": "https://alfatah.pk/collections/spices"
+    },
+    {
+      "handle": "desi-spices",
+      "category": "Spices & Recipe Mixes",
+      "pages": 1,
+      "products": 55,
+      "url": "https://alfatah.pk/collections/desi-spices"
+    },
+    {
+      "handle": "snacks-confectioneries",
+      "category": "Snacks & Confectionery",
+      "pages": 16,
+      "products": 3752,
+      "url": "https://alfatah.pk/collections/snacks-confectioneries"
+    },
+    {
+      "handle": "biscuit-cookies",
+      "category": "Snacks & Confectionery",
+      "pages": 5,
+      "products": 1187,
+      "url": "https://alfatah.pk/collections/biscuit-cookies"
+    },
+    {
+      "handle": "sweets-chocolates",
+      "category": "Snacks & Confectionery",
+      "pages": 10,
+      "products": 2291,
+      "url": "https://alfatah.pk/collections/sweets-chocolates"
+    },
+    {
+      "handle": "laundry-fabric-care",
+      "category": "Laundry & Detergents",
+      "pages": 3,
+      "products": 643,
+      "url": "https://alfatah.pk/collections/laundry-fabric-care"
+    },
+    {
+      "handle": "laundry-care",
+      "category": "Laundry & Detergents",
+      "pages": 3,
+      "products": 627,
+      "url": "https://alfatah.pk/collections/laundry-care"
+    },
+    {
+      "handle": "household-cleaning-products",
+      "category": "Household & Cleaning",
+      "pages": 13,
+      "products": 3043,
+      "url": "https://alfatah.pk/collections/household-cleaning-products"
+    },
+    {
+      "handle": "cleaning-products",
+      "category": "Household & Cleaning",
+      "pages": 3,
+      "products": 623,
+      "url": "https://alfatah.pk/collections/cleaning-products"
+    },
+    {
+      "handle": "tissue-price-in-pakistan",
+      "category": "Household & Cleaning",
+      "pages": 2,
+      "products": 267,
+      "url": "https://alfatah.pk/collections/tissue-price-in-pakistan"
+    },
+    {
+      "handle": "foil-paper-garbage-bags",
+      "category": "Household & Cleaning",
+      "pages": 1,
+      "products": 127,
+      "url": "https://alfatah.pk/collections/foil-paper-garbage-bags"
+    },
+    {
+      "handle": "insect-killer-spray-price-in-pakistan",
+      "category": "Household & Cleaning",
+      "pages": 1,
+      "products": 179,
+      "url": "https://alfatah.pk/collections/insect-killer-spray-price-in-pakistan"
+    },
+    {
+      "handle": "disposables",
+      "category": "Household & Cleaning",
+      "pages": 1,
+      "products": 197,
+      "url": "https://alfatah.pk/collections/disposables"
+    },
+    {
+      "handle": "mop-price-in-pakistan",
+      "category": "Household & Cleaning",
+      "pages": 1,
+      "products": 165,
+      "url": "https://alfatah.pk/collections/mop-price-in-pakistan"
+    },
+    {
+      "handle": "baby-food-in-pakistan",
+      "category": "Baby Care",
+      "pages": 1,
+      "products": 248,
+      "url": "https://alfatah.pk/collections/baby-food-in-pakistan"
+    },
+    {
+      "handle": "diapers-wipes",
+      "category": "Baby Care",
+      "pages": 1,
+      "products": 161,
+      "url": "https://alfatah.pk/collections/diapers-wipes"
+    },
+    {
+      "handle": "baby-toiletry",
+      "category": "Baby Care",
+      "pages": 2,
+      "products": 268,
+      "url": "https://alfatah.pk/collections/baby-toiletry"
+    },
+    {
+      "handle": "oral-care",
+      "category": "Personal Care & Hygiene",
+      "pages": 3,
+      "products": 709,
+      "url": "https://alfatah.pk/collections/oral-care"
+    },
+    {
+      "handle": "sanitary-hygiene",
+      "category": "Personal Care & Hygiene",
+      "pages": 2,
+      "products": 281,
+      "url": "https://alfatah.pk/collections/sanitary-hygiene"
+    },
+    {
+      "handle": "soaps-body-wash",
+      "category": "Personal Care & Hygiene",
+      "pages": 1,
+      "products": 193,
+      "url": "https://alfatah.pk/collections/soaps-body-wash"
+    },
+    {
+      "handle": "body-wash-price-in-pakistan",
+      "category": "Personal Care & Hygiene",
+      "pages": 4,
+      "products": 951,
+      "url": "https://alfatah.pk/collections/body-wash-price-in-pakistan"
+    },
+    {
+      "handle": "shampoo-and-conditioner-online",
+      "category": "Personal Care & Hygiene",
+      "pages": 6,
+      "products": 1495,
+      "url": "https://alfatah.pk/collections/shampoo-and-conditioner-online"
+    },
+    {
+      "handle": "hair-treatments-care",
+      "category": "Personal Care & Hygiene",
+      "pages": 2,
+      "products": 491,
+      "url": "https://alfatah.pk/collections/hair-treatments-care"
+    },
+    {
+      "handle": "deodorant-stick-price-in-pakistan",
+      "category": "Personal Care & Hygiene",
+      "pages": 3,
+      "products": 535,
+      "url": "https://alfatah.pk/collections/deodorant-stick-price-in-pakistan"
+    },
+    {
+      "handle": "deodorants",
+      "category": "Personal Care & Hygiene",
+      "pages": 2,
+      "products": 286,
+      "url": "https://alfatah.pk/collections/deodorants"
+    },
+    {
+      "handle": "hand-wash-sanitizer",
+      "category": "Personal Care & Hygiene",
+      "pages": 1,
+      "products": 79,
+      "url": "https://alfatah.pk/collections/hand-wash-sanitizer"
+    },
+    {
+      "handle": "creams-lotions",
+      "category": "Personal Care & Hygiene",
+      "pages": 8,
+      "products": 1796,
+      "url": "https://alfatah.pk/collections/creams-lotions"
+    },
+    {
+      "handle": "personal-care-hygiene",
+      "category": "Personal Care & Hygiene",
+      "pages": 1,
+      "products": 230,
+      "url": "https://alfatah.pk/collections/personal-care-hygiene"
+    }
+  ],
+  "duplicate_sku_groups": 24,
+  "duplicate_name_groups": 50,
+  "matching_notes": {
+    "sku": "Source SKU may repeat; match only when unique.",
+    "barcode": "Variant barcode not provided by source; candidates are provenance only.",
+    "name": "Cleaned names may repeat; prefer exact Askari UUID."
+  },
+  "access_limits": [
+    {
+      "source": "Naheed.pk",
+      "status": 403,
+      "note": "Unavailable to web fetch; no access-control bypass attempted."
+    }
+  ],
+  "notes": [
+    "All selected collection pages were enumerated until exhausted, not a sampled catalog.",
+    "Only grocery and household essentials within the nine requested categories were retained.",
+    "Retained catalog contains no retailer prices, availability or ratings. All products start unpriced and out of stock.",
+    "Variant pack sizes and source SKUs preserved. Barcode tag candidates may include multiple historic/product barcodes; they are provenance only and must not be treated as an exact variant identifier.",
+    "Remote photos were HEAD-checked for HTTP200, image content type and positive content length. Retailer image rights and ongoing CDN availability remain source-dependent."
+  ]
+}

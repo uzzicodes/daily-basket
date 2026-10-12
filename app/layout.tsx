@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./professional-theme.css";
+import "./dark-theme.css";
 
 export const metadata: Metadata = {
   title: "Askari Departmental Store | Lahore Groceries",
