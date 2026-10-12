@@ -1,5 +1,5 @@
 -- Run once in the Supabase SQL editor. The service key stays on the server.
-create extension if not exists pgcrypto;
+-- gen_random_uuid() is built into supported PostgreSQL versions; no extension is needed.
 create table public.products (
  id uuid primary key default gen_random_uuid(), name text not null, brand text not null,
  category text not null check (category in ('Cooking & Pantry','Dairy, Milk & Breakfast','Tea, Coffee & Beverages','Spices & Recipe Mixes','Snacks & Confectionery','Laundry & Detergents','Household & Cleaning','Baby Care','Personal Care & Hygiene')),

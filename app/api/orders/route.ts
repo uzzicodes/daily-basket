@@ -11,10 +11,10 @@ export async function POST(request:Request){
   if(!databaseConfigured())return NextResponse.json({error:'Online COD ordering is not connected yet. Please contact the store.'},{status:503});
   try {
     if(!await allowRequest(request,'checkout',10,15))return NextResponse.json({error:'Too many order attempts. Please try again in 15 minutes.'},{status:429,headers:{'Retry-After':'900'}});
-    const {idempotency_key,items,...customer}=parsed.data;
-    const requestHash=await digest(JSON.stringify({...customer,items}));
-    const {data,error}=await database().rpc('create_checkout_order',{p_customer:customer,p_items:items,p_key:idempotency_key,p_hash:requestHash});
-    if(error){if(['P0001','23514','22P02'].includes(error.code))return NextResponse.json({error:error.code==='P0001'?error.message:'Some order details are invalid.'},{status:409});console.error('Order persistence failed',error.code);return NextResponse.json({error:'We could not save your order. Please try again.'},{status:503});}
+    const {idempotency_key,items,expected_total,...customer}=parsed.data;
+    const requestHash=await digest(JSON.stringify({...customer,items,expected_total}));
+    const {data,error}=await database().rpc('create_checkout_order',{p_customer:customer,p_items:items,p_key:idempotency_key,p_hash:requestHash,p_expected_total:expected_total});
+    if(error){if(['P0001','23514','22P02'].includes(error.code))return NextResponse.json({error:error.code==='P0001'?error.message:'Some order details are invalid.',code:error.message.startsWith('Prices have changed.')?'PRICE_CHANGED':undefined},{status:409});console.error('Order persistence failed',error.code);return NextResponse.json({error:'We could not save your order. Please try again.'},{status:503});}
     return NextResponse.json({order:data},{status:201,headers:{'Cache-Control':'no-store'}});
   }catch {return NextResponse.json({error:'Ordering is temporarily unavailable. Please try again.'},{status:503});}
 }

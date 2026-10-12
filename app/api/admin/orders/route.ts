@@ -2,9 +2,20 @@ import { NextResponse } from 'next/server';
 import { database } from '@/lib/supabase';
 import { isAdmin, sameOrigin } from '@/lib/security';
 import { z } from 'zod';
+import { decodeOrderCursor, orderPage, ORDER_PAGE_SIZE } from '@/lib/order-pagination';
+import type { Order } from '@/lib/types';
 export async function GET(request:Request){
   if(!await isAdmin())return NextResponse.json({error:'Please sign in.'},{status:401});
-  try{const db=database();const url=new URL(request.url);const before=url.searchParams.get('before');let query=db.from('orders').select('*').order('created_at',{ascending:false}).limit(200);if(before){if(!Number.isFinite(Date.parse(before)))return NextResponse.json({error:'Invalid page cursor'},{status:400});query=query.lt('created_at',before);}const {data:orders,error}=await query;if(error)throw error;const {data:metrics,error:metricsError}=await db.rpc('today_metrics');if(metricsError)throw metricsError;return NextResponse.json({orders,metrics,nextCursor:orders?.length===200?orders[orders.length-1].created_at:null},{headers:{'Cache-Control':'no-store'}});}catch{return NextResponse.json({error:'Unable to load orders. Please retry.'},{status:503});}
+  const before=new URL(request.url).searchParams.get('before');
+  let cursor:ReturnType<typeof decodeOrderCursor>|undefined;
+  if(before){try{cursor=decodeOrderCursor(before);}catch{return NextResponse.json({error:'Invalid page cursor.'},{status:400});}}
+  try{
+    const db=database();
+    const {data,error}=await db.rpc('list_store_orders',{p_before:cursor?.created_at??null,p_before_id:cursor?.id??null,p_limit:ORDER_PAGE_SIZE+1});
+    if(error)throw error;
+    const {data:metrics,error:metricsError}=await db.rpc('today_metrics');if(metricsError)throw metricsError;
+    return NextResponse.json({...orderPage((data??[]) as Order[]),metrics},{headers:{'Cache-Control':'no-store'}});
+  }catch{return NextResponse.json({error:'Unable to load orders. Please retry.'},{status:503});}
 }
 const changeSchema=z.object({id:z.string().regex(/^ORD-[\da-f-]{36}$/i),status:z.enum(['Pending','Packing','Out for Delivery','Delivered']),expected_status:z.enum(['Pending','Packing','Out for Delivery','Delivered'])}).strict();
 export async function PATCH(request:Request){

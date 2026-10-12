@@ -26,7 +26,7 @@ Delivery is free at Rs. 2,999 and above; below the threshold the fee is Rs. 150.
 Original brief used Al-Barakah as the store name. The user later supplied the real Askari Departmental Store logo and identified it as their store logo, so the actual name and logo take precedence. Preserve that artwork, with the original brief's Naheed.pk-inspired modern minimalist aesthetic, deep emerald #044E32 / #059669, dark slate and restrained gold/amber accents. Real product photography is mandatory. User requires Impeccable and template previews before further final UI implementation; three previews were presented and the user delegated selection to the agent. Quick Basket was selected. The user subsequently requested a better, more professional theme and animations; the interface palette now uses navy/blue and gold drawn from the unchanged logo, with cool-white product shelves.
 
 ## Evidence on Hand
-Original brief in the user attachment. 18 product-image URLs verified to return image responses; sources recorded in work/image-sources.json. User-owned logo is public/askari-logo.png. WhatsApp contact is the user-provided 03084555567. No live inventory, Supabase credentials or administrator secret supplied so far.
+Original brief in the user attachment. 18 product-image URLs verified to return image responses; sources recorded in work/image-sources.json. User-owned logo is public/askari-logo.png. WhatsApp contact is the user-provided 03084555567. Supabase is connected, and the account currently has no projects. Organization selection for a dedicated Askari project is pending. No live inventory, runtime database credentials or administrator secret supplied so far.
 
 ## Product Principles
 - Make everyday grocery shopping fast on phones.

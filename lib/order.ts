@@ -10,6 +10,7 @@ export const customerSchema = z.object({
 export const orderSchema = customerSchema.extend({
   items: z.array(z.object({ product_id: z.string().uuid(), quantity: z.number().int().min(1).max(99) }).strict()).min(1).max(60),
   idempotency_key: z.string().uuid(),
+  expected_total: z.number().finite().positive().max(9999999999.99).refine(v => Math.abs(v * 100 - Math.round(v * 100)) < 0.0001, 'Invalid checkout total.'),
 }).strict();
 export function priceOrder(request: {product_id: string; quantity: number}[], products: Product[]) {
   const seen = new Set<string>();
