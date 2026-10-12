@@ -17,10 +17,11 @@ On Windows PowerShell, use `Copy-Item .env.example .env.local`. Open `http://loc
 ## Connect Supabase
 
 1. Create a Supabase PostgreSQL project.
-2. Run `supabase/migrations/001_store.sql` in its SQL editor, then `002_seed.sql`, then `20261012160254_checkout_quote_and_order_paging.sql`. Run each schema migration once; seed insertion is safe to repeat. If the first two migrations are already installed, apply only the new timestamped migration before deploying this source.
+2. Run the SQL files in `supabase/migrations/` in filename order. Run each schema migration once; seed insertion is safe to repeat. If older migrations are already installed, apply only the remaining timestamped migrations before deploying this source. The final migration restricts the dashboard's optional automatic-RLS event trigger to internal use.
 3. Set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in `.env.local`. The service key is server-only; never use a `NEXT_PUBLIC_` prefix.
 4. Set `ADMIN_PASSWORD` to a strong store-counter password. Set `ADMIN_SESSION_SECRET` to a random secret of at least 32 characters. Generate one with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` on your own machine and keep it private.
 5. `STORE_WHATSAPP_NUMBER` defaults to the store number the user supplied: `923084555567` (+92 308 4555567). Override it only if the store contact changes.
+   Keep `CATALOG_PREVIEW=true` until the store reviews prices, ratings, discount references and stock. Set it to `false` after that review; the flag labels inventory without disabling saved COD orders.
 6. Restart the dev server, place a test COD order and sign in at `/admin`. The counter polls every ten seconds. Test all four stages and a printed packing slip before opening to customers.
 
 Products, orders and request counters use RLS with no anonymous write or read privileges. Only server requests access them. The database transaction locks the relevant catalog records, reads authoritative prices and stock, computes delivery and totals, snapshots the ordered items, and enforces idempotency. The shopper's displayed total is compared with the server total; a mismatch saves no order and asks the customer to refresh prices and review the basket. The displayed total never determines the price charged. Retries return the complete original saved total even if catalog prices or stock subsequently change. The success screen shows the saved COD total. Administrative status updates compare the prior status to prevent two counter sessions overwriting one another.
@@ -57,6 +58,8 @@ npm run build
 ```
 
 Tests run the migration files in an isolated PGlite PostgreSQL engine, including seed inventory, private-role permissions, price-change rejection, immutable checkout retries, stock/quantity validation, exact delivery thresholds, 450 orders sharing a timestamp, Karachi day boundaries and rate-limit expiry. Other tests cover phone and area validation, receipt contents, session tampering, cross-origin requests and failure without persistence. The test dependency is used only for local validation and is not part of the deployed database.
+
+The Askari Supabase project is provisioned in Mumbai on the Free plan. Migrations and a transaction that rolls back verified authoritative checkout totals, complete idempotent responses and server-only access on the real project. The security advisor's public execution warnings for the dashboard's automatic-RLS helper were fixed. Its remaining [RLS-without-policy information](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy) is intentional: anonymous and signed-in API roles have no table or checkout privileges, and only the server key accesses these tables. Empty-database unused-index notices are informational.
 
 Browser checks cover desktop/mobile layouts and the storefront-to-counter flow against an isolated local PostgreSQL adapter: price refresh preserves the address form, successful COD orders show the saved total, retries create one order, all delivery stages work, packing slips open, older orders refresh and signing out blocks admin access. Actual Supabase hosting and WhatsApp handoff still require the store's configuration and account setup.
 

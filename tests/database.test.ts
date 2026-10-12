@@ -22,6 +22,8 @@ before(async()=>{
     grant usage on schema public to anon,authenticated,service_role;
     alter default privileges in schema public grant all on tables to anon,authenticated,service_role;
     alter default privileges in schema public grant execute on functions to anon,authenticated,service_role;`);
+  // Simulate the dashboard helper so its internal-only ACL is tested as well.
+  await db.exec(`create function public.rls_auto_enable() returns event_trigger language plpgsql security definer as $$begin end$$;`);
   const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')).sort();
   for(const file of files)await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
 });
@@ -69,6 +71,12 @@ test('Anonymous and authenticated roles cannot read orders or invoke private RPC
     await db.exec('reset role');
   }
   await db.exec('set role service_role');assert.equal((await checkout()).total_amount,1150);await db.exec('reset role');
+});
+test('The automatic-RLS event trigger is not a publicly executable API function',async()=>{
+  for(const role of ['anon','authenticated','service_role']){
+    const r=await db.query<{allowed:boolean}>("select has_function_privilege($1,'public.rls_auto_enable()','execute') as allowed",[role]);
+    assert.equal(r.rows[0].allowed,false);
+  }
 });
 test('450 orders with identical timestamps paginate without skipping or duplicating an order',async()=>{
   await db.exec(`insert into orders(customer_name,customer_phone,delivery_area,delivery_address,items,subtotal,delivery_fee,total_amount,idempotency_key,request_hash,created_at)
