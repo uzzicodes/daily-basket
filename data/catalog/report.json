@@ -4,20 +4,20 @@
   "source_url": "https://alfatah.pk",
   "source_products": 22031,
   "photo_candidate_variants": 18700,
-  "verified_photo_variants": 18700,
-  "unique_images": 18643,
+  "verified_photo_variants": 18652,
+  "unique_images": 18595,
   "rejected_photo_variants": 0,
   "excluded_variants_or_products": 3406,
   "category_counts": {
-    "Cooking & Pantry": 3392,
-    "Dairy, Milk & Breakfast": 1424,
-    "Tea, Coffee & Beverages": 1528,
-    "Spices & Recipe Mixes": 337,
-    "Snacks & Confectionery": 4150,
-    "Laundry & Detergents": 632,
-    "Household & Cleaning": 1352,
-    "Baby Care": 660,
-    "Personal Care & Hygiene": 5225
+    "Cooking & Pantry": 3390,
+    "Spices & Recipe Mixes": 336,
+    "Tea, Coffee & Beverages": 1525,
+    "Dairy, Milk & Breakfast": 1419,
+    "Snacks & Confectionery": 4134,
+    "Baby Care": 659,
+    "Laundry & Detergents": 628,
+    "Household & Cleaning": 1348,
+    "Personal Care & Hygiene": 5213
   },
   "collections": [
     {
@@ -371,8 +371,8 @@
       "url": "https://alfatah.pk/collections/personal-care-hygiene"
     }
   ],
-  "duplicate_sku_groups": 24,
-  "duplicate_name_groups": 50,
+  "duplicate_sku_groups": 5,
+  "duplicate_name_groups": 0,
   "matching_notes": {
     "sku": "Source SKU may repeat; match only when unique.",
     "barcode": "Variant barcode not provided by source; candidates are provenance only.",
@@ -390,6 +390,12 @@
     "Only grocery and household essentials within the nine requested categories were retained.",
     "Retained catalog contains no retailer prices, availability or ratings. All products start unpriced and out of stock.",
     "Variant pack sizes and source SKUs preserved. Barcode tag candidates may include multiple historic/product barcodes; they are provenance only and must not be treated as an exact variant identifier.",
-    "Remote photos were HEAD-checked for HTTP200, image content type and positive content length. Retailer image rights and ongoing CDN availability remain source-dependent."
-  ]
+    "Remote photos were HEAD-checked for HTTP200, image content type and positive content length. Retailer image rights and ongoing CDN availability remain source-dependent.",
+    "Post-collection metadata quality pass merged44 confirmed duplicate records, quarantined4 conflicting records, preserved visibly different flavors/packaging/shades and removed zero-prefixed inventory codes."
+  ],
+  "pre_metadata_quality_variants": 18700,
+  "metadata_duplicates_archived": 44,
+  "metadata_quarantined": 4,
+  "active_catalog_variants": 18652,
+  "quality_report": "quality-report.json"
 }

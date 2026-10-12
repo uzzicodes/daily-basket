@@ -1,0 +1,319 @@
+{
+  "performed_at": "2026-10-12T17:50:01.161Z",
+  "before_count": 18700,
+  "after_count": 18652,
+  "archived_duplicate_records": 44,
+  "quarantined_records": 4,
+  "quarantined_ids": [
+    "cd071d5b-d6c5-533d-a5b6-6d78dbbc2dd7",
+    "41deab74-de6b-55ac-a3ca-268dba21b2a6",
+    "d5a67280-2342-5e28-a661-3d2e2f28cd63",
+    "6d9a95cb-f18f-5976-a822-ac12192aed04"
+  ],
+  "changed_retained_records": 492,
+  "all_exact_duplicate_name_groups_reviewed": 50,
+  "distinct_variants_renamed": [
+    {
+      "id": "2fdcd1f8-d257-5373-a731-f297292b19d3",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-4",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-4.png?v=1690218680",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "604939b1-3009-5203-a07e-46130c885d13",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-1",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-1.png?v=1690218671",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "54531e9e-019a-55c9-abc6-63b91ac47a63",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-6",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject-2025-09-22T103655.865.png?v=1758519443",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "15006b6b-43ad-59e5-af90-0d5bb764fa8d",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-10",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-10.png?v=1690218674",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "27bb9887-411b-5b46-a057-f0daea11d9e6",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-11",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-11.png?v=1690218676",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "bb7b7ec6-ad78-5c5d-a762-263b2f307512",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-5",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-5.png?v=1690218681",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "4245a5dd-280c-5312-aa6a-c0b0d0e03603",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-2",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-2.png?v=1690218676",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "cdcaec5e-4b03-5c2d-a48e-abdaaa693d69",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-3",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-3.png?v=1690218677",
+      "note": "Distinct variety read from printed product photo; original generic title retained."
+    },
+    {
+      "id": "b934cdde-9d17-58fe-a948-ba6dabd93e2f",
+      "source_url": "https://alfatah.pk/products/ariel-washing-liquid-detergent-cold-short-2418-ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8700216689083.jpg?v=1783599896",
+      "note": "Photo distinctly says COLOUR; preserved as a separate variant."
+    },
+    {
+      "id": "9b60f85f-0205-5ead-abff-b51f0492cb05",
+      "source_url": "https://alfatah.pk/products/ariel-washing-liquid-detergent-cold-short-2418ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8700216688932.jpg?v=1783599906",
+      "note": "Photo distinctly says ORIGINAL; preserved as a separate variant."
+    },
+    {
+      "id": "9b9937fe-af17-578d-aed9-ef9913d13d6f",
+      "source_url": "https://alfatah.pk/products/laundary-basket-ir-521-469",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2025073010396_6f2da4c2-2b67-42e9-9c03-89f6066fb933.jpg?v=1758010653",
+      "note": "Photo shows white lattice basket, different design from companion record."
+    },
+    {
+      "id": "8809d522-084f-5525-abd1-29bcee336d0c",
+      "source_url": "https://alfatah.pk/products/laundary-basket-ir-521-470",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_8_b4049d81-798c-4f63-a04e-5fc84bf1c369.png?v=1768909281",
+      "note": "Photo shows cream slotted basket, different design from companion record."
+    },
+    {
+      "id": "9feaf657-c82f-5b4a-a51d-0d16db526b10",
+      "source_url": "https://alfatah.pk/products/dove-body-wash-deeply-nourishing-50-ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_84_d4eeabca-1dd1-41ce-9335-cbfc898eacbe.png?v=1781866431",
+      "note": "Photo label says TRIPLE MOISTURE SERUM; distinct label/formulation retained."
+    },
+    {
+      "id": "8fd3e1a5-fea9-5261-a325-d2714dd728e7",
+      "source_url": "https://alfatah.pk/products/dove-body-wash-deeply-nourishing-500-ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8712561593533_de1bc517-08df-4969-88fa-a81e2c9044ae.jpg?v=1735193719",
+      "note": "Photo label says 1/4 moisturising cream; distinct label/formulation retained."
+    },
+    {
+      "id": "eff74b34-c173-5a77-a8d2-8501fe808cce",
+      "source_url": "https://alfatah.pk/products/lady-speed-deo-stick-wild-freesia-39-6-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/ChatGPTImageMay19_2026_01_30_39PM.png?v=1779179457",
+      "note": "Photo label says fresh & essence, distinct from Invisible Dry Power."
+    },
+    {
+      "id": "b47cf8d0-4fd7-5549-ac34-3cef512cea7a",
+      "source_url": "https://alfatah.pk/products/lady-speed-deo-stick-wild-freesia-65-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_5_e96a95a8-69fd-4806-b153-25950a0475d3.jpg?v=1706101916",
+      "note": "Photo label says Invisible Dry power, distinct from Fresh & Essence."
+    },
+    {
+      "id": "c19bc79f-9153-5faa-a65a-3c0829d72f3a",
+      "source_url": "https://alfatah.pk/products/nivea-body-lotion-express-hydration-400-ml-1",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_3_c9eb0535-8c77-4c8e-9957-dd17b9d0e65f.png?v=1766404611",
+      "note": "Photo shows pump bottle; distinct packaging retained."
+    },
+    {
+      "id": "d7599d44-1872-50ee-a2bf-66f3d2a0b334",
+      "source_url": "https://alfatah.pk/products/nivea-body-lotion-express-hydration-400-ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/4005900579614_f5d65738-42b8-46b5-abbf-e513c1a8dd84.jpg?v=1751027231",
+      "note": "Photo shows flip-cap 5-in-1 Complete Care label; distinct packaging retained."
+    },
+    {
+      "id": "85d7f155-04ce-51b8-afe3-e3d76105047f",
+      "source_url": "https://alfatah.pk/products/the-body-shop-strawberry-hand-cream-30ml-1",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5028197313074_1.jpg?v=1717670584",
+      "note": "Photo label says 48h hydration and vegan; different labelled version retained."
+    },
+    {
+      "id": "fd0feb56-7060-5dc8-a473-ce095344e6e6",
+      "source_url": "https://alfatah.pk/products/the-body-shop-strawberry-hand-cream-30ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5028197871277.jpg?v=1693177325",
+      "note": "Photo label says with English strawberry extract; different labelled version retained."
+    },
+    {
+      "id": "27b7256d-c8f9-535c-ab62-82e475abb139",
+      "source_url": "https://alfatah.pk/products/the-body-shop-british-rose-hand-cream-30-ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5028197313982_a4a12740-4ce7-486a-85ed-3257d8bee956.jpg?v=1756381732",
+      "note": "Photo label says 48h hydration and vegan; different labelled version retained."
+    },
+    {
+      "id": "ee6280a8-a40e-5a40-a296-fb3107ed4fe7",
+      "source_url": "https://alfatah.pk/products/the-body-shop-british-rose-hand-cream-30ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5028197869267.jpg?v=1693177336",
+      "note": "Photo label says Petal-Soft; different labelled version retained."
+    },
+    {
+      "id": "969ff12f-1fc4-5803-a026-4a4a177f6e3b",
+      "source_url": "https://alfatah.pk/products/the-body-shop-vitamin-e-eye-cream-15-ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5028197103643_1e666707-3f94-4f91-91ff-058ee3b384fc.jpg?v=1746707051",
+      "note": "Photo label says 48h with biofermented hyaluronic acid from Pomacle; preserved separately."
+    },
+    {
+      "id": "966ea6c4-462c-5db9-aca8-69926605c0cd",
+      "source_url": "https://alfatah.pk/products/the-body-shop-vitamin-e-eye-cream-15ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_5_8b71d87e-1dd4-45f2-83ea-48c4aa870faa.png?v=1741674161",
+      "note": "Photo label says enriched with hyaluronic acid, HYDRATE; preserved separately."
+    },
+    {
+      "id": "9acf8327-bbc2-511d-a980-a38bc7b013bd",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-zaiqa-nimko-250-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325344_1_c6d6d3ba-8de6-4554-a9f8-94b254fb51f2.jpg?v=1715434751",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "e8975ce6-678a-5880-aa55-c06b943553b4",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-moti-mix-250-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325306_1_86b6a2c4-0370-4ac3-937e-ae03a7021c22.jpg?v=1715434732",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "30ee053c-0a48-5a24-aff7-3ee6585bf3be",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-gaathia-250gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325405_a6fbd366-04a8-4b09-ad69-eb3f2118c9d9.jpg?v=1725885251",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "53234c17-e16f-50ef-ac4c-71779cc8ce66",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-masar-sawyan-250-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325320_1_a15ee02d-2277-4191-ba78-25fb5c14541e.jpg?v=1715434742",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "5ecc40bc-d6d1-506a-a028-3c6efce891b7",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-barik-sawyan-250gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325399_7558195b-7947-4c5a-847c-e36590da6071.jpg?v=1732527402",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "b04bdc15-03d1-51af-a87d-10e97fe7fb36",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-daal-moth-250-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325337_1_da5803fa-09c1-47b4-a045-427ee5c2a753.jpg?v=1715434747",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "6c0522f7-b86c-5e3e-af0a-edbaa3aff430",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-gujrati-mix-250-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325351_1_9243eafc-b4e9-4639-9ebf-145f105bf3b6.jpg?v=1715434756",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "e0450ff4-509c-553e-ab74-2e8bedc1b7fb",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-daal-chana-250gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325375_559b49c9-6967-414b-ac54-04d7bb84d859.jpg?v=1725885244",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "76c2265b-7fe4-5947-a07f-4b4621f279dc",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-moti-sawyan-250gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325382_1_4c471824-1eac-404c-a7f3-32bbc75e3ced.jpg?v=1715434761",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    },
+    {
+      "id": "759305c8-defc-57c0-a3d7-edf6f057423c",
+      "source_url": "https://alfatah.pk/products/lahori-mixture-barik-mix-250-gm",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0743407325313_1_fedc0dc5-16e3-4464-8335-7d21a6c9abcb.jpg?v=1715434737",
+      "note": "Existing photo label confirms AUK Foods, named flavor and250g pack."
+    }
+  ],
+  "confirmed_duplicate_group_indexes": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    42,
+    46
+  ],
+  "unresolved_groups": [
+    {
+      "group": 2,
+      "note": "Source titles both say454g, but one photo label visibly says340g. Different SKUs/barcodes. No pack size was guessed or changed; requires inventory/photo verification.",
+      "ids": [
+        "cd071d5b-d6c5-533d-a5b6-6d78dbbc2dd7",
+        "ef77e9fd-9d67-5bc4-a03c-cfe0e047b1f8"
+      ],
+      "names": [
+        "American Garden Peanut Butter Chunky 454 g",
+        "American Garden Peanut Butter Chunky 454 g"
+      ]
+    },
+    {
+      "group": 5,
+      "note": "Source titles both say430g, but packaging photos show different serving counts and different barcode/SKU. Unclear if photo is wrong or pack actually differs; retained pending verification.",
+      "ids": [
+        "1d52b0f0-a442-5a80-ab48-31540f7f2f1a",
+        "41deab74-de6b-55ac-a3ca-268dba21b2a6"
+      ],
+      "names": [
+        "Kelloggs Cereal Rice Krispies 430 g",
+        "Kelloggs Cereal Rice Krispies 430 g"
+      ]
+    },
+    {
+      "group": 48,
+      "note": "Retailer titles truncate the shade to(LI; different barcodes/SKUs. Side-view photos do not identify shade. Potential shade differences; retained pending verification.",
+      "ids": [
+        "d5a67280-2342-5e28-a661-3d2e2f28cd63",
+        "6d9a95cb-f18f-5976-a822-ac12192aed04"
+      ],
+      "names": [
+        "It Cosmetics Color Correcting Full Coverage Cream Spf 50 (Li",
+        "It Cosmetics Color Correcting Full Coverage Cream Spf 50 (Li"
+      ]
+    }
+  ],
+  "remaining_exact_duplicate_name_groups": [],
+  "category_counts": {
+    "Cooking & Pantry": 3390,
+    "Spices & Recipe Mixes": 336,
+    "Tea, Coffee & Beverages": 1525,
+    "Dairy, Milk & Breakfast": 1419,
+    "Snacks & Confectionery": 4134,
+    "Baby Care": 659,
+    "Laundry & Detergents": 628,
+    "Household & Cleaning": 1348,
+    "Personal Care & Hygiene": 5213
+  },
+  "normalization_rules": [
+    "Only leading zero-prefixed inventory numbers were stripped; real brands137Degrees,7UP,3Pandas,4ME etc remain intact.",
+    "7UP/6thSense/PeekFreans/LadySpeedStick and explicit code-prefixed brands normalized from source titles/tags. Unbranded is used when producer is not identifiable.",
+    "Eight Lahori Mixture flavors were read directly from existing verified photos; IDs and original generic titles preserved.",
+    "Numeric variants now display explicitly so shade1/3/5 are not hidden inside a35ml string.",
+    "All50 exact duplicate-name groups reviewed; same sourceSKU and exact identity is the strongest duplicate evidence. Photo-label corroboration is recorded for additional confirmed duplicates.",
+    "Three source conflicts remain flagged. Their products stay unpriced/out of stock; no shade or pack size was guessed.",
+    "No new source crawl, no retailer prices/ratings/stock imported."
+  ]
+}

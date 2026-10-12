@@ -1,5 +1,5 @@
 import { z } from 'zod';
-export type InventoryItem={id:string;catalog_code:string;name:string;brand:string;unit:string;barcode:string|null;sku:string|null;source_name:string|null;price:number|null;in_stock:boolean};
+export type InventoryItem={id:string;catalog_code:string;name:string;brand:string;unit:string;barcode:string|null;sku:string|null;source_name:string|null;source_sku_aliases?:string[];source_aliases?:{id:string;name:string;source_title:string;sku?:string}[];price:number|null;in_stock:boolean};
 export type PriceRow={row:number;product_id?:string;code?:string;barcode?:string;name:string;brand:string;unit:string;price:number|null;error?:string};
 export type Match={row:PriceRow;product:InventoryItem|null;candidates:InventoryItem[];issue?:string};
 const normal=(v:string)=>v.normalize('NFKC').toLowerCase().replace(/[’']/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
@@ -26,9 +26,9 @@ export function priceRows(matrix:unknown[][]):PriceRow[]{
  if(!rows.length||rows.length>25000)throw Error('Use a non-empty sheet with at most 25,000 product rows.');return rows;
 }
 export function matchPrices(rows:PriceRow[],catalog:InventoryItem[]):Match[]{
- const byId=new Map(catalog.map(p=>[p.id,p]));const indices=new Map<string,InventoryItem[]>();
+ const byId=new Map(catalog.map(p=>[p.id,p]));for(const p of catalog)for(const a of p.source_aliases??[])if(a.id&&!byId.has(a.id))byId.set(a.id,p);const indices=new Map<string,InventoryItem[]>();
  const put=(key:string,p:InventoryItem)=>{const arr=indices.get(key)??[];if(!arr.some(x=>x.id===p.id))arr.push(p);indices.set(key,arr);};
- for(const p of catalog){for(const c of [p.catalog_code,p.sku])if(c)put('code:'+normal(c),p);if(p.barcode)put('barcode:'+p.barcode.replace(/\s/g,''),p);for(const n of [p.name,p.source_name])if(n){put('name:'+normal(n),p);put('name:'+normal([p.brand,n,p.unit].join(' ')),p);}}
+ for(const p of catalog){for(const c of [p.catalog_code,p.sku,...(p.source_sku_aliases??[]),...(p.source_aliases??[]).map(a=>a.sku)])if(c)put('code:'+normal(c),p);if(p.barcode)put('barcode:'+p.barcode.replace(/\s/g,''),p);for(const n of [p.name,p.source_name,...(p.source_aliases??[]).flatMap(a=>[a.name,a.source_title])])if(n){put('name:'+normal(n),p);put('name:'+normal([p.brand,n,p.unit].join(' ')),p);}}
  const used=new Set<string>();
  return rows.map(row=>{let candidates:InventoryItem[]=[];
   if(row.product_id)candidates=byId.has(row.product_id)?[byId.get(row.product_id)!]:[];

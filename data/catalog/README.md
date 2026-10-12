@@ -21,3 +21,7 @@ Primary provenance:
 
 Naheed.pk returned403 to web fetch. No security challenge or access-control bypass was attempted. This is a broad enumerated source catalog within the requested nine categories, not a claim to contain every product on the internet or all Naheed inventory. Photos remain original retailer CDN URLs; HEAD checks verify response availability, not a grant of intellectual-property rights or future CDN availability.
 
+
+## Metadata quality pass
+
+The active catalog has18,652 records after44 confirmed duplicate merges and4 uncertain photo/title quarantines. quality-report.json records the review; quality-changes.json lists492 changed retained IDs; duplicate-id-map.json and catalog-archive-actions.json preserve every removed-to-retained identity mapping. review-needed.json preserves uncertain records for verification. No products or historical order records are deleted. Source SKU and name aliases remain usable by the private Excel matcher.

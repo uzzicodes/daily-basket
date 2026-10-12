@@ -1,0 +1,5717 @@
+[
+  {
+    "id": "145509ea-29c3-58a9-ae4e-435aadf11fd6",
+    "changes": {
+      "name": {
+        "before": "Dipitt Peri Peri Garlic Sauce 300 Gms",
+        "after": "Dipitt Peri Peri Garlic Sauce 300 g"
+      }
+    }
+  },
+  {
+    "id": "a85f4e40-01ef-520f-add8-fe763df9ab56",
+    "changes": {
+      "name": {
+        "before": "Dipitt Peri Peri Lemon And Herb Sauce 290 Gms",
+        "after": "Dipitt Peri Peri Lemon And Herb Sauce 290 g"
+      }
+    }
+  },
+  {
+    "id": "a81b247b-bfd5-576f-ac59-c712b783986e",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "76a98c51-442f-5170-ac4a-74bd76b08fdd",
+            "name": "Key Brand Soya Sauce 750 ml",
+            "brand": "Key Brand",
+            "source_title": "KEY BRAND SOYA SAUCE 750 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10588684779808",
+            "source_variant_id": "52334976106784",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/key-brand-soya-sauce-750-ml",
+            "sku": "AFP-000114039",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/6280541402608.jpg?v=1789041420",
+            "source_barcode_candidates": [
+              "6280541402608"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000114039-1",
+          "AFP-000114039"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8a39d1ff-c6ad-56f1-a861-f742caaffc23",
+    "changes": {
+      "name": {
+        "before": "National Masala Chicken Tandoori 40 Gms",
+        "after": "National Masala Chicken Tandoori 40 g"
+      }
+    }
+  },
+  {
+    "id": "628db91a-3b34-5369-ad2b-e8faf43dd4c6",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "7b12aff5-1085-5470-a419-a4cc1cbf6b91",
+            "name": "Rafhan Corn Oil Bottle 1 L",
+            "brand": "Rafhan",
+            "source_title": "RAFHAN CORN OIL BOTTLE 1 LTR",
+            "source_variant_title": "Default Title",
+            "source_id": "10063727460640",
+            "source_variant_id": "50751787368736",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/rafhan-corn-oil-bottle-1-ltr",
+            "sku": "AFP-000163096",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8961014011944_acf72707-8b7d-46be-90aa-fb79d894e034.jpg?v=1759318607",
+            "source_barcode_candidates": [
+              "8961014011944"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000163096",
+          "AFP-000380129"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cceca73b-afef-5025-a542-9c7f6c3751cb",
+    "changes": {
+      "name": {
+        "before": "0053 Pasta Conchigle Shell Cup 250 g",
+        "after": "Pasta Conchigle Shell Cup 250 g"
+      },
+      "brand": {
+        "before": "0053 Pasta",
+        "after": "Unbranded"
+      }
+    }
+  },
+  {
+    "id": "5bf9cf91-3e51-55ce-ad06-b27d3f03eec8",
+    "changes": {
+      "name": {
+        "before": "0059 Pasta Penne 250 Gms",
+        "after": "Pasta Penne 250 g"
+      },
+      "brand": {
+        "before": "0059 Pasta",
+        "after": "Unbranded"
+      }
+    }
+  },
+  {
+    "id": "07f92582-9d8f-5812-a064-d3e50119499e",
+    "changes": {
+      "name": {
+        "before": "0052 Pasta Cavatappi Double Elbow 250 g",
+        "after": "Pasta Cavatappi Double Elbow 250 g"
+      },
+      "brand": {
+        "before": "0052 Pasta",
+        "after": "Unbranded"
+      }
+    }
+  },
+  {
+    "id": "d9bb2d9d-2f1a-54af-a3eb-f79beb1fae9d",
+    "changes": {
+      "name": {
+        "before": "0054 Pasta Screw 250 g",
+        "after": "Pasta Screw 250 g"
+      },
+      "brand": {
+        "before": "0054 Pasta",
+        "after": "Unbranded"
+      }
+    }
+  },
+  {
+    "id": "ff107b36-e260-5ef7-a616-513fc88cae2f",
+    "changes": {
+      "name": {
+        "before": "Naturelle Green Olive Pitted 380 Gms",
+        "after": "Naturelle Green Olive Pitted 380 g"
+      }
+    }
+  },
+  {
+    "id": "1becfd95-515a-5111-ae0f-a8f99fb2d251",
+    "changes": {
+      "name": {
+        "before": "Naturelle Green Olive Whole 380 Gms",
+        "after": "Naturelle Green Olive Whole 380 g"
+      }
+    }
+  },
+  {
+    "id": "543656f4-8343-562d-a05d-96ece5122d9c",
+    "changes": {
+      "name": {
+        "before": "Naturelle Green Olive Whole 190 Gms",
+        "after": "Naturelle Green Olive Whole 190 g"
+      }
+    }
+  },
+  {
+    "id": "3012090d-f19d-5801-a606-58cf3a5689f0",
+    "changes": {
+      "name": {
+        "before": "Naturelle Olive Achar 330 Gms",
+        "after": "Naturelle Olive Achar 330 g"
+      }
+    }
+  },
+  {
+    "id": "683a357e-db1e-5d8d-a888-81ccd2fd498a",
+    "changes": {
+      "name": {
+        "before": "Naturelle Jalapeno Achar 330 Gms",
+        "after": "Naturelle Jalapeno Achar 330 g"
+      }
+    }
+  },
+  {
+    "id": "637559a8-ea1f-5140-aaa3-adbd76fba8af",
+    "changes": {
+      "name": {
+        "before": "Naturelle Garden Peas 400 Gms",
+        "after": "Naturelle Garden Peas 400 g"
+      }
+    }
+  },
+  {
+    "id": "8b8f399d-d027-5f9c-ab0b-1bc73b921329",
+    "changes": {
+      "name": {
+        "before": "Naturelle Garden Peas 850 Gms",
+        "after": "Naturelle Garden Peas 850 g"
+      }
+    }
+  },
+  {
+    "id": "4895d7bb-3c32-5999-a41d-c83dc047ec35",
+    "changes": {
+      "name": {
+        "before": "Doughstory Spring Roll Pastry Sheet (8*8) 375 Gms 25 pcs",
+        "after": "Doughstory Spring Roll Pastry Sheet (8*8) 375 g 25 pcs"
+      }
+    }
+  },
+  {
+    "id": "521ab492-3818-58f8-a741-a40dcca7b9e9",
+    "changes": {
+      "name": {
+        "before": "Auk Food Roasted Skinned Grams (Premium Grade) 300 Gms",
+        "after": "Auk Food Roasted Skinned Grams (Premium Grade) 300 g"
+      }
+    }
+  },
+  {
+    "id": "928542f6-e99d-5573-af17-b6adb5413de0",
+    "changes": {
+      "name": {
+        "before": "Auk Food Roasted Grams Without Skin (Premium Grade) 300 Gms",
+        "after": "Auk Food Roasted Grams Without Skin (Premium Grade) 300 g"
+      }
+    }
+  },
+  {
+    "id": "fcb189d9-df15-5f09-add4-8c270a714d56",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "c182ff44-662a-5b6f-a142-88d18c5cea94",
+            "name": "Nestle Cereal Milo 300 g",
+            "brand": "Nestle",
+            "source_title": "NESTLE CEREAL MILO 300 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10241056080160",
+            "source_variant_id": "51362756657440",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/nestle-cereal-milo-300-gm",
+            "sku": "AFP-000113275",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/4800361291446.jpg?v=1774001517",
+            "source_barcode_candidates": [
+              "4800361291446",
+              "8961008219325"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000113275"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e95bf16f-13b4-56f9-a312-7c29d33a8539",
+    "changes": {
+      "name": {
+        "before": "Tru Bru Premium Coffee 100 Gms",
+        "after": "Tru Bru Premium Coffee 100 g"
+      }
+    }
+  },
+  {
+    "id": "0b99365b-1396-54a5-acb9-31b54cd0abc7",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "621882fd-b0db-5bca-a64a-1f841105026d",
+            "name": "Kelloggs Cereal Frosties 470 g",
+            "brand": "Kelloggs",
+            "source_title": "KELLOGGS CEREAL FROSTIES 470 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10248486027552",
+            "source_variant_id": "51399510229280",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/kelloggs-cereal-frosties-470-gm",
+            "sku": "AFP-000628378",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5059319036809.jpg?v=1774957656",
+            "source_barcode_candidates": [
+              "5059319036809"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000078988",
+          "AFP-000628378"
+        ]
+      }
+    }
+  },
+  {
+    "id": "02c7a71b-79e7-5fa1-ae3c-bdf503d3b32a",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "aeb6fbcd-e1ad-5358-a567-828c8dfbf77c",
+            "name": "Lipton Yellow Label Danedar Strong Tea Jar 475 g",
+            "brand": "Lipton",
+            "source_title": "LIPTON YELLOW LABEL DANEDAR STRONG TEA JAR  475 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10489531236640",
+            "source_variant_id": "52017566449952",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lipton-yellow-label-danedar-strong-tea-jar-475-gm",
+            "sku": "AFP-000113692",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8720608621392.jpg?v=1784721214",
+            "source_barcode_candidates": [
+              "8720608621392"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000113692"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d4fa5c2d-3f4a-515b-a112-70782ac7dc72",
+    "changes": {
+      "name": {
+        "before": "Tapal Danedar Tea 1600 Gms",
+        "after": "Tapal Danedar Tea 1600 g"
+      }
+    }
+  },
+  {
+    "id": "dcc8d0b4-4892-5cd1-a73c-cb0d495e1f0f",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "66ca86ab-afcf-5e8e-adf8-3398c5a10265",
+            "name": "Lipton Yellow Label Tea Blk 170 g",
+            "brand": "Lipton",
+            "source_title": "LIPTON YELLOW LABEL TEA BLK 170 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10489531203872",
+            "source_variant_id": "52017566417184",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lipton-yellow-label-tea-blk-170-gm",
+            "sku": "AFP-000544805",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5063305014719.jpg?v=1784721225",
+            "source_barcode_candidates": [
+              "5063305014719"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000544805"
+        ]
+      }
+    }
+  },
+  {
+    "id": "6adc68ad-d2e8-5d51-aa5e-286ee282af6c",
+    "changes": {
+      "name": {
+        "before": "Tru Bru Classic Coffee 50 Gms",
+        "after": "Tru Bru Classic Coffee 50 g"
+      }
+    }
+  },
+  {
+    "id": "6469c513-6905-55c0-aaa7-2160bf83a6e3",
+    "changes": {
+      "name": {
+        "before": "Tru Bru Classic Coffee 85 Gms",
+        "after": "Tru Bru Classic Coffee 85 g"
+      }
+    }
+  },
+  {
+    "id": "86b96ef9-2c2f-5248-abac-a48fbbf220b2",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "f2589213-77d2-5909-a81a-c6f77a40a1f8",
+            "name": "Tapal Tea Danedar Economy Pack Save Rs.100 900 g",
+            "brand": "Tapal",
+            "source_title": "TAPAL TEA DANEDAR ECONOMY PACK SAVE RS.100 900 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10147812671776",
+            "source_variant_id": "51064132108576",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/tapal-tea-danedar-economy-pack-save-rs-100-900-gm",
+            "sku": "AFP-000428660",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8961103601988_b886a762-1ad8-475f-a9d9-7fab23bee555.jpg?v=1766496726",
+            "source_barcode_candidates": [
+              "815096004913",
+              "815096005484",
+              "815096006061",
+              "8961103601988"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000428660"
+        ]
+      }
+    }
+  },
+  {
+    "id": "48e6913e-37c4-50fa-a7dd-a7fbd54284ff",
+    "changes": {
+      "name": {
+        "before": "7up Bottle 1.5 L",
+        "after": "7UP Bottle 1.5 L"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "ea36ad0e-3832-538a-a24b-8d8a41798773",
+    "changes": {
+      "name": {
+        "before": "7 Up Bottle 1.5 L-Carton · 1.5 L X 6",
+        "after": "7UP Bottle 1.5 L-Carton · 1.5 L X 6"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "89169e54-df47-54cc-ad8a-00dbaee1decd",
+    "changes": {
+      "name": {
+        "before": "7up Bottle 500 ml",
+        "after": "7UP Bottle 500 ml"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "3fe49a20-65c9-5162-ab88-3650bc40cd65",
+    "changes": {
+      "name": {
+        "before": "7up Bottle 500 ml-Carton · 500 ml X 12",
+        "after": "7UP Bottle 500 ml-Carton · 500 ml X 12"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "434f1a99-7afb-5efc-a05a-ef0b07f7e59a",
+    "changes": {
+      "name": {
+        "before": "7up Bottle Free 500 ml",
+        "after": "7UP Bottle Free 500 ml"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "45799816-3132-59d4-aba6-0da2c5be1d08",
+    "changes": {
+      "name": {
+        "before": "7 Up Bottle Free 500 ml-Carton · 500 ml X 12",
+        "after": "7UP Bottle Free 500 ml-Carton · 500 ml X 12"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "3930295a-4860-5724-ab6a-53931dc0715a",
+    "changes": {
+      "name": {
+        "before": "7up Bottle 345 ml",
+        "after": "7UP Bottle 345 ml"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "00eef777-a760-546c-a684-2f01e83a18b5",
+    "changes": {
+      "name": {
+        "before": "7 Up Bottle 345 ml-Carton · 345 ml X 12",
+        "after": "7UP Bottle 345 ml-Carton · 345 ml X 12"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "371b2482-ed33-5ba4-a521-0782400383ec",
+    "changes": {
+      "name": {
+        "before": "7up Zero Sugar 1.5 L",
+        "after": "7UP Zero Sugar 1.5 L"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "d7d2b91f-0dfa-54d2-a30a-c3d213c87e16",
+    "changes": {
+      "name": {
+        "before": "7up Free 1.5 L-Carton · 1.5 L X6",
+        "after": "7UP Free 1.5 L-Carton · 1.5 L X6"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "9a575471-65ed-5420-ae25-8caedc694d53",
+    "changes": {
+      "name": {
+        "before": "7 Up Free Bottle 345 ml",
+        "after": "7UP Free Bottle 345 ml"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "4b7f8f9d-b5bb-5384-a2a5-81d4af23e363",
+    "changes": {
+      "name": {
+        "before": "7up Free Bottle 345 ml-Carton · 345 ml X 12",
+        "after": "7UP Free Bottle 345 ml-Carton · 345 ml X 12"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "52efc9a3-944c-5769-ac06-6c4067b98985",
+    "changes": {
+      "name": {
+        "before": "7 Up Zero Sugar Local Tin 250 ml",
+        "after": "7UP Zero Sugar Local Tin 250 ml"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "df4b194b-a76f-528c-a2aa-0b9891852bba",
+    "changes": {
+      "name": {
+        "before": "7 Up Free Local Can 250 ml-Carton · 250 ml X 12",
+        "after": "7UP Free Local Can 250 ml-Carton · 250 ml X 12"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "e3ce7e85-2d34-58b4-a799-98083c8db44f",
+    "changes": {
+      "name": {
+        "before": "7up Jumbo 2.25 L",
+        "after": "7UP Jumbo 2.25 L"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "5228b3fc-250b-50a8-a79b-6e3d6f862b3c",
+    "changes": {
+      "name": {
+        "before": "7 Up Jumbo 2.25 L-Carton · 2.25 L X6",
+        "after": "7UP Jumbo 2.25 L-Carton · 2.25 L X6"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "ae5b892e-c261-5d61-a4ee-671fff1bd9f2",
+    "changes": {
+      "name": {
+        "before": "7 Up Lemon Slim Tin 250 ml",
+        "after": "7UP Lemon Slim Tin 250 ml"
+      },
+      "brand": {
+        "before": "7",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "84bea39e-3aad-584a-ae6c-7aab90967170",
+    "changes": {
+      "name": {
+        "before": "7up Lemon Slim Can 250 ml-Carton · 250 ml X 12",
+        "after": "7UP Lemon Slim Can 250 ml-Carton · 250 ml X 12"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "809ada73-d624-5c63-a0c2-a007f402bdd7",
+    "changes": {
+      "name": {
+        "before": "7up Bottle Lemon Mint Flavour 500 ml",
+        "after": "7UP Bottle Lemon Mint Flavour 500 ml"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "e6b757c6-7b6a-550b-af79-c6a722a98e61",
+    "changes": {
+      "name": {
+        "before": "7 Up Drink Lemon Lime & Bubbles 330 ml",
+        "after": "7UP Drink Lemon Lime & Bubbles 330 ml"
+      },
+      "brand": {
+        "before": "7 Up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "e7be22e1-2587-50ea-a8ca-bcf858a263a6",
+    "changes": {
+      "name": {
+        "before": "7 Up Mint Lemonade Bottle 345 ml",
+        "after": "7UP Mint Lemonade Bottle 345 ml"
+      },
+      "brand": {
+        "before": "7 Up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "ae7a9cca-fb7b-53ef-aa4c-e219ade84f36",
+    "changes": {
+      "name": {
+        "before": "7up Refreshment 345 ml 6 pcs Pack",
+        "after": "7UP Refreshment 345 ml 6 pcs Pack"
+      },
+      "brand": {
+        "before": "7up",
+        "after": "7UP"
+      }
+    }
+  },
+  {
+    "id": "8ca7a40a-a74a-599b-af2c-979052499e2f",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "cc127a37-b89a-5428-a972-9239bc7f6f78",
+            "name": "Shan Tez Lal Mirch Powder Save Rs.730 400 g",
+            "brand": "Shan",
+            "source_title": "SHAN TEZ LAL MIRCH POWDER SAVE RS.730 400 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10319445590304",
+            "source_variant_id": "51674093191456",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/shan-tez-lal-mirch-powder-save-rs-730-400-gm",
+            "sku": "AFP-000627459",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/788821024329.jpg?v=1779191360",
+            "source_barcode_candidates": [
+              "788821024329"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000627459"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8c2da743-d594-59c7-adc4-aefb2ef1119f",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "fad2b887-6d3a-5bf4-a2a2-393ae430c1a2",
+            "name": "Peek Freans Sooper Classic Hr 72 g",
+            "brand": "Peek Freans",
+            "source_title": "PEEK FREANS SOOPER CLASSIC HR 72 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10508635013408",
+            "source_variant_id": "52060888138016",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/peek-freans-sooper-classic-hr-72-gm",
+            "sku": "AFP-000649054",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8964004770456.jpg?v=1785500055",
+            "source_barcode_candidates": [
+              "8964004770456"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000434960",
+          "AFP-000649054"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c2b8e4de-8789-5c2b-ae75-5b0d3cf513ac",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "2e321740-b1e6-559f-a650-57b2110da15d",
+            "name": "Peek Freans Peanut Pik Hr 59 g",
+            "brand": "Peek Freans",
+            "source_title": "PEEK FREANS PEANUT PIK HR 59 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10508634751264",
+            "source_variant_id": "52060887679264",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/peek-freans-peanut-pik-hr-59-gm",
+            "sku": "AFP-000649061",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8964004770616.jpg?v=1785500056",
+            "source_barcode_candidates": [
+              "8964004770616"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000434978",
+          "AFP-000649061"
+        ]
+      }
+    }
+  },
+  {
+    "id": "66916a44-55b3-5d35-a8dc-ef557c84e208",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "28dd21d6-5252-5ebe-a769-0ab7ec672e53",
+            "name": "Peek Freans Lemon Sandwich Hr 72 g",
+            "brand": "Peek Freans",
+            "source_title": "PEEK FREANS LEMON SANDWICH HR 72 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10508634620192",
+            "source_variant_id": "52060887548192",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/peek-freans-lemon-sandwich-hr-72-gm",
+            "sku": "AFP-000649058",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8964004770531.jpg?v=1785500057",
+            "source_barcode_candidates": [
+              "8964004770531"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000434973",
+          "AFP-000649058"
+        ]
+      }
+    }
+  },
+  {
+    "id": "407b45fd-1915-5f7e-a41b-2d220c01ae16",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "de654712-ab5f-5610-a6de-b5f79c4ff1c1",
+            "name": "Peek Freans Chocolate Sandwich Hr 72 g",
+            "brand": "Peek Freans",
+            "source_title": "PEEK FREANS CHOCOLATE SANDWICH HR 72 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10508634390816",
+            "source_variant_id": "52060887122208",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/peek-freans-chocolate-sandwich-hr-72-gm",
+            "sku": "AFP-000649059",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8964004770555.jpg?v=1785500057",
+            "source_barcode_candidates": [
+              "8964004770555"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000434976",
+          "AFP-000649059"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d93c24b6-ac8b-5f0e-a223-1e7ab6f6545c",
+    "changes": {
+      "name": {
+        "before": "Peek Freans Saltish Biscuits Value Pack 48 Gms",
+        "after": "Peek Freans Saltish Biscuits Value Pack 48 g"
+      }
+    }
+  },
+  {
+    "id": "ef29e61d-7443-5de8-aa39-3c0c7ea356fe",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "34aeab1c-b83e-5586-adff-f3612bdc8702",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "32a6f09f-35a6-58bf-a6c6-2776dfb7feab",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "7d471b36-ecb7-5517-a5c5-c6a33600fa1b",
+            "name": "Lu Tiger Snack Pack 56 g Box 15 Pc",
+            "brand": "Lu",
+            "source_title": "LU TIGER SNACK PACK 56 GM BOX 15PC",
+            "source_variant_title": "Default Title",
+            "source_id": "10069328331040",
+            "source_variant_id": "50781772579104",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lu-tiger-snack-pack-56-gm-box-15pc",
+            "sku": "AFP-000366772",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8961003592010_fee6b03a-6251-422e-966e-bde14811befe.jpg?v=1760008950",
+            "source_barcode_candidates": [
+              "8961003592010"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000366772"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c7b8d3ea-2978-5ab5-a962-221283222459",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "8d9ad3a5-282b-5468-a85d-4425157e00fe",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "0def8ed5-243e-50b0-aabe-5c3ba6d1304e",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "12446d5a-ebe3-5fa5-a4d3-d6b2b4eddceb",
+            "name": "Trident Bubble Gum Spearmint Sugar Free 14 Sticks",
+            "brand": "Trident",
+            "source_title": "TRIDENT BUBBLE GUM SPEARMINT SUGAR FREE 14 STICKS",
+            "source_variant_title": "Default Title",
+            "source_id": "9823359828256",
+            "source_variant_id": "49886250041632",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/trident-bubble-gum-spearmint-sugar-free-14-sticks",
+            "sku": "AFP-000167170",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/012546011075_37aef8be-78f2-41c4-8587-f366a87da932.jpg?v=1739361745",
+            "source_barcode_candidates": [
+              "12546011075"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000212301",
+          "AFP-000167170"
+        ]
+      }
+    }
+  },
+  {
+    "id": "0a847a92-eaa0-5f8f-a624-76fa7e1aa919",
+    "changes": {
+      "name": {
+        "before": "American Kuisine B&B Soft Double Chocolate Cookies 160 Gms",
+        "after": "American Kuisine B&B Soft Double Chocolate Cookies 160 g"
+      }
+    }
+  },
+  {
+    "id": "2a6aa7c1-97c5-5d35-a7e3-ad9336bed1f8",
+    "changes": {
+      "name": {
+        "before": "Choci Toki Chocolate & Meises Wafer Stick 40 Gms",
+        "after": "Choci Toki Chocolate & Meises Wafer Stick 40 g"
+      }
+    }
+  },
+  {
+    "id": "3c6a5187-3224-5955-aaf9-ed4334ce694f",
+    "changes": {
+      "name": {
+        "before": "0087 Chakwal Reori Dana Gurh 200 g",
+        "after": "Chakwal Reori Dana Gurh 200 g"
+      },
+      "brand": {
+        "before": "0087",
+        "after": "Al-Fatah"
+      }
+    }
+  },
+  {
+    "id": "f574ec29-ba37-5b8a-a3a1-bc25d73fee2f",
+    "changes": {
+      "name": {
+        "before": "Choci Toki Chocolate & Strawberry Wafer Stick 40 Gms",
+        "after": "Choci Toki Chocolate & Strawberry Wafer Stick 40 g"
+      }
+    }
+  },
+  {
+    "id": "9de1835d-4bbf-540f-a422-882bbdd741b4",
+    "changes": {
+      "name": {
+        "before": "Choci Toki Vanilla & Meises Wafer Stick 40 Gms",
+        "after": "Choci Toki Vanilla & Meises Wafer Stick 40 g"
+      }
+    }
+  },
+  {
+    "id": "320ed245-ce09-52ee-af5b-d23b5a8c887d",
+    "changes": {
+      "name": {
+        "before": "Choci Toki Chocolate & Vanilla Wafer Stick 40 Gms",
+        "after": "Choci Toki Chocolate & Vanilla Wafer Stick 40 g"
+      }
+    }
+  },
+  {
+    "id": "7d8736e8-6a39-509e-a0d9-c216a09a56d2",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "fa91a298-3639-54a0-a95d-37eb3025db22",
+    "changes": {
+      "name": {
+        "before": "Choci Toki Chocolate & Sugar Balls Wafer Stick 40 Gms",
+        "after": "Choci Toki Chocolate & Sugar Balls Wafer Stick 40 g"
+      }
+    }
+  },
+  {
+    "id": "db6e8c85-0dfd-5f6c-a4a8-e01c3ce28c47",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "0438be53-07c8-5f2b-aaa9-423b6fff76df",
+            "name": "Diablo Bar Apricort Muesli Sugar Free 30 g",
+            "brand": "Diablo",
+            "source_title": "DIABLO BAR APRICORT MUESLI SUGAR FREE 30 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10118508314912",
+            "source_variant_id": "50941935878432",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/diablo-bar-apricort-muesli-sugar-free-30-gm",
+            "sku": "AFP-000540669",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5060309490167_039be037-417a-4a58-a82b-4ee10fd53dd3.jpg?v=1763469519",
+            "source_barcode_candidates": [
+              "5060309490167"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000540669"
+        ]
+      }
+    }
+  },
+  {
+    "id": "05f4f75f-7208-509a-a42d-aa0bc865c512",
+    "changes": {
+      "name": {
+        "before": "Home Made Pure Gurh And Desi Ghee Rewri 300 Gms",
+        "after": "Home Made Pure Gurh And Desi Ghee Rewri 300 g"
+      }
+    }
+  },
+  {
+    "id": "f48c5a47-7e86-5d9f-ac9c-92614b614b6a",
+    "changes": {
+      "name": {
+        "before": "0040 Batata Chat Small 250 g",
+        "after": "Batata Chat Small 250 g"
+      }
+    }
+  },
+  {
+    "id": "f4d6ee2d-0179-50c2-ae08-9286ae63eb8a",
+    "changes": {
+      "name": {
+        "before": "0039 Batata Chat Large 500 g",
+        "after": "Batata Chat Large 500 g"
+      }
+    }
+  },
+  {
+    "id": "5425f809-1baf-5f0a-aa3a-b25a2b4a9cfc",
+    "changes": {
+      "name": {
+        "before": "0038 Fresh Pakori Small 250 g",
+        "after": "Fresh Pakori Small 250 g"
+      },
+      "brand": {
+        "before": "0038",
+        "after": "Al-Fatah"
+      }
+    }
+  },
+  {
+    "id": "f24dd0ba-c0cb-5958-ab4a-b8c777585fd3",
+    "changes": {
+      "name": {
+        "before": "0049 Savoury Snacks Papri Chat 150 g",
+        "after": "Savoury Snacks Papri Chat 150 g"
+      }
+    }
+  },
+  {
+    "id": "9acf8327-bbc2-511d-a980-a38bc7b013bd",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Zaiqa Nimko 250 g",
+        "after": "Lahori Mixture Nimko Zaiqa Mixture 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "27bb9887-411b-5b46-a057-f0daea11d9e6",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459896160544",
+            "source_variant_id": "45744602906912",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-11",
+            "sku": "AFP-000114084-11",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-11.png?v=1690218676",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000453888",
+          "AFP-000114084-11"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b7fff963-fb2b-534f-aea1-0e1428cbe95c",
+    "changes": {
+      "name": {
+        "before": "0081 Supreme Nimko Large 400 g",
+        "after": "Supreme Nimko Large 400 g"
+      }
+    }
+  },
+  {
+    "id": "e8975ce6-678a-5880-aa55-c06b943553b4",
+    "changes": {
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      }
+    }
+  },
+  {
+    "id": "30ee053c-0a48-5a24-aff7-3ee6585bf3be",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Gathia 250 g",
+        "after": "Lahori Mixture Nimko Ghatia 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "bb7b7ec6-ad78-5c5d-a762-263b2f307512",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459896455456",
+            "source_variant_id": "45744603595040",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-5",
+            "sku": "AFP-000114084-5",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-5.png?v=1690218681",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000453896",
+          "AFP-000114084-5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "53234c17-e16f-50ef-ac4c-71779cc8ce66",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Masar Sawyan 250 g",
+        "after": "Lahori Mixture Nimko Masar Sewyan 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      }
+    }
+  },
+  {
+    "id": "5ecc40bc-d6d1-506a-a028-3c6efce891b7",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Barik Sewyan 250 g",
+        "after": "Lahori Mixture Nimko Barik Sewyan 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "4245a5dd-280c-5312-aa6a-c0b0d0e03603",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459896226080",
+            "source_variant_id": "45744602939680",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-2",
+            "sku": "AFP-000114084-2",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-2.png?v=1690218676",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000453895",
+          "AFP-000114084-2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c2e7bfff-e875-5864-a44f-8d3f9f8ef0c9",
+    "changes": {
+      "name": {
+        "before": "0037 Fresh Pakori Large 500 g",
+        "after": "Fresh Pakori Large 500 g"
+      },
+      "brand": {
+        "before": "0037",
+        "after": "Al-Fatah"
+      }
+    }
+  },
+  {
+    "id": "b04bdc15-03d1-51af-a87d-10e97fe7fb36",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Daal Moth 250 g",
+        "after": "Lahori Mixture Nimko Daal Moth 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "2fdcd1f8-d257-5373-a731-f297292b19d3",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 gm",
+            "source_variant_title": "Default Title",
+            "source_id": "8459896389920",
+            "source_variant_id": "45744603463968",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-4",
+            "sku": "AFP-000114084-4",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-4.png?v=1690218680",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000453887",
+          "AFP-000114084-4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "6c0522f7-b86c-5e3e-af0a-edbaa3aff430",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Gujrati Mix 250 g",
+        "after": "Lahori Mixture Nimko Gujrati Mix 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      }
+    }
+  },
+  {
+    "id": "e0450ff4-509c-553e-ab74-2e8bedc1b7fb",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Daal Channa 250 g",
+        "after": "Lahori Mixture Nimko Daal Channa 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "cdcaec5e-4b03-5c2d-a48e-abdaaa693d69",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459896291616",
+            "source_variant_id": "45744603169056",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-3",
+            "sku": "AFP-000114084-3",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-3.png?v=1690218677",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000453893",
+          "AFP-000114084-3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ee042cc6-e676-5140-a728-ab691e26590e",
+    "changes": {
+      "name": {
+        "before": "0034 Italian Snacks Wavy 100 g",
+        "after": "Italian Snacks Wavy 100 g"
+      },
+      "brand": {
+        "before": "0034",
+        "after": "Al-Fatah"
+      }
+    }
+  },
+  {
+    "id": "1c7410e0-21b4-5d9c-a447-6d5e831e78ff",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "fb504543-800a-5e59-a3e6-4026791bc1f0",
+            "name": "Cheetos Chips Flamin Hot Crunchy 99.2 g",
+            "brand": "Cheetos",
+            "source_title": "CHEETOS CHIPS FLAMIN HOT CRUNCHY 99.2 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459515625760",
+            "source_variant_id": "45743933751584",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/cheetos-chips-red-flaming-hot-75-gm",
+            "sku": "AFP-000290910",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_77.png?v=1690210403",
+            "source_barcode_candidates": [
+              "8964002347414"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000290910",
+          "AFP-000002793"
+        ]
+      }
+    }
+  },
+  {
+    "id": "7c22077d-053a-5afa-aaf3-bcea383a860b",
+    "changes": {
+      "name": {
+        "before": "Chatpatta Moti Sev Nimko 250 Gms",
+        "after": "Chatpatta Moti Sev Nimko 250 g"
+      }
+    }
+  },
+  {
+    "id": "54531e9e-019a-55c9-abc6-63b91ac47a63",
+    "changes": {
+      "name": {
+        "before": "0009 Lahori Mixture Nimko Mix 250 g",
+        "after": "Lahori Mixture Nimko Papri & Peanut Mix 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      }
+    }
+  },
+  {
+    "id": "76c2265b-7fe4-5947-a07f-4b4621f279dc",
+    "changes": {
+      "name": {
+        "before": "Lahori Mixture Moti Sewyan 250 g",
+        "after": "Lahori Mixture Nimko Moti Sewyan 250 g"
+      },
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "15006b6b-43ad-59e5-af90-0d5bb764fa8d",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459896062240",
+            "source_variant_id": "45744602054944",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-10",
+            "sku": "AFP-000114084-10",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-10.png?v=1690218674",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000114084-10",
+          "AFP-000453894"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9056d797-b8ef-58fc-a5de-d89e808ebddc",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "d7277751-e276-526f-a450-b3bc24be2d61",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "ecdf49d3-9ad6-53ab-a974-f028a8ae63f9",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "21617c5f-e8b7-5fc3-a101-2bbc3d206912",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "2ef60304-97d6-594e-af19-18032741c2ad",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "20a52620-3914-5043-a6ab-5a37774fff3d",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "759305c8-defc-57c0-a3d7-edf6f057423c",
+    "changes": {
+      "brand": {
+        "before": "Lahori",
+        "after": "AUK Foods"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "604939b1-3009-5203-a07e-46130c885d13",
+            "name": "0009 Lahori Mixture Nimko Mix 250 g",
+            "brand": "Lahori",
+            "source_title": "0009 LAHORI MIXTURE NIMKO MIX 250 GM",
+            "source_variant_title": "Default Title",
+            "source_id": "8459895996704",
+            "source_variant_id": "45744601792800",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/lahori-mixture-nimko-mix-250-gm-1",
+            "sku": "AFP-000114084-1",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/2007001301134-1.png?v=1690218671",
+            "source_barcode_candidates": [
+              "2007001301134",
+              "2007001301158",
+              "700130113"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000114084-1",
+          "AFP-000453885"
+        ]
+      }
+    }
+  },
+  {
+    "id": "6e881a34-f541-5f86-a8f8-06b1fd527cd4",
+    "changes": {
+      "name": {
+        "before": "0055 The Little Fisherman Fish Cracker White 230 g",
+        "after": "The Little Fisherman Fish Cracker White 230 g"
+      },
+      "brand": {
+        "before": "Fisherman",
+        "after": "The Little Fisherman"
+      }
+    }
+  },
+  {
+    "id": "f03bfb43-8f94-5f27-a7db-d9e54d148432",
+    "changes": {
+      "name": {
+        "before": "0057 The Little Fisherman Fish Cracker Crystal 230 g",
+        "after": "The Little Fisherman Fish Cracker Crystal 230 g"
+      },
+      "brand": {
+        "before": "0057",
+        "after": "The Little Fisherman"
+      }
+    }
+  },
+  {
+    "id": "a07b3949-ac9b-5bbd-a03b-e17680e6aa78",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "5da02c0a-d110-5420-ac15-3c8958cf2410",
+            "name": "Peek Freans Choco Lava Mp 30 g 8 Pc Box",
+            "brand": "Peek",
+            "source_title": "PEEK FREANS CHOCO LAVA MP 30GM 8 PC BOX",
+            "source_variant_title": "Default Title",
+            "source_id": "10308802150688",
+            "source_variant_id": "51596527534368",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/peek-freans-choco-lava-mp-30gm-8-pc-box",
+            "sku": "AFP-000609656",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8964003591540.jpg?v=1778328126",
+            "source_barcode_candidates": [
+              "8964003591540"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000601064",
+          "AFP-000609656"
+        ]
+      }
+    }
+  },
+  {
+    "id": "6d22b0b9-9a85-567a-afe7-c32ca47a23a6",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "e8341900-6a01-5488-a442-4610f3c92be6",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "6342a8ce-182a-5982-ab78-e8440b2e0179",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "16ca0590-11c3-5f07-a19d-58c1cc4a9cd9",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "20b8b1d6-53ab-5e53-a9f5-2ac50d22b353",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "1560ac93-e7b2-5252-a89f-50df9386e8ca",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "7f70412d-6591-5009-a708-5bc9058ae0ab",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "3e505de3-f059-5c73-a03f-c6cbdb9ba8c1",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "3cf2f6e8-244c-5ebd-a53e-c8d6c916a552",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "f8548bc5-78c2-5311-a24c-9b00efc7097f",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "20e5325c-2d04-5c92-a661-6817893b60d5",
+    "changes": {
+      "name": {
+        "before": "Lu Prince Mini Star 18 Gms Box 12 pcs",
+        "after": "Lu Prince Mini Star 18 g Box 12 pcs"
+      }
+    }
+  },
+  {
+    "id": "52ca3547-2d77-5433-ad63-5c79805f74bc",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "42848757-9dd2-588c-a72b-82f6d81c4ee9",
+            "name": "Pipers Gold Biscuit Caramel Delight 140.7 g",
+            "brand": "Pipers",
+            "source_title": "PIPERS GOLD BISCUIT CARAMEL DELIGHT 140.7GM",
+            "source_variant_title": "Default Title",
+            "source_id": "10241056506144",
+            "source_variant_id": "51362757968160",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/pipers-gold-biscuit-caramel-delight-140-7gm",
+            "sku": "AFP-000614055",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8964003590468.jpg?v=1768908760",
+            "source_barcode_candidates": [
+              "8964003590468"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000614055"
+        ]
+      }
+    }
+  },
+  {
+    "id": "173f9ba9-0430-5e7c-aadd-bcf54c8c87d3",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "31504983-e5d5-5361-a824-344a8ce1dea5",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "2ee6e74a-8b68-59a8-a4af-c6424828b9a3",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "c4d4873a-c9c9-5657-a8e2-28860deeb941",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "b5663a82-207f-5846-a52f-76822b848763",
+    "changes": {
+      "brand": {
+        "before": "Peek",
+        "after": "Peek Freans"
+      }
+    }
+  },
+  {
+    "id": "9724377d-8558-5dec-a1f9-fcad315cae08",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "b90d55dd-2db8-586f-ad65-97bff292e67b",
+            "name": "Persil Washing Power Gel Deep Clean White Flower 2.9 L",
+            "brand": "Persil",
+            "source_title": "PERSIL WASHING POWER GEL DEEP CLEAN WHITE FLOWER 2.9 LTR",
+            "source_variant_title": "Default Title",
+            "source_id": "9988078731552",
+            "source_variant_id": "50367813845280",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/persil-washing-power-gel-deep-clean-white-flower-2-9-ltr",
+            "sku": "AFP-000277794",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/6281031114315_ed26d4b4-6245-47a3-b356-912f7bf1c6a3.jpg?v=1751289800",
+            "source_barcode_candidates": [
+              "6281031114162",
+              "6281031114315"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000277794"
+        ]
+      }
+    }
+  },
+  {
+    "id": "45d7c67a-6bf7-5a6f-aa6c-101fe1409c58",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "d035c41e-9fc7-5f7d-ac17-8452cd82d5a1",
+            "name": "Persil Washing Power Gel Deep Clean Rose 2.9 L",
+            "brand": "Persil",
+            "source_title": "PERSIL WASHING POWER GEL DEEP CLEAN ROSE 2.9 LTR",
+            "source_variant_title": "Default Title",
+            "source_id": "9988078666016",
+            "source_variant_id": "50367813648672",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/persil-washing-power-gel-deep-clean-rose-2-9-ltr",
+            "sku": "AFP-000455284",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/6281031114575_12cd28cc-73b4-4f39-b51a-b6553d72771e.jpg?v=1751289796",
+            "source_barcode_candidates": [
+              "6281031114575",
+              "6281031114599"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000455284"
+        ]
+      }
+    }
+  },
+  {
+    "id": "0a322f2a-c7d0-5c70-a99d-421892c0b699",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "7646a3e0-98e5-5b8f-a2a8-da90a5e6d741",
+            "name": "Persil Washing Power Gel Deep Clean Lavender 2.9 L",
+            "brand": "Persil",
+            "source_title": "PERSIL WASHING POWER GEL DEEP CLEAN LAVENDER 2.9 LTR",
+            "source_variant_title": "Default Title",
+            "source_id": "9988078633248",
+            "source_variant_id": "50367813517600",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/persil-washing-power-gel-deep-clean-lavender-2-9-ltr",
+            "sku": "AFP-000277795",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/6281031114308_91687444-78b8-498c-b92f-bd47cce57062.jpg?v=1751289792",
+            "source_barcode_candidates": [
+              "6281031114308",
+              "6281031256756"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000277795"
+        ]
+      }
+    }
+  },
+  {
+    "id": "01a71b39-ad32-5203-ad32-8a068db7327f",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "e1d01a19-e8ae-5cab-aaa6-840f49c2ed07",
+            "name": "Bonus Tri Star Washing Powder 5 kg",
+            "brand": "Bonus",
+            "source_title": "BONUS TRI STAR WASHING POWDER 5KG",
+            "source_variant_title": "Default Title",
+            "source_id": "10406086803744",
+            "source_variant_id": "51877244666144",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/bonus-tri-star-washing-powder-5kg-1",
+            "sku": "AFP-000588206",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_75_6be50e05-2804-4741-8ca6-0081a0ba4c44.png?v=1781766326",
+            "source_barcode_candidates": [
+              "8886950013183"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000335221",
+          "AFP-000588206"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b934cdde-9d17-58fe-a948-ba6dabd93e2f",
+    "changes": {
+      "name": {
+        "before": "Ariel Washing Liquid Detergent Cold & Short 2418 ml",
+        "after": "Ariel Washing Liquid Detergent Cold & Short Colour 2418 ml"
+      }
+    }
+  },
+  {
+    "id": "9b60f85f-0205-5ead-abff-b51f0492cb05",
+    "changes": {
+      "name": {
+        "before": "Ariel Washing Liquid Detergent Cold & Short 2418 ml",
+        "after": "Ariel Washing Liquid Detergent Cold & Short Original 2418 ml"
+      }
+    }
+  },
+  {
+    "id": "5c381fc2-810d-50d2-af5f-64d116e881a2",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "fe09bfb4-9656-5aad-a7c1-7aad1824c64c",
+            "name": "Harpic Toilet Cleaner Power Plus Original 700 ml",
+            "brand": "Harpic",
+            "source_title": "HARPIC TOILET CLEANER POWER PLUS ORIGINAL 700 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10239804014880",
+            "source_variant_id": "51359478579488",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/harpic-toilet-cleaner-power-plus-original-700-ml",
+            "sku": "AFP-000117725",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/6001106114633.jpg?v=1764331865",
+            "source_barcode_candidates": [
+              "5011417561973",
+              "6001106114633"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000117725"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2e247fde-9880-58a0-a0f4-ba526d23a4dc",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "db896dea-88c2-5e30-a11f-00ccb38994b8",
+            "name": "Harpic Toilet Cleaner Power Plus Original 680 ml",
+            "brand": "Harpic",
+            "source_title": "HARPIC TOILET CLEANER POWER PLUS ORIGINAL 680 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10562197520672",
+            "source_variant_id": "52240526836000",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/harpic-toilet-cleaner-power-plus-original-680-ml",
+            "sku": "AFP-000418415",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5059001003874.jpg?v=1727677307",
+            "source_barcode_candidates": [
+              "5059001003874"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000418415"
+        ]
+      }
+    }
+  },
+  {
+    "id": "3de7e5f3-242e-53d6-a0f9-888bb2ce7409",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "9bddcbe7-fedd-50f0-a1e0-642f974c650d",
+            "name": "Giant Tissue Box 2-Ply 150 300 Sheets",
+            "brand": "Giant",
+            "source_title": "GIANT TISSUE BOX 2-PLY 150 300 SHEETS",
+            "source_variant_title": "Default Title",
+            "source_id": "8459729961248",
+            "source_variant_id": "45744351052064",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/giant-tissue-2ply-150-200-mm-2",
+            "sku": "AFP-000078498-1",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/AFP-000078498_e80ad74d-c97a-40c1-ae96-bb038f4266f3.jpg?v=1755865272",
+            "source_barcode_candidates": [
+              "4902990812020"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000078498-1",
+          "AFP-000078498"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bc1b44d6-98fc-526f-a6ff-2592bfdb5173",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "c19f7ab2-c0b4-5aff-a1d6-91ce98dd88e1",
+            "name": "Dettol Washing Machine Cleaner Spring Blossom 5in1 250 ml",
+            "brand": "Dettol",
+            "source_title": "DETTOL WASHING MACHINE CLEANER SPRING BLOSSOM 5IN1 250 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10130892751136",
+            "source_variant_id": "50984691171616",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/dettol-washing-machine-cleaner-spring-blossom-5in1-250-ml",
+            "sku": "AFP-000503687",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5011417588468_750f9422-bcfb-4b87-9893-302078e13df9.jpg?v=1764333669",
+            "source_barcode_candidates": [
+              "5011417588468"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000503687"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9b9937fe-af17-578d-aed9-ef9913d13d6f",
+    "changes": {
+      "name": {
+        "before": "Laundary Basket Ir 521-469",
+        "after": "Laundry Basket White Lattice IR 521-469"
+      },
+      "brand": {
+        "before": "Laundary",
+        "after": "Unbranded"
+      }
+    }
+  },
+  {
+    "id": "8809d522-084f-5525-abd1-29bcee336d0c",
+    "changes": {
+      "name": {
+        "before": "Laundary Basket Ir 521-469",
+        "after": "Laundry Basket Cream Slotted IR 521-469"
+      },
+      "brand": {
+        "before": "Laundary",
+        "after": "Unbranded"
+      }
+    }
+  },
+  {
+    "id": "938f4a1c-417c-57e8-a6c9-a05ed923639a",
+    "changes": {
+      "name": {
+        "before": "Kendamil Comfort Milk Colic & Constipation 800 Gms",
+        "after": "Kendamil Comfort Milk Colic & Constipation 800 g"
+      }
+    }
+  },
+  {
+    "id": "bedd9636-7779-5dfc-a22e-88f7785b96de",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "a6e31e45-0ddc-50b4-a0e2-e068e4fd6e8d",
+            "name": "Johnsons Baby Jelly Fragrance Free 100 ml",
+            "brand": "Johnsons",
+            "source_title": "JOHNSONS BABY JELLY FRAGRANCE FREE 100 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "8459837669664",
+            "source_variant_id": "45744498901280",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/johnsons-baby-jelly-fragrance-free-100-ml",
+            "sku": "AFP-000286523",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/3574660602500_1.jpg?v=1708408162",
+            "source_barcode_candidates": [
+              "3574660602500"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000286523",
+          "AFP-000117284"
+        ]
+      }
+    }
+  },
+  {
+    "id": "48036768-327d-5598-aca5-1bcb075d4f5d",
+    "changes": {
+      "name": {
+        "before": "Nexton Baby Powder White 350 Gms",
+        "after": "Nexton Baby Powder White 350 g"
+      }
+    }
+  },
+  {
+    "id": "f9483c12-05d5-557c-a46a-039990046090",
+    "changes": {
+      "name": {
+        "before": "Nexton Baby Powder Pink 350 Gms",
+        "after": "Nexton Baby Powder Pink 350 g"
+      }
+    }
+  },
+  {
+    "id": "5d6a0dc4-3a46-5e49-a56a-67ca65c13586",
+    "changes": {
+      "name": {
+        "before": "Nexton Baby Powder Rash Off 350 Gms",
+        "after": "Nexton Baby Powder Rash Off 350 g"
+      }
+    }
+  },
+  {
+    "id": "52af0bf0-7358-543d-a6f8-8771aed80583",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "16fc3b54-dfd1-5f71-ae0f-edd02f1953a2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1ddbb478-c228-51fa-ad49-553a13b7c70e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "eeddabf4-0b3e-5690-ad9e-240932c90be1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "fc685507-9ea9-5f47-a878-fd961773b4df",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9d4c8b34-94ec-5871-abc2-b94547c9ece8",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "130b3f07-4339-51f0-aeda-43824f333daf",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7db51c98-1674-5d47-a22c-c07bfe24f232",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "af2b56ac-8e13-5580-a4f6-e197113244c8",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f9b8d104-6c8c-5da4-a86f-234c9b5f595e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0491a726-be4d-5277-aa6c-94e6466203ba",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3709a59c-be4c-5e67-a73f-1f44754cc419",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "23f57c3e-284b-54ec-afe9-c34638d59dea",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4679bead-40ab-50be-a8b1-04fc9b64c2b7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9e3b00b3-54b1-53e3-a044-2a6b21603f39",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "72882bc2-466c-5d5f-a274-a2281683d741",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e9025fd2-96ca-58b7-ac54-f73d360079b9",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ecdfcdef-44de-5e0c-ae66-9953e04ea19b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "6f832d13-fd32-531b-a4ff-214cca8cb72f",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3da4f64a-ab9b-5908-a771-47caeb118681",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a16b5ec4-2170-5196-a788-5f97798301a4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c6b80009-c8e0-5489-a3f8-37d7c5db26b1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e02a026f-a967-54e9-a6e8-74217e0b09c4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "bbcf90c9-912a-5e60-adc7-57d1b5860a46",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5338ecb0-7049-5963-ab4e-02dcff1b0ebe",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "69a933b0-b2f7-5c45-a198-aa3c96605ac2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b1c3ee32-72db-5275-af77-d5720b9debcd",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ada61019-1329-550c-a1b4-1c999ca46fe1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "bbd93768-6c3f-5647-ab00-c6c90a855e55",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "780f5c59-f8ce-5424-a429-9395f99f0d05",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8c38d510-d9cd-5894-a5db-c434c68f44df",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "497ab2b9-c6a5-519f-a6eb-a7175f2524b2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a2881164-ac84-54ce-a7a1-a50f9f559dfc",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "79857bee-9dd8-51c6-a616-72ea56816b81",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3f1a09ab-c386-55ea-a1fc-bb305df9bf0d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "96fe91fa-666a-5003-a4c8-bad09c872df7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "493bd92b-8f8b-5ccb-a2be-3afe9aee0269",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "766ec403-d31f-54db-aadb-7ee647bb5502",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8c574f7b-2c92-5cee-a691-e2b473351be4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f2344c81-099a-5588-aacb-e27e8225fdaf",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2d52971c-9e65-58a7-aa75-01645f1a21bb",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "88db6f2b-9823-5259-ad69-8e0dd44fa30a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "80869ffd-a87b-5ad7-a492-6d1d33cb9c2a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ab145dbd-f77c-57c2-af14-baaf453f2b9d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3842f1b5-2757-5800-aad9-b497a313eca1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1b2f6f07-bd50-5ac1-aa74-7b63915ba078",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f0a10021-7534-5211-a91c-5d0653883fd1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c225159a-dffd-525c-ab8d-1bb829dac691",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a993b3fe-6d21-5729-a661-dd3f9a3d67f4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3d3fe332-1ebd-5866-a42f-114f28c97581",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5404d3f2-6636-5011-a662-4078678a7513",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ef6dd0e2-ebcb-551c-aac2-cc64484e6e4c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "64081446-1043-58be-a8d8-07526bce2463",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5087a2fb-d674-5e24-a717-04c0a3c20828",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "93e7478a-0c0d-5898-a309-7e1ed9e03a5f",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "21b3610d-d6a4-5bb4-a6c5-bd9bb8378cf9",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d3aa3205-53ce-5ebf-a1f6-c8595319acbd",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f64b3569-fdee-583b-a49d-f572b8af62c8",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b0f2b6cd-8eb8-54c5-a987-f1ca77b6d7bd",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9864e44b-7c52-5429-a26b-2c97c6b612ce",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4829adc7-a798-5bb5-a516-0aefccbd128a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "bbf776d0-19bc-5126-ad2f-bc7ac1c0058f",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "db9bd832-097a-5e20-a91b-5ddb151a58a2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1caf333e-2123-548d-a674-45db27da4c91",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4970c17b-eb87-516c-a802-4a0c46950599",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8f6369b0-c44f-5f52-add7-b0a7f3717869",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "edceb77a-3530-5b55-acfc-01a1d4cd9759",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f9cf99b7-875e-55d4-af93-66bd9067d1dd",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4c561e20-1ac8-5c17-a4cc-0b6c2d551f04",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "dab2c6b9-f6cc-56fa-a51b-685b67bff96e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "fe1d14b1-7856-5773-ae1b-485ed636ffde",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7579d3a1-498a-5ea3-ac83-755f9063563e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1db0bbfd-a0bf-5c0a-aef2-13fe1ce0cdf9",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e41baec9-3131-5cf2-ae0e-35373847643c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "27bdfe48-b716-5811-aee9-31f2cb67d530",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a1bcae38-23a3-564d-af87-c4e4026b29e7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "38b4e692-ab67-5e97-a793-6c569e40afb0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1ab1853e-51bd-5e3b-acb7-538c7141bd1c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b45584b5-5ddc-51ce-ac22-4f0d103c6985",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3a6aa31a-0cf1-5592-a715-d24683a5221e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2c392564-7c35-5a41-a434-f560b73e277b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "614573ca-2918-51be-ae0b-f57797a6f350",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5a8b7ecb-15c6-50e0-a697-c15182cc9262",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4d2530bf-4c8e-5f66-ac29-a61637b83625",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "567caf05-0878-53df-aaff-94b7241dcfea",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3cf8b2b4-e229-5d9a-a87c-f91dd12a2a39",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      },
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "bcaf657a-78f4-572e-a4dc-5191e13c778a",
+            "name": "Bbw Body Wash Brightest Bloom 295 ml",
+            "brand": "Bbw",
+            "source_title": "BBW BODY WASH BRIGHTEST BLOOM 295ML",
+            "source_variant_title": "Default Title",
+            "source_id": "9816883134752",
+            "source_variant_id": "49856921927968",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/bbw-body-wash-brightest-bloom-295ml",
+            "sku": "AFP-000545521",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/0667559145233_6255a8cb-bdfd-4368-9519-db72dd844bcc.jpg?v=1738416482",
+            "source_barcode_candidates": [
+              "667559145233"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000529578",
+          "AFP-000545521"
+        ]
+      }
+    }
+  },
+  {
+    "id": "533260d0-9575-5738-a490-6b08285928ad",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a266a4e2-d214-5a90-abcc-8b0fd8b13434",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1c2cf59d-b910-5ffd-acb7-db7e5c134018",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "26cd95ea-5dd8-59b2-a356-ccf1694796ab",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "68b7b2ee-cb6b-52cf-aeb1-f33daf7e4930",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7133ffa2-3047-5573-a6d4-a168972e0146",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8616e738-de4b-5526-a28d-be145e8c6153",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d1ff10bb-5f8a-550a-a2e5-94a92f7a9c46",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7a2aa2d2-2286-5527-a55a-aa02efa3ec1b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ba958580-6888-5efc-a50d-1fd0a7203582",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e8ea2f7c-e2bd-57d3-a629-1a581f58c726",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "08660e77-1287-5da5-a975-05a29c1870ef",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "fd353f36-dacb-5165-abf8-db761a59cbd1",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "acaac522-8f88-5a20-a804-54b4e0c7dec5",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2018c3a0-a024-5c02-a0f5-0d1f50386be0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5fa54b4c-b114-58fd-aa4f-60078016b44a",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5eac7ea5-8ee7-5d32-a644-b20be12dcac3",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1390bb96-1f4c-583c-a0b2-b90fc8270a94",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0ad4c590-7f2e-51b7-a7fb-9b03ea92a924",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5cf9dd77-e182-5638-af7d-31b40d27b30d",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ded76a4c-9ae4-5d69-a128-05543ffba4b2",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "6e17052a-01b5-56a2-ab0e-9f3b35a60f96",
+    "changes": {
+      "brand": {
+        "before": "Bbw Golden",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9cbcc15a-92ec-5b56-a291-256a9c694821",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d52453c1-20f2-567d-a5b3-4f8cb3ddfc4f",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "011448e2-fa9e-5d3b-ab51-2692300e4faf",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d532c8c1-ecef-5d8a-a7c0-10077ec86598",
+    "changes": {
+      "brand": {
+        "before": "Bbw Dream Bright Aloe",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2b905315-f549-57ac-a568-925d36ee0997",
+    "changes": {
+      "brand": {
+        "before": "Bbw Youre",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "af28c692-aa80-5be0-adb9-427b2914c1aa",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3f57cffb-246b-5461-afed-695d464df131",
+    "changes": {
+      "brand": {
+        "before": "Bbw Mad About You Shea",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "dc1151ea-9e48-5f3a-a21f-0d407bd10c60",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3e6c4599-5e4f-5cec-a837-f13919af89b7",
+    "changes": {
+      "brand": {
+        "before": "Bbw White Tea",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c456625b-c890-5651-ab09-6a279d882326",
+    "changes": {
+      "brand": {
+        "before": "Bbw In",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "dbe5fcc6-0756-5ead-a869-4a67a9bf1f0e",
+    "changes": {
+      "brand": {
+        "before": "Bbw Sensual",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "36ba0933-c762-5adb-a9a6-c48bb38f55d7",
+    "changes": {
+      "brand": {
+        "before": "Bbw Dream",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "940106c0-726d-5d3c-a1e1-247f78f67694",
+    "changes": {
+      "brand": {
+        "before": "Bbw Hello",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "41c8ab92-517f-5d4d-a397-c49f9ad80521",
+    "changes": {
+      "brand": {
+        "before": "Bbw Marshmallow",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ae77e58b-f3dc-5ee0-a3bc-acacd2073643",
+    "changes": {
+      "brand": {
+        "before": "Bbw Body",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2d36f644-ad6b-5336-ad47-5bad7dc0963d",
+    "changes": {
+      "brand": {
+        "before": "Bbw Fresh",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a2df9781-732a-5faf-aaa9-081e8f2c758d",
+    "changes": {
+      "brand": {
+        "before": "Bbw Butterfly Aloe",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a03cb5cc-b0a9-5e39-affe-8f0496d688b9",
+    "changes": {
+      "brand": {
+        "before": "Bbw You",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "21b91148-484a-576b-a75e-d9717dfe324d",
+    "changes": {
+      "brand": {
+        "before": "Bbw Dark",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "dd090211-3e6c-5c66-af28-d12fe33bbea0",
+    "changes": {
+      "brand": {
+        "before": "Bbw Gingham",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "277a5d1e-66ad-536e-aef0-9a4679d96d16",
+    "changes": {
+      "brand": {
+        "before": "Bbw At",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "6eb50499-4ddd-5c6e-a6f8-ea1afafa1612",
+    "changes": {
+      "brand": {
+        "before": "Bbw Ocean",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4171e4a3-ce3e-529d-a0f8-a91f43e4cea4",
+    "changes": {
+      "brand": {
+        "before": "Bbw Legend",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8435eecf-9134-549a-ac9e-d0794aaf50f5",
+    "changes": {
+      "brand": {
+        "before": "Bbw Butterfly",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7de70089-41d9-5044-a1d5-b1afecd5d01b",
+    "changes": {
+      "brand": {
+        "before": "Bbw Mad",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "79e7cbb4-013f-5a53-a566-5e4ff88ad4c2",
+    "changes": {
+      "brand": {
+        "before": "Bbw Gingham",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "243de994-1139-507d-abdc-9645b57ead09",
+    "changes": {
+      "brand": {
+        "before": "Bbw Among",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "aabea3f9-0b51-59f7-ac47-f360591f865a",
+    "changes": {
+      "brand": {
+        "before": "Bbw Magnolia",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "92962d93-1ce5-5331-a3d5-7be6ea0b8b52",
+    "changes": {
+      "brand": {
+        "before": "Bbw Into",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "cd1bc75a-1c9d-5d98-a8cc-284e9c372f22",
+    "changes": {
+      "brand": {
+        "before": "Bbw Clean",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5babd5e7-6dd0-5c9c-ad8e-8a0a64d47a12",
+    "changes": {
+      "brand": {
+        "before": "Bbw Smooth",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "af0f8fd0-3516-58bb-a69c-7511183cb9ee",
+    "changes": {
+      "brand": {
+        "before": "Bbw Gingham",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e7bdbd91-0c44-5ca7-a908-40dd3f8251a7",
+    "changes": {
+      "brand": {
+        "before": "Bbw Gingham Gordeous Aloe",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "23a2ffb5-17cb-58e9-a094-04dcc4dccdf9",
+    "changes": {
+      "brand": {
+        "before": "Bbw Champagne",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3fba1f39-ad08-5a55-a3cf-1487d3dc6f6e",
+    "changes": {
+      "brand": {
+        "before": "Bbw Wild",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b35a2553-75aa-5f6b-a2b1-ccb806eba12c",
+    "changes": {
+      "brand": {
+        "before": "Bbw Endless",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ffb6c2b3-0b8d-5e2f-afe8-98594ab9cbea",
+    "changes": {
+      "brand": {
+        "before": "Bbw Midnight",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "12afe927-06af-5dd4-a042-7d11fac0c184",
+    "changes": {
+      "brand": {
+        "before": "Bbw Summer",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9feaf657-c82f-5b4a-a51d-0d16db526b10",
+    "changes": {
+      "name": {
+        "before": "Dove Body Wash Deeply Nourishing 500 ml",
+        "after": "Dove Body Wash Deeply Nourishing Triple Moisture Serum 500 ml"
+      }
+    }
+  },
+  {
+    "id": "04f136a7-9f1e-5635-ac63-5e79c2d469a9",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "3e3985d8-fdb2-5119-afbd-71bed818446b",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "8ea5b07b-dfff-5870-a785-acea49dd02cf",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "8afa1e80-5f43-5201-ada6-6791ac483405",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "8adb393b-5821-5221-a77a-1c624e6a5c38",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "d1773776-d54a-5aea-a5c9-4a58eee7c3fb",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "31412632-d0a3-5619-a175-6f58368bae8d",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "86ae5995-b4f3-52d5-ae1b-7ef69b0c7eba",
+            "name": "Dove Body Wash Refresh Cucumber & Green Tea 591 ml",
+            "brand": "Dove",
+            "source_title": "DOVE BODY WASH REFRESH CUCUMBER & GREEN TEA 591 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10373922521376",
+            "source_variant_id": "51806401265952",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/dove-body-wash-refresh-cucumber-green-tea-591-ml",
+            "sku": "AFP-000500919",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/011111123311.jpg?v=1757405133",
+            "source_barcode_candidates": [
+              "11111123311"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000500919"
+        ]
+      }
+    }
+  },
+  {
+    "id": "5f34775e-eeae-53b1-a8bf-440b4d0c12d6",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "666f2f0c-aa0f-5bb0-aa92-f8325305fffb",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "b0a3a54a-3eb0-54fd-ab78-a959e34ed215",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "8fd3e1a5-fea9-5261-a325-d2714dd728e7",
+    "changes": {
+      "name": {
+        "before": "Dove Body Wash Deeply Nourishing 500 ml",
+        "after": "Dove Body Wash Deeply Nourishing Moisturising Cream 500 ml"
+      }
+    }
+  },
+  {
+    "id": "20486363-0132-5690-a226-578a752b3739",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "34df55df-531b-526b-a83b-f5ccf6a4cab4",
+            "name": "The Body Shop Ginger Shampoo 250 ml",
+            "brand": "The Body Shop",
+            "source_title": "THE BODY SHOP GINGER SHAMPOO  250ML",
+            "source_variant_title": "Default Title",
+            "source_id": "9818281050400",
+            "source_variant_id": "49862345949472",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/the-body-shop-ginger-shampoo-250ml",
+            "sku": "AFP-000546674",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5028197422531_cf6bcbbf-894b-4cb4-a5a2-21e96fc0ba21.jpg?v=1738674387",
+            "source_barcode_candidates": [
+              "5028197422531"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000532072",
+          "AFP-000546674"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cc90f18c-ded2-5f47-a0ab-36613de1380a",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "0d3bb7b4-fc4c-5af8-a744-0d614421d239",
+            "name": "Head & Shoulders Shampoo Classic Clean 1000 ml",
+            "brand": "Head &",
+            "source_title": "HEAD & SHOULDERS SHAMPOO CLASSIC CLEAN 1000 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10502183223584",
+            "source_variant_id": "52045087408416",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/head-shoulders-shampoo-classic-clean-1000-ml",
+            "sku": "AFP-000170136",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/4084500944107.jpg?v=1690216284",
+            "source_barcode_candidates": [
+              "4084500944107"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000170136"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cb13ce20-cdf8-56dc-aed5-dd120cbe0537",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "d8435289-62d8-5ef1-a70f-1852cf73f0b3",
+            "name": "Tresemme Shampoo Keratin Smooth With Argan Oil 650 ml",
+            "brand": "Tresemme",
+            "source_title": "TRESEMME SHAMPOO KERATIN SMOOTH WITH ARGAN OIL 650ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10502183452960",
+            "source_variant_id": "52045087637792",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/tresemme-shampoo-keratin-smooth-with-argan-oil-650ml",
+            "sku": "AFP-000275670",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8961014256406.jpg?v=1785239283",
+            "source_barcode_candidates": [
+              "8961014256406"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000275670"
+        ]
+      }
+    }
+  },
+  {
+    "id": "94d7b932-ec65-54b1-a8b2-f270612c1cea",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "09643298-3241-579d-ae6c-9844a2080c33",
+            "name": "Sunsilk Shampoo Keratin Yoghurt Thick & Long 185 ml",
+            "brand": "Sunsilk",
+            "source_title": "SUNSILK SHAMPOO KERATIN YOGHURT THICK & LONG 185 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10502183518496",
+            "source_variant_id": "52045087899936",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/sunsilk-shampoo-keratin-yoghurt-thick-long-185-ml",
+            "sku": "AFP-000296295",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8961014266986.jpg?v=1785239282",
+            "source_barcode_candidates": [
+              "8961014266986"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000296295"
+        ]
+      }
+    }
+  },
+  {
+    "id": "4a73e8b7-70a0-517a-aa30-6fdf9bb4bcb0",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "20455108-7429-5d9c-ab38-67d0484f95ef",
+            "name": "Tresemme Conditioner Keratin Smooth Marula Oil 400 ml",
+            "brand": "Tresemme",
+            "source_title": "TRESEMME CONDITIONER KERATIN SMOOTH MARULA OIL 400 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10308138271008",
+            "source_variant_id": "51594303832352",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/tresemme-conditioner-keratin-smooth-marula-oil-400-ml",
+            "sku": "AFP-000237818",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8710447224366.jpg?v=1778243114",
+            "source_barcode_candidates": [
+              "8710447224366"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000237818"
+        ]
+      }
+    }
+  },
+  {
+    "id": "1ea934aa-ae63-51d2-aa7d-bd601d075edb",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "ec20a04d-b7df-5ad1-a0bc-cf99c54d7aa7",
+            "name": "Palmolive Shampoo Brilliant Colour 350 ml",
+            "brand": "Palmolive",
+            "source_title": "PALMOLIVE SHAMPOO BRILLIANT COLOUR 350 ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10174388961568",
+            "source_variant_id": "51162135560480",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/palmolive-shampoo-brilliant-colour-350-ml",
+            "sku": "AFP-000104686",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/8714789880518_de0b7600-d562-4050-9005-9e1ce3d6a4fd.jpg?v=1769608159",
+            "source_barcode_candidates": [
+              "8714789880518"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000104686",
+          "AFP-000104686-1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "eff74b34-c173-5a77-a8d2-8501fe808cce",
+    "changes": {
+      "name": {
+        "before": "Lady Speed Deo Stick Wild Freesia 65 g",
+        "after": "Lady Speed Stick Wild Freesia Fresh & Essence 65 g"
+      },
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "d0773f93-4b66-5491-a028-726740eb9b04",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "8a799c4c-3cea-575e-a3f9-8207938d23c4",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "73dd7ae6-34f0-542a-a62a-160ad67a3391",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "6aebf295-09a7-5d7b-ac50-483b28860191",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "3f40d153-8909-5d85-a5ea-2f28b4937399",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "35dfb1df-0a36-5342-a1ac-1aa8218a05b3",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "85afa6c0-a2f1-5a7d-a237-efd41561d2bc",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "cd7c73f7-242e-55b6-ae21-809f031f37d9",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "ff530fed-4d12-5dfb-a2c2-dce0f44cfbd3",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "b26e157f-2e09-525f-aace-410196fa62db",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "b47cf8d0-4fd7-5549-ac34-3cef512cea7a",
+    "changes": {
+      "name": {
+        "before": "Lady Speed Deo Stick Wild Freesia 65 g",
+        "after": "Lady Speed Stick Wild Freesia Invisible Dry Power 65 g"
+      },
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "e6b615f4-9095-505b-a6a4-d1ec4cd09870",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "d56184bc-cfd9-5bc8-a241-bc3f6274bfe9",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "68cccbd7-30ca-56be-a181-6fac7a164ee7",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "cc282383-2183-54c2-a05b-148ec5412428",
+    "changes": {
+      "brand": {
+        "before": "Lady Speed",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "2eb53db8-aaaa-5b01-a461-75a4779e0dbb",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "d732748f-73b6-5483-a6cd-1b6a1122dcf5",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "2470baf2-cf81-5aca-a742-ed0f12bcb1c1",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "b8579e8d-8af5-5cd5-a52d-eaa66f2db0b9",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "615f580a-dc21-59fd-a40f-9edd3c18e145",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "6d49d301-3443-5cd3-af59-d9d836e00bd0",
+    "changes": {
+      "brand": {
+        "before": "Lady",
+        "after": "Lady Speed Stick"
+      }
+    }
+  },
+  {
+    "id": "8296b5a3-efc5-587e-a44b-82555a75c845",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3656f2a7-3b3e-5419-a857-c3372bd1ebe6",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d31e8d81-c72d-50f2-a90d-5922ebc5d0a4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5b7b0ce1-2bbc-564a-aee6-21542cd58b67",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ee843f97-cbe8-520d-a095-a22c21425f86",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "456262e8-d818-59a4-a3e0-4801de64a706",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "50237477-b049-5a34-ac85-dd159c104a23",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9bdc0f9b-9149-510d-a641-7094e810b88e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "14482e86-ef4e-5d0b-a16f-77d47e1e8bbb",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "94a673f0-4d49-5044-a19a-c11ac7edf79a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ee1ded4d-5627-5485-ab14-62e0796dbe0a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "68912ea2-bd9e-5ba6-ab93-af02a094e7e8",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "695c41ac-1379-5f3c-a781-adeb77770488",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "a939f345-0f1d-54dc-a366-1270d0047d41",
+            "name": "Nivea Cream Blue Tin 250 ml",
+            "brand": "Nivea",
+            "source_title": "NIVEA CREAM BLUE TIN 250ML",
+            "source_variant_title": "Default Title",
+            "source_id": "10235412939040",
+            "source_variant_id": "51343844376864",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/nivea-cream-blue-tin-250ml",
+            "sku": "AFP-000617625",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/4005808801053.jpg?v=1773485642",
+            "source_barcode_candidates": [
+              "4005808801053"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000617625",
+          "AFP-000116349"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c19bc79f-9153-5faa-a65a-3c0829d72f3a",
+    "changes": {
+      "name": {
+        "before": "Nivea Body Lotion Express Hydration 400 ml",
+        "after": "Nivea Body Lotion Express Hydration Pump Bottle 400 ml"
+      }
+    }
+  },
+  {
+    "id": "b240c996-b017-5047-add8-62547e3a7dc0",
+    "changes": {
+      "brand": {
+        "before": "6th",
+        "after": "6th Sense"
+      }
+    }
+  },
+  {
+    "id": "d7599d44-1872-50ee-a2bf-66f3d2a0b334",
+    "changes": {
+      "name": {
+        "before": "Nivea Body Lotion Express Hydration 400 ml",
+        "after": "Nivea Body Lotion Express Hydration 5-in-1 Bottle 400 ml"
+      }
+    }
+  },
+  {
+    "id": "b15cdf1f-ee00-5ba7-a028-158a5a796e6e",
+    "changes": {
+      "name": {
+        "before": "Flormar Bb Cream Spf15 35 ml",
+        "after": "Flormar Bb Cream Spf15 35 ml · Variant 1"
+      },
+      "unit": {
+        "before": "1",
+        "after": "35 ml"
+      }
+    }
+  },
+  {
+    "id": "764eaea3-dd00-5090-a95d-1bf53ee0ce56",
+    "changes": {
+      "name": {
+        "before": "Flormar Bb Cream Spf15 35 ml",
+        "after": "Flormar Bb Cream Spf15 35 ml · Variant 3"
+      },
+      "unit": {
+        "before": "3",
+        "after": "35 ml"
+      }
+    }
+  },
+  {
+    "id": "f4e8f12a-7ddf-5c65-ae26-4f084b31cd5e",
+    "changes": {
+      "name": {
+        "before": "Flormar Bb Cream Spf15 35 ml",
+        "after": "Flormar Bb Cream Spf15 35 ml · Variant 5"
+      },
+      "unit": {
+        "before": "5",
+        "after": "35 ml"
+      }
+    }
+  },
+  {
+    "id": "2dd61692-6a4b-5f8e-abcf-9962a42a6102",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "401f8713-0557-5a78-a065-e8036d76a834",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "90ccb18d-74da-55af-a85d-fa8a97e6cc49",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2e1e9407-8611-56ec-a9ab-3e4ea96a5bd9",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "85d7f155-04ce-51b8-afe3-e3d76105047f",
+    "changes": {
+      "name": {
+        "before": "The Body Shop Strawberry Hand Cream 30 ml",
+        "after": "The Body Shop Strawberry Hand Cream 48h Hydration 30 ml"
+      }
+    }
+  },
+  {
+    "id": "54d1165e-2b1f-5435-a5a9-5e6eb2dc879c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a978599f-7e36-5e8e-a07f-3164cdc01183",
+    "changes": {
+      "name": {
+        "before": "Clinique Clarifying Lotion 200 ml",
+        "after": "Clinique Clarifying Lotion 200 ml · Variant 2"
+      },
+      "unit": {
+        "before": "2",
+        "after": "200 ml"
+      }
+    }
+  },
+  {
+    "id": "f1c931c5-daa2-58b6-aca8-86d7fb4c72d3",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "72d898b0-4ab7-5204-a059-a13afacb9de7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ed778b03-4c8a-586b-a3ac-da325f489c4a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "43ccd7ae-4751-5ad6-a7e4-84e28550783e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2626ecbc-e94b-5c33-ade7-1020dbb7941f",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "bd2676d3-ecf4-514a-ac33-11e3b67134fb",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "87d0b080-4154-503c-a6bc-0ce5c1e56893",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "39758e08-73fc-508f-a7a1-a69424bca9a8",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "27b7256d-c8f9-535c-ab62-82e475abb139",
+    "changes": {
+      "name": {
+        "before": "The Body Shop British Rose Hand Cream 30 ml",
+        "after": "The Body Shop British Rose Hand Cream 48h Hydration 30 ml"
+      }
+    }
+  },
+  {
+    "id": "5babe25a-6f90-539c-aede-5b70217ba085",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8340c558-262e-5646-a932-27f51c3ca7c7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0b9ecac1-6f7c-50f1-aa56-30e7e5119844",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "b51c40b0-8453-5c79-a75d-49899ee1cb71",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "6fbd6a33-473c-542e-a831-2b6c6e0ff8d5",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ae74cf9a-8b43-5901-a625-12ea0e06ec8c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d4114210-ba14-5429-ab5a-14d470eccb38",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "5f4a492b-ef95-5d3f-a053-fd38fc378a7b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0ce243e1-9f80-5519-a236-cfd6167c13d2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8bb919d8-7b4a-5c93-a73a-9a6683991296",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b4bf9b7e-308e-56a4-a4d7-79b465c31785",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "943f22de-8053-51a4-a8fc-930694f9ae44",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "4e3d5e21-1f8f-5322-a206-2d8b5c6eb8db",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d387256a-1c86-5704-aa80-c73e034c3425",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ea476af9-11b1-5807-a7f1-a11f66a4f903",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "bc42eec7-eb56-52cf-ad53-ddebe45f429d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "969ff12f-1fc4-5803-a026-4a4a177f6e3b",
+    "changes": {
+      "name": {
+        "before": "The Body Shop Vitamin E Eye Cream 15 ml",
+        "after": "The Body Shop Vitamin E Eye Cream 48h Pomacle 15 ml"
+      }
+    }
+  },
+  {
+    "id": "37fdf759-b3ee-5bc7-a37f-6be22dff899d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7ce69a9e-23d9-5bc9-aabd-75fe70beb2ac",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "193c3ffd-3413-547b-a1d5-d11f9a512a12",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "42ceff2e-c191-5045-ab9d-a2a10f5dd95c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "93b0b19b-4b18-5047-a9ec-c0d14da504b1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "28e7e76e-2c26-56e1-ad91-30b4ba661168",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "6b756d86-57cd-520b-a177-937a3d628fb9",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ffbd0795-2615-5e4f-a357-0ceea2cdf282",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2df51182-dbde-5883-a2f4-b08728473f34",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "89091611-d795-5ce0-afd6-dcb58bc3cf6e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e4b73007-08fa-525c-afbf-b38304138e2e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0efe7da2-e205-5c88-a94a-0f293fbc0fdf",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3974c9d8-352e-5747-ae25-b570aa8b6838",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "cb3eff8d-d536-5208-a13e-dded24142ccf",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "7d19e00a-b83c-52b6-ae4c-44c96142f379",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "557eef9e-9ab0-5c24-af85-b6d0a279ca7d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5c24764d-362e-5203-a008-54f1e8f954de",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f145c82f-c3ef-511c-a640-68260eedb536",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "066896a4-1776-59a6-a6be-53b2a969a099",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "295d21a7-e03d-599d-a710-4c94c02bd995",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "fd0feb56-7060-5dc8-a473-ce095344e6e6",
+    "changes": {
+      "name": {
+        "before": "The Body Shop Strawberry Hand Cream 30 ml",
+        "after": "The Body Shop Strawberry Hand Cream English Strawberry Extract 30 ml"
+      }
+    }
+  },
+  {
+    "id": "e88c71b4-64c5-5ae3-a360-4e15fa7c76fe",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "10a85e9e-f565-510c-acae-82fd74b91d77",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a9a8dd00-53ad-5c8f-afb3-58d458ba3140",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "052ac9fc-6062-568d-ad98-dc5c3b7da218",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e9be5663-f4c0-5551-a7e2-c24029632bad",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0b678433-b985-5052-aa53-5a3199b5242a",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "dc74a535-0bd5-5d8d-a2bb-a587bcb3b46b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ee6280a8-a40e-5a40-a296-fb3107ed4fe7",
+    "changes": {
+      "name": {
+        "before": "The Body Shop British Rose Hand Cream 30 ml",
+        "after": "The Body Shop British Rose Petal-Soft Hand Cream 30 ml"
+      }
+    }
+  },
+  {
+    "id": "98bf5293-e3b2-5977-ab97-c1105311e143",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5b57ff53-6215-5475-afe2-46eb0e6d8b3d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "966ea6c4-462c-5db9-aca8-69926605c0cd",
+    "changes": {
+      "name": {
+        "before": "The Body Shop Vitamin E Eye Cream 15 ml",
+        "after": "The Body Shop Vitamin E Eye Cream Hyaluron Hydrate 15 ml"
+      }
+    }
+  },
+  {
+    "id": "49e31077-9489-5c4f-affc-3aaee489e207",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3d2c1c04-5056-5b77-a639-ef124c7383f7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d95a4b66-c00e-59fb-aab0-d2e3686e3c41",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "235c5327-7ae8-540e-a513-967a02f32b53",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "702b921d-0f6f-565f-abd6-3aa9ead9942e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9730c8d0-d5f6-519e-a5a0-b02dbfe303a5",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "12e97879-9d62-5760-afdf-16f37660e80b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "71e59f2f-b4c5-5191-abbc-a034fd877dd0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "730d5f70-3cc7-52df-a89b-543ebf4106e0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1fb911bb-62c9-5b1b-a798-a1415d33cf6e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "521d0490-23aa-556c-afd5-edcfb4e4feee",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "d5d14940-08db-5cbb-a056-5f7baea28724",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b5f3a598-db45-5d61-a462-1b83ddea5d0e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2b9baebb-0db9-5561-a25c-1754b0790b3b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9090792d-6042-5220-a573-a8f749a449b7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "10e78278-0e4b-59e3-ad5b-59ae31d9d201",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "309f1ae8-d137-50dd-a7eb-2d69554c4c98",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2d1c20fa-e21a-5eb3-a752-63b58f6bd879",
+    "changes": {
+      "source_aliases": {
+        "before": null,
+        "after": [
+          {
+            "id": "d91eebbc-9f4f-5416-a179-7342cf3b3359",
+            "name": "Tatcha The Dewy Skin Cream 50 ml",
+            "brand": "Tatcha",
+            "source_title": "TATCHA THE DEWY SKIN CREAM  50ML",
+            "source_variant_title": "Default Title",
+            "source_id": "9962160587040",
+            "source_variant_id": "50246574276896",
+            "source_site": "Al-Fatah Pakistan",
+            "source_url": "https://alfatah.pk/products/tatcha-the-dewy-skin-cream-50ml",
+            "sku": "AFP-000567498",
+            "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/793888680340_4bd8bd64-bf14-4c67-8351-170618d2a3c8.jpg?v=1748695346",
+            "source_barcode_candidates": [
+              "793888680340"
+            ]
+          }
+        ]
+      },
+      "source_sku_aliases": {
+        "before": null,
+        "after": [
+          "AFP-000567498",
+          "AFP-000437275"
+        ]
+      }
+    }
+  },
+  {
+    "id": "44552c25-904f-59a7-a6fc-29f07c879400",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "89b207f4-f10e-5474-af47-5222079b6287",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c3547296-1a42-5bc0-a0b2-18bacc83deb8",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3a3c872d-a042-5710-aa60-1c4897a7abd9",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b857680f-0ad7-5c2a-aa92-14532911e3da",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f90401c6-4a56-5f97-a385-c7a18cd7380b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "eb60b3d1-6d27-53a6-a431-d047f955d708",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "27031665-b32f-555b-a507-6949cbdd321c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "09418912-745c-519a-a8d1-29ab7c914c3b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "cf130d10-8ec6-5012-a6cd-26f9b45f2373",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1827ba9f-78bc-5567-a68f-80db815c9718",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f53024d4-685f-5fbe-aee1-8776ea6af2fc",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "75cce655-6996-563a-a770-e98d1b4ef7e2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4497894c-5c07-5a13-a503-41c9e1c7c4b2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9496716c-5b5c-5ade-af3c-6a40e13457f4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b5c074cf-5436-5f57-a176-933bf8f0a921",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "938be811-2e36-5619-ab90-83381b1216a4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a4f2c0cd-7f54-5ed9-acfc-66c0486ec3ce",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3d63c711-1776-5300-a924-2cc122c2f16d",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "1176bcff-90ca-594f-aa42-05ad18502219",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "aaf5b2d2-fba8-55ec-ac52-ea27324538e5",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f78944e2-3d20-5df6-af30-50c7e516f780",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8b8729a1-dd1b-509c-a040-5ba60d0a2199",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "10582fae-881d-536d-ac27-d83606ef90f0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8b16a265-5c69-58cc-ac1b-dd4cb55bcd89",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "16bf50b2-232a-5165-a783-f89ffe088482",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e25ef98d-634e-52e0-a94d-fa83d692df09",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4e895f1f-3d9d-52cd-a081-ac638da6653e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c9691f29-4f0b-5869-ae66-6fd003d0b7df",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9385f2e6-07c1-5412-a226-18fd7dd988ca",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "759d69e9-2ad1-589e-a497-8d27aac621ce",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b5d13b69-58a2-551d-a3b9-a0302dcfc478",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c10ea4f3-00ef-5afd-afec-c5781d928e12",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f9b69c09-5094-5e0a-ad80-712865fae469",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "50ab8a2f-73b4-5725-abe2-5f6d62eb21d1",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "a893ec56-87a3-57b1-a69b-38ed2c6fe71b",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3122ae17-fb67-5eeb-a92c-43481b338bda",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "271d36ab-07b4-5109-a31e-36025f283ff4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2e28f05e-3217-5bf1-a67b-1a18f08d04aa",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ff766f7e-b5ca-56ea-a4fe-0d331fd55540",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "dbe2c561-639d-5cd1-a80d-313e607c7471",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c24569ad-31c7-53c9-a46d-9f1efa206e5c",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "c5941251-36bb-5bbe-a394-46406c9215df",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "788c73fc-04b8-56a3-a696-58b0311d47a2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "6fe8f540-e852-51ff-ad48-c9a0626fabb2",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "3cec77b9-3715-5c49-a593-133f190b36a0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2497824e-849e-5c8f-ae17-d1a4a36e8f86",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "861a7e94-659c-50db-a2b3-853da5f13427",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "700a8200-eecd-50fa-a12e-1d36fb3534f4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "ca5038a6-baf4-516d-a80b-f6783ea8a62f",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b2cae9b6-9062-5c30-a5ac-744664f6ccfe",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "4da97141-faf1-5c90-ac55-b3aabc51f631",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "2dd235a5-6942-5b04-a2ab-6ae84306aa90",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "e062cca5-0f9d-5235-ab9e-2234a49857b7",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "76036b52-f586-5d5d-a7e1-1992aefd2fd4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "883c6680-3689-5de9-a709-afe9f72200a3",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8778d323-fdc3-59d5-ac32-44ae7cbaedbc",
+    "changes": {
+      "brand": {
+        "before": "It",
+        "after": "IT Cosmetics"
+      }
+    }
+  },
+  {
+    "id": "e9ac30bb-7e29-5103-acd4-54778e4dfd4e",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "b34831cc-7fdf-5337-ae5d-e8ae26e330ad",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "fb7976c4-8c35-5525-ab6c-88cc2eac1477",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "8759a1fb-5fb7-58ed-a408-bea09acd34d4",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "9bf36ff1-2999-5aeb-a4b9-9bf50d5eea33",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "81fc45d4-6862-55a4-ac1b-1cd37af10715",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "5fefa9f3-a379-5ec3-af34-5607a6c39b56",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "71d7bf1a-72eb-5813-acec-a2d1b4843645",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "66c28efc-70e3-52cc-a46a-893214c151dc",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "0a354223-7178-5d5f-a2a4-96ddd7262aa5",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "21bf0009-1477-54a1-a79b-f019ba6f8fb0",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  },
+  {
+    "id": "f3164bc8-2063-5d2f-aa25-6e1dd69fec84",
+    "changes": {
+      "brand": {
+        "before": "Bbw",
+        "after": "Bath & Body Works"
+      }
+    }
+  }
+]

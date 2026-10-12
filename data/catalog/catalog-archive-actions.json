@@ -1,0 +1,466 @@
+[
+  {
+    "old_id": "76a98c51-442f-5170-ac4a-74bd76b08fdd",
+    "retained_id": "a81b247b-bfd5-576f-ac59-c712b783986e",
+    "name": "Key Brand Soya Sauce 750 ml",
+    "old_sku": "AFP-000114039",
+    "retained_sku": "AFP-000114039-1",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 0,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "7b12aff5-1085-5470-a419-a4cc1cbf6b91",
+    "retained_id": "628db91a-3b34-5369-ad2b-e8faf43dd4c6",
+    "name": "Rafhan Corn Oil Bottle 1 L",
+    "old_sku": "AFP-000163096",
+    "retained_sku": "AFP-000380129",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 1,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "c182ff44-662a-5b6f-a142-88d18c5cea94",
+    "retained_id": "fcb189d9-df15-5f09-add4-8c270a714d56",
+    "name": "Nestle Cereal Milo 300 g",
+    "old_sku": "AFP-000113275",
+    "retained_sku": "AFP-000113275",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 3,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "621882fd-b0db-5bca-a64a-1f841105026d",
+    "retained_id": "0b99365b-1396-54a5-acb9-31b54cd0abc7",
+    "name": "Kelloggs Cereal Frosties 470 g",
+    "old_sku": "AFP-000628378",
+    "retained_sku": "AFP-000078988",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 4,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "0438be53-07c8-5f2b-aaa9-423b6fff76df",
+    "retained_id": "db6e8c85-0dfd-5f6c-a4a8-e01c3ce28c47",
+    "name": "Diablo Bar Apricort Muesli Sugar Free 30 g",
+    "old_sku": "AFP-000540669",
+    "retained_sku": "AFP-000540669",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 6,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "aeb6fbcd-e1ad-5358-a567-828c8dfbf77c",
+    "retained_id": "02c7a71b-79e7-5fa1-ae3c-bdf503d3b32a",
+    "name": "Lipton Yellow Label Danedar Strong Tea Jar 475 g",
+    "old_sku": "AFP-000113692",
+    "retained_sku": "AFP-000113692",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 7,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "66ca86ab-afcf-5e8e-adf8-3398c5a10265",
+    "retained_id": "dcc8d0b4-4892-5cd1-a73c-cb0d495e1f0f",
+    "name": "Lipton Yellow Label Tea Blk 170 g",
+    "old_sku": "AFP-000544805",
+    "retained_sku": "AFP-000544805",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 8,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "f2589213-77d2-5909-a81a-c6f77a40a1f8",
+    "retained_id": "86b96ef9-2c2f-5248-abac-a48fbbf220b2",
+    "name": "Tapal Tea Danedar Economy Pack Save Rs.100 900 g",
+    "old_sku": "AFP-000428660",
+    "retained_sku": "AFP-000428660",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 9,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "cc127a37-b89a-5428-a972-9239bc7f6f78",
+    "retained_id": "8ca7a40a-a74a-599b-af2c-979052499e2f",
+    "name": "Shan Tez Lal Mirch Powder Save Rs.730 400 g",
+    "old_sku": "AFP-000627459",
+    "retained_sku": "AFP-000627459",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 10,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "fad2b887-6d3a-5bf4-a2a2-393ae430c1a2",
+    "retained_id": "8c2da743-d594-59c7-adc4-aefb2ef1119f",
+    "name": "Peek Freans Sooper Classic Hr 72 g",
+    "old_sku": "AFP-000649054",
+    "retained_sku": "AFP-000434960",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 11,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "2e321740-b1e6-559f-a650-57b2110da15d",
+    "retained_id": "c2b8e4de-8789-5c2b-ae75-5b0d3cf513ac",
+    "name": "Peek Freans Peanut Pik Hr 59 g",
+    "old_sku": "AFP-000649061",
+    "retained_sku": "AFP-000434978",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 12,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "28dd21d6-5252-5ebe-a769-0ab7ec672e53",
+    "retained_id": "66916a44-55b3-5d35-a8dc-ef557c84e208",
+    "name": "Peek Freans Lemon Sandwich Hr 72 g",
+    "old_sku": "AFP-000649058",
+    "retained_sku": "AFP-000434973",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 13,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "de654712-ab5f-5610-a6de-b5f79c4ff1c1",
+    "retained_id": "407b45fd-1915-5f7e-a41b-2d220c01ae16",
+    "name": "Peek Freans Chocolate Sandwich Hr 72 g",
+    "old_sku": "AFP-000649059",
+    "retained_sku": "AFP-000434976",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 14,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "7d471b36-ecb7-5517-a5c5-c6a33600fa1b",
+    "retained_id": "32a6f09f-35a6-58bf-a6c6-2776dfb7feab",
+    "name": "Lu Tiger Snack Pack 56 g Box 15 Pc",
+    "old_sku": "AFP-000366772",
+    "retained_sku": "AFP-000366772",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 15,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "12446d5a-ebe3-5fa5-a4d3-d6b2b4eddceb",
+    "retained_id": "0def8ed5-243e-50b0-aabe-5c3ba6d1304e",
+    "name": "Trident Bubble Gum Spearmint Sugar Free 14 Sticks",
+    "old_sku": "AFP-000167170",
+    "retained_sku": "AFP-000212301",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 16,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "fb504543-800a-5e59-a3e6-4026791bc1f0",
+    "retained_id": "1c7410e0-21b4-5d9c-a447-6d5e831e78ff",
+    "name": "Cheetos Chips Flamin Hot Crunchy 99.2 g",
+    "old_sku": "AFP-000290910",
+    "retained_sku": "AFP-000002793",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 17,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "5da02c0a-d110-5420-ac15-3c8958cf2410",
+    "retained_id": "a07b3949-ac9b-5bbd-a03b-e17680e6aa78",
+    "name": "Peek Freans Choco Lava Mp 30 g 8 Pc Box",
+    "old_sku": "AFP-000609656",
+    "retained_sku": "AFP-000601064",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 19,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "42848757-9dd2-588c-a72b-82f6d81c4ee9",
+    "retained_id": "52ca3547-2d77-5433-ad63-5c79805f74bc",
+    "name": "Pipers Gold Biscuit Caramel Delight 140.7 g",
+    "old_sku": "AFP-000614055",
+    "retained_sku": "AFP-000614055",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 20,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "b90d55dd-2db8-586f-ad65-97bff292e67b",
+    "retained_id": "9724377d-8558-5dec-a1f9-fcad315cae08",
+    "name": "Persil Washing Power Gel Deep Clean White Flower 2.9 L",
+    "old_sku": "AFP-000277794",
+    "retained_sku": "AFP-000277794",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 21,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "d035c41e-9fc7-5f7d-ac17-8452cd82d5a1",
+    "retained_id": "45d7c67a-6bf7-5a6f-aa6c-101fe1409c58",
+    "name": "Persil Washing Power Gel Deep Clean Rose 2.9 L",
+    "old_sku": "AFP-000455284",
+    "retained_sku": "AFP-000455284",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 22,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "7646a3e0-98e5-5b8f-a2a8-da90a5e6d741",
+    "retained_id": "0a322f2a-c7d0-5c70-a99d-421892c0b699",
+    "name": "Persil Washing Power Gel Deep Clean Lavender 2.9 L",
+    "old_sku": "AFP-000277795",
+    "retained_sku": "AFP-000277795",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 23,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "e1d01a19-e8ae-5cab-aaa6-840f49c2ed07",
+    "retained_id": "01a71b39-ad32-5203-ad32-8a068db7327f",
+    "name": "Bonus Tri Star Washing Powder 5 kg",
+    "old_sku": "AFP-000588206",
+    "retained_sku": "AFP-000335221",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 24,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "fe09bfb4-9656-5aad-a7c1-7aad1824c64c",
+    "retained_id": "5c381fc2-810d-50d2-af5f-64d116e881a2",
+    "name": "Harpic Toilet Cleaner Power Plus Original 700 ml",
+    "old_sku": "AFP-000117725",
+    "retained_sku": "AFP-000117725",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 26,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "db896dea-88c2-5e30-a11f-00ccb38994b8",
+    "retained_id": "2e247fde-9880-58a0-a0f4-ba526d23a4dc",
+    "name": "Harpic Toilet Cleaner Power Plus Original 680 ml",
+    "old_sku": "AFP-000418415",
+    "retained_sku": "AFP-000418415",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 27,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "9bddcbe7-fedd-50f0-a1e0-642f974c650d",
+    "retained_id": "3de7e5f3-242e-53d6-a0f9-888bb2ce7409",
+    "name": "Giant Tissue Box 2-Ply 150 300 Sheets",
+    "old_sku": "AFP-000078498-1",
+    "retained_sku": "AFP-000078498",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 28,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "c19f7ab2-c0b4-5aff-a1d6-91ce98dd88e1",
+    "retained_id": "bc1b44d6-98fc-526f-a6ff-2592bfdb5173",
+    "name": "Dettol Washing Machine Cleaner Spring Blossom 5in1 250 ml",
+    "old_sku": "AFP-000503687",
+    "retained_sku": "AFP-000503687",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 29,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "a6e31e45-0ddc-50b4-a0e2-e068e4fd6e8d",
+    "retained_id": "bedd9636-7779-5dfc-a22e-88f7785b96de",
+    "name": "Johnsons Baby Jelly Fragrance Free 100 ml",
+    "old_sku": "AFP-000286523",
+    "retained_sku": "AFP-000117284",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 31,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "bcaf657a-78f4-572e-a4dc-5191e13c778a",
+    "retained_id": "3cf8b2b4-e229-5d9a-a87c-f91dd12a2a39",
+    "name": "Bbw Body Wash Brightest Bloom 295 ml",
+    "old_sku": "AFP-000545521",
+    "retained_sku": "AFP-000529578",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 32,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "86ae5995-b4f3-52d5-ae1b-7ef69b0c7eba",
+    "retained_id": "31412632-d0a3-5619-a175-6f58368bae8d",
+    "name": "Dove Body Wash Refresh Cucumber & Green Tea 591 ml",
+    "old_sku": "AFP-000500919",
+    "retained_sku": "AFP-000500919",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 34,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "34df55df-531b-526b-a83b-f5ccf6a4cab4",
+    "retained_id": "20486363-0132-5690-a226-578a752b3739",
+    "name": "The Body Shop Ginger Shampoo 250 ml",
+    "old_sku": "AFP-000546674",
+    "retained_sku": "AFP-000532072",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 35,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "0d3bb7b4-fc4c-5af8-a744-0d614421d239",
+    "retained_id": "cc90f18c-ded2-5f47-a0ab-36613de1380a",
+    "name": "Head & Shoulders Shampoo Classic Clean 1000 ml",
+    "old_sku": "AFP-000170136",
+    "retained_sku": "AFP-000170136",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 36,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "d8435289-62d8-5ef1-a70f-1852cf73f0b3",
+    "retained_id": "cb13ce20-cdf8-56dc-aed5-dd120cbe0537",
+    "name": "Tresemme Shampoo Keratin Smooth With Argan Oil 650 ml",
+    "old_sku": "AFP-000275670",
+    "retained_sku": "AFP-000275670",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 37,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "09643298-3241-579d-ae6c-9844a2080c33",
+    "retained_id": "94d7b932-ec65-54b1-a8b2-f270612c1cea",
+    "name": "Sunsilk Shampoo Keratin Yoghurt Thick & Long 185 ml",
+    "old_sku": "AFP-000296295",
+    "retained_sku": "AFP-000296295",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 38,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "20455108-7429-5d9c-ab38-67d0484f95ef",
+    "retained_id": "4a73e8b7-70a0-517a-aa30-6fdf9bb4bcb0",
+    "name": "Tresemme Conditioner Keratin Smooth Marula Oil 400 ml",
+    "old_sku": "AFP-000237818",
+    "retained_sku": "AFP-000237818",
+    "reason": "Exact source SKU, name, pack size and variant match.",
+    "duplicate_group_before": 39,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "ec20a04d-b7df-5ad1-a0bc-cf99c54d7aa7",
+    "retained_id": "1ea934aa-ae63-51d2-aa7d-bd601d075edb",
+    "name": "Palmolive Shampoo Brilliant Colour 350 ml",
+    "old_sku": "AFP-000104686",
+    "retained_sku": "AFP-000104686-1",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 40,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "a939f345-0f1d-54dc-a366-1270d0047d41",
+    "retained_id": "695c41ac-1379-5f3c-a781-adeb77770488",
+    "name": "Nivea Cream Blue Tin 250 ml",
+    "old_sku": "AFP-000617625",
+    "retained_sku": "AFP-000116349",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 42,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "d91eebbc-9f4f-5416-a179-7342cf3b3359",
+    "retained_id": "2d1c20fa-e21a-5eb3-a752-63b58f6bd879",
+    "name": "Tatcha The Dewy Skin Cream 50 ml",
+    "old_sku": "AFP-000567498",
+    "retained_sku": "AFP-000437275",
+    "reason": "Exact name/brand/pack/variant match corroborated by inspected product labels/photos; packaging/photo revisions do not establish a different product.",
+    "duplicate_group_before": 46,
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "27bb9887-411b-5b46-a057-f0daea11d9e6",
+    "retained_id": "9acf8327-bbc2-511d-a980-a38bc7b013bd",
+    "name": "Lahori Mixture Nimko Zaiqa Mixture 250 g",
+    "old_sku": "AFP-000114084-11",
+    "retained_sku": "AFP-000453888",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "bb7b7ec6-ad78-5c5d-a762-263b2f307512",
+    "retained_id": "30ee053c-0a48-5a24-aff7-3ee6585bf3be",
+    "name": "Lahori Mixture Nimko Ghatia 250 g",
+    "old_sku": "AFP-000114084-5",
+    "retained_sku": "AFP-000453896",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "4245a5dd-280c-5312-aa6a-c0b0d0e03603",
+    "retained_id": "5ecc40bc-d6d1-506a-a028-3c6efce891b7",
+    "name": "Lahori Mixture Nimko Barik Sewyan 250 g",
+    "old_sku": "AFP-000114084-2",
+    "retained_sku": "AFP-000453895",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "2fdcd1f8-d257-5373-a731-f297292b19d3",
+    "retained_id": "b04bdc15-03d1-51af-a87d-10e97fe7fb36",
+    "name": "Lahori Mixture Nimko Daal Moth 250 g",
+    "old_sku": "AFP-000114084-4",
+    "retained_sku": "AFP-000453887",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "cdcaec5e-4b03-5c2d-a48e-abdaaa693d69",
+    "retained_id": "e0450ff4-509c-553e-ab74-2e8bedc1b7fb",
+    "name": "Lahori Mixture Nimko Daal Channa 250 g",
+    "old_sku": "AFP-000114084-3",
+    "retained_sku": "AFP-000453893",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "604939b1-3009-5203-a07e-46130c885d13",
+    "retained_id": "759305c8-defc-57c0-a3d7-edf6f057423c",
+    "name": "Lahori Mixture Nimko Barik Mix 250 g",
+    "old_sku": "AFP-000114084-1",
+    "retained_sku": "AFP-000453885",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "15006b6b-43ad-59e5-af90-0d5bb764fa8d",
+    "retained_id": "76c2265b-7fe4-5947-a07f-4b4621f279dc",
+    "name": "Lahori Mixture Nimko Moti Sewyan 250 g",
+    "old_sku": "AFP-000114084-10",
+    "retained_sku": "AFP-000453894",
+    "reason": "Same AUK Foods brand, printed flavor and250g pack corroborated by both inspected photos; generic old title was a retailer metadata defect.",
+    "duplicate_group_before": "Lahori photo-label reconciliation",
+    "action": "archive_duplicate"
+  },
+  {
+    "old_id": "cd071d5b-d6c5-533d-a5b6-6d78dbbc2dd7",
+    "retained_id": null,
+    "action": "quarantine",
+    "reason": "Source titles both say454g, but one photo label visibly says340g. Different SKUs/barcodes. No pack size was guessed or changed; requires inventory/photo verification."
+  },
+  {
+    "old_id": "41deab74-de6b-55ac-a3ca-268dba21b2a6",
+    "retained_id": null,
+    "action": "quarantine",
+    "reason": "Source titles both say430g, but packaging photos show different serving counts and different barcode/SKU. Unclear if photo is wrong or pack actually differs; retained pending verification."
+  },
+  {
+    "old_id": "d5a67280-2342-5e28-a661-3d2e2f28cd63",
+    "retained_id": null,
+    "action": "quarantine",
+    "reason": "Retailer titles truncate the shade to(LI; different barcodes/SKUs. Side-view photos do not identify shade. Potential shade differences; retained pending verification."
+  },
+  {
+    "old_id": "6d9a95cb-f18f-5976-a822-ac12192aed04",
+    "retained_id": null,
+    "action": "quarantine",
+    "reason": "Retailer titles truncate the shade to(LI; different barcodes/SKUs. Side-view photos do not identify shade. Potential shade differences; retained pending verification."
+  }
+]

@@ -20,8 +20,8 @@ colors:
   discount-surface: "#594629"
   discount-text: "#ffe0a0"
 typography:
-  headline: { fontFamily: "Figtree, sans-serif", fontSize: "36px", fontWeight: 700, lineHeight: 1.22, letterSpacing: "-0.035em" }
-  headline-mobile: { fontFamily: "Figtree, sans-serif", fontSize: "27px", fontWeight: 700, lineHeight: 1.25 }
+  headline: { fontFamily: "Figtree, sans-serif", fontSize: "38px", fontWeight: 700, lineHeight: 1.22, letterSpacing: "-0.035em" }
+  headline-mobile: { fontFamily: "Figtree, sans-serif", fontSize: "29px", fontWeight: 700, lineHeight: 1.25 }
   body: { fontFamily: "Figtree, sans-serif", fontSize: "14px", fontWeight: 400, lineHeight: 1.5 }
   product-title: { fontFamily: "Figtree, sans-serif", fontSize: "14px", fontWeight: 650, lineHeight: 1.45 }
   price: { fontFamily: "Figtree, sans-serif", fontSize: "18px", fontWeight: 750, letterSpacing: "-0.025em" }
@@ -36,7 +36,7 @@ spacing:
   desktop-gutter: "56px"
   mobile-gutter: "18px"
 components:
-  button-primary: { backgroundColor: "{colors.action}", textColor: "{colors.white}", rounded: "{rounded.control}", height: "42px" }
+  button-primary: { backgroundColor: "{colors.action}", textColor: "{colors.navy}", rounded: "{rounded.control}", height: "42px" }
   button-basket: { backgroundColor: "{colors.gold-fill}", textColor: "{colors.navy}", rounded: "{rounded.control}" }
   product-card: { backgroundColor: "{colors.white}", textColor: "{colors.ink}", rounded: "{rounded.card}" }
   basket-rail: { backgroundColor: "{colors.navy}", textColor: "{colors.white}", rounded: "{rounded.card}", padding: "23px 21px 21px" }
@@ -45,14 +45,30 @@ components:
 
 # Design System: Askari Departmental Store
 
-The user requested a dark, professional grocery store. Charcoal navy (#0d1723) carries the page; shelves use #152537, raised controls #1c3044, and dividers #304256. Warm gold (#e9bc6d) identifies actions and keyboard focus. Body text is #edf2f6 and supporting text #b3c1ce. Real package photographs retain bright backgrounds so packaging stays legible; the supplied logo is unchanged.
+## Overview
+The user's requested dark grocery store keeps the Quick Basket layout and supplied logo. The interface makes finding and pricing everyday essentials the main task.
 
-The incumbent filter/catalog/basket layout remains. Products are paged 48 at a time; brand search supports the expanded catalog. Stock always has explicit text. Unpriced products say Price pending and cannot enter the basket. No retailer prices, fake ratings or discounts are presented as Askari inventory.
+## Colors
+Charcoal navy carries the page, dark shelf panels group products, and raised slate controls establish elevation. Warm gold marks actions and keyboard focus. Off-white body text and supporting slate remain readable on each dark surface. Success uses mint plus explicit text. Product photographs sit on bright backgrounds so labels stay legible.
 
-Figtree is retained. Headlines are38px desktop/29px mobile; product titles14px, prices18px and metadata11px. Cards use14px corners. Dialogs, search, forms, checkout, order counter and inventory imports share the dark palette.
+## Typography
+Figtree remains the storefront and counter voice. Headlines are38px desktop and29px mobile; product titles14px, prices18px and metadata11px. Long product names wrap within three lines. Totals use tabular numerals.
 
-Existing hover lift, contained image zoom, quantity confirmations and native overlay transitions are retained. Motion lasts150–350ms; reduced-motion removes spatial movement and animations. Loading blocks product additions until the current query completes.
+## Layout
+The desktop filter/catalog/basket arrangement and two-column phone shelves remain. Products load48 at a time. Brand search handles the expanded catalog. On phones the availability control follows the heading; drawers and filter dialogs preserve the shopping context.
 
-Excel imports require exact product IDs, catalog codes, barcodes or unambiguous product names. A matched positive price makes a product available; blank prices and omitted products are out of stock. Ambiguous, invalid and duplicate rows require correction before an atomic import.
+## Elevation & Depth
+Shelves use a thin border at rest. Hover lifts the card gently and contained photography enlarges. Dialog backdrops use a dark tint, and raised controls remain distinct without glass effects.
 
-The inherited seed-reference metadata verification limit remains. This refinement makes no unsupported claim that that check passed. Local browser inspection was blocked by the browser URL policy during this pass; production inspection and automated checks are recorded separately.
+## Shapes
+Cards and the basket use14px corners. Controls use7px and search10px. The checkout drawer retains square outer edges. The logo viewport crops transparent padding only.
+
+## Components
+Unpriced cards say Price pending and Out of stock; unavailable items cannot be added. Stock status has explicit text alongside color. Exact Excel matches preview their result before an atomic import.
+
+Existing quantity confirmations, image hover and native overlay transitions remain bounded to150–350ms. Reduced-motion removes spatial movement and animations while retaining state feedback. Focus returns to the invoking control when dialogs close. Error, loading, empty and disabled states use the same dark system.
+
+## Do's and Don'ts
+Preserve the supplied logo, real package photos and product identity. Keep actions gold and stock semantic. Never show retailer prices or invented ratings as Askari inventory. Do not add looping decoration or make shopping wait for motion.
+
+The inherited seed-reference metadata verification limitation remains documented in the surface brief. Desktop, intermediate and phone captures informed one correction batch and a final confirmation.

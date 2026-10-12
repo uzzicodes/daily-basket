@@ -1,0 +1,129 @@
+[
+  {
+    "id": "cd071d5b-d6c5-533d-a5b6-6d78dbbc2dd7",
+    "name": "American Garden Peanut Butter Chunky 454 g",
+    "brand": "American Garden",
+    "unit": "454 g",
+    "category": "Dairy, Milk & Breakfast",
+    "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/NewProject_66_e296ab52-1765-4208-9f7d-e7835190e086.png?v=1781502352",
+    "price": null,
+    "original_price": null,
+    "in_stock": false,
+    "rating": null,
+    "badge": null,
+    "source_title": "AMERICAN GARDEN PEANUT BUTTER CHUNKY 454 GM",
+    "source_variant_title": "Default Title",
+    "source_site": "Al-Fatah Pakistan",
+    "source_url": "https://alfatah.pk/products/american-garden-peanut-butter-chunky-510-gm",
+    "source_id": "8459424203040",
+    "source_variant_id": "45743734260000",
+    "sku": "AFP-000011184",
+    "barcode": null,
+    "source_barcode_candidates": [
+      "717273501812",
+      "717273600157"
+    ],
+    "source_collections": [
+      "breakfast",
+      "jams-spreads"
+    ],
+    "metadata_review": {
+      "status": "needs_review",
+      "reason": "Source titles both say454g, but one photo label visibly says340g. Different SKUs/barcodes. No pack size was guessed or changed; requires inventory/photo verification."
+    }
+  },
+  {
+    "id": "41deab74-de6b-55ac-a3ca-268dba21b2a6",
+    "name": "Kelloggs Cereal Rice Krispies 430 g",
+    "brand": "Kelloggs",
+    "unit": "430 g",
+    "category": "Dairy, Milk & Breakfast",
+    "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/5059319036830_cd811bb6-7863-4bf7-8029-abc1abd0205d.jpg?v=1771583795",
+    "price": null,
+    "original_price": null,
+    "in_stock": false,
+    "rating": null,
+    "badge": null,
+    "source_title": "KELLOGGS CEREAL RICE KRISPIES 430 GM",
+    "source_variant_title": "Default Title",
+    "source_site": "Al-Fatah Pakistan",
+    "source_url": "https://alfatah.pk/products/kelloggs-rice-krispies-430g",
+    "source_id": "10210523808032",
+    "source_variant_id": "51255159324960",
+    "sku": "AFP-000618261",
+    "barcode": null,
+    "source_barcode_candidates": [
+      "5059319036830"
+    ],
+    "source_collections": [
+      "cereal-price-in-pakistan"
+    ],
+    "metadata_review": {
+      "status": "needs_review",
+      "reason": "Source titles both say430g, but packaging photos show different serving counts and different barcode/SKU. Unclear if photo is wrong or pack actually differs; retained pending verification."
+    }
+  },
+  {
+    "id": "d5a67280-2342-5e28-a661-3d2e2f28cd63",
+    "name": "It Cosmetics Color Correcting Full Coverage Cream Spf 50 (Li",
+    "brand": "IT Cosmetics",
+    "unit": "1 Pack",
+    "category": "Personal Care & Hygiene",
+    "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/3605972971647_0c76e363-fb66-4d99-b99a-ec42724f4425.jpg?v=1748697049",
+    "price": null,
+    "original_price": null,
+    "in_stock": false,
+    "rating": null,
+    "badge": null,
+    "source_title": "IT COSMETICS COLOR CORRECTING FULL COVERAGE CREAM SPF 50 (LI",
+    "source_variant_title": "Default Title",
+    "source_site": "Al-Fatah Pakistan",
+    "source_url": "https://alfatah.pk/products/it-cosmetics-color-correcting-full-coverage-cream-spf-50-li-1",
+    "source_id": "9962166419744",
+    "source_variant_id": "50246601769248",
+    "sku": "AFP-000562720",
+    "barcode": null,
+    "source_barcode_candidates": [
+      "3605972971647",
+      "3605972971661"
+    ],
+    "source_collections": [
+      "creams-lotions"
+    ],
+    "metadata_review": {
+      "status": "needs_review",
+      "reason": "Retailer titles truncate the shade to(LI; different barcodes/SKUs. Side-view photos do not identify shade. Potential shade differences; retained pending verification."
+    }
+  },
+  {
+    "id": "6d9a95cb-f18f-5976-a822-ac12192aed04",
+    "name": "It Cosmetics Color Correcting Full Coverage Cream Spf 50 (Li",
+    "brand": "IT Cosmetics",
+    "unit": "1 Pack",
+    "category": "Personal Care & Hygiene",
+    "image_url": "https://cdn.shopify.com/s/files/1/0777/0954/1664/files/3605972971685_638a6f67-947e-416f-ae27-d287f50a2db2.jpg?v=1761220057",
+    "price": null,
+    "original_price": null,
+    "in_stock": false,
+    "rating": null,
+    "badge": null,
+    "source_title": "IT COSMETICS COLOR CORRECTING FULL COVERAGE CREAM SPF 50 (LI",
+    "source_variant_title": "Default Title",
+    "source_site": "Al-Fatah Pakistan",
+    "source_url": "https://alfatah.pk/products/it-cosmetics-color-correcting-full-coverage-cream-spf-50-li",
+    "source_id": "9962166485280",
+    "source_variant_id": "50246602981664",
+    "sku": "AFP-000573020",
+    "barcode": null,
+    "source_barcode_candidates": [
+      "3605972971685"
+    ],
+    "source_collections": [
+      "creams-lotions"
+    ],
+    "metadata_review": {
+      "status": "needs_review",
+      "reason": "Retailer titles truncate the shade to(LI; different barcodes/SKUs. Side-view photos do not identify shade. Potential shade differences; retained pending verification."
+    }
+  }
+]
