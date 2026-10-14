@@ -13,7 +13,9 @@ export function orderAlert(orderId:string,lineCount:number){return {title:'New A
 export async function sendPhoneAlert(subscription:PushSubscription,data:ReturnType<typeof orderAlert>|{title:string;body:string;tag:string;url:string},send:typeof fetch=fetch){
  if(!trustedPushEndpoint(subscription.endpoint))throw Error('INVALID_PUSH_SERVICE');
  const payload=await buildPushPayload({data,options:{ttl:86400,urgency:'high',topic:(await digest(data.tag)).slice(0,32)}},subscription,{publicKey:process.env.DESK_PUSH_PUBLIC_KEY!,privateKey:process.env.DESK_PUSH_PRIVATE_KEY!,subject:process.env.DESK_PUSH_SUBJECT!});
- return send(subscription.endpoint,{...payload,redirect:'error',signal:AbortSignal.timeout(7000)});
+ // Workers supports manual/follow only. Never follow a push-service redirect:
+ // it could forward the VAPID authorization and encrypted message elsewhere.
+ return send(subscription.endpoint,{...payload,redirect:'manual',signal:AbortSignal.timeout(7000)});
 }
 export async function removeDeskDevice(request:Request){const token=deviceToken(request);if(!token)return;const {error}=await database().from('desk_push_devices').delete().eq('id',await digest(token));if(error)throw Error('DEVICE_REMOVE_FAILED');}
 type Delivery={id:string;order_id:string;device_id:string;subscription:PushSubscription;line_count:number;attempts:number};

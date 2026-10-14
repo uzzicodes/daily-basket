@@ -18,12 +18,28 @@ function ProductPhoto({item,large=false}:{item:OrderItem;large?:boolean}){
 function printOrder(order:Order){
   const popup=window.open('','_blank','width=850,height=750');if(!popup)return false;popup.opener=null;
   popup.document.title=`Packing slip ${order.id}`;
-  const style=popup.document.createElement('style');style.textContent='body{font:14px/1.5 Arial,sans-serif;color:#111;padding:24px}h1{font-size:22px}h2{font-size:18px}p{overflow-wrap:anywhere}article{display:flex;align-items:center;gap:18px;border-bottom:1px solid #ddd;padding:12px 0;break-inside:avoid}img{width:85px;height:85px;object-fit:contain}article div{flex:1}strong{display:block}small{display:block}button{padding:10px 20px}@media print{button{display:none}}';popup.document.head.appendChild(style);
-  const add=(tag:string,value:string)=>{const el=popup.document.createElement(tag);el.textContent=value;popup.document.body.appendChild(el);};
-  add('h1',STORE);add('h2','Packing slip');add('p',`${order.id} • ${time(order.created_at)}`);add('p',`${order.customer_name} • ${order.customer_phone}`);add('p',`${order.delivery_area} — ${order.delivery_address}`);
-  order.items.forEach(i=>{const row=popup.document.createElement('article');if(i.image_url){const photo=popup.document.createElement('img');photo.src=i.image_url;photo.alt=i.name;photo.referrerPolicy='no-referrer';row.appendChild(photo);}const detail=popup.document.createElement('div');const name=popup.document.createElement('strong');name.textContent=i.name;const unit=popup.document.createElement('small');unit.textContent=i.unit;detail.appendChild(name);detail.appendChild(unit);const qty=popup.document.createElement('strong');qty.textContent=`${i.quantity} × ${money(i.price)}`;row.appendChild(detail);row.appendChild(qty);popup.document.body.appendChild(row);});
-  add('h2',`Collect cash: ${money(order.total_amount)}`);add('p','Packed by: _____________________');
-  const button=popup.document.createElement('button');button.textContent='Print packing slip';button.onclick=()=>popup.print();popup.document.body.appendChild(button);popup.focus();return true;
+  const style=popup.document.createElement('style');style.textContent=`
+    *{box-sizing:border-box}body{font:13px/1.45 Arial,sans-serif;color:#111;background:#fff;margin:0;padding:24px}
+    main{width:100%;max-width:480px}h1,h2,p{margin:0}h1{font-size:19px;line-height:1.25}h2{font-size:14px;margin-top:4px}
+    header{padding-bottom:12px;border-bottom:2px solid #111}header p{font-size:11px;margin-top:6px;overflow-wrap:anywhere}
+    .customer{padding:12px 0;border-bottom:1px solid #aaa}.customer strong{font-size:14px}.customer p{margin-top:3px;overflow-wrap:anywhere}
+    .items{margin-top:4px}.item{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #ddd;break-inside:avoid}
+    .photo{width:48px;height:56px;display:flex;align-items:center;justify-content:center}.photo img{width:100%;height:100%;object-fit:contain}
+    .detail{min-width:0}.detail strong{display:block;font-size:13px;overflow-wrap:anywhere}.detail small{display:block;font-size:11px;margin-top:2px}.detail p{font-size:12px;margin-top:4px;font-variant-numeric:tabular-nums}
+    .amount{font-size:13px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.totals{margin:12px 0 0 auto;width:240px;max-width:100%;break-inside:avoid}
+    .total-line{display:flex;justify-content:space-between;gap:12px;margin-top:4px;font-variant-numeric:tabular-nums}.cash{font-size:16px;font-weight:700;border-top:2px solid #111;padding-top:8px;margin-top:8px}
+    .packed{font-size:12px;margin-top:20px;break-inside:avoid}button{font:600 13px Arial,sans-serif;min-height:44px;padding:10px 16px;margin-top:20px;cursor:pointer;border:1px solid #111;border-radius:4px;background:white;color:#111}
+    @page{margin:12mm}@media print{body{padding:0;font-size:10pt}main{max-width:128mm}button{display:none}}@media screen and (max-width:480px){body{padding:16px}.item{gap:8px;grid-template-columns:40px minmax(0,1fr) auto}.photo{width:40px;height:48px}}
+  `;popup.document.head.appendChild(style);
+  const main=popup.document.createElement('main');popup.document.body.appendChild(main);
+  const add=(parent:HTMLElement,tag:string,value:string,className='')=>{const el=popup.document.createElement(tag);el.textContent=value;if(className)el.className=className;parent.appendChild(el);return el;};
+  const header=add(main,'header','');add(header,'h1',STORE);add(header,'h2','Packing slip');add(header,'p',`${order.id} · ${time(order.created_at)}`);if(order.id.startsWith('SAMPLE'))add(header,'p','Sample order · Practice only');
+  const customer=add(main,'section','','customer');add(customer,'strong',order.customer_name);if(order.customer_phone)add(customer,'p',order.customer_phone);add(customer,'p',`${order.delivery_area} — ${order.delivery_address}`);
+  const items=add(main,'section','','items');
+  order.items.forEach(i=>{const row=add(items,'article','','item');const photo=add(row,'div','','photo');if(i.image_url){const image=popup.document.createElement('img');image.src=i.image_url;image.alt=i.name;image.referrerPolicy='no-referrer';photo.appendChild(image);}const detail=add(row,'div','','detail');add(detail,'strong',i.name);add(detail,'small',i.unit);add(detail,'p',`${i.quantity} × ${money(i.price)}`);add(row,'strong',money(i.quantity*i.price),'amount');});
+  const totals=add(main,'section','','totals');for(const [label,value] of [['Products',order.subtotal],['Delivery',order.delivery_fee],['Collect cash',order.total_amount]] as const){const line=add(totals,'div','','total-line'+(label==='Collect cash'?' cash':''));add(line,'span',label);add(line,'span',money(value));}
+  add(main,'p','Packed by: _____________________','packed');
+  const button=add(main,'button','Print packing slip') as HTMLButtonElement;button.onclick=()=>popup.print();popup.focus();return true;
 }
 export default function OrderDesk({samples}:{samples:Order[]}){
   const [authenticated,setAuthenticated]=useState(false),[checking,setChecking]=useState(true),[password,setPassword]=useState(''),[busy,setBusy]=useState(false),[preview,setPreview]=useState(false);
