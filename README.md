@@ -32,6 +32,16 @@ The server relies on hosting-provided client IP headers for durable limits: chec
 
 ## WhatsApp and paper lists
 
+### Packing receipts on Android and iPhone
+
+Staff can receive Web Push alerts for new website orders without WhatsApp Business verification. Open `/orders` on each packer’s phone, sign in with the staff password, and tap **Phone alerts**. On iPhone (iOS 16.4+), first use Safari → Share → Add to Home Screen and open the resulting Askari Orders app. Android Chrome also supports installation from its menu. Enable alerts, allow the phone’s notification prompt, then use **Send test alert** to verify delivery on the actual phone.
+
+Alerts contain a generic new-order message. Tapping one opens the exact saved receipt with photos, variants, quantities, delivery details and COD total, behind staff sign-in. Receipts also open by direct order ID even when they are outside the currently loaded queue. An expired staff session requires signing in again; sessions retain their existing eight-hour lifetime. No order or customer data is cached for offline use. Signing out removes this device from future alerts; **Turn off on this device** is also available in Phone alerts.
+
+The order transaction creates one private queue entry per registered device. Successful checkout schedules background dispatch, and Supabase Cron retries due entries every minute without depending on an open browser. No HTTP request runs when the queue is empty. Retries are capped at five attempts per device; accepted alerts are not retried. Expired push endpoints are removed. Browser notification tags and Web Push topics coalesce the same order across ambiguous network retries, but push delivery is not a guaranteed alarm. Internet, notification permission, Focus modes and battery settings affect delivery. Devices expire after 30 days without opening the authenticated desk; completed queue records are retained for seven days. Device registrations are capped at 20.
+
+For a separate deployment, run `node scripts/setup-phone-alerts.mjs`, set `DESK_PUSH_SUBJECT` to your business contact, and configure its four `DESK_PUSH_*` values as server environment variables. Apply the phone alert and scheduler migrations in order. In Supabase Vault, set `askari_desk_alert_url` to `https://YOUR-SITE/api/internal/desk-alerts` and `askari_desk_alert_secret` to the same private dispatch secret. The scheduler requires Supabase’s pg_cron, pg_net and Vault extensions. Keep the private key and dispatch secret out of public source and frontend environment variables. The hosted Askari site has these settings configured; each actual phone still needs activation and a successful test.
+
 Basket ordering validates the name, Pakistani mobile number, Lahore area and street address, then opens WhatsApp with the store name, customer info, line items, delivery fee and COD total. The store confirms stock and delivery time. WhatsApp orders are not also saved as web orders, preventing accidental duplicates.
 
 Typed lists open WhatsApp directly. Handwritten-photo lists use the device’s native file sharing where supported; the customer chooses WhatsApp and the store chat. A `wa.me` link cannot attach a local photo automatically, so desktop customers attach it in WhatsApp after it opens. No list photos or customer data are uploaded to an unconfigured server.

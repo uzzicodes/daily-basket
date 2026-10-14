@@ -37,3 +37,5 @@ Original brief in the user attachment. 18 product-image URLs verified to return 
 
 ## Open Decisions
 The user supplied 03084555567 as the WhatsApp contact; use international format 923084555567. Store inventory values and operational delivery capacity remain unconfirmed. Database and counter access are configured, and credentials are excluded from source. The user explicitly deferred Discord integration on this turn; no Discord calls or queued alerts are included in active checkout.
+
+Automatic WhatsApp slips were deferred after Meta required business verification. The user needs packing receipts on both Android and iPhone instead. Staff Web Push alerts open the existing private receipt, including saved product photos and quantities. Each phone must enable notification permission and pass a test; iPhone requires the Home Screen app on iOS 16.4+. Generic push copy excludes customer details. A durable per-device queue and a quiet Supabase Cron retry path keep sending independent of an open browser. Existing customer-initiated WhatsApp links remain available.

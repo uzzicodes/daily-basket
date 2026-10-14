@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import OrderDesk from '@/components/OrderDesk';
 import { SEED_PRODUCTS } from '@/lib/products';
 import type { Order } from '@/lib/types';
-export const metadata:Metadata={title:'Order Desk | Askari Departmental Store',robots:{index:false,follow:false}};
+export const metadata:Metadata={title:'Order Desk | Askari Departmental Store',robots:{index:false,follow:false},manifest:'/desk.webmanifest',appleWebApp:{capable:true,title:'Askari Orders',statusBarStyle:'default'},icons:{apple:'/desk-icon-192.png'}};
 export default function OrdersPage(){
   const items=[SEED_PRODUCTS[0],SEED_PRODUCTS[1],SEED_PRODUCTS[5]].map((p,index)=>({product_id:p.id,name:p.name.toLowerCase().includes(p.brand.toLowerCase())?p.name:`${p.brand} ${p.name}`,unit:p.unit,image_url:p.image_url,quantity:index===0?1:2,price:p.price!}));
   const subtotal=items.reduce((sum,i)=>sum+i.quantity*i.price,0);

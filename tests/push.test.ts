@@ -1,0 +1,33 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import {trustedPushEndpoint,subscriptionSchema,orderAlert,sendPhoneAlert,dispatchDeskAlerts} from '../lib/push';
+import {GET,POST,DELETE} from '../app/api/desk/notifications/route';
+import {POST as dispatch} from '../app/api/internal/desk-alerts/route';
+import {GET as receipt} from '../app/api/desk/orders/[id]/route';
+import {database} from '../lib/supabase';
+const b64=(v:ArrayBuffer)=>Buffer.from(v).toString('base64url');
+async function configure(){const vapid=await crypto.subtle.generateKey({name:'ECDSA',namedCurve:'P-256'},true,['sign','verify']);process.env.DESK_PUSH_PUBLIC_KEY=b64(await crypto.subtle.exportKey('raw',vapid.publicKey));process.env.DESK_PUSH_PRIVATE_KEY=(await crypto.subtle.exportKey('jwk',vapid.privateKey)).d!;process.env.DESK_PUSH_SUBJECT='mailto:unit-test@example.invalid';}
+test('Phone alert endpoints keep device registrations and individual receipts private',async()=>{
+ const url='https://shop.invalid/api/desk/notifications';assert.equal((await GET(new Request(url))).status,401);assert.equal((await POST(new Request(url,{method:'POST',headers:{origin:'https://shop.invalid'},body:'{}'}))).status,401);assert.equal((await DELETE(new Request(url,{method:'DELETE',headers:{origin:'https://attacker.invalid'}}))).status,403);assert.equal((await dispatch(new Request('https://shop.invalid/api/internal/desk-alerts',{method:'POST'}))).status,401);assert.equal((await receipt(new Request('https://shop.invalid/api/desk/orders/ORD-private'),{params:Promise.resolve({id:'ORD-private'})})).status,401);
+});
+test('Push subscriptions cannot turn the private sender into an arbitrary HTTP proxy',()=>{
+ for(const u of ['http://fcm.googleapis.com/x','https://fcm.googleapis.com.evil.test/x','https://fcm.googleapis.com@127.0.0.1/x','https://127.0.0.1/x','https://web.push.apple.com:444/x','https://updates.push.services.mozilla.com/'])assert.equal(trustedPushEndpoint(u),false,u);
+ for(const u of ['https://fcm.googleapis.com/wp/opaque','https://web.push.apple.com/opaque','https://updates.push.services.mozilla.com/wpush/v2/opaque','https://wns2.notify.windows.com/w/?token=opaque'])assert.equal(trustedPushEndpoint(u),true,u);
+ assert.equal(subscriptionSchema.safeParse({endpoint:'https://fcm.googleapis.com/x',keys:{auth:'wrong',p256dh:'wrong'}}).success,false);
+});
+test('A real RFC 8291 encrypted phone alert decrypts to a private receipt link with no customer details',async()=>{
+ await configure();const receiver=await crypto.subtle.generateKey({name:'ECDH',namedCurve:'P-256'},true,['deriveBits']);const uaPublic=new Uint8Array(await crypto.subtle.exportKey('raw',receiver.publicKey));const auth=crypto.getRandomValues(new Uint8Array(16));
+ const subscription={endpoint:'https://web.push.apple.com/test-only',expirationTime:null,keys:{p256dh:b64(uaPublic.buffer),auth:b64(auth.buffer)}};assert.equal(subscriptionSchema.safeParse(subscription).success,true);
+ const payload=orderAlert('ORD-00000000-0000-4000-8000-000000000001',3);let captured:RequestInit|undefined;
+ await sendPhoneAlert(subscription,payload,async(_input,init)=>{captured=init;return new Response('',{status:201});});assert.ok(captured);
+ const headers=new Headers(captured.headers);assert.equal(headers.get('Content-Encoding'),'aes128gcm');assert.match(headers.get('Authorization')||'',/^vapid /);assert.equal(headers.get('TTL'),'86400');assert.equal(captured.redirect,'error');
+ const bytes=new Uint8Array(await new Response(captured.body).arrayBuffer());assert.equal(bytes.length,4096);const salt=bytes.slice(0,16);const keyLength=bytes[20];const senderPub=bytes.slice(21,21+keyLength);const sender=await crypto.subtle.importKey('raw',senderPub,{name:'ECDH',namedCurve:'P-256'},false,[]);const shared=await crypto.subtle.deriveBits({name:'ECDH',public:sender},receiver.privateKey,256);
+ const enc=new TextEncoder();const join=(...parts:Uint8Array[])=>{const out=new Uint8Array(parts.reduce((n,p)=>n+p.length,0));let offset=0;for(const p of parts){out.set(p,offset);offset+=p.length;}return out;};
+ const hkdf=async(ikm:Uint8Array,s:Uint8Array,info:Uint8Array,len:number)=>{const key=await crypto.subtle.importKey('raw',new Uint8Array(ikm),'HKDF',false,['deriveBits']);return new Uint8Array(await crypto.subtle.deriveBits({name:'HKDF',hash:'SHA-256',salt:new Uint8Array(s),info:new Uint8Array(info)},key,len*8));};
+ const ikm=await hkdf(new Uint8Array(shared),auth,join(enc.encode('WebPush: info\0'),uaPublic,senderPub),32);const cek=await hkdf(ikm,salt,enc.encode('Content-Encoding: aes128gcm\0'),16);const nonce=await hkdf(ikm,salt,enc.encode('Content-Encoding: nonce\0'),12);const key=await crypto.subtle.importKey('raw',cek,'AES-GCM',false,['decrypt']);const plain=new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM',iv:nonce},key,bytes.slice(21+keyLength)));let end=plain.length-1;while(plain[end]===0)end--;assert.equal(plain[end],2);assert.deepEqual(JSON.parse(new TextDecoder().decode(plain.slice(0,end))),payload);assert.equal('customer_name' in payload,false);assert.ok(payload.url.startsWith('/orders?order=ORD-'));
+});
+test('Push failures retry independently and expired devices are removed without replaying accepted deliveries',async()=>{
+ await configure();const outcomes=[201,503,429,400,410,0];const updates:{id:string;values:Record<string,unknown>}[]=[];const removed:string[]=[];
+ const fake={rpc:async()=>({error:null,data:outcomes.map((_,i)=>({id:String(i),order_id:'ORD-test',device_id:'device-'+i,subscription:{endpoint:String(i)},line_count:2,attempts:1}))}),from:(table:string)=>({update:(values:Record<string,unknown>)=>{let id='';const chain={eq:(field:string,value:string)=>{if(field==='id')id=value;return chain;},then:(resolve:(v:unknown)=>unknown)=>{updates.push({id,values});return Promise.resolve({error:null}).then(resolve);}};return chain;},delete:()=>({eq:async(_field:string,id:string)=>{assert.equal(table,'desk_push_devices');removed.push(id);return {error:null};}})})} as unknown as ReturnType<typeof database>;
+ const result=await dispatchDeskAlerts(fake,async s=>{const code=outcomes[Number(s.endpoint)];if(!code)throw Error('timeout');return new Response('',{status:code});});assert.deepEqual(result,{accepted:1,failed:5});assert.deepEqual(removed,['device-4']);const status=new Map(updates.map(u=>[u.id,u.values.status]));assert.equal(status.get('0'),'sent');assert.equal(status.get('1'),'queued');assert.equal(status.get('2'),'queued');assert.equal(status.get('3'),'failed');assert.equal(status.get('5'),'queued');assert.ok(updates.every(u=>!JSON.stringify(u.values).includes('test-only')));
+});

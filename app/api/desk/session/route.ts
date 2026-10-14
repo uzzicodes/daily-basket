@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { deskCookie, equalSecret, isOrderDesk, sameOrigin, sessionToken } from '@/lib/security';
 import { databaseConfigured } from '@/lib/supabase';
 import { allowRequest } from '@/lib/rate-limit';
+import { removeDeskDevice,pushCookie } from '@/lib/push';
 const headers={'Cache-Control':'no-store'};
 export async function GET(request:Request){return NextResponse.json({authenticated:await isOrderDesk(request),configured:!!process.env.ORDER_DESK_PASSWORD&&!!process.env.ADMIN_SESSION_SECRET},{headers});}
 export async function POST(request:Request){
@@ -17,4 +18,4 @@ export async function POST(request:Request){
     const response=NextResponse.json({ok:true},{headers});response.cookies.set({...deskCookie,value:await sessionToken('desk')});return response;
   }catch{return NextResponse.json({error:'Unable to sign in. Please retry.'},{status:503,headers});}
 }
-export async function DELETE(request:Request){if(!sameOrigin(request))return NextResponse.json({error:'Invalid request origin.'},{status:403,headers});const response=NextResponse.json({ok:true},{headers});response.cookies.set({...deskCookie,value:'',maxAge:0});return response;}
+export async function DELETE(request:Request){if(!sameOrigin(request))return NextResponse.json({error:'Invalid request origin.'},{status:403,headers});try{await removeDeskDevice(request);const response=NextResponse.json({ok:true},{headers});response.cookies.set({...deskCookie,value:'',maxAge:0});response.cookies.set({...pushCookie,value:'',maxAge:0});return response;}catch{return NextResponse.json({error:'Could not sign out safely. Please retry.'},{status:503,headers});}}

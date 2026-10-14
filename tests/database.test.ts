@@ -24,12 +24,35 @@ before(async()=>{
     alter default privileges in schema public grant execute on functions to anon,authenticated,service_role;`);
   // Simulate the dashboard helper so its internal-only ACL is tested as well.
   await db.exec(`create function public.rls_auto_enable() returns event_trigger language plpgsql security definer as $$begin end$$;`);
-  const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')).sort();
+  // pg_cron/pg_net/Vault infrastructure is checked against hosted Supabase, not this isolated engine.
+  const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')&&!f.endsWith('_desk_push_scheduler.sql')).sort();
   for(const file of files)await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
 });
-beforeEach(async()=>{await db.exec(`reset role;delete from orders;delete from api_limits;delete from inventory_imports;update inventory_state set revision=1;update products set is_archived=false;
+beforeEach(async()=>{await db.exec(`reset role;delete from orders;delete from desk_push_devices;delete from api_limits;delete from inventory_imports;update inventory_state set revision=1;update products set is_archived=false;
   update products set price=1000,original_price=1000,in_stock=true where id='${productId}';`);});
 after(async()=>{await db.close();});
+
+test('Phone alert queue is atomic with checkout, independent per device and idempotent across retries',async()=>{
+ const deviceA='a'.repeat(64),deviceB='b'.repeat(64);const old=await checkout();
+ await db.query('insert into desk_push_devices(id,endpoint_hash,subscription) values($1,$1,$3),($2,$2,$3)',[deviceA,deviceB,'{}']);
+ assert.equal((await db.query('select * from desk_push_deliveries where order_id=$1',[old.id])).rows.length,0);
+ const key=crypto.randomUUID();await assert.rejects(()=>checkout(items,1149,key),/Prices have changed/);assert.equal((await db.query('select * from desk_push_deliveries')).rows.length,0);
+ const order=await checkout(items,1150,key);await checkout(items,1150,key);assert.equal((await db.query('select * from desk_push_deliveries where order_id=$1',[order.id])).rows.length,2);
+ const first=await db.query<{id:string;attempts:number;device_id:string}>('select * from claim_desk_push_deliveries(1)');const second=await db.query<{id:string;attempts:number;device_id:string}>('select * from claim_desk_push_deliveries(1)');assert.notEqual(first.rows[0].id,second.rows[0].id);assert.equal(first.rows[0].attempts,1);
+ assert.equal((await db.query('select * from claim_desk_push_deliveries()')).rows.length,0);
+ await db.query("update desk_push_deliveries set status='sent' where id=$1",[first.rows[0].id]);await db.query("update desk_push_deliveries set lease_until=now()-interval '1 second' where id=$1",[second.rows[0].id]);
+ const retry=await db.query<{id:string;attempts:number}>('select * from claim_desk_push_deliveries()');assert.equal(retry.rows.length,1);assert.equal(retry.rows[0].id,second.rows[0].id);assert.equal(retry.rows[0].attempts,2);
+ await db.query("update desk_push_deliveries set attempts=5,lease_until=now()-interval '1 second' where id=$1",[second.rows[0].id]);assert.equal((await db.query('select * from claim_desk_push_deliveries()')).rows.length,0);const failed=await db.query<{status:string}>('select status from desk_push_deliveries where id=$1',[second.rows[0].id]);assert.equal(failed.rows[0].status,'failed');
+});
+test('Expired or removed phones receive no new queued orders; device rebind retains pending delivery',async()=>{
+ const old='a'.repeat(64),fresh='b'.repeat(64);await db.query("insert into desk_push_devices(id,endpoint_hash,subscription,last_seen_at) values($1,$1,'{}',now()-interval '31 days')",[old]);await checkout();assert.equal((await db.query('select * from desk_push_deliveries')).rows.length,0);
+ await db.query('update desk_push_devices set last_seen_at=now() where id=$1',[old]);await checkout();assert.equal((await db.query('select * from desk_push_deliveries')).rows.length,1);
+ await db.query('update desk_push_devices set id=$2 where id=$1',[old,fresh]);const queued=await db.query<{device_id:string}>('select device_id from desk_push_deliveries');assert.equal(queued.rows[0].device_id,fresh);
+ await db.query('delete from desk_push_devices where id=$1',[fresh]);assert.equal((await db.query('select * from desk_push_deliveries')).rows.length,0);
+});
+test('Phone subscriptions, alert queue and claim RPC cannot be read or executed by public roles',async()=>{
+ for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(()=>db.query('select * from desk_push_devices'),/permission denied/);await assert.rejects(()=>db.query('select * from desk_push_deliveries'),/permission denied/);await assert.rejects(()=>db.query('select * from claim_desk_push_deliveries()'),/permission denied/);await db.exec('reset role');}
+});
 
 test('Order snapshots keep the exact product photo, name and pack size after catalog changes',async()=>{
   const original=await db.query<{name:string;unit:string;image_url:string}>('select name,unit,image_url from products where id=$1',[productId]);
