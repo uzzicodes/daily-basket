@@ -3,10 +3,12 @@ import "./globals.css";
 import "./professional-theme.css";
 import "./alfatah-theme.css";
 import "./order-desk.css";
+import 'leaflet/dist/leaflet.css';
+import './delivery.css';
 
 export const metadata: Metadata = {
   title: "Askari Departmental Store | Lahore Groceries",
-  description: "Everyday grocery essentials, trusted Pakistani brands and doorstep delivery across Lahore. Askari Departmental Store.",
+  description: "Grocery essentials and household favourites from Askari Departmental Store. Delivery within 5 km of our PGECHS Phase 1 store in Lahore.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

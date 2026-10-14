@@ -7,7 +7,7 @@ import type { Order } from '../lib/types';
 
 // An isolated PostgreSQL engine: no Supabase account, customer records or network writes.
 const db=new PGlite();
-const customer={customer_name:'Database Test',customer_phone:'03001234567',delivery_area:'DHA Phase 5',delivery_address:'House 12 Street 4 Block A'};
+const customer={customer_name:'Database Test',customer_phone:'03001234567',delivery_area:'PGECHS Phase 1',delivery_latitude:31.41216075,delivery_longitude:74.27587375,delivery_address:'House 12 Street 4 Block A'};
 const productId='00000000-0000-4000-8000-000000000001';
 const items=[{product_id:productId,quantity:1}];
 async function checkout(entries:unknown=items,total=1150,key=crypto.randomUUID(),hash='test-request'){
@@ -50,6 +50,20 @@ test('Staff queue exposes older active orders separately from delivered history 
 
 test('All migrations load and the seed catalog has all 18 grocery products',async()=>{
   const r=await db.query<{count:number}>('select count(*)::int as count from products');assert.equal(r.rows[0].count,18);
+});
+
+test('Database checkout rejects missing, invalid and outside delivery pins and snapshots valid pins',async()=>{
+  async function place(details:unknown){return db.query('select create_checkout_order($1::jsonb,$2::jsonb,$3::uuid,$4,1150)',[JSON.stringify(details),JSON.stringify(items),crypto.randomUUID(),'delivery-test']);}
+  await assert.rejects(()=>place({...customer,delivery_latitude:undefined}),/delivery pin/);
+  await assert.rejects(()=>place({...customer,delivery_latitude:'31.41216075'}),/delivery pin/);
+  await assert.rejects(()=>place({...customer,delivery_latitude:91}),/Invalid delivery pin/);
+  await assert.rejects(()=>place({...customer,delivery_latitude:31.47,delivery_distance_km:0}),/within 5 km/);
+  const count=await db.query<{count:number}>('select count(*)::int as count from orders');assert.equal(count.rows[0].count,0);
+  const inside={...customer,delivery_latitude:31.41216075+4.999/6371*180/Math.PI};await place(inside);
+  const saved=await db.query<{delivery_latitude:number;delivery_longitude:number;delivery_distance_km:number}>('select delivery_latitude,delivery_longitude,delivery_distance_km from orders');assert.equal(saved.rows[0].delivery_latitude,inside.delivery_latitude);assert.equal(saved.rows[0].delivery_longitude,customer.delivery_longitude);assert.equal(Number(saved.rows[0].delivery_distance_km),4.999);
+  await assert.rejects(()=>place({...customer,delivery_latitude:31.41216075+5.001/6371*180/Math.PI}),/within 5 km/);
+  const boundary=await db.query<{km:number}>('select delivery_distance_km($1,$2) as km',[31.41216075+5/6371*180/Math.PI,74.27587375]);assert.ok(Math.abs(boundary.rows[0].km-5)<1e-9);
+  for(const role of ['anon','authenticated']){const acl=await db.query<{allowed:boolean}>("select has_function_privilege($1,'delivery_distance_km(double precision,double precision)','EXECUTE') as allowed",[role]);assert.equal(acl.rows[0].allowed,false);}
 });
 test('Checkout snapshots authoritative prices and freezes the complete response across retries',async()=>{
   const key=crypto.randomUUID();const first=await checkout(items,1150,key);

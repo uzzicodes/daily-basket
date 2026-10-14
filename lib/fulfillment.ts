@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { database } from './supabase';
 import type { Order } from './types';
 // Explicit fields keep internal accounting, request hashes and future owner fields out of staff responses.
-export function fulfillmentOrder(order:Order):Order{return {id:order.id,customer_name:order.customer_name,customer_phone:order.customer_phone,delivery_area:order.delivery_area,delivery_address:order.delivery_address,created_at:order.created_at,status:order.status,payment_method:order.payment_method,subtotal:order.subtotal,delivery_fee:order.delivery_fee,total_amount:order.total_amount,items:order.items.map(i=>({product_id:i.product_id,name:i.name,unit:i.unit,image_url:i.image_url,quantity:i.quantity,price:i.price}))};}
+export function fulfillmentOrder(order:Order):Order{return {id:order.id,customer_name:order.customer_name,customer_phone:order.customer_phone,delivery_area:order.delivery_area,delivery_address:order.delivery_address,delivery_latitude:order.delivery_latitude,delivery_longitude:order.delivery_longitude,delivery_distance_km:order.delivery_distance_km,created_at:order.created_at,status:order.status,payment_method:order.payment_method,subtotal:order.subtotal,delivery_fee:order.delivery_fee,total_amount:order.total_amount,items:order.items.map(i=>({product_id:i.product_id,name:i.name,unit:i.unit,image_url:i.image_url,quantity:i.quantity,price:i.price}))};}
 const schema=z.object({id:z.string().regex(/^ORD-[\da-f-]{36}$/i),status:z.enum(['Pending','Packing','Out for Delivery','Delivered']),expected_status:z.enum(['Pending','Packing','Out for Delivery','Delivered'])}).strict();
 export async function updateOrderStatus(request:Request){
   try{
