@@ -10,6 +10,7 @@ export default function DeliveryLocationPicker({active=true}:{active?:boolean}){
   const callbackRef=useRef(setDeliveryPoint);callbackRef.current=setDeliveryPoint;
   const container=useRef<HTMLDivElement>(null),map=useRef<Leaflet.Map|null>(null),marker=useRef<Leaflet.Marker|null>(null),library=useRef<typeof Leaflet|null>(null);
   const [error,setError]=useState(''),[locating,setLocating]=useState(false),[ready,setReady]=useState(false),[retry,setRetry]=useState(0),[latitude,setLatitude]=useState(''),[longitude,setLongitude]=useState('');
+  useEffect(()=>{if(deliveryPoint){setLatitude(String(deliveryPoint.latitude));setLongitude(String(deliveryPoint.longitude));}},[deliveryPoint]);
   useEffect(()=>{
     if(!active||!container.current)return;let cancelled=false;let observer:ResizeObserver|undefined;setReady(false);
     import('leaflet').then(L=>{

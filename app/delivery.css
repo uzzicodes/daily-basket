@@ -7,3 +7,9 @@
 .shop-intro h2{font:600 24px/1.4 Poppins,sans-serif;color:#021c19;letter-spacing:normal}@media(max-width:600px){.shop-intro h2{font-size:21px}}
 
 .nav-main>.store-logo{background:#fff;border-radius:8px}
+.delivery-location.coverage-trigger{display:flex;background:#e7f7f6;color:#066761;border:1px solid #c7e5df}
+.welcome-banners .welcome-copy{padding:0}
+.welcome-banners .welcome-products{padding:0;gap:0;background:transparent;border:0;box-shadow:none}
+.welcome-banners .welcome-product img{mix-blend-mode:normal}
+@media(min-width:601px) and (max-width:1200px){.nav-main{position:relative;height:136px;padding-bottom:32px}.delivery-location.coverage-trigger{position:absolute;left:0;bottom:9px;padding:0;background:transparent;border:0;border-radius:0;min-height:0;gap:8px}.coverage-trigger>span{flex-direction:row;align-items:center;gap:10px}}
+@media(max-width:600px){.delivery-location.coverage-trigger{background:transparent;border:0;padding:0}.nav-main .search-wrap{bottom:45px}}
