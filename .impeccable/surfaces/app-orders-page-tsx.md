@@ -1,0 +1,9 @@
+# Order desk
+
+Mode: Operate. Counter staff pack and dispatch grocery orders on a single desktop screen.
+
+Inherit the established Askari white/teal world and self-hosted Poppins. Keep owner financial aggregates and inventory administration behind separate owner access. Queue, product identification and delivery context remain together in one viewport; panes scroll independently. On phones, selecting an order opens its detail with a back-to-orders control.
+
+Each item uses the immutable order photo, full name, pack size and quantity. Never substitute a generic product image when the snapshot photo fails. Tick the entire ordered quantity before dispatch; confirm cash received before delivery completion. Sample mode contains clearly marked fictional customers and prices, never calls mutation APIs and cannot alter live orders.
+
+Polling every 10 seconds refreshes all loaded pages. Active orders are queried separately from delivered history so older unfinished orders are not buried. Keep selected order and checks during polling. Display stale-connection errors with retry and retain last loaded data. Empty queues explain where incoming orders appear.

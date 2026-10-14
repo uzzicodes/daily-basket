@@ -31,6 +31,23 @@ beforeEach(async()=>{await db.exec(`reset role;delete from orders;delete from ap
   update products set price=1000,original_price=1000,in_stock=true where id='${productId}';`);});
 after(async()=>{await db.close();});
 
+test('Order snapshots keep the exact product photo, name and pack size after catalog changes',async()=>{
+  const original=await db.query<{name:string;unit:string;image_url:string}>('select name,unit,image_url from products where id=$1',[productId]);
+  const first=await checkout();
+  await db.query('update products set name=$1,unit=$2,image_url=$3 where id=$4',['Changed name','Changed pack','https://example.com/new.jpg',productId]);
+  const saved=await db.query<{items:{name:string;unit:string;image_url:string}[]}>('select items from orders where id=$1',[first.id]);
+  assert.equal(saved.rows[0].items[0].name,original.rows[0].name);assert.equal(saved.rows[0].items[0].unit,original.rows[0].unit);assert.equal(saved.rows[0].items[0].image_url,original.rows[0].image_url);
+  await db.query('update products set name=$1,unit=$2,image_url=$3 where id=$4',[original.rows[0].name,original.rows[0].unit,original.rows[0].image_url,productId]);
+});
+
+test('Staff queue exposes older active orders separately from delivered history with private RPC grants',async()=>{
+  const first=await checkout();await db.query("update orders set created_at='2026-01-01T00:00:00Z' where id=$1",[first.id]);
+  const second=await checkout(items,1150);await db.query("update orders set status='Delivered' where id=$1",[second.id]);
+  const active=await db.query<{id:string}>("select id from list_desk_orders('active')");assert.deepEqual(active.rows.map(o=>o.id),[first.id]);
+  const history=await db.query<{id:string}>("select id from list_desk_orders('delivered')");assert.deepEqual(history.rows.map(o=>o.id),[second.id]);
+  for(const role of ['anon','authenticated']){const grant=await db.query<{allowed:boolean}>("select has_function_privilege($1,'public.list_desk_orders(text,timestamptz,text,integer)','EXECUTE') as allowed",[role]);assert.equal(grant.rows[0].allowed,false);}
+});
+
 test('All migrations load and the seed catalog has all 18 grocery products',async()=>{
   const r=await db.query<{count:number}>('select count(*)::int as count from products');assert.equal(r.rows[0].count,18);
 });

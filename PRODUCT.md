@@ -15,10 +15,10 @@ Confirmed in the user's pasted brief: Lahore households shopping for supermarket
 Build a full grocery-only e-commerce application for Askari Departmental Store Lahore. Customers find essentials, choose quantities, provide an address, and order with Cash on Delivery or WhatsApp.
 
 ## Operating Context
-The brief prioritizes smartphone shopping. Deliver only to the Lahore areas listed in lib/constants.ts. Staff use a protected /admin page on the store counter laptop.
+The brief prioritizes smartphone shopping. Deliver only to the Lahore areas listed in lib/constants.ts. Staff use a protected /orders desk on the store counter laptop. The owner has a separate protected /admin dashboard for sales and inventory.
 
 ## Capabilities and Constraints
-Nine categories listed in the original brief, including laundry, cleaning, baby care and personal hygiene. No electronics, appliances, toys, clothing or mobile accessories. A comprehensive catalog within the nine grocery departments with verified source photography and Excel-driven availability. Live search, category filters, four sorting modes, persistent basket, delivery-progress calculation, sliding checkout, list-by-photo or text, admin order pipeline, packing slips and daily metrics. Discord alerts are explicitly deferred by the user.
+Nine categories listed in the original brief, including laundry, cleaning, baby care and personal hygiene. No electronics, appliances, toys, clothing or mobile accessories. A comprehensive catalog within the nine grocery departments with verified source photography and Excel-driven availability. Live search, category filters, four sorting modes, persistent basket, delivery-progress calculation, sliding checkout, list-by-photo or text, a staff order desk with exact product photos, pack-size and quantity checks, picture packing slips and COD collection; a separate owner dashboard with daily metrics and inventory. Discord alerts are explicitly deferred by the user.
 
 Delivery is free at Rs. 2,999 and above; below the threshold the fee is Rs. 150. The requested announcement advertises 45-minute express delivery. This is supplied copy, not an independently verified service promise. Live catalog prices are blank until the store imports its own price list; imported positive prices activate matched items and all other items remain out of stock.
 
