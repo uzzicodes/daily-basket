@@ -1,0 +1,1 @@
+export default function StoreLoading(){return <main className="container shop-loading" role="status"><div className="shop-loading-photo"/><div><h1>Opening the shelf…</h1><p>Getting the latest products and prices.</p></div></main>;}

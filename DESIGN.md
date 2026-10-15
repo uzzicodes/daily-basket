@@ -70,3 +70,9 @@ Stock and pending prices are explicit. Buttons, dialogs, forms, search results, 
 Preserve Askari identity and verified product photography. Match the observed typography and color relationships without importing Al-Fatah's name, logo, promotions or unrelated departments. Keep staff tools authenticated. Show only Askari's imported prices as selling prices.
 
 The inherited seed-reference metadata verification limit remains documented.
+
+## Shopping and receipt refinement
+
+Full-width photographic campaigns use original generated grocery, breakfast and home-care scenes with readable HTML copy over a quiet left area. Phones stack the image above the copy. Manual carousel changes use one short fade. Nine round department photos lift and zoom slightly on hover, keyboard focus and press; reduced-motion disables these effects. Separate category and product-detail pages share the header and basket. Product detail prioritizes the exact pack photo and size. Packing receipts use a compact image/name/quantity/line-total grid, authoritative totals and an explicit packing-copy label. Staff workflow ends at dispatch; only the owner closes orders after cash handover.
+
+The order desk and Discord share a PDF renderer for the picture packing receipt. Noto Sans and Noto Sans Arabic are embedded, receipts paginate at A5, and all photos and totals come from saved snapshots. The original compact print view and PNG export remain available.

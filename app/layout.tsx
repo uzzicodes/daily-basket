@@ -5,6 +5,7 @@ import "./alfatah-theme.css";
 import "./order-desk.css";
 import 'leaflet/dist/leaflet.css';
 import './delivery.css';
+import './shop.css';
 
 export const metadata: Metadata = {
   title: "Askari Departmental Store | Lahore Groceries",

@@ -1,5 +1,5 @@
 import { after, NextResponse } from 'next/server';
-import { dispatchDeskAlerts } from '@/lib/push';
+import { dispatchOrderNotifications } from '@/lib/notifications';
 import { orderSchema } from '@/lib/order';
 import { database, databaseConfigured } from '@/lib/supabase';
 import { allowRequest } from '@/lib/rate-limit';
@@ -16,7 +16,7 @@ export async function POST(request:Request){
     const requestHash=await digest(JSON.stringify({...customer,items,expected_total}));
     const {data,error}=await database().rpc('create_checkout_order',{p_customer:customer,p_items:items,p_key:idempotency_key,p_hash:requestHash,p_expected_total:expected_total});
     if(error){if(['P0001','23514','22P02'].includes(error.code))return NextResponse.json({error:error.code==='P0001'?error.message:'Some order details are invalid.',code:error.message.startsWith('Prices have changed.')?'PRICE_CHANGED':undefined},{status:409});console.error('Order persistence failed',error.code);return NextResponse.json({error:'We could not save your order. Please try again.'},{status:503});}
-    try{after(async()=>{try{await dispatchDeskAlerts();}catch{console.error('Phone alert queue will retry.');}});}catch{console.error('Phone alert queue will retry.');}
+    try{after(async()=>{await dispatchOrderNotifications();});}catch{console.error('Order notification queues will retry.');}
     return NextResponse.json({order:data},{status:201,headers:{'Cache-Control':'no-store'}});
   }catch {return NextResponse.json({error:'Ordering is temporarily unavailable. Please try again.'},{status:503});}
 }

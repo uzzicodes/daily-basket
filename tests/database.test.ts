@@ -25,12 +25,20 @@ before(async()=>{
   // Simulate the dashboard helper so its internal-only ACL is tested as well.
   await db.exec(`create function public.rls_auto_enable() returns event_trigger language plpgsql security definer as $$begin end$$;`);
   // pg_cron/pg_net/Vault infrastructure is checked against hosted Supabase, not this isolated engine.
-  const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')&&!f.endsWith('_desk_push_scheduler.sql')).sort();
+  const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')&&!f.endsWith('_scheduler.sql')).sort();
   for(const file of files)await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
 });
 beforeEach(async()=>{await db.exec(`reset role;delete from orders;delete from desk_push_devices;delete from api_limits;delete from inventory_imports;update inventory_state set revision=1;update products set is_archived=false;
   update products set price=1000,original_price=1000,in_stock=true where id='${productId}';`);});
 after(async()=>{await db.close();});
+
+test('Discord receipts queue atomically, do not replay old orders, recover leases and stay private',async()=>{
+ const key=crypto.randomUUID();await assert.rejects(()=>checkout(items,1149,key),/Prices have changed/);assert.equal((await db.query('select * from discord_receipt_deliveries')).rows.length,0);
+ const saved=await checkout(items,1150,key);await checkout(items,1150,key);assert.equal((await db.query('select * from discord_receipt_deliveries')).rows.length,1);
+ const first=await db.query<{receipt:Order;attempts:number}>('select * from claim_discord_receipts()');assert.equal(first.rows[0].receipt.id,saved.id);assert.equal(first.rows[0].attempts,1);assert.equal((await db.query('select * from claim_discord_receipts()')).rows.length,0);
+ await db.exec("update discord_receipt_deliveries set lease_until=now()-interval '1 second'");assert.equal((await db.query<{attempts:number}>('select * from claim_discord_receipts()')).rows[0].attempts,2);
+ for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(()=>db.query('select * from discord_receipt_deliveries'),/permission denied/);await assert.rejects(()=>db.query('select * from claim_discord_receipts()'),/permission denied/);await db.exec('reset role');}
+});
 
 test('Phone alert queue is atomic with checkout, independent per device and idempotent across retries',async()=>{
  const deviceA='a'.repeat(64),deviceB='b'.repeat(64);const old=await checkout();

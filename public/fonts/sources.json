@@ -34,5 +34,20 @@
     "weight": "400",
     "file": "open-sans-400.woff2",
     "url": "https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2"
+  },
+  {
+    "family": "Noto Sans",
+    "file": "noto-sans.ttf",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSans/NotoSans-Regular.ttf"
+  },
+  {
+    "family": "Noto Sans",
+    "file": "noto-sans-bold.ttf",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSans/NotoSans-Bold.ttf"
+  },
+  {
+    "family": "Noto Sans Arabic",
+    "file": "noto-sans-arabic.ttf",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansArabic/NotoSansArabic-Regular.ttf"
   }
 ]

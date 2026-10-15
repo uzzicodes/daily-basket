@@ -81,7 +81,7 @@ Upload the store’s real selling-price file before accepting catalog orders. Th
 
 ## Hosted private preview
 
-The workspace also includes optional Sites/Vinext tooling for the private preview. The downloadable source uses standard Next.js for local development and Vercel. No credentials are embedded in the source. Discord integration is intentionally deferred.
+The workspace also includes optional Sites/Vinext tooling for the private preview. The downloadable source uses standard Next.js for local development and Vercel. No credentials are embedded in the source. Discord receipt delivery is optional and requires the server-only DISCORD_RECEIPT_WEBHOOK_URL.
 
 ## Full catalog and price-list inventory
 
@@ -95,7 +95,7 @@ The server pages products, so the full catalog is never sent to the homepage at 
 
 Set `ORDER_DESK_PASSWORD` to a different strong password from `ADMIN_PASSWORD`. Counter staff sign in at `/orders`. Owner-only sales and inventory remain at `/admin`; only the owner password opens it. Owner credentials can also sign into the desk, issuing a desk-scoped session. Staff tokens cannot be replayed as owner sessions. Both cookies are HttpOnly, SameSite Strict, Secure in production and expire after eight hours.
 
-The order desk loads active orders separately from delivered history, 200 per page with stable timestamp/ID cursors, and refreshes all loaded pages every 10 seconds. No financial aggregates, inventory endpoints, cost fields or request hashes are exposed to staff. COD amounts and selling prices are included only for fulfillment and payment collection. Each product photo, name, size, quantity and price is read from the saved order snapshot. Failed photos show an explicit unavailable message. Packing checks are held in the current screen; refreshing or closing it resets the checks. Dispatch requires all lines checked; delivery confirmation requires checking cash received. Status transitions also use the expected prior status on the server to reject concurrent changes.
+The order desk loads active orders separately from delivered history, 200 per page with stable timestamp/ID cursors, and refreshes all loaded pages every 10 seconds. No financial aggregates, inventory endpoints, cost fields or request hashes are exposed to staff. COD amounts and selling prices are included only for fulfillment and payment collection. Each product photo, name, size, quantity and price is read from the saved order snapshot. Failed photos show an explicit unavailable message. Packing checks are held in the current screen; refreshing or closing it resets the checks. Dispatch requires all lines checked. The desk cannot confirm cash or close deliveries. Only the owner dashboard can close an order after explicitly confirming cash handover. This is enforced by the server, including forged desk requests. Status transitions also use the expected prior status on the server to reject concurrent changes.
 
 Sample mode uses fictional customers and demonstration prices from the original sample products. It never reads live customer data or sends status changes. Real profit requires product cost prices; the existing owner profit-share figure is explicitly an estimate, not actual profit.
 
@@ -105,4 +105,17 @@ The owner limits delivery to a 5 km straight-line radius of the store pin: 31.41
 
 Customers can check coverage from the header without a priced basket. Leaflet 1.9.4 is loaded only when a map opens. OpenStreetMap tiles carry visible attribution and use normal browser caching; no tile prefetch, bulk download, paid map key or address-geocoding service is used. Customers can select a map pin, explicitly request device location, or enter coordinates. Delivery pins are held in page memory, not local storage. Coordinates appear in the staff order desk as a directions link and in WhatsApp requests.
 
-The owner requested banner-style onboarding and a clearer main-screen logo. The storefront has a manually controlled merchandising carousel and a paper-list banner. Banner product photos are existing catalog-source images; banners contain no invented discounts or stock claims. The supplied original logo remains unchanged and is framed at a larger size.
+The owner requested banner-style onboarding and a clearer main-screen logo. The storefront has a manually controlled merchandising carousel and a paper-list banner. Campaign banners and round category photos are original generated artwork, served locally in WebP. Artwork is illustrative, contains no invented discounts or availability claims, and is documented in public/images/README.md. Product cards and receipts retain exact catalog photography. The supplied original logo remains unchanged and is framed at a larger size.
+
+
+## Shopping pages and packing receipts
+
+Home shows available, priced products only. `/categories` lists nine departments; `/category/[slug]` opens a separate department page. `/shop?q=...` searches the full catalog. Product links open `/products/[name]--[id]` with the exact photo, brand, pack size, stock and price, a zoom view and related available items. The shared store layout keeps the basket across navigation. Product ingredients or nutrition are not invented when source data lacks them.
+
+The staff desk includes compact picture packing slips and downloadable PDF and PNG receipts for manual sharing to WhatsApp or another app. All totals and photos come from the saved order snapshot. The packing receipt is not proof of payment; financial settlement remains owner-only on every device.
+
+## Automatic Discord receipts
+
+Apply the Discord receipt and scheduler migrations after the existing phone-alert migrations. Set `DISCORD_RECEIPT_WEBHOOK_URL` as a secret in the hosting environment, preserving the existing `DESK_PUSH_DISPATCH_SECRET`, wake URL and Cron job. Each newly saved order queues one private Discord delivery in the checkout transaction. No historical orders are replayed. The post-response sender attempts delivery immediately; the existing minute scheduler retries independently of an open browser. Phone alerts remain independent.
+
+The Discord post includes customer contact/address, COD totals, a picture packing slip PDF containing every product photo, name, pack size, quantity, unit price, line total and COD total. The PDF comes from the same shared generator as Save PDF on the order desk. Long receipts paginate, photos are fetched with bounded size/time and safe destinations, and missing photos are explicitly labelled. The private order-desk link opens all photos and offers Save PDF, Save image or Print slip. Use a private staff-only channel. The webhook is never sent to the browser or included in source exports. Destinations are restricted to Discord, redirects are refused, and mentions are disabled. Leases prevent concurrent claims, confirmed message IDs are retained, and transient/rate-limit failures retry up to five attempts. As with external webhook delivery, an interrupted response after acceptance can cause a duplicate; the full order reference identifies it. Payment actions are not exposed in Discord. Manual WhatsApp sharing remains available; Discord does not automatically relay to WhatsApp.

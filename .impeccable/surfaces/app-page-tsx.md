@@ -1,12 +1,12 @@
 ---
 version: 1
 slug: "app-page-tsx"
-primary_target: "app/page.tsx"
+primary_target: "app/(store)/page.tsx"
 related_targets: ["components/Storefront.tsx"]
 ---
 
 # Storefront
-Visitor mode: Operate. Target: app/page.tsx and components/Storefront.tsx.
+Visitor mode: Operate. Target: app/(store)/page.tsx and components/Storefront.tsx.
 The user delegated template selection after seeing the three directions. Quick Basket is selected for the mobile-priority grocery task. This is a code-led build; no image comp is approved.
 
 ## Direction contract
@@ -19,3 +19,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 ## Motion refinement
 Focal feedback: an Add action becomes a dark stepper with warm text with a brief warm confirmation, while the count, basket badge and total respond together. Drawers enter and exit along their spatial edge; centered dialogs settle over a dimming navy backdrop. CSS-only bounded transitions (150–350ms), no looping effects or loading choreography. Reduced-motion users retain immediate count/color state without spatial animation. No new dependency.
+
+## Current refinement
+The owner requested full photographic store banners and category images after rejecting the small packshot collage. Three original full-width campaigns and nine round department photos now replace it. Separate category and product detail routes share the basket. Photos have gentle hover/focus/press motion with reduced-motion support. Staff payment confirmation is removed on all screens and server-enforced; compact receipts can be printed or saved as PNG. Discord receipts are a private fulfillment stream, without payment controls. Artwork provenance and prompts live in public/images/README.md.
