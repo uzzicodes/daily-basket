@@ -1,0 +1,11 @@
+export type Product={id:string;name:string;brand:string;category:string;unit:string;image_url:string;price:number|null;in_stock:boolean;catalog_code?:string};
+export type Department={name:string;slug:string;label:string;description:string};
+export type StoreConfig={store:string;address:string;whatsapp:string;delivery_fee:number;free_delivery:number;radius_km:number;location:Point;departments:Department[]};
+export type Point={latitude:number;longitude:number};
+export type Customer={customer_name:string;customer_phone:string;delivery_area:string;delivery_address:string;delivery_latitude:number;delivery_longitude:number};
+export type CartLine={product:Product;quantity:number};
+export type Catalog={products:Product[];total:number;available_total:number;next_offset:number|null;revision:number};
+export type SavedOrder={id:string;created_at:string;status:string;total_amount:number;subtotal:number;delivery_fee:number;items:CartLine[]};
+export type CustomerReceipt=Omit<SavedOrder,'items'>&{items:{product_id:string;name:string;unit:string;image_url:string;quantity:number;price:number}[]};
+export type Attempt={idempotency_key:string;expected_total:number;items:{product_id:string;quantity:number}[];customer:Customer;lines:CartLine[]};
+export type RootParams={Main:{screen?:'Shop'|'Categories'|'Basket'|'Orders'|'Help'}|undefined;Catalog:{category?:string;q?:string;favourites?:boolean};Product:{id:string};Checkout:undefined;Delivery:{checkout?:boolean}|undefined;Order:{id:string};List:undefined};

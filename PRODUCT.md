@@ -5,8 +5,12 @@
 ## Platform
 web
 
+Native Android and iPhone customer shopping app alongside the existing website. The native extension is implemented in `mobile/`; `/app-preview` is a labelled browser preview, not a phone installation.
+
 ## Stack
 User specified Next.js 14+ App Router, React, TypeScript, Tailwind CSS, Lucide React, Supabase PostgreSQL, React Context or Zustand, Discord webhook and WhatsApp links. Local installation and Vercel deployment instructions are required.
+
+The native customer app uses Expo SDK 57, React Native and React Navigation with the existing Next.js/Supabase order backend. Its delivery-pin map uses a Leaflet/OpenStreetMap WebView; the shopping screens and navigation are native.
 
 ## Users
 Confirmed in the user's pasted brief: Lahore households shopping for supermarket essentials, including customers who prefer handwritten grocery lists. Store-counter staff pack orders, manage deliveries, print slips and collect COD.
@@ -41,3 +45,13 @@ The user supplied 03084555567 as the WhatsApp contact; use international format 
 Automatic WhatsApp slips were deferred after Meta required business verification. The user needs packing receipts on both Android and iPhone instead. Staff Web Push alerts open the existing private receipt, including saved product photos and quantities. Each phone must enable notification permission and pass a test; iPhone requires the Home Screen app on iOS 16.4+. Generic push copy excludes customer details. A durable per-device queue and a quiet Supabase Cron retry path keep sending independent of an open browser. Existing customer-initiated WhatsApp links remain available.
 
 Storefront navigation now has separate category, search and product-detail pages. Home shows only available priced products. Original full photographic campaigns and nine round category images are documented in public/images/README.md; exact catalog photos remain authoritative. Staff have no cash-received/Delivered action on any device, including forged API requests. Shared packing slips use compact quantities/unit prices and line totals; PNG downloads support manual phone sharing.
+
+## Native Customer Extension
+
+The user requested actual Android/iPhone shopping apps for regular customers while retaining the website and backend. The app inherits Askari's original logo, teal identity, grocery photography and nine departments. Guest ordering requires no account or OTP. English/Urdu controls, automatic light/dark appearance, a native five-tab navigation, favourites, product details, basket, delivery pin, COD checkout and per-device order history are implemented. Expanded Android windows use a left navigation rail. Reorder refreshes current prices and availability before replacing the basket.
+
+Delivery remains within the store's 5 km straight-line radius, with the existing Rs. 2,999 free-delivery threshold and Rs. 150 fee below it. The server remains authoritative for prices, stock, coverage and totals. Uncertain checkout retries preserve the original key and frozen order payload across restarts. Explicit price/stock rejection releases that attempt for basket review; uncertain responses retain it. Confirmed orders remain confirmed even if local history cannot be saved.
+
+Native SecureStore holds private receipt access keys, optional remembered addresses and pending delivery details. Basket, favourites, language and recent receipt summaries are stored on the device. History does not sync between phones; customer receipt access expires after 90 days. The browser preview keeps private fields in session storage. Help offers forgetting an address and clearing local shopping data, with pending attempts protected from accidental deletion. `/app-privacy` describes these behaviours. Optional foreground location is requested on tap; list photos are explicitly shared through the phone's sharing menu. There is no customer push notification implementation. Existing staff push, automatic private Discord picture-PDF receipts and owner-only cash settlement retain their separate roles.
+
+The final review verdict is **ship at code/browser-preview scope only**: TypeScript and Android/iOS JavaScript exports passed, and both material checkout-retry fixes were resolved. Captures in `.impeccable/review/mobile/browser-*.png` show browser rendering only. Native device/simulator QA, permission handling, platform symbols, safe areas, enlarged text, native Back/gestures and performance remain unverified. No signed APK/AAB/IPA, EAS/account setup or app-store publication is claimed; distribution still requires the owner's signing/accounts and native QA. See `mobile/README.md` for build and handoff instructions.

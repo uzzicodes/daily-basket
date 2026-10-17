@@ -1,0 +1,13 @@
+import {cp,mkdir,readdir,rm} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const source=path.resolve(root,'dist-web');
+const target=path.resolve(root,'../public/mobile-preview');
+const publicRoot=path.resolve(root,'../public');
+if(path.dirname(target)!==publicRoot||path.basename(target)!=='mobile-preview')throw Error('Unexpected preview output path.');
+await readdir(source);
+await rm(target,{recursive:true,force:true});
+await mkdir(target,{recursive:true});
+await cp(source,target,{recursive:true});
+console.log('Browser preview copied to '+target+'; native verification is separate.');

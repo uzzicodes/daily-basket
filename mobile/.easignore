@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+dist-native/
+dist-web/
+.env*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.mobileprovision

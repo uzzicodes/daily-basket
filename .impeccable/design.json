@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-12T15:11:33.691Z",
+  "generatedAt": "2026-10-17T23:51:37.087Z",
   "title": "Design System: Askari Departmental Store",
   "extensions": {
     "colorMeta": {
@@ -255,6 +255,291 @@
           "oklch(84% 0.016 245)",
           "oklch(95% 0.009 245)"
         ]
+      },
+      "mobile-light-background": {
+        "role": "neutral",
+        "displayName": "Native light background",
+        "tonalRamp": [
+          "oklch(15% 0.0045 134.85)",
+          "oklch(26% 0.0045 134.85)",
+          "oklch(38% 0.0045 134.85)",
+          "oklch(49% 0.0045 134.85)",
+          "oklch(61% 0.0045 134.85)",
+          "oklch(72% 0.0045 134.85)",
+          "oklch(84% 0.0045 134.85)",
+          "oklch(95% 0.0045 134.85)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-surface": {
+        "role": "neutral",
+        "displayName": "Native light surface",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-tint": {
+        "role": "primary",
+        "displayName": "Native light tint",
+        "tonalRamp": [
+          "oklch(15% 0.0913 188.90)",
+          "oklch(26% 0.0913 188.90)",
+          "oklch(38% 0.0913 188.90)",
+          "oklch(49% 0.0913 188.90)",
+          "oklch(61% 0.0913 188.90)",
+          "oklch(72% 0.0913 188.90)",
+          "oklch(84% 0.0913 188.90)",
+          "oklch(95% 0.0913 188.90)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-on-tint": {
+        "role": "neutral",
+        "displayName": "Native light on tint",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-text": {
+        "role": "neutral",
+        "displayName": "Native light text",
+        "tonalRamp": [
+          "oklch(15% 0.0277 167.25)",
+          "oklch(26% 0.0277 167.25)",
+          "oklch(38% 0.0277 167.25)",
+          "oklch(49% 0.0277 167.25)",
+          "oklch(61% 0.0277 167.25)",
+          "oklch(72% 0.0277 167.25)",
+          "oklch(84% 0.0277 167.25)",
+          "oklch(95% 0.0277 167.25)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-muted": {
+        "role": "neutral",
+        "displayName": "Native light muted",
+        "tonalRamp": [
+          "oklch(15% 0.0298 161.02)",
+          "oklch(26% 0.0298 161.02)",
+          "oklch(38% 0.0298 161.02)",
+          "oklch(49% 0.0298 161.02)",
+          "oklch(61% 0.0298 161.02)",
+          "oklch(72% 0.0298 161.02)",
+          "oklch(84% 0.0298 161.02)",
+          "oklch(95% 0.0298 161.02)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-line": {
+        "role": "neutral",
+        "displayName": "Native light line",
+        "tonalRamp": [
+          "oklch(15% 0.0159 154.45)",
+          "oklch(26% 0.0159 154.45)",
+          "oklch(38% 0.0159 154.45)",
+          "oklch(49% 0.0159 154.45)",
+          "oklch(61% 0.0159 154.45)",
+          "oklch(72% 0.0159 154.45)",
+          "oklch(84% 0.0159 154.45)",
+          "oklch(95% 0.0159 154.45)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-soft": {
+        "role": "neutral",
+        "displayName": "Native light soft",
+        "tonalRamp": [
+          "oklch(15% 0.0191 162.93)",
+          "oklch(26% 0.0191 162.93)",
+          "oklch(38% 0.0191 162.93)",
+          "oklch(49% 0.0191 162.93)",
+          "oklch(61% 0.0191 162.93)",
+          "oklch(72% 0.0191 162.93)",
+          "oklch(84% 0.0191 162.93)",
+          "oklch(95% 0.0191 162.93)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-light-error": {
+        "role": "semantic",
+        "displayName": "Native light error",
+        "tonalRamp": [
+          "oklch(15% 0.1586 25.61)",
+          "oklch(26% 0.1586 25.61)",
+          "oklch(38% 0.1586 25.61)",
+          "oklch(49% 0.1586 25.61)",
+          "oklch(61% 0.1586 25.61)",
+          "oklch(72% 0.1586 25.61)",
+          "oklch(84% 0.1586 25.61)",
+          "oklch(95% 0.1586 25.61)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-background": {
+        "role": "neutral",
+        "displayName": "Native dark background",
+        "tonalRamp": [
+          "oklch(15% 0.0146 172.29)",
+          "oklch(26% 0.0146 172.29)",
+          "oklch(38% 0.0146 172.29)",
+          "oklch(49% 0.0146 172.29)",
+          "oklch(61% 0.0146 172.29)",
+          "oklch(72% 0.0146 172.29)",
+          "oklch(84% 0.0146 172.29)",
+          "oklch(95% 0.0146 172.29)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-surface": {
+        "role": "neutral",
+        "displayName": "Native dark surface",
+        "tonalRamp": [
+          "oklch(15% 0.0233 162.48)",
+          "oklch(26% 0.0233 162.48)",
+          "oklch(38% 0.0233 162.48)",
+          "oklch(49% 0.0233 162.48)",
+          "oklch(61% 0.0233 162.48)",
+          "oklch(72% 0.0233 162.48)",
+          "oklch(84% 0.0233 162.48)",
+          "oklch(95% 0.0233 162.48)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-tint": {
+        "role": "primary",
+        "displayName": "Native dark tint",
+        "tonalRamp": [
+          "oklch(15% 0.0953 181.91)",
+          "oklch(26% 0.0953 181.91)",
+          "oklch(38% 0.0953 181.91)",
+          "oklch(49% 0.0953 181.91)",
+          "oklch(61% 0.0953 181.91)",
+          "oklch(72% 0.0953 181.91)",
+          "oklch(84% 0.0953 181.91)",
+          "oklch(95% 0.0953 181.91)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-on-tint": {
+        "role": "neutral",
+        "displayName": "Native dark on tint",
+        "tonalRamp": [
+          "oklch(15% 0.0445 175.54)",
+          "oklch(26% 0.0445 175.54)",
+          "oklch(38% 0.0445 175.54)",
+          "oklch(49% 0.0445 175.54)",
+          "oklch(61% 0.0445 175.54)",
+          "oklch(72% 0.0445 175.54)",
+          "oklch(84% 0.0445 175.54)",
+          "oklch(95% 0.0445 175.54)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-text": {
+        "role": "neutral",
+        "displayName": "Native dark text",
+        "tonalRamp": [
+          "oklch(15% 0.0058 153.78)",
+          "oklch(26% 0.0058 153.78)",
+          "oklch(38% 0.0058 153.78)",
+          "oklch(49% 0.0058 153.78)",
+          "oklch(61% 0.0058 153.78)",
+          "oklch(72% 0.0058 153.78)",
+          "oklch(84% 0.0058 153.78)",
+          "oklch(95% 0.0058 153.78)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-muted": {
+        "role": "neutral",
+        "displayName": "Native dark muted",
+        "tonalRamp": [
+          "oklch(15% 0.0242 165.70)",
+          "oklch(26% 0.0242 165.70)",
+          "oklch(38% 0.0242 165.70)",
+          "oklch(49% 0.0242 165.70)",
+          "oklch(61% 0.0242 165.70)",
+          "oklch(72% 0.0242 165.70)",
+          "oklch(84% 0.0242 165.70)",
+          "oklch(95% 0.0242 165.70)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-line": {
+        "role": "neutral",
+        "displayName": "Native dark line",
+        "tonalRamp": [
+          "oklch(15% 0.0294 161.66)",
+          "oklch(26% 0.0294 161.66)",
+          "oklch(38% 0.0294 161.66)",
+          "oklch(49% 0.0294 161.66)",
+          "oklch(61% 0.0294 161.66)",
+          "oklch(72% 0.0294 161.66)",
+          "oklch(84% 0.0294 161.66)",
+          "oklch(95% 0.0294 161.66)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-soft": {
+        "role": "neutral",
+        "displayName": "Native dark soft",
+        "tonalRamp": [
+          "oklch(15% 0.0370 164.67)",
+          "oklch(26% 0.0370 164.67)",
+          "oklch(38% 0.0370 164.67)",
+          "oklch(49% 0.0370 164.67)",
+          "oklch(61% 0.0370 164.67)",
+          "oklch(72% 0.0370 164.67)",
+          "oklch(84% 0.0370 164.67)",
+          "oklch(95% 0.0370 164.67)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-dark-error": {
+        "role": "semantic",
+        "displayName": "Native dark error",
+        "tonalRamp": [
+          "oklch(15% 0.0904 30.85)",
+          "oklch(26% 0.0904 30.85)",
+          "oklch(38% 0.0904 30.85)",
+          "oklch(49% 0.0904 30.85)",
+          "oklch(61% 0.0904 30.85)",
+          "oklch(72% 0.0904 30.85)",
+          "oklch(84% 0.0904 30.85)",
+          "oklch(95% 0.0904 30.85)"
+        ],
+        "scope": "mobile/App.tsx and mobile/src; native extension only"
+      },
+      "mobile-preview-frame": {
+        "role": "neutral",
+        "displayName": "Browser preview frame",
+        "tonalRamp": [
+          "oklch(15% 0.0083 157.08)",
+          "oklch(26% 0.0083 157.08)",
+          "oklch(38% 0.0083 157.08)",
+          "oklch(49% 0.0083 157.08)",
+          "oklch(61% 0.0083 157.08)",
+          "oklch(72% 0.0083 157.08)",
+          "oklch(84% 0.0083 157.08)",
+          "oklch(95% 0.0083 157.08)"
+        ],
+        "scope": "app/app-preview/page.tsx only"
       }
     },
     "typographyMeta": {
@@ -293,6 +578,31 @@
       "price": {
         "displayName": "Catalog Price",
         "purpose": "Current product amount."
+      },
+      "mobile-body": {
+        "displayName": "Native body",
+        "purpose": "System font; 17 logical units, 25 line height.",
+        "scope": "mobile native extension; no explicit fontFamily"
+      },
+      "mobile-heading": {
+        "displayName": "Native heading",
+        "purpose": "Section headings; 23 logical units, 30 line height.",
+        "scope": "mobile native extension; no explicit fontFamily"
+      },
+      "mobile-product-title": {
+        "displayName": "Native product name",
+        "purpose": "Pack names; 16 logical units, 23 line height.",
+        "scope": "mobile native extension; no explicit fontFamily"
+      },
+      "mobile-price": {
+        "displayName": "Native price",
+        "purpose": "Current product amount; 19 logical units, 27 line height.",
+        "scope": "mobile native extension; no explicit fontFamily"
+      },
+      "mobile-tab-label": {
+        "displayName": "Native tab label",
+        "purpose": "Five native destinations; 12 logical units, weight 600.",
+        "scope": "mobile native extension; no explicit fontFamily"
       }
     },
     "shadows": [
@@ -342,6 +652,11 @@
         "name": "reduced-motion",
         "value": "animation:none;transition:none;transform:none",
         "purpose": "Immediate state remains legible; no spatial or looping effects."
+      },
+      {
+        "name": "native-stack",
+        "value": "iOS default; Android fade_from_bottom; reduced motion none",
+        "purpose": "App.tsx native stack only; modal sort fade remains separately implemented."
       }
     ],
     "breakpoints": [
@@ -364,8 +679,87 @@
       {
         "name": "narrow-mobile",
         "value": "360px"
+      },
+      {
+        "name": "native-single-column",
+        "value": "360 logical units",
+        "purpose": "Measured content below this uses one column; two columns thereafter."
+      },
+      {
+        "name": "native-three-columns",
+        "value": "700 logical units",
+        "purpose": "Measured content at least this uses three columns."
+      },
+      {
+        "name": "native-four-columns",
+        "value": "1000 logical units",
+        "purpose": "Measured content at least this uses four columns."
+      },
+      {
+        "name": "native-android-rail",
+        "value": "768 logical units",
+        "purpose": "Android window at least this switches tabs to the left; iOS keeps bottom tabs."
       }
-    ]
+    ],
+    "native": {
+      "scope": [
+        "mobile/App.tsx",
+        "mobile/src",
+        "app/app-preview/page.tsx",
+        "app/app-privacy/page.tsx"
+      ],
+      "source": "mobile/src/theme.tsx, mobile/src/ui.tsx, mobile/src/shop.tsx and mobile/App.tsx",
+      "primitives": "Root DESIGN.md mobile-* colors, typography, rounded and components; native-* spacing. Existing unprefixed web tokens retain their scope.",
+      "units": "React Native numeric logical units; DESIGN.md uses pixel strings for portable tooling. Browser translations render CSS pixels.",
+      "appearance": "Automatic useColorScheme light/dark roles; unchanged logo and pack photos keep white image surfaces.",
+      "type": "Platform system fonts, fontFamily unset. Scaling enabled. English/Urdu text uses alignment and writingDirection; full layout mirroring is not claimed.",
+      "interaction": {
+        "buttonMinHeight": 52,
+        "iconTarget": 48,
+        "stepperTargetWidth": 48,
+        "stepperMinHeight": 50,
+        "fieldMinHeight": 54,
+        "pressedButtonOpacity": 0.75,
+        "disabledButtonOpacity": 0.45
+      },
+      "icons": "Mapped iOS SF Symbols and Android Material Community icons, Ionicons fallback. Browser implementation is separate.",
+      "elevation": "Flat bordered cards and tonal surfaces; no native shared shadow tokens.",
+      "storage": "Native SecureStore for receipt keys, opt-in addresses and pending customer details; device-local basket, favourites, language and history. Browser private fields use sessionStorage.",
+      "review": {
+        "verdict": "ship at code/browser-preview scope only",
+        "date": "2026-10-18",
+        "retryFixes": "Both material retry fixes resolved: only explicit order validation/stock-price rejection releases an attempt; uncertain responses preserve key and payload.",
+        "checks": [
+          "TypeScript passed",
+          "Android/iOS JavaScript export passed",
+          "Browser captures: home, categories, product, basket, Urdu"
+        ],
+        "captures": ".impeccable/review/mobile/browser-*.png; browser evidence only",
+        "unverified": [
+          "Native devices and simulators",
+          "Permissions and sharing",
+          "Native symbols",
+          "Android Back and iOS gestures",
+          "Safe areas and enlarged text",
+          "Device performance",
+          "Signing/accounts and installable distribution"
+        ]
+      },
+      "tokenAdvisories": "Wrapper detector advisories #e5ebe7, #11231c, #f7f9f6 belong to the preview/native extension, not a replacement web palette.",
+      "tonalRamps": "New native ramps are synthesized display metadata from source hex hue/chroma; runtime uses only the documented exact light/dark role values.",
+      "narrative": {
+        "overview": "The approved native customer extension carries that logo, teal action hierarchy and grocery photography into Expo/React Native. Native-specific tokens are prefixed mobile-; they apply to mobile/App.tsx and mobile/src, not to the incumbent website.",
+        "dos": [
+          "Preserve original logo and real pack photographs.",
+          "Use native role colors and system typography.",
+          "Keep guest checkout and server-authoritative totals explicit."
+        ],
+        "donts": [
+          "Do not represent browser captures or JS exports as native-device QA or signed installations.",
+          "Do not introduce customer push or account syncing claims."
+        ]
+      }
+    }
   },
   "components": [
     {
@@ -446,6 +840,49 @@
       "description": "Flat staff metric panel, shown with explicit preview values.",
       "html": "<div class=\"ds-metric\"><span>Today’s gross revenue</span><strong>Rs. 0</strong><small>All orders placed today, including delivery</small></div>",
       "css": ".ds-metric{border:1px solid var(--line,#d9e4e2);border-radius:14px;padding:22px;background:#fff;font-family:Poppins,sans-serif}.ds-metric span{display:block;font-size:13px;color:var(--secondary,#536460)}.ds-metric strong{display:block;font-size:32px;font-weight:650;color:var(--action,#087e78);margin-top:9px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.ds-metric small{display:block;font-size:11px;color:var(--secondary,#536460);margin-top:8px}@media(max-width:600px){.ds-metric{padding:17px 20px}.ds-metric strong{font-size:30px;margin-top:6px}.ds-metric small{margin-top:5px}}"
+    },
+    {
+      "name": "Native Primary Button (light browser translation)",
+      "kind": "button",
+      "refersTo": "mobile-button-light",
+      "description": "Illustrative CSS translation of the native 52-unit action. Not native render evidence.",
+      "html": "<button class=\"ds-native-button\">Continue to checkout</button>",
+      "css": ".ds-native-button{font:700 17px/25px system-ui,sans-serif;min-height:52px;border:0;border-radius:14px;padding:13px 18px;background:#087e78;color:#fff;cursor:pointer}.ds-native-button:hover,.ds-native-button:active{opacity:.75}.ds-native-button:disabled{opacity:.45}.ds-native-button:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
+      "scope": "native extension browser translation"
+    },
+    {
+      "name": "Native Delivery Field (light browser translation)",
+      "kind": "input",
+      "description": "Native label/field shape and role colors. Browser focus outline is an illustrative accessibility affordance.",
+      "html": "<label class=\"ds-native-field\">Your name<input placeholder=\"Your name\" autocomplete=\"name\"/></label>",
+      "css": ".ds-native-field{display:block;font:600 17px/25px system-ui,sans-serif;color:#11231c}.ds-native-field input{display:block;margin-top:6px;padding:14px;min-height:54px;border:1px solid #d9e4dc;border-radius:12px;background:#fff;color:#11231c;font:400 17px/25px system-ui,sans-serif}.ds-native-field input::placeholder{color:#52665b}.ds-native-field input:focus-visible{outline:2px solid #087e78;outline-offset:2px}",
+      "scope": "native extension browser translation"
+    },
+    {
+      "name": "Native Product Card (light browser translation)",
+      "kind": "card",
+      "refersTo": "mobile-product-card-light",
+      "description": "Native card shape and typography. Photograph omitted; specimen price is a demonstration value.",
+      "html": "<article class=\"ds-native-card\"><small>Pack brand</small><strong>Everyday grocery</strong><span>Exact pack size</span><b>Rs. 100 · example</b><button>Add</button></article>",
+      "css": ".ds-native-card{display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid #d9e4dc;border-radius:18px;background:#fff;color:#11231c;font:400 16px/23px system-ui,sans-serif}.ds-native-card small{font-size:13px;line-height:19px;color:#52665b}.ds-native-card span{font-size:14px;color:#52665b}.ds-native-card b{font-size:19px;line-height:27px}.ds-native-card button{min-height:52px;padding:13px 18px;border:0;border-radius:14px;background:#087e78;color:#fff;font:700 17px/25px system-ui,sans-serif;cursor:pointer}.ds-native-card button:hover,.ds-native-card button:active{opacity:.75}.ds-native-card button:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
+      "scope": "native extension browser translation"
+    },
+    {
+      "name": "Native Navigation (light browser translation)",
+      "kind": "nav",
+      "description": "Five native destinations; illustrative label-only browser specimen. Native icons and platform tab behaviour require native QA.",
+      "html": "<nav class=\"ds-native-nav\" aria-label=\"App destinations\"><button aria-current=\"page\">Shop</button><button>Categories</button><button>Basket</button><button>My orders</button><button>Help</button></nav>",
+      "css": ".ds-native-nav{display:flex;gap:4px;background:#fff;border-top:1px solid #d9e4dc;padding:8px 4px}.ds-native-nav button{flex:1;min-height:48px;border:0;background:transparent;color:#52665b;font:600 12px/18px system-ui,sans-serif;cursor:pointer}.ds-native-nav button[aria-current]{color:#087e78}.ds-native-nav button:hover,.ds-native-nav button:active{background:#e4f3eb}.ds-native-nav button:focus-visible{outline:2px solid #087e78;outline-offset:-2px}",
+      "scope": "native extension browser translation"
+    },
+    {
+      "name": "Native Primary Button (dark browser translation)",
+      "kind": "button",
+      "refersTo": "mobile-button-dark",
+      "description": "Illustrative dark-mode native tint and on-tint roles. Not native render evidence.",
+      "html": "<button class=\"ds-native-dark-button\">Continue to checkout</button>",
+      "css": ".ds-native-dark-button{font:700 17px/25px system-ui,sans-serif;min-height:52px;border:0;border-radius:14px;padding:13px 18px;background:#75d6c6;color:#062c24;cursor:pointer}.ds-native-dark-button:hover,.ds-native-dark-button:active{opacity:.75}.ds-native-dark-button:disabled{opacity:.45}.ds-native-dark-button:focus-visible{outline:3px solid #75d6c6;outline-offset:3px}",
+      "scope": "native extension browser translation"
     }
   ],
   "narrative": {

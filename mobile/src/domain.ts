@@ -1,0 +1,10 @@
+import type {CartLine,Point,StoreConfig,Product,CustomerReceipt,SavedOrder} from './types';
+export const rejectedAttempt=(error:{status:number;code?:string})=>error.status===400||(error.status===409&&['PRICE_CHANGED','ITEM_UNAVAILABLE'].includes(error.code||''));
+export function receiptOrder(order:CustomerReceipt,previous:CartLine[]):SavedOrder{return {...order,items:order.items.map(item=>({quantity:item.quantity,product:{...(previous.find(l=>l.product.id===item.product_id)?.product||{brand:'',category:'',in_stock:true}),id:item.product_id,name:item.name,unit:item.unit,image_url:item.image_url,price:item.price}}))};}
+export const money=(n:number|null)=>n===null?'—':'Rs. '+new Intl.NumberFormat('en-PK',{maximumFractionDigits:2}).format(n);
+export const available=(p:Product)=>p.in_stock&&p.price!==null&&p.price>0;
+export function distanceKm(a:Point,b:Point){const rad=(v:number)=>v*Math.PI/180;const h=Math.sin(rad(a.latitude-b.latitude)/2)**2+Math.cos(rad(a.latitude))*Math.cos(rad(b.latitude))*Math.sin(rad(a.longitude-b.longitude)/2)**2;return 6371*2*Math.asin(Math.sqrt(Math.min(1,Math.max(0,h))));}
+export const validPoint=(p:Point)=>Number.isFinite(p.latitude)&&Number.isFinite(p.longitude)&&Math.abs(p.latitude)<=90&&Math.abs(p.longitude)<=180;
+export const covered=(p:Point,c:StoreConfig)=>validPoint(p)&&distanceKm(p,c.location)<=c.radius_km+1e-9;
+export function totals(lines:CartLine[],config:StoreConfig){const subtotal=Math.round(lines.reduce((n,l)=>n+(l.product.price||0)*l.quantity,0)*100)/100,delivery_fee=subtotal>=config.free_delivery?0:config.delivery_fee;return {subtotal,delivery_fee,total_amount:subtotal+delivery_fee};}
+export function refreshedLines(lines:CartLine[],products:Product[]){const removed:string[]=[];const result=lines.flatMap(line=>{const fresh=products.find(p=>p.id===line.product.id);if(!fresh||!available(fresh)){removed.push(line.product.name);return [];}return [{product:fresh,quantity:Math.min(99,Math.max(1,Math.trunc(line.quantity)))}];});return {lines:result,removed,changed:result.some(line=>line.product.price!==lines.find(l=>l.product.id===line.product.id)?.product.price)||removed.length>0};}
