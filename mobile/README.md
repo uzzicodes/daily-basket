@@ -18,7 +18,7 @@ The app has guest checkout, not phone OTP authentication. Recent orders and favo
 
 ## Android installable test build
 
-An Expo account and EAS project are required. No private store/backend credentials belong in this app.
+The project is linked to the owner’s Expo organization `daily-basket-lahore`, project `daily-basket-shopping` (ID `2d7cb415-af08-4f09-9694-ae38a7ae1c62`). Local CLI login is configured outside the repository. No private store/backend credentials belong in this app.
 
 ```sh
 cd mobile
@@ -27,7 +27,7 @@ pnpm dlx eas-cli init
 pnpm dlx eas-cli build --platform android --profile preview
 ```
 
-The preview profile produces an APK installation link. Creating the EAS project adds the owner's actual project ID to Expo config. Confirm `pk.dailybasket.shopping` is available and belongs to the store before the first production release. Android production uses an AAB, uploaded through the owner's Google Play account. EAS cloud builds require the account owner's build/signing setup; an exported JS bundle is not an APK.
+The preview profile produces an APK installation link. Expo config carries the existing project ID and organization owner. The internal Android build uses `pk.dailybasket.shopping`; confirm the final name and identifiers before the first production release. Android production uses an AAB, uploaded through the owner's Google Play account. EAS cloud builds require the account owner's build/signing setup; an exported JS bundle is not an APK.
 
 ## iPhone
 
@@ -56,3 +56,13 @@ App store release still needs native device QA, the owner's signing accounts, fi
 Daily Basket is a temporary customer name, separate from the inventory supplier. Confirm the final name and app identifiers before the first EAS production project/signing setup. Historical on-device storage namespaces and the current live backend URL intentionally stay compatible.
 
 The Everyday Market upgrade adds private on-device named checklists, basket-to-list saving, product-to-list saving, current-stock list additions, recent searches, recently viewed items, buy-again shelves, appearance preferences, English/Urdu copy, related products, photo enlargement, delivery-fee progress, order status steps and token-protected receipt PDF sharing. No loyalty balance, online payment, live rider location or account synchronisation is claimed. Native file sharing still requires device testing.
+
+## Android preview build
+
+The owner completed Expo setup and approved this computer’s Expo CLI login on 18 October 2026. The Free plan had unused Android build quota. An isolated mobile-only source archive was inspected before upload; it contains no store database keys, staff passwords, Discord webhook, local environment files or signing credentials. Expo manages the new Android signing key privately.
+
+Build: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/e6f54180-3929-40d8-bd0f-7e3232dbcb2b
+
+The earlier build `605c5248` compiled but exposed a missing direct font-module dependency in Expo Doctor and is superseded. Use the corrected build linked above; Expo Doctor now passes 21/21 checks. This is an internal preview APK build, not a Play Store submission. Native device QA and the iPhone signing/distribution setup remain open.
+
+For source uploads, use an isolated mobile-only checkout, as used for this build. Inspect `eas build:inspect --platform android --stage archive --profile preview --output <new-inspection-folder>` before upload. Keep store server source, private outputs, environment files and signing credentials outside the uploaded checkout.

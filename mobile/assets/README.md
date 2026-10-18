@@ -1,7 +1,9 @@
-# Askari artwork
+# Daily Basket working artwork
 
-`askari-logo.png` is the original logo supplied by the owner, copied unchanged from `public/askari-logo.png`. Its transparent canvas is framed in the UI so the full lettering remains visible.
+The customer interface uses a simple basket icon and Daily Basket text wordmark in `src/ui.tsx`; the final business name and distribution artwork remain to be chosen.
 
-`icon.png` and `favicon.png` reuse the existing Askari teal basket icons from `public/desk-icon-512.png` and `public/desk-icon-192.png`, preserving their pixels and embedding source provenance in PNG metadata. These are placeholders for the owner's final store-distribution icon; no new trademark art is generated.
+`askari-logo.png` is a historical, unchanged copy of the supplier logo from `public/askari-logo.png`. It is retained as source provenance and is not referenced by the customer interface or native app bundle.
 
-Photographic banners and department illustrations are served by the existing Askari site. Their origins and original generation prompts are recorded in `public/images/README.md`. Product photographs use the catalogue's existing image URLs and attribution register `public/product-image-sources.json`.
+`icon.png` and `favicon.png` reuse the existing generic teal basket icons from `public/desk-icon-512.png` and `public/desk-icon-192.png`. Their pixels and embedded source provenance are preserved. These working app icons contain no supplier lettering.
+
+Photographic banners and department images are served by the connected storefront. Exact generation prompts and provenance sidecars are in `public/images/`. Product photography uses the catalogue’s existing image URLs and attribution register `public/product-image-sources.json`.
