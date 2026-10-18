@@ -1,4 +1,5 @@
 export const extraEn={
+ pauseBanners:'Pause banners',playBanners:'Play banners',showBanner:'Show banner',bannerPages:'Banner pages',
  home:'Home',more:'More',viewBasket:'View basket',items:'items',products:'products',selected:'Selected',allCategories:'All categories',categoryCopy:'Find the right aisle for your everyday essentials.',
  bannerEveryday:'Good groceries.\nClose to home.',bannerEverydayAction:'Shop essentials',bannerBreakfast:'A better start\nto your day.',bannerBreakfastAction:'Shop breakfast',bannerHome:'A little care.\nA happier home.',bannerHomeAction:'Shop home care',
  searchHint:'Search products, brands or pack sizes',recentSearches:'Recent searches',quickSearches:'Quick searches',clearHistory:'Clear history',recentlyViewed:'Recently viewed',buyAgain:'Buy it again',searchCopy:'Find the exact brand, size and variant you need.',searchPrompt:'What’s on your list?',
@@ -9,7 +10,9 @@ export const extraEn={
  allLoaded:'You’ve reached the end of this shelf.',unavailableRelated:'Browse the catalogue for more options.',photoList:'Send a photo or written list',viewOrders:'View your orders',keepReference:'Keep this reference for order enquiries.',removeBasket:'Remove all products?',emptyBasketAction:'Clear basket',helpList:'Send us your grocery list',brandPending:'Final business name to be chosen',
 };
 export const extraUr:Record<keyof typeof extraEn,string>={
- ...extraEn,home:'خریداری',more:'مزید',viewBasket:'ٹوکری دیکھیں',items:'اشیاء',products:'مصنوعات',selected:'منتخب',allCategories:'تمام کیٹیگریز',categoryCopy:'اپنی روزمرہ کی اشیاء کی صحیح کیٹیگری منتخب کریں۔',
+ ...extraEn,
+ pauseBanners:'بینرز روکیں',playBanners:'بینرز چلائیں',showBanner:'بینر دکھائیں',bannerPages:'بینرز',
+ home:'خریداری',more:'مزید',viewBasket:'ٹوکری دیکھیں',items:'اشیاء',products:'مصنوعات',selected:'منتخب',allCategories:'تمام کیٹیگریز',categoryCopy:'اپنی روزمرہ کی اشیاء کی صحیح کیٹیگری منتخب کریں۔',
  bannerEveryday:'روزمرہ کی گروسری۔\nآپ کے قریب۔',bannerEverydayAction:'ضروری اشیاء دیکھیں',bannerBreakfast:'دن کا آغاز\nبہتر بنائیں۔',bannerBreakfastAction:'ناشتے کی اشیاء',bannerHome:'گھر کا خیال۔\nآسان خریداری۔',bannerHomeAction:'گھر کی ضروریات',
  searchHint:'چیز، برانڈ یا پیک کا سائز تلاش کریں',recentSearches:'پچھلی تلاش',quickSearches:'آسان تلاش',clearHistory:'تلاش صاف کریں',recentlyViewed:'حال ہی میں دیکھی گئی اشیاء',buyAgain:'دوبارہ منگوائیں',searchCopy:'اپنا مطلوبہ برانڈ، سائز اور قسم تلاش کریں۔',searchPrompt:'آپ کی فہرست میں کیا ہے؟',
  lists:'خریداری کی فہرستیں',createList:'نئی فہرست بنائیں',listName:'فہرست کا نام',listNamePlaceholder:'ہفتے کی گروسری',create:'فہرست بنائیں',saveAsList:'ٹوکری کو فہرست میں محفوظ کریں',saveProduct:'خریداری کی فہرست میں شامل کریں',listEmpty:'تھوڑی منصوبہ بندی، آسان خریداری',listEmptyCopy:'ہفتے کی اشیاء فہرست میں رکھیں۔ کیٹلاگ سے چیز منتخب کریں یا اپنی ضرورت لکھیں۔',addItem:'ایک چیز شامل کریں',itemPlaceholder:'دودھ، آٹا، چائے…',addListItems:'دستیاب اشیاء ٹوکری میں ڈالیں',sendToStore:'فہرست اسٹور کو بھیجیں',listLocal:'فہرستیں اس فون پر محفوظ ہوتی ہیں۔',listTip:'لکھی ہوئی فہرست اسٹور کو بھیج سکتے ہیں۔ کیٹلاگ کی اشیاء براہ راست ٹوکری میں شامل ہو سکتی ہیں۔',listLimit:'ایک فہرست میں ۶۰ اشیاء رکھی جا سکتی ہیں۔',deleteList:'فہرست ہٹائیں',deleteListConfirm:'کیا اس فون سے یہ فہرست ہٹائیں؟',shareList:'فہرست شیئر کریں',listProductAdded:'چیز آپ کی فہرست میں شامل ہوگئی۔',

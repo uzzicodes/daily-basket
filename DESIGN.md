@@ -38,6 +38,8 @@ colors:
   mobile-dark-soft: "#223b30"
   mobile-dark-error: "#ffb4a6"
   mobile-preview-frame: "#e5ebe7"
+  mobile-campaign-background: "#073f37"
+  mobile-campaign-text: "#ffffff"
 typography:
   headline: { fontFamily: "Poppins, sans-serif", fontSize: "28px", fontWeight: 600, lineHeight: 1.22, letterSpacing: "-0.035em" }
   headline-mobile: { fontFamily: "Poppins, sans-serif", fontSize: "24px", fontWeight: 700, lineHeight: 1.25 }
@@ -48,9 +50,10 @@ typography:
   mobile-body: { fontSize: "17px", lineHeight: 1.470588 }
   mobile-heading: { fontSize: "22px", fontWeight: 700, lineHeight: 1.318182 }
   mobile-product-title: { fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }
-  mobile-price: { fontSize: "18px", fontWeight: 800, lineHeight: 1.5 }
+  mobile-price: { fontSize: "18px", fontWeight: 700, lineHeight: 1.5 }
+  mobile-campaign-heading: { fontSize: "24px", fontWeight: 700, lineHeight: 1.25, letterSpacing: "-0.5px" }
   customer-wordmark: { fontFamily: "Poppins, sans-serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, letterSpacing: "-0.035em" }
-  mobile-wordmark: { fontSize: "22px", fontWeight: 800, lineHeight: 1.227273, letterSpacing: "-0.6px" }
+  mobile-wordmark: { fontSize: "22px", fontWeight: 700, lineHeight: 1.227273, letterSpacing: "-0.5px" }
   mobile-tab-label: { fontSize: "12px", fontWeight: 600 }
 rounded:
   control: "7px"
@@ -82,6 +85,7 @@ components:
   mobile-button-dark: { backgroundColor: "{colors.mobile-dark-tint}", textColor: "{colors.mobile-dark-on-tint}", rounded: "{rounded.mobile-control}", padding: "13px 18px" }
   mobile-product-card-light: { backgroundColor: "{colors.mobile-light-surface}", textColor: "{colors.mobile-light-text}", rounded: "{rounded.mobile-card}", padding: "12px" }
   mobile-product-card-dark: { backgroundColor: "{colors.mobile-dark-surface}", textColor: "{colors.mobile-dark-text}", rounded: "{rounded.mobile-card}", padding: "12px" }
+  mobile-campaign: { backgroundColor: "{colors.mobile-campaign-background}", textColor: "{colors.mobile-campaign-text}", typography: "{typography.mobile-campaign-heading}", rounded: "{rounded.mobile-banner}" }
   customer-mark: { backgroundColor: "{colors.action}", textColor: "{colors.white}", rounded: "{rounded.customer-mark}", width: "48px", height: "48px" }
   mobile-customer-mark-light: { backgroundColor: "{colors.mobile-light-tint}", textColor: "{colors.mobile-light-on-tint}", rounded: "{rounded.customer-mark}", width: "42px", height: "42px" }
   mobile-customer-mark-dark: { backgroundColor: "{colors.mobile-dark-tint}", textColor: "{colors.mobile-dark-on-tint}", rounded: "{rounded.customer-mark}", width: "42px", height: "42px" }
@@ -109,6 +113,8 @@ The established website uses white shelves, pale aqua fields, teal controls and 
 White owns website shelves; teal owns actions, focus and selected departments. Pale aqua groups search, delivery and basket regions. Dark green-black text and gray-green support text preserve readable hierarchy. Success accompanies explicit stock labels.
 
 Native system/light/dark preferences select the role colors in `mobile/src/theme.tsx`: background, surface, tint, on-tint, text, muted, line, soft and error. Dark mode uses green-black surfaces with a lighter teal action and dark on-tint text. Exact pack photos retain white image surfaces in both modes. The basket mark follows tint/on-tint in native appearance; the website mark uses action/white. `/app-preview` and `/app-privacy` use their explicitly scoped extension roles.
+
+Native photographic campaigns use the scoped campaign background and text roles in both appearances. A solid deep teal text panel preserves readable white copy beside the still-life photograph; it does not replace the app's adaptive surface or action roles.
 
 **The Real Shelf Rule.** Display imported selling prices and actual stock. No invented markup, discount, rating or availability may be added to customer screens.
 
@@ -140,11 +146,15 @@ Native cards use flat role-based borders and tonal layering without a shared sha
 
 Preserve unrelated incumbent website corner tokens. The new website basket mark uses the frontmatter customer-mark radius with a 48 CSS-pixel square, reduced to 42 on phones and staff headers. Its geometry comes from Lucide ShoppingBasket; native uses basket-outline in a 42-unit square with the same mark radius. These are icon-and-wordmark compositions, not new raster logos.
 
-Native controls use 14-unit corners, fields 12, shelf cards and photo banners 16, and basket/summary containers 16. Other existing receipt/history panels keep their incumbent shapes. Circular icon actions are 48 square with radius 24. Primary buttons have minimum height 52; quantity-stepper targets are 48 wide and at least 50 high. Round department photographs and contained pack photographs remain distinct.
+Native controls use 14-unit corners, fields 12, shelf cards and photo banners 16, and basket/summary containers 16. Other existing receipt/history panels keep their incumbent shapes. Circular icon actions are 48 square with radius 24. Primary buttons have minimum height 52; quantity-stepper targets are 48 wide and at least 50 high. Department photographs use rounded-square crops inside a thin bordered frame; contained pack photographs preserve exact package identity. The website's round department imagery retains its existing shape.
 
 ## Components
 
 Stock and pending prices are explicit. Loading, empty, unavailable, retry and confirmed-order/local-save-warning states remain distinct. Disabled/busy controls expose accessibility state; errors use text alerts. Product photos have an explicit fallback.
+
+Native campaigns use a full photograph with a solid text panel occupying 60% of the slide, the campaign-heading role and a short linked catalogue action. Three campaigns advance every six seconds while visible, focused and active. Swipes, touches and direct page choices pause movement until Play; 48-unit pagination and pause/play targets retain manual control. Autoplay also stops for reduced motion and native screen readers, and browser hover or keyboard focus. React Native Web's screen-reader query is a constant stub, so the browser preview relies on its reduced-motion and interaction guards; native accessibility behaviour still needs device verification. The carousel does not introduce a shared transition duration.
+
+Native shelf cards keep brand, two-line pack name, pack size and teal price in a consistent order. The favourite action sits on its own surface above the white pack-photo region. Home search and the saved-products header action use the adaptive soft surface.
 
 Native Add becomes a quantity stepper and updates the Basket badge, capped visually at 99+. The dock opens the basket and shows product subtotal; delivery progress uses the real configured threshold. Pending attempts lock basket mutations and delivery fields. Lists are local named checklists, with separate actions for adding current available linked products, sending unchecked text to the store and sharing the list. Basket/product saves record product links; plain written entries are never silently treated as catalog matches. Repeat and recently viewed shelves refresh availability. Product detail offers related current products and an enlarged pack-photo modal.
 

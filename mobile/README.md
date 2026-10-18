@@ -66,3 +66,11 @@ Build: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopp
 The earlier build `605c5248` compiled but exposed a missing direct font-module dependency in Expo Doctor and is superseded. Use the corrected build linked above; Expo Doctor now passes 21/21 checks. This is an internal preview APK build, not a Play Store submission. Native device QA and the iPhone signing/distribution setup remain open.
 
 For source uploads, use an isolated mobile-only checkout, as used for this build. Inspect `eas build:inspect --platform android --stage archive --profile preview --output <new-inspection-folder>` before upload. Keep store server source, private outputs, environment files and signing credentials outside the uploaded checkout.
+
+## Android 1.0.1 preview — campaign refinement
+
+The updated internal Android build (version code 2) is tracked at https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/5176d8eb-7785-428b-9725-d2af267ec04c. It uses the existing signing key so it can update the earlier test app. Use its successful APK artifact for the latest design; the 1.0.0 build above is the previous release.
+
+The photo campaigns now rotate every six seconds while visible and active. Direct page selection, swiping or touching a campaign pauses rotation until Play; navigation, app backgrounding, offscreen position, reduced motion and native screen-reader preferences also stop automatic movement. The web preview pauses on keyboard focus and hover. Department photographs, search and product shelves receive the same scoped Everyday Market refinement. TypeScript, Android/iOS bundle exports and browser motion checks passed; native phone testing is still required.
+
+The owner chose Android first. The earlier Expo Go tunnel/QR was a temporary development session and has been stopped; it is not an iPhone installation link.

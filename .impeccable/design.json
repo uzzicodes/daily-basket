@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-18T09:44:48.375749+00:00",
+  "generatedAt": "2026-10-18T18:58:42.984Z",
   "title": "Design System: Daily Basket (temporary customer identity)",
   "extensions": {
     "colorMeta": {
@@ -540,6 +540,36 @@
           "oklch(95% 0.0083 157.08)"
         ],
         "scope": "app/app-preview/page.tsx only"
+      },
+      "mobile-campaign-background": {
+        "role": "primary",
+        "displayName": "Native Deep Teal Campaign",
+        "scope": "native campaign panel in light and dark appearance",
+        "tonalRamp": [
+          "oklch(15% 0.06 168)",
+          "oklch(26% 0.06 168)",
+          "oklch(38% 0.06 168)",
+          "oklch(49% 0.06 168)",
+          "oklch(61% 0.06 168)",
+          "oklch(72% 0.06 168)",
+          "oklch(84% 0.06 168)",
+          "oklch(95% 0.06 168)"
+        ]
+      },
+      "mobile-campaign-text": {
+        "role": "neutral",
+        "displayName": "Native Campaign White",
+        "scope": "native campaign text and action disc",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
       }
     },
     "typographyMeta": {
@@ -596,7 +626,7 @@
       },
       "mobile-price": {
         "displayName": "Native price",
-        "purpose": "Current shelf product amount; 18 logical units, 27 line height, weight 800.",
+        "purpose": "Current shelf product amount; 18 logical units, 27 line height, weight 700; adaptive tint color.",
         "scope": "mobile native extension; no explicit fontFamily"
       },
       "mobile-tab-label": {
@@ -611,7 +641,12 @@
       "mobile-wordmark": {
         "displayName": "Native temporary wordmark",
         "scope": "mobile native extension; no explicit fontFamily",
-        "purpose": "Daily Basket text beside the basket icon; platform system font."
+        "purpose": "Daily Basket text beside the basket icon; platform system font, weight 700."
+      },
+      "mobile-campaign-heading": {
+        "displayName": "Native campaign heading",
+        "purpose": "White campaign title; 24 logical units, 30 line height, weight 700, letter spacing -0.5.",
+        "scope": "native extension; no explicit fontFamily"
       }
     },
     "shadows": [
@@ -671,6 +706,11 @@
         "purpose": "Cart dock count change; skipped when OS reduced motion is enabled.",
         "name": "native-basket-confirm",
         "value": "180ms scale .98 to 1"
+      },
+      {
+        "name": "native-campaign-autoplay",
+        "value": "6000ms interval; platform scroll animation when reduced motion is off",
+        "purpose": "Only while visible, navigation-focused and app-active. Touch, swipe or direct pagination pauses until Play. Reduced motion and native screen readers prevent autoplay; browser hover and keyboard focus pause it. React Native Web screen-reader query is a constant stub; native accessibility needs device QA."
       }
     ],
     "breakpoints": [
@@ -905,9 +945,9 @@
       "name": "Native Product Card (light browser translation)",
       "kind": "card",
       "refersTo": "mobile-product-card-light",
-      "description": "Native card shape and typography. Photograph omitted; specimen price is a demonstration value.",
+      "description": "Native shelf hierarchy: brand, two-line pack name, size, teal price and Add. Photograph and favourite overlay omitted; specimen price is a demonstration value.",
       "html": "<article class=\"ds-native-card\"><small>Pack brand</small><strong>Everyday grocery</strong><span>Exact pack size</span><b>Rs. 100 · example</b><button>Add</button></article>",
-      "css": ".ds-native-card{display:flex;flex-direction:column;gap:8px;padding:12px;border:1px solid #d9e4dc;border-radius:16px;background:#fff;color:#11231c;font:600 15px/21px system-ui,sans-serif}.ds-native-card small{font-size:12px;line-height:18px;color:#52665b}.ds-native-card span{font-size:13px;line-height:20px;color:#52665b}.ds-native-card b{font-size:18px;line-height:27px;font-weight:800}.ds-native-card button{min-height:52px;padding:13px 18px;border:0;border-radius:14px;background:#087e78;color:#fff;font:700 17px/25px system-ui,sans-serif;cursor:pointer}.ds-native-card button:hover,.ds-native-card button:active{opacity:.75}.ds-native-card button:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
+      "css": ".ds-native-card{display:flex;flex-direction:column;gap:8px;padding:12px;border:1px solid #d9e4dc;border-radius:16px;background:#fff;color:#11231c;font:600 15px/21px system-ui,sans-serif}.ds-native-card small{font-size:12px;line-height:18px;color:#52665b}.ds-native-card span{font-size:13px;line-height:20px;color:#52665b}.ds-native-card b{font-size:18px;line-height:27px;font-weight:700;color:#087e78}.ds-native-card button{min-height:52px;padding:13px 18px;border:0;border-radius:14px;background:#087e78;color:#fff;font:700 17px/25px system-ui,sans-serif;cursor:pointer}.ds-native-card button:hover,.ds-native-card button:active{opacity:.75}.ds-native-card button:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
       "scope": "native extension browser translation"
     },
     {
@@ -934,6 +974,15 @@
       "description": "Daily Basket working identity. Simple icon geometry; final name pending.",
       "html": "<a class=\"ds-customer-wordmark\" href=\"#\" aria-label=\"Daily Basket home\"><span><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 11-1 9M19 11l-4-7M2 11h20M3.5 11l1.6 7.4A2 2 0 0 0 7.1 20h9.8a2 2 0 0 0 2-1.6l1.6-7.4M4.5 15.5h15M5 11l4-7M9 11l1 9\"/></svg></span><strong>Daily Basket</strong></a>",
       "name": "Temporary Customer Wordmark"
+    },
+    {
+      "name": "Native Campaign Panel (browser translation)",
+      "kind": "custom",
+      "refersTo": "mobile-campaign",
+      "description": "Illustrative solid text panel from the three native photo campaigns. Photograph and carousel runtime are omitted; browser focus outline is illustrative. Not native render evidence.",
+      "html": "<button class=\"ds-native-campaign\"><strong>Good groceries.<br>Close to home.</strong><span>Shop essentials</span></button>",
+      "css": ".ds-native-campaign{display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:194px;width:240px;padding:18px;border:0;border-radius:16px;background:#073f37;color:#fff;text-align:left;cursor:pointer}.ds-native-campaign strong{font:700 24px/30px system-ui,sans-serif;letter-spacing:-.5px}.ds-native-campaign span{display:flex;align-items:center;min-height:40px;font:700 14px/20px system-ui,sans-serif}.ds-native-campaign:hover{opacity:.95}.ds-native-campaign:active{opacity:.9}.ds-native-campaign:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
+      "scope": "native extension browser translation"
     }
   ],
   "narrative": {
