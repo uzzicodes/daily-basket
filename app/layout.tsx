@@ -6,10 +6,11 @@ import "./order-desk.css";
 import 'leaflet/dist/leaflet.css';
 import './delivery.css';
 import './shop.css';
+import './brand.css';
 
 export const metadata: Metadata = {
-  title: "Askari Departmental Store | Lahore Groceries",
-  description: "Grocery essentials and household favourites from Askari Departmental Store. Delivery within 5 km of our PGECHS Phase 1 store in Lahore.",
+  title: "Daily Basket | Lahore Groceries",
+  description: "Grocery essentials and household favourites from Daily Basket. Delivery within 5 km of our PGECHS Phase 1 store in Lahore.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

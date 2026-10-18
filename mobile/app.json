@@ -1,26 +1,26 @@
 {
   "expo": {
-    "name": "Askari",
-    "slug": "askari-shopping",
-    "scheme": "askari",
+    "name": "Daily Basket",
+    "slug": "daily-basket-shopping",
+    "scheme": "dailybasket",
     "version": "1.0.0",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "bundleIdentifier": "pk.askari.store",
+      "bundleIdentifier": "pk.dailybasket.shopping",
       "supportsTablet": false,
       "infoPlist": {"ITSAppUsesNonExemptEncryption": false}
     },
     "android": {
-      "package": "pk.askari.store",
+      "package": "pk.dailybasket.shopping",
       "predictiveBackGestureEnabled": true,
       "adaptiveIcon": {"foregroundImage": "./assets/icon.png", "backgroundColor": "#087e78"},
       "blockedPermissions": ["android.permission.RECORD_AUDIO", "android.permission.CAMERA", "android.permission.ACCESS_BACKGROUND_LOCATION"]
     },
     "plugins": [
       "expo-secure-store",
-      ["expo-location", {"locationWhenInUsePermission": "Allow Askari to find your delivery pin when you tap Use my current location.", "isAndroidBackgroundLocationEnabled": false}],
-      ["expo-image-picker", {"photosPermission": "Choose a grocery-list photo to share with Askari.", "cameraPermission": false, "microphonePermission": false}]
+      ["expo-location", {"locationWhenInUsePermission": "Allow Daily Basket to find your delivery pin when you tap Use my current location.", "isAndroidBackgroundLocationEnabled": false}],
+      ["expo-image-picker", {"photosPermission": "Choose a grocery-list photo to share with Daily Basket.", "cameraPermission": false, "microphonePermission": false}]
     ],
     "web": {"favicon": "./assets/favicon.png"},
     "experiments": {"baseUrl": "/mobile-preview"}

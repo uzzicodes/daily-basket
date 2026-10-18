@@ -1,4 +1,4 @@
-# Askari customer app
+# Daily Basket customer app
 
 Real Expo / React Native screens for Android and iPhone. The existing Next.js website, Supabase catalogue, private staff desk, owner cash controls and automatic Discord picture-PDF receipts remain the shared backend. Only the delivery-pin map is a WebView (Leaflet/OpenStreetMap); the shopping UI and navigation are native.
 
@@ -12,7 +12,7 @@ pnpm install --frozen-lockfile
 pnpm start
 ```
 
-Scan the displayed QR code. Android can scan in Expo Go; iPhone can scan using Camera. Set `EXPO_PUBLIC_STORE_URL` only when using another deployed Askari backend. Public checkout/config/status routes introduced by this change must be deployed before the phone app can order.
+Scan the displayed QR code. Android can scan in Expo Go; iPhone can scan using Camera. Set `EXPO_PUBLIC_STORE_URL` only when using another deployed Daily Basket backend. Public checkout/config/status routes introduced by this change must be deployed before the phone app can order.
 
 The app has guest checkout, not phone OTP authentication. Recent orders and favourites belong to this device; they do not sync to another phone. Customer receipt access expires after 90 days. Native receipt keys and opt-in saved addresses use SecureStore; the browser preview uses session storage for these private fields. An uncertain order keeps its original key and payload across restarts, preventing duplicate orders.
 
@@ -27,7 +27,7 @@ pnpm dlx eas-cli init
 pnpm dlx eas-cli build --platform android --profile preview
 ```
 
-The preview profile produces an APK installation link. Creating the EAS project adds the owner's actual project ID to Expo config. Confirm `pk.askari.store` is available and belongs to the store before the first production release. Android production uses an AAB, uploaded through the owner's Google Play account. EAS cloud builds require the account owner's build/signing setup; an exported JS bundle is not an APK.
+The preview profile produces an APK installation link. Creating the EAS project adds the owner's actual project ID to Expo config. Confirm `pk.dailybasket.shopping` is available and belongs to the store before the first production release. Android production uses an AAB, uploaded through the owner's Google Play account. EAS cloud builds require the account owner's build/signing setup; an exported JS bundle is not an APK.
 
 ## iPhone
 
@@ -51,3 +51,8 @@ The parent `pnpm test` suite checks checkout pricing/idempotency, permissions, r
 The app collects delivery details only for orders. Foreground GPS is optional and requested on a button tap. Photo lists use the system picker and explicit system sharing. No card payments, customer account, background tracking or customer push notifications are implemented in this first version. Staff notifications and Discord PDFs continue through the existing server queue. Privacy: `/app-privacy` on the store URL.
 
 App store release still needs native device QA, the owner's signing accounts, final store screenshots/listings and reviewed privacy/data-safety answers. Artwork provenance is in `assets/README.md` and the parent `public/images/README.md`.
+
+## Working identity and shopping tools
+Daily Basket is a temporary customer name, separate from the inventory supplier. Confirm the final name and app identifiers before the first EAS production project/signing setup. Historical on-device storage namespaces and the current live backend URL intentionally stay compatible.
+
+The Everyday Market upgrade adds private on-device named checklists, basket-to-list saving, product-to-list saving, current-stock list additions, recent searches, recently viewed items, buy-again shelves, appearance preferences, English/Urdu copy, related products, photo enlargement, delivery-fee progress, order status steps and token-protected receipt PDF sharing. No loyalty balance, online payment, live rider location or account synchronisation is claimed. Native file sharing still requires device testing.

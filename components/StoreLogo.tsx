@@ -1,2 +1,4 @@
 import Link from 'next/link';
-export default function StoreLogo(){return <Link className="store-logo" href="/" aria-label="Askari Departmental Store home"><img src="/askari-logo.png" alt="Askari Departmental Store" width="940" height="788"/><span className="sr-only">Askari Departmental Store Lahore</span></Link>;}
+import {ShoppingBasket} from 'lucide-react';
+import {BRAND} from '@/lib/branding';
+export default function StoreLogo(){return <Link className="store-logo customer-wordmark" href="/" aria-label={BRAND+' home'}><span className="customer-mark"><ShoppingBasket size={32} strokeWidth={1.8}/></span><strong>{BRAND}</strong></Link>;}

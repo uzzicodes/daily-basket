@@ -8,4 +8,6 @@ export type Catalog={products:Product[];total:number;available_total:number;next
 export type SavedOrder={id:string;created_at:string;status:string;total_amount:number;subtotal:number;delivery_fee:number;items:CartLine[]};
 export type CustomerReceipt=Omit<SavedOrder,'items'>&{items:{product_id:string;name:string;unit:string;image_url:string;quantity:number;price:number}[]};
 export type Attempt={idempotency_key:string;expected_total:number;items:{product_id:string;quantity:number}[];customer:Customer;lines:CartLine[]};
-export type RootParams={Main:{screen?:'Shop'|'Categories'|'Basket'|'Orders'|'Help'}|undefined;Catalog:{category?:string;q?:string;favourites?:boolean};Product:{id:string};Checkout:undefined;Delivery:{checkout?:boolean}|undefined;Order:{id:string};List:undefined};
+export type ListItem={id:string;text:string;checked:boolean;product_id?:string;quantity?:number};
+export type ShoppingList={id:string;name:string;items:ListItem[]};
+export type RootParams={Main:{screen?:'Shop'|'Categories'|'Basket'|'Orders'|'Help'}|undefined;Catalog:{category?:string;q?:string;favourites?:boolean;recent?:boolean;buyAgain?:boolean};Search:undefined;Product:{id:string};Checkout:undefined;Delivery:{checkout?:boolean}|undefined;Order:{id:string};List:undefined;Lists:{productId?:string}|undefined;ShoppingList:{id:string};Preferences:undefined};

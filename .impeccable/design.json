@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-17T23:51:37.087Z",
-  "title": "Design System: Askari Departmental Store",
+  "generatedAt": "2026-10-18T09:44:48.375749+00:00",
+  "title": "Design System: Daily Basket (temporary customer identity)",
   "extensions": {
     "colorMeta": {
       "ink": {
@@ -188,7 +188,7 @@
       },
       "navy": {
         "role": "primary",
-        "displayName": "Askari Navy",
+        "displayName": "Legacy white surface token",
         "tonalRamp": [
           "oklch(15% 0.009 245)",
           "oklch(26% 0.016 245)",
@@ -586,23 +586,32 @@
       },
       "mobile-heading": {
         "displayName": "Native heading",
-        "purpose": "Section headings; 23 logical units, 30 line height.",
+        "purpose": "Section headings; 22 logical units, 29 line height.",
         "scope": "mobile native extension; no explicit fontFamily"
       },
       "mobile-product-title": {
         "displayName": "Native product name",
-        "purpose": "Pack names; 16 logical units, 23 line height.",
+        "purpose": "Two-line shelf names; 15 logical units, 21 line height; full names on detail and accessibility labels.",
         "scope": "mobile native extension; no explicit fontFamily"
       },
       "mobile-price": {
         "displayName": "Native price",
-        "purpose": "Current product amount; 19 logical units, 27 line height.",
+        "purpose": "Current shelf product amount; 18 logical units, 27 line height, weight 800.",
         "scope": "mobile native extension; no explicit fontFamily"
       },
       "mobile-tab-label": {
         "displayName": "Native tab label",
         "purpose": "Five native destinations; 12 logical units, weight 600.",
         "scope": "mobile native extension; no explicit fontFamily"
+      },
+      "customer-wordmark": {
+        "purpose": "Daily Basket text beside the simple basket mark; Poppins on the website.",
+        "displayName": "Temporary customer wordmark"
+      },
+      "mobile-wordmark": {
+        "displayName": "Native temporary wordmark",
+        "scope": "mobile native extension; no explicit fontFamily",
+        "purpose": "Daily Basket text beside the basket icon; platform system font."
       }
     },
     "shadows": [
@@ -657,6 +666,11 @@
         "name": "native-stack",
         "value": "iOS default; Android fade_from_bottom; reduced motion none",
         "purpose": "App.tsx native stack only; modal sort fade remains separately implemented."
+      },
+      {
+        "purpose": "Cart dock count change; skipped when OS reduced motion is enabled.",
+        "name": "native-basket-confirm",
+        "value": "180ms scale .98 to 1"
       }
     ],
     "breakpoints": [
@@ -711,7 +725,7 @@
       "source": "mobile/src/theme.tsx, mobile/src/ui.tsx, mobile/src/shop.tsx and mobile/App.tsx",
       "primitives": "Root DESIGN.md mobile-* colors, typography, rounded and components; native-* spacing. Existing unprefixed web tokens retain their scope.",
       "units": "React Native numeric logical units; DESIGN.md uses pixel strings for portable tooling. Browser translations render CSS pixels.",
-      "appearance": "Automatic useColorScheme light/dark roles; unchanged logo and pack photos keep white image surfaces.",
+      "appearance": "System/light/dark preference selects theme roles. Exact pack photos keep white image surfaces; the temporary basket mark follows tint/on-tint.",
       "type": "Platform system fonts, fontFamily unset. Scaling enabled. English/Urdu text uses alignment and writingDirection; full layout mirroring is not claimed.",
       "interaction": {
         "buttonMinHeight": 52,
@@ -724,7 +738,7 @@
       },
       "icons": "Mapped iOS SF Symbols and Android Material Community icons, Ionicons fallback. Browser implementation is separate.",
       "elevation": "Flat bordered cards and tonal surfaces; no native shared shadow tokens.",
-      "storage": "Native SecureStore for receipt keys, opt-in addresses and pending customer details; device-local basket, favourites, language and history. Browser private fields use sessionStorage.",
+      "storage": "Native SecureStore for receipt keys, opt-in addresses and pending customer details; device-local basket, favourites, language, appearance, named lists, recent searches/viewed products and history. Browser private fields use sessionStorage.",
       "review": {
         "verdict": "ship at code/browser-preview scope only",
         "date": "2026-10-18",
@@ -748,16 +762,45 @@
       "tokenAdvisories": "Wrapper detector advisories #e5ebe7, #11231c, #f7f9f6 belong to the preview/native extension, not a replacement web palette.",
       "tonalRamps": "New native ramps are synthesized display metadata from source hex hue/chroma; runtime uses only the documented exact light/dark role values.",
       "narrative": {
-        "overview": "The approved native customer extension carries that logo, teal action hierarchy and grocery photography into Expo/React Native. Native-specific tokens are prefixed mobile-; they apply to mobile/App.tsx and mobile/src, not to the incumbent website.",
+        "overview": "The approved Everyday Market native refinement carries the temporary Daily Basket basket mark, teal role colors and real grocery photography into Expo/React Native. Native tokens retain mobile- names; unrelated web tokens retain their scope.",
         "dos": [
-          "Preserve original logo and real pack photographs.",
+          "Use the temporary Daily Basket wordmark and simple basket mark.",
+          "Preserve real pack photography and catalog identities.",
           "Use native role colors and system typography.",
           "Keep guest checkout and server-authoritative totals explicit."
         ],
         "donts": [
+          "Do not restore supplier branding as the customer identity.",
           "Do not represent browser captures or JS exports as native-device QA or signed installations.",
-          "Do not introduce customer push or account syncing claims."
+          "Do not introduce customer push, account syncing or live rider tracking claims."
         ]
+      },
+      "identity": {
+        "status": "Temporary; final name pending",
+        "slug": "daily-basket-shopping",
+        "scheme": "dailybasket",
+        "supplier": "Askari is inventory provenance, not the customer identity",
+        "mark": "Simple basket icon and text; website Lucide ShoppingBasket, native basket-outline",
+        "workingName": "Daily Basket",
+        "releaseGate": "Confirm final identity and identifiers before the first production signing/EAS project.",
+        "productionIdentifier": "pk.dailybasket.shopping"
+      },
+      "refinement": {
+        "firstViewport": "Compact customer mark, saved action, locality and search; photographic banner, horizontal departments and available packs. Language/appearance are in Preferences.",
+        "features": [
+          "Local named checklists and product/basket snapshots",
+          "Current-stock linked-list-to-basket merge",
+          "Recent searches/viewed and buy-again shelves",
+          "Related products and pack-photo modal",
+          "Configured delivery-fee progress",
+          "Server-status steps and private customer receipt-PDF sharing"
+        ],
+        "nativeRelease": "Device/simulator QA, permissions, symbols, safe areas, enlarged text, gestures/Back, performance, signing, Expo/EAS account/project setup and APK/AAB/IPA distribution remain open.",
+        "review": "Initial market disposition fix: mobile website invitation and stale identity docs. Documentation updated; reviewer owns final disposition.",
+        "approved": "2026-10-18",
+        "captures": ".impeccable/review/market/*.png; browser evidence only",
+        "direction": "Everyday Market",
+        "rasterProvenance": "No new raster for this refinement. Existing grocery/department photos: public/images/README.md; catalog sources: work/image-sources.json."
       }
     }
   },
@@ -864,7 +907,7 @@
       "refersTo": "mobile-product-card-light",
       "description": "Native card shape and typography. Photograph omitted; specimen price is a demonstration value.",
       "html": "<article class=\"ds-native-card\"><small>Pack brand</small><strong>Everyday grocery</strong><span>Exact pack size</span><b>Rs. 100 · example</b><button>Add</button></article>",
-      "css": ".ds-native-card{display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid #d9e4dc;border-radius:18px;background:#fff;color:#11231c;font:400 16px/23px system-ui,sans-serif}.ds-native-card small{font-size:13px;line-height:19px;color:#52665b}.ds-native-card span{font-size:14px;color:#52665b}.ds-native-card b{font-size:19px;line-height:27px}.ds-native-card button{min-height:52px;padding:13px 18px;border:0;border-radius:14px;background:#087e78;color:#fff;font:700 17px/25px system-ui,sans-serif;cursor:pointer}.ds-native-card button:hover,.ds-native-card button:active{opacity:.75}.ds-native-card button:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
+      "css": ".ds-native-card{display:flex;flex-direction:column;gap:8px;padding:12px;border:1px solid #d9e4dc;border-radius:16px;background:#fff;color:#11231c;font:600 15px/21px system-ui,sans-serif}.ds-native-card small{font-size:12px;line-height:18px;color:#52665b}.ds-native-card span{font-size:13px;line-height:20px;color:#52665b}.ds-native-card b{font-size:18px;line-height:27px;font-weight:800}.ds-native-card button{min-height:52px;padding:13px 18px;border:0;border-radius:14px;background:#087e78;color:#fff;font:700 17px/25px system-ui,sans-serif;cursor:pointer}.ds-native-card button:hover,.ds-native-card button:active{opacity:.75}.ds-native-card button:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
       "scope": "native extension browser translation"
     },
     {
@@ -883,47 +926,56 @@
       "html": "<button class=\"ds-native-dark-button\">Continue to checkout</button>",
       "css": ".ds-native-dark-button{font:700 17px/25px system-ui,sans-serif;min-height:52px;border:0;border-radius:14px;padding:13px 18px;background:#75d6c6;color:#062c24;cursor:pointer}.ds-native-dark-button:hover,.ds-native-dark-button:active{opacity:.75}.ds-native-dark-button:disabled{opacity:.45}.ds-native-dark-button:focus-visible{outline:3px solid #75d6c6;outline-offset:3px}",
       "scope": "native extension browser translation"
+    },
+    {
+      "refersTo": "customer-mark",
+      "css": ".ds-customer-wordmark{display:inline-flex;align-items:center;gap:12px;color:var(--ink,#021c19);text-decoration:none}.ds-customer-wordmark span{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:var(--action,#087e78);color:#fff}.ds-customer-wordmark strong{font:600 25px/1.2 Poppins,sans-serif;letter-spacing:-.035em;white-space:nowrap}.ds-customer-wordmark:hover{opacity:.85}.ds-customer-wordmark:active{opacity:.75}.ds-customer-wordmark:focus-visible{outline:3px solid var(--action,#087e78);outline-offset:4px}@media(max-width:600px){.ds-customer-wordmark{gap:9px}.ds-customer-wordmark strong{font-size:21px}.ds-customer-wordmark span{width:42px;height:42px}}",
+      "kind": "custom",
+      "description": "Daily Basket working identity. Simple icon geometry; final name pending.",
+      "html": "<a class=\"ds-customer-wordmark\" href=\"#\" aria-label=\"Daily Basket home\"><span><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 11-1 9M19 11l-4-7M2 11h20M3.5 11l1.6 7.4A2 2 0 0 0 7.1 20h9.8a2 2 0 0 0 2-1.6l1.6-7.4M4.5 15.5h15M5 11l4-7M9 11l1 9\"/></svg></span><strong>Daily Basket</strong></a>",
+      "name": "Temporary Customer Wordmark"
     }
   ],
   "narrative": {
-    "northStar": "The Neighbourhood Grocery Shelf",
-    "overview": "The selected Quick Basket experience is preserved, refined with logo-blue/navy shopping controls, a dark basket rail and warm gold checkout. Real Pakistani packaging stays on bright white shelves against a cool neutral canvas. The original logo is unchanged. Bounded quantity, total and overlay feedback explain actions; reduced-motion preferences preserve immediate state without spatial movement.",
+    "northStar": "Everyday Market",
+    "overview": "Daily Basket is a temporary customer identity: a simple teal basket icon beside a readable wordmark. The user clarified that Askari supplies inventory and revoked its customer-facing name/logo. Historical supplier artwork remains source provenance; future work must follow the customer identity shown in `components/StoreLogo.tsx` and `mobile/src/ui.tsx`. The final name is pending.\n\nThe established website uses white shelves, pale aqua fields, teal controls and Poppins typography. The approved Everyday Market native refinement carries the same grocery clarity through compact system typography, photographic browsing and exact pack identity. Native tokens use `mobile-` names and `native-` spacing; unrelated incumbent web tokens retain their scope. The preview frame belongs only to the labelled browser wrapper.",
     "keyCharacteristics": [
-      "Navy basket regions, blue shopping actions and warm gold checkout.",
-      "Poppins hierarchy and readable slate metadata.",
-      "Contained real package images on white shelves.",
-      "Brief quantity and basket confirmations, with smooth overlay continuity.",
-      "Same grocery-only workflows and honest preview states."
+      "Real pack photographs and visible pack sizes.",
+      "Teal actions, quiet bordered surfaces and explicit stock states.",
+      "A compact basket wordmark without supplier branding.",
+      "Native system typography and readable light/dark role colors.",
+      "Clear quantity, delivery-progress and server-confirmed order feedback."
     ],
     "rules": [
       {
-        "name": "The Basket Hierarchy Rule",
-        "body": "Blue marks shopping actions; gold marks checkout against the navy basket. Keep product shelves white and stock semantically green.",
-        "section": "colors"
+        "name": "The Real Shelf Rule",
+        "section": "colors",
+        "body": "Display imported selling prices and actual stock. No invented markup, discount, rating or availability may be added to customer screens."
       },
       {
         "name": "The Familiar Name Rule",
-        "body": "Keep package names and brands in ordinary case; package photography carries the brand's own lettering.",
-        "section": "typography"
+        "section": "typography",
+        "body": "Keep real package names, brands and variants in ordinary case; package photography carries their own lettering."
       },
       {
         "name": "The Shelf Border Rule",
-        "body": "Product and metric cards use borders at rest; overlay depth comes from the existing shadow vocabulary.",
-        "section": "elevation"
+        "section": "elevation",
+        "body": "Use borders and tonal surfaces to separate grocery information; keep product photography clear of decorative depth."
       }
     ],
     "dos": [
-      "**Do** preserve the user-supplied logo artwork and crop only its transparent padding through the existing viewport.",
-      "**Do** show actual package photography with contain sizing and legible brand, unit and price text.",
-      "**Do** reuse blue actions, white shelves and navy/gold basket hierarchy.",
-      "**Do** keep the mobile two-column shelf, visible delivery selection and accessible names for icon actions.",
-      "**Do** expose preview, validation, disabled, empty and success states with explicit text."
+      "**Do** use Daily Basket as a temporary customer wordmark and simple basket mark until the final name is confirmed.",
+      "**Do** preserve exact pack photography, real brand/variant labels, imported prices and explicit stock states.",
+      "**Do** scope native light/dark roles to the app and its identified preview/privacy wrappers.",
+      "**Do** keep guest checkout, current-stock list/reorder checks and server-confirmed totals clear.",
+      "**Do** retain supplier provenance, real contacts, 5 km PGECHS dispatch coverage, COD rules, compatible storage namespaces and authenticated staff tools."
     ],
     "donts": [
-      "**Don't** redraw, recolor or replace the supplied logo.",
-      "**Don't** inherit hidden decorative eyebrow strings as a new visual pattern.",
-      "**Don't** describe demonstration inventory, prices or empty admin preview metrics as live data.",
-      "**Don't** claim persistence or photo attachment succeeded when the configured integration cannot do it."
+      "**Don't** restore Askari's name or supplier-logo artwork as the customer-facing identity.",
+      "**Don't** import reference-store names, logos, promotions or unrelated departments.",
+      "**Don't** invent selling prices, discounts, rewards, live tracking or payment confirmation.",
+      "**Don't** present browser captures or JavaScript exports as native-device QA, signed installations or app-store publication.",
+      "**Don't** finalize the temporary name or production identifiers without the owner's confirmation before the first production signing/EAS project."
     ]
   }
 }

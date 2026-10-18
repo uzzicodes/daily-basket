@@ -1,4 +1,5 @@
-export const STORE = 'Askari Departmental Store Lahore';
+import {BRAND} from './branding';
+export const STORE = BRAND+' · Lahore';
 export const STORE_WHATSAPP_DEFAULT = '923084555567';
 export const FREE_DELIVERY = 2999;
 export const DELIVERY_FEE = 150;
