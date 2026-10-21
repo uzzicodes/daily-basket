@@ -11,14 +11,14 @@ export async function updateOrderStatus(request:Request,{canSettle=false}:{canSe
     let value:unknown;try{value=JSON.parse(raw);}catch{return NextResponse.json({error:'Invalid status request.'},{status:400});}
     const parsed=schema.safeParse(value);if(!parsed.success)return NextResponse.json({error:'Invalid status.'},{status:400});
     if(parsed.data.status==='Delivered'&&!canSettle)return NextResponse.json({error:'Only the owner can confirm delivery and cash received.'},{status:403});
-    if(parsed.data.status==='Delivered'&&parsed.data.cash_received!==true)return NextResponse.json({error:'Confirm that you have received the cash before closing this order.'},{status:400});
+    if(parsed.data.status==='Delivered')return NextResponse.json({error:'Use the manager workspace to report delivery, then verify delivery and cash separately.'},{status:409});
     const sequence=['Pending','Packing','Out for Delivery','Delivered'];if(sequence.indexOf(parsed.data.status)!==sequence.indexOf(parsed.data.expected_status)+1)return NextResponse.json({error:'Orders must move forward one stage at a time.'},{status:409});
     if(parsed.data.status==='Out for Delivery'&&!canSettle)return NextResponse.json({error:'Use the assigned rider account to dispatch a checked order.'},{status:403});
     const db=database();const {data:current,error:readError}=await db.from('orders').select('id,status,operation_version,total_amount').eq('id',parsed.data.id).maybeSingle();
     if(readError)throw readError;if(!current||current.status!==parsed.data.expected_status)return NextResponse.json({error:'This order has changed. Refresh before trying again.'},{status:409});
-    const action=parsed.data.status==='Packing'?'start_pack':parsed.data.status==='Out for Delivery'?'depart':'settle';
-    const {data,error}=await db.rpc('perform_store_order_action',{p_order_id:current.id,p_action:action,p_expected_version:current.operation_version,p_role:canSettle?'owner':'packer',p_staff_id:null,p_payload:action==='settle'?{cash_received:current.total_amount}:{}});
-    if(error)return NextResponse.json({error:'This order is not ready for that action. Refresh and check approval, packing and rider assignment.'},{status:409});
+    const action=parsed.data.status==='Packing'?'start_pack':'depart';
+    const {data,error}=await db.rpc('perform_store_order_action',{p_order_id:current.id,p_action:action,p_expected_version:current.operation_version,p_role:canSettle?'owner':'packer',p_staff_id:null,p_payload:{}});
+    if(error)return NextResponse.json({error:'This order is not ready for that action. Refresh and check packing and rider assignment.'},{status:409});
     return NextResponse.json({order:data},{headers:{'Cache-Control':'no-store'}});
   }catch{return NextResponse.json({error:'Could not update the order. Please retry.'},{status:503});}
 }

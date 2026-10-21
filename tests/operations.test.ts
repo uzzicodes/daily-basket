@@ -23,15 +23,15 @@ test('Staff credentials are salted and staff tokens cannot become owner or desk 
  const a=await staffPassword('a-safe-test-password','salt-a'),b=await staffPassword('a-safe-test-password','salt-b');assert.equal(a.length,64);assert.notEqual(a,b);
  const token=await issueStaffToken({id:manager,username:'manager',display_name:'Manager',role:'manager',auth_version:2});assert.deepEqual(await verifyStaffSignature(token),{id:manager,auth_version:2});assert.equal(await verifyToken(token),false);assert.equal(await verifyStaffSignature(token+'tampered'),null);assert.equal(await verifyStaffSignature(await sessionToken()),null);assert.equal(await verifyStaffSignature(token,Date.now()+9*60*60*1000),null);
  assert.equal(canPerform('packer','settle'),false);assert.equal(canPerform('rider','approve'),false);assert.equal(canPerform('manager','settle'),true);
- assert.equal(actionSchema.safeParse({id:order,action:'settle',expected_version:0,payload:{cash_received:2150},role:'owner'}).success,false);
+ assert.equal(actionSchema.safeParse({id:order,action:'settle',expected_version:0,payload:{cash_received:2150,delivery_verified:true},role:'owner'}).success,false);
  delete process.env.ADMIN_SESSION_SECRET;
 });
-test('Picking starts before review; bill approval, exact packing and assignment guard dispatch atomically',async()=>{
+test('Orders pack and dispatch without approval; delivery must be reported before cash verification',async()=>{
  await act('start_pack','packer',packer);
  const parallel=(await db.query<{status:string;approval_status:string}>('select status,approval_status from orders where id=$1',[order])).rows[0];assert.equal(parallel.status,'Packing');assert.equal(parallel.approval_status,'pending');
- await assert.rejects(()=>act('depart','manager',manager),/bill approval/);
+ await assert.rejects(()=>act('depart','manager',manager),/Packing must be checked/);
  await assert.rejects(()=>act('approve','rider',rider),/not assigned/);
- await act('approve','manager',manager);
+ await assert.rejects(()=>act('approve','manager',manager),/do not require approval/);
  await assert.rejects(()=>act('start_pack','packer',packer,{},0),/Order changed/);
  assert.equal((await db.query<{status:string}>('select status from orders where id=$1',[order])).rows[0].status,'Packing');
  await assert.rejects(()=>act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:1}]}),/exact product and quantity/);
@@ -39,15 +39,18 @@ test('Picking starts before review; bill approval, exact packing and assignment 
  await assert.rejects(()=>act('depart','packer',packer),/Rider or manager/);
  await act('assign_rider','manager',manager,{rider_id:rider});
  await assert.rejects(()=>act('depart','rider',other),/not assigned/);
- await act('depart','rider',rider);await act('deliver','rider',rider);
+ await act('depart','rider',rider);
+ await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/Delivery must be reported/);
+ await act('deliver','rider',rider);
  const row=(await db.query<{status:string;cash_confirmed:boolean;cash_received:number}>('select status,cash_confirmed,cash_received from orders where id=$1',[order])).rows[0];assert.equal(row.status,'Delivered');assert.equal(row.cash_confirmed,false);assert.equal(row.cash_received,null);
 });
 test('Only manager/owner can close exact cash once; inactive staff lose authority immediately',async()=>{
- await assert.rejects(()=>act('settle','rider',rider,{cash_received:2150}),/manager or owner/);
- await assert.rejects(()=>act('settle','packer',packer,{cash_received:2150}),/manager or owner/);
- await assert.rejects(()=>act('settle','manager',manager,{cash_received:2000}),/match the bill exactly/);
- await db.query('update store_staff set active=false where id=$1',[manager]);await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150}),/revoked/);await db.query('update store_staff set active=true where id=$1',[manager]);
- await act('settle','manager',manager,{cash_received:2150});await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150}),/not awaiting cash/);
+ await assert.rejects(()=>act('settle','rider',rider,{cash_received:2150,delivery_verified:true}),/manager or owner/);
+ await assert.rejects(()=>act('settle','packer',packer,{cash_received:2150,delivery_verified:true}),/manager or owner/);
+ await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150}),/Verify delivery/);
+ await assert.rejects(()=>act('settle','manager',manager,{cash_received:2000,delivery_verified:true}),/match the bill exactly/);
+ await db.query('update store_staff set active=false where id=$1',[manager]);await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/revoked/);await db.query('update store_staff set active=true where id=$1',[manager]);
+ await act('settle','manager',manager,{cash_received:2150,delivery_verified:true});await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/not awaiting cash/);
  const events=await db.query<{actor_role:string;action:string}>('select actor_role,action from store_audit_events where order_id=$1 and action=$2',[order,'settle']);assert.equal(events.rows.length,1);assert.equal(events.rows[0].actor_role,'manager');
 });
 test('Actual profit stays unknown without costs and becomes recorded revenue minus costs and expenses',async()=>{
