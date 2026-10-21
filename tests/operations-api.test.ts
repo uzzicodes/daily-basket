@@ -6,7 +6,7 @@ import {GET as list,PATCH} from '../app/api/operations/orders/route';
 import {GET as single} from '../app/api/operations/orders/[id]/route';
 import {GET as receipt} from '../app/api/operations/receipt/[id]/route';
 
-test('Staff HTTP routes enforce assigned/approved order filters and reject forged cash actions before mutation',async t=>{
+test('Staff HTTP routes give pickers pending orders, restrict rider assignments and reject forged cash actions',async t=>{
  const originalFetch=globalThis.fetch,env={...process.env};
  process.env.ADMIN_SESSION_SECRET='isolated-api-test-signing-secret-longer-than-32';process.env.SUPABASE_URL='https://isolated-database.invalid';process.env.SUPABASE_SERVICE_ROLE_KEY='isolated-test-key';
  t.after(()=>{globalThis.fetch=originalFetch;for(const key of ['ADMIN_SESSION_SECRET','SUPABASE_URL','SUPABASE_SERVICE_ROLE_KEY']){if(env[key]===undefined)delete process.env[key];else process.env[key]=env[key];}});
@@ -18,14 +18,14 @@ test('Staff HTTP routes enforce assigned/approved order filters and reject forge
   if(url.pathname.endsWith('/orders')){
    orderRead=true;assert.equal(options?.method??'GET','GET');assert.doesNotMatch(url.searchParams.get('select')||'',/cost|profit|request_hash|idempotency/);
    if(actor.role==='rider')assert.equal(url.searchParams.get('assigned_rider_id'),'eq.'+actor.id);
-   if(actor.role==='packer')assert.equal(url.searchParams.get('approval_status'),'eq.approved');
-   return Response.json(url.searchParams.has('id')?null:[]);
+   if(actor.role==='packer')assert.equal(url.searchParams.has('approval_status'),false);
+   return Response.json(url.searchParams.has('id')?null:actor.role==='packer'?[{id:orderId,items:[],status:'Pending',approval_status:'pending',operation_version:0,total_amount:100,subtotal:100,delivery_fee:0}]:[]);
   }
   mutations++;throw Error('Unexpected database write or photo request: '+url.pathname);
  };
  for(const role of ['packer','rider'] as const){
   actor={...actor,role};const token=await issueStaffToken(actor),headers={Authorization:'Bearer '+token,'X-Daily-Basket-Client':'staff-v1'};
-  assert.equal((await list(new Request('https://store.invalid/api/operations/orders?view=all',{headers}))).status,200);
+  const queue=await list(new Request('https://store.invalid/api/operations/orders?view=all',{headers}));assert.equal(queue.status,200);const queueBody=await queue.json() as {orders:{approval_status:string}[]};assert.equal(queueBody.orders.length,role==='packer'?1:0);if(role==='packer')assert.equal(queueBody.orders[0].approval_status,'pending');
   assert.equal((await single(new Request('https://store.invalid/api/operations/orders/'+orderId,{headers}),{params:Promise.resolve({id:orderId})})).status,404);
   // Receipt downloads reject the same unauthorized order before touching photos/fonts.
   // Rate-limit persistence is outside this isolated transport fixture, so order-ID isolation is also checked on its source filter by the single-order route above.

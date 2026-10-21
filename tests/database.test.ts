@@ -88,12 +88,12 @@ test('Database checkout rejects missing, invalid and outside delivery pins and s
   await assert.rejects(()=>place({...customer,delivery_latitude:undefined}),/delivery pin/);
   await assert.rejects(()=>place({...customer,delivery_latitude:'31.41216075'}),/delivery pin/);
   await assert.rejects(()=>place({...customer,delivery_latitude:91}),/Invalid delivery pin/);
-  await assert.rejects(()=>place({...customer,delivery_latitude:31.47,delivery_distance_km:0}),/within 5 km/);
+  await assert.rejects(()=>place({...customer,delivery_latitude:31.49,delivery_distance_km:0}),/within 7 km/);
   const count=await db.query<{count:number}>('select count(*)::int as count from orders');assert.equal(count.rows[0].count,0);
-  const inside={...customer,delivery_latitude:31.41216075+4.999/6371*180/Math.PI};await place(inside);
-  const saved=await db.query<{delivery_latitude:number;delivery_longitude:number;delivery_distance_km:number}>('select delivery_latitude,delivery_longitude,delivery_distance_km from orders');assert.equal(saved.rows[0].delivery_latitude,inside.delivery_latitude);assert.equal(saved.rows[0].delivery_longitude,customer.delivery_longitude);assert.equal(Number(saved.rows[0].delivery_distance_km),4.999);
-  await assert.rejects(()=>place({...customer,delivery_latitude:31.41216075+5.001/6371*180/Math.PI}),/within 5 km/);
-  const boundary=await db.query<{km:number}>('select delivery_distance_km($1,$2) as km',[31.41216075+5/6371*180/Math.PI,74.27587375]);assert.ok(Math.abs(boundary.rows[0].km-5)<1e-9);
+  const inside={...customer,delivery_latitude:31.41216075+6.999/6371*180/Math.PI};await place(inside);
+  const saved=await db.query<{delivery_latitude:number;delivery_longitude:number;delivery_distance_km:number}>('select delivery_latitude,delivery_longitude,delivery_distance_km from orders');assert.equal(saved.rows[0].delivery_latitude,inside.delivery_latitude);assert.equal(saved.rows[0].delivery_longitude,customer.delivery_longitude);assert.equal(Number(saved.rows[0].delivery_distance_km),6.999);
+  await assert.rejects(()=>place({...customer,delivery_latitude:31.41216075+7.001/6371*180/Math.PI}),/within 7 km/);
+  const boundary=await db.query<{km:number}>('select delivery_distance_km($1,$2) as km',[31.41216075+7/6371*180/Math.PI,74.27587375]);assert.ok(Math.abs(boundary.rows[0].km-7)<1e-9);
   for(const role of ['anon','authenticated']){const acl=await db.query<{allowed:boolean}>("select has_function_privilege($1,'delivery_distance_km(double precision,double precision)','EXECUTE') as allowed",[role]);assert.equal(acl.rows[0].allowed,false);}
 });
 test('Checkout snapshots authoritative prices and freezes the complete response across retries',async()=>{

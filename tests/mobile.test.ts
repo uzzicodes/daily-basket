@@ -36,14 +36,14 @@ test('Native endpoints fail closed before persistence; client headers cannot rep
  assert.equal((await checkout(request('checkout',JSON.stringify({items:[],price:1})))).status,400);
  assert.equal((await status(request('order-status',JSON.stringify({id,token:'guessed'})))).status,401);
  assert.equal((await status(request('order-status','a'.repeat(501)))).status,400);
- const body=await config().json() as StoreConfig;assert.equal(body.radius_km,5);assert.equal(body.departments.length,9);assert.equal(Object.keys(body).some(k=>/secret|service|webhook|password/i.test(k)),false);
+ const body=await config().json() as StoreConfig;assert.equal(body.radius_km,7);assert.equal(body.departments.length,9);assert.equal(Object.keys(body).some(k=>/secret|service|webhook|password/i.test(k)),false);
 });
 test('Reordering uses refreshed availability and prices; quantities and delivery thresholds stay valid',()=>{
  const p:Product={id:'123',name:'Milk',unit:'1 litre',brand:'Brand',category:'Dairy',image_url:'',price:450,in_stock:true};
  const refreshed=refreshedLines([{product:p,quantity:200}],[{...p,price:500}]);assert.equal(refreshed.changed,true);assert.equal(refreshed.lines[0].product.price,500);assert.equal(refreshed.lines[0].quantity,99);
  assert.deepEqual(refreshedLines([{product:p,quantity:1}],[{...p,in_stock:false}]).removed,['Milk']);
  assert.equal(available({...p,price:null}),false);assert.equal(available({...p,price:0}),false);
- const conf={free_delivery:2999,delivery_fee:150,location:{latitude:31.41216075,longitude:74.27587375},radius_km:5} as StoreConfig;
+ const conf={free_delivery:2999,delivery_fee:150,location:{latitude:31.41216075,longitude:74.27587375},radius_km:7} as StoreConfig;
  assert.equal(totals([{product:{...p,price:2998},quantity:1}],conf).total_amount,3148);
  assert.equal(totals([{product:{...p,price:2999},quantity:1}],conf).delivery_fee,0);
  assert.equal(covered(conf.location,conf),true);assert.equal(distanceKm(conf.location,conf.location),0);assert.equal(covered({latitude:24.86,longitude:67.01},conf),false);assert.equal(covered({latitude:NaN,longitude:74},conf),false);

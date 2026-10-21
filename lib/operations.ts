@@ -18,9 +18,8 @@ export async function performAction(value:z.infer<typeof actionSchema>,actor:Sta
 export async function listOperations(role:StaffRole|'owner',staffId:string|null,view:string,before?:{created_at:string;id:string}){
  let query=database().from('orders').select(operationsFields).order('created_at',{ascending:false}).order('id',{ascending:false}).limit(201);
  if(role==='rider')query=query.eq('assigned_rider_id',staffId!);
- if(role==='packer')query=query.eq('approval_status','approved');
  if(view==='cash')query=query.eq('status','Delivered').eq('cash_confirmed',false);
- else if(view==='review')query=query.eq('status','Pending').eq('approval_status','pending');
+ else if(view==='review')query=query.in('status',['Pending','Packing']).eq('approval_status','pending');
  else if(view==='active'&&role==='packer')query=query.in('status',['Pending','Packing']);
  else if(view==='active')query=query.not('status','eq','Cancelled').or('status.neq.Delivered,cash_confirmed.eq.false');
  else if(view==='completed')query=query.or('cash_confirmed.eq.true,status.eq.Cancelled');

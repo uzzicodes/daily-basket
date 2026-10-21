@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-21T12:05:45.759Z",
+  "generatedAt": "2026-10-21T17:20:39.534Z",
   "title": "Design System: Daily Basket (temporary customer identity)",
   "extensions": {
     "colorMeta": {
@@ -1203,7 +1203,7 @@
         "supplier": "Askari is inventory provenance, not the customer identity",
         "mark": "Original independently generated 3D teal/mint basket raster, no supplier reference; source/derivative prompts in public/brand/*.png.json and mobile/assets/*.png.json and embedded PNG metadata.",
         "workingName": "Daily Basket",
-        "releaseGate": "Signed customer build is authorized and finished. Confirm the final temporary name before store publication; preserve current signing identifiers and storage compatibility.",
+        "releaseGate": "Signing is authorized. Replacement customer 1.0.3/code4 and Team 1.0.1/code2 builds are submitted/pending, not download-verified. Confirm the final temporary name before store publication; preserve current signing identifiers and storage compatibility.",
         "productionIdentifier": "pk.dailybasket.shopping"
       },
       "refinement": {
@@ -1216,7 +1216,7 @@
           "Configured delivery-fee progress",
           "Server-status steps and private customer receipt-PDF sharing"
         ],
-        "nativeRelease": "Customer 1.0.2/code3 signed build 266afa8a-853a-4fad-9862-f809fcd0d4c7 and Team 1.0.0/code1 signed build 19ecf595-9678-4bad-9064-b58d1385d6a7 finished. Both APKs downloaded and ZIP/signing-block structural checks passed; final URLs/captures completed. Installed native QA and store publication remain unverified.",
+        "nativeRelease": "Replacement customer 1.0.3/code4 build 3999a36e-8225-4597-bd02-abac055eeb63 and Team 1.0.1/code2 build 9833f54e-9cb4-4773-aa33-915b07b6634e are submitted/pending, without finished APK download verification. Earlier customer build 633ca7d1-7413-40ce-ac09-322535f3877f was canceled before completion. Previous customer 1.0.2/code3 and Team 1.0.0/code1 artifacts passed ZIP/signing-block checks. Installed native QA and store publication remain unverified.",
         "review": "Initial market disposition fix: mobile website invitation and stale identity docs. Documentation updated; reviewer owns final disposition.",
         "approved": "2026-10-18",
         "captures": ".impeccable/review/market/*.png; browser evidence only",
@@ -1242,31 +1242,32 @@
       "depth": "Flat one-pixel borders and tonal groups; original raster brand artwork contains its own dimensional shading.",
       "focus": "3px solid #49a99a; outline-offset 3px on web workspace controls.",
       "layout": "238px sidebar; minmax(270px,.74fr) / minmax(0,1.5fr) workbench; maximum content width 1800px. Phone queue/detail replace each other.",
-      "authority": "Manager or owner receives exact rider cash and closes payment. Packers/riders cannot settle. Delivered and cash_confirmed are separate. Owner alone sees actual costs, expenses, sales/profit. Every staff action identifies its actor.",
-      "finance": "Costs frozen per order; missing cost leaves profit unknown; only recorded expenses deducted; periods use order placement date in Asia/Karachi.",
+      "authority": "New orders appear immediately to manager and picker. Picking/checking proceeds during bill review; manager approves/rejects Pending or Packing. Approval gates rider assignment/dispatch. Manager or owner receives exact rider cash and closes payment. Packers/riders cannot settle. Delivered and cash_confirmed are separate. Owner alone sees actual costs, expenses, sales/profit. Every staff action identifies its actor.",
+      "finance": "Costs frozen per order; missing cost leaves profit unknown; only recorded expenses deducted; periods use order placement date in Asia/Karachi. Owner Reset test earnings previews counts/sales and requires explicit confirmation; exclusions affect every financial period, preserving receipts/history/jobs and expenses. New orders count normally; Undo last reset restores only its batch. Owner API, snapshot guard, idempotency, private RLS/grants and audit enforce the action. No actual orders left excluded during verification.",
+      "deliveryMap": "Final 7 km straight-line radius from original store pin, 14 km across; road-routing choice superseded. App validation uses config.radius_km. Native/browser wrappers load public /delivery-map with server constants, circle fitBounds, main OSM tile URL, real document/referrer policy and restrictive CSP. Native user-agent identifies the app, limits navigation to the map route and sends initial pin on load without URL coordinates. Browser 390px tiles verified; no native phone QA.",
       "team": "One Android Team app; packer/rider views by individual owner-created account. Foreground refresh 10 seconds and resume; native background push not configured, keep-open copy explicit.",
       "distribution": {
         "customer": {
-          "version": "1.0.2",
-          "androidCode": 3,
-          "buildId": "266afa8a-853a-4fad-9862-f809fcd0d4c7",
-          "status": "finished; downloaded APK and ZIP/signing-block structural checks passed; no native phone run"
+          "version": "1.0.3",
+          "androidCode": 4,
+          "buildId": "3999a36e-8225-4597-bd02-abac055eeb63",
+          "status": "submitted/pending; finished APK download verification pending; earlier 633ca7d1-7413-40ce-ac09-322535f3877f canceled before completion; no native phone run"
         },
         "team": {
-          "version": "1.0.0",
-          "androidCode": 1,
+          "version": "1.0.1",
+          "androidCode": 2,
           "projectId": "08a1661d-69fc-4f99-af37-b82e17b16762",
-          "buildId": "19ecf595-9678-4bad-9064-b58d1385d6a7",
-          "status": "finished; downloaded APK and ZIP/signing-block structural checks passed; no native phone run"
+          "buildId": "9833f54e-9cb4-4773-aa33-915b07b6634e",
+          "status": "submitted/pending; finished APK download verification pending; intermediate Team builds canceled during copy reconciliation; previous Team 1.0.0/code1 was verified; no native phone run"
         },
-        "links": "Verified customer/Team APK URLs in lib/app-downloads.ts, exposed at /apps. Final apps captures show both links. docs/OPERATIONS.md handoff."
+        "links": "Both new builds IN_QUEUE. Current customer/team download values in lib/app-downloads.ts are empty; appBuildPages links to exact customer 3999a36e and Team 9833f54e builds. /apps uses existing slots for queue/status messages and web Packing desk access; historical 1.0.2/1.0.0 APKs are not advertised as current. Website publication next; APK publication awaits finished-build verification. Hub fallback captures under review, no completed publication claimed."
       },
       "review": {
         "status": "Original documentation and final APK-link material fixes completed; final reviewer disposition and added account-security review remain separate.",
         "reviewer": ".impeccable/review/operations-reviewer.md",
         "detector": ".impeccable/review/operations-detector.md",
         "detectorScope": "One changed-web pass only; tonal palette/compact-radius advisories; native detector skipped.",
-        "evidence": "13 named operations captures indexed in .impeccable/surfaces/operations.md. Customer/Team phone images are web previews. No Android SDK, emulator/device or installed-native UX QA."
+        "evidence": "Earlier operations captures plus parallel-picker-desktop.png (1280px), parallel-picker-mobile.png (390px), parallel-team-phone.png (390px) and replaced radius-seven-app-preview.png with working tiles/no 403, indexed in .impeccable/surfaces/operations.md. Picker actions are disabled fictional previews. Parent reran all 70 tests successfully, including pending picking/private API/rider/cash guards. English/Urdu Team empty states describe immediate new-order delivery. Fresh finish review is in progress. No Android SDK, emulator/device or installed-native UX QA."
       },
       "rasterProvenance": {
         "master": "public/brand/daily-basket-mark-v2.png",
@@ -1515,7 +1516,7 @@
       "**Do** preserve exact pack photography, real brand/variant labels, imported prices and explicit stock states.",
       "**Do** scope native light/dark roles to the app and its identified preview/privacy wrappers.",
       "**Do** keep guest checkout, current-stock list/reorder checks and server-confirmed totals clear.",
-      "**Do** retain supplier provenance, real contacts, 5 km PGECHS dispatch coverage, COD rules, compatible storage namespaces and authenticated staff tools."
+      "**Do** retain supplier provenance, real contacts, 7 km straight-line PGECHS dispatch coverage from the original store pin, COD rules, compatible storage namespaces and authenticated staff tools."
     ],
     "donts": [
       "**Don't** restore Askari's name or supplier-logo artwork as the customer-facing identity.",

@@ -11,7 +11,7 @@ import './operations.css';
 
 export const metadata: Metadata = {
   title: "Daily Basket | Lahore Groceries",
-  description: "Grocery essentials and household favourites from Daily Basket. Delivery within 5 km of our PGECHS Phase 1 store in Lahore.",
+  description: "Grocery essentials and household favourites from Daily Basket. Delivery within 7 km of our PGECHS Phase 1 store in Lahore.",
   icons: {
     icon: "/brand/daily-basket-app-icon-v2.png",
     shortcut: "/brand/daily-basket-app-icon-v2.png",

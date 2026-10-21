@@ -9,9 +9,9 @@ import { STORE } from '@/lib/constants';
 export default function PaperListModal({whatsappNumber}: {whatsappNumber:string}) {
   const {paperOpen,setPaperOpen,area,deliveryPoint}=useCart();const [text,setText]=useState('');const [file,setFile]=useState<File|null>(null);const [error,setError]=useState('');const [busy,setBusy]=useState(false);
   async function send() {
-    setError('');if(!withinDeliveryRange(deliveryPoint)){setError('Choose a delivery pin within 5 km of our store before sending your list.');return;}if(!whatsappNumber){setError('The store WhatsApp number has not been configured yet.');return;}
+    setError('');if(!withinDeliveryRange(deliveryPoint)){setError('Choose a delivery pin within 7 km of our store before sending your list.');return;}if(!whatsappNumber){setError('The store WhatsApp number has not been configured yet.');return;}
     if(!text.trim()&&!file){setError('Type your grocery list or choose a photo.');return;}
-    const message=`${STORE}\nPlease pack my grocery list.\nDelivery area: ${area}\nDelivery pin: ${deliveryPinUrl(deliveryPoint!)}\nDistance: ${deliveryDistanceKm(deliveryPoint!).toFixed(2)} km (5 km delivery radius)\n\n${text.trim()}${file?'\nI am sending a photo of my handwritten grocery list.':''}\n\nPlease confirm availability, price and delivery time.`;
+    const message=`${STORE}\nPlease pack my grocery list.\nDelivery area: ${area}\nDelivery pin: ${deliveryPinUrl(deliveryPoint!)}\nDistance: ${deliveryDistanceKm(deliveryPoint!).toFixed(2)} km (7 km delivery radius)\n\n${text.trim()}${file?'\nI am sending a photo of my handwritten grocery list.':''}\n\nPlease confirm availability, price and delivery time.`;
     const url=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     if(file && navigator.canShare?.({files:[file]})) {setBusy(true);try{await navigator.share({files:[file],text:message,title:'My Daily Basket grocery list'});}catch(e){if((e as Error).name!=='AbortError')setError('Photo sharing failed. Open WhatsApp and attach the selected photo.');}finally{setBusy(false);} }
     else {window.open(url,'_blank','noopener,noreferrer');if(file)setError('WhatsApp opened. Use its attachment button to add your selected photo; WhatsApp links cannot attach files automatically.');}

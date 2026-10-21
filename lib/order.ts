@@ -10,7 +10,7 @@ const customerFields = z.object({
   delivery_latitude: z.number({required_error:'Choose your delivery pin before ordering.'}).finite().min(-90).max(90),
   delivery_longitude: z.number({required_error:'Choose your delivery pin before ordering.'}).finite().min(-180).max(180),
 });
-function deliveryCheck(customer:{delivery_latitude:number;delivery_longitude:number},ctx:z.RefinementCtx){if(!withinDeliveryRange({latitude:customer.delivery_latitude,longitude:customer.delivery_longitude}))ctx.addIssue({code:z.ZodIssueCode.custom,path:['delivery_latitude'],message:'Sorry, we deliver only within 5 km of our PGECHS Phase 1 store. Choose a nearby delivery address.'});}
+function deliveryCheck(customer:{delivery_latitude:number;delivery_longitude:number},ctx:z.RefinementCtx){if(!withinDeliveryRange({latitude:customer.delivery_latitude,longitude:customer.delivery_longitude}))ctx.addIssue({code:z.ZodIssueCode.custom,path:['delivery_latitude'],message:'Sorry, we deliver only within 7 km of our PGECHS Phase 1 store. Choose a nearby delivery address.'});}
 export const customerSchema=customerFields.superRefine(deliveryCheck);
 export const orderSchema = customerFields.extend({
   items: z.array(z.object({ product_id: z.string().uuid(), quantity: z.number().int().min(1).max(99) }).strict()).min(1).max(60),
@@ -35,5 +35,5 @@ export function receipt(customer: Customer, items: OrderItem[]) {
   const subtotal = items.reduce((s,i) => s + i.price * i.quantity, 0);
   const fee = subtotal >= FREE_DELIVERY ? 0 : DELIVERY_FEE;
   const point=typeof customer.delivery_latitude==='number'&&typeof customer.delivery_longitude==='number'?{latitude:customer.delivery_latitude,longitude:customer.delivery_longitude}:null;
-  return [STORE, 'GROCERY ORDER · Cash on Delivery', '', `Customer: ${customer.customer_name}`, `Phone: ${customer.customer_phone}`, `Area: ${customer.delivery_area}`, `Address: ${customer.delivery_address}`, ...(point?[`Delivery pin: ${deliveryPinUrl(point)}`,`Distance from store: ${deliveryDistanceKm(point).toFixed(2)} km · 5 km delivery radius`]:[]), '', ...items.map(i => `${i.quantity} × ${i.name} (${i.unit}) — ${money(i.quantity * i.price)}`), '', `Subtotal: ${money(subtotal)}`, `Delivery: ${money(fee)}`, `TOTAL COD: ${money(subtotal + fee)}`, '', 'Please confirm availability and delivery time.'].join('\n');
+  return [STORE, 'GROCERY ORDER · Cash on Delivery', '', `Customer: ${customer.customer_name}`, `Phone: ${customer.customer_phone}`, `Area: ${customer.delivery_area}`, `Address: ${customer.delivery_address}`, ...(point?[`Delivery pin: ${deliveryPinUrl(point)}`,`Distance from store: ${deliveryDistanceKm(point).toFixed(2)} km · 7 km delivery radius`]:[]), '', ...items.map(i => `${i.quantity} × ${i.name} (${i.unit}) — ${money(i.quantity * i.price)}`), '', `Subtotal: ${money(subtotal)}`, `Delivery: ${money(fee)}`, `TOTAL COD: ${money(subtotal + fee)}`, '', 'Please confirm availability and delivery time.'].join('\n');
 }

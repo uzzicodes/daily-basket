@@ -26,12 +26,14 @@ test('Staff credentials are salted and staff tokens cannot become owner or desk 
  assert.equal(actionSchema.safeParse({id:order,action:'settle',expected_version:0,payload:{cash_received:2150},role:'owner'}).success,false);
  delete process.env.ADMIN_SESSION_SECRET;
 });
-test('Approval, exact packing, assignment and delivery have atomic role and version guards',async()=>{
- await assert.rejects(()=>act('start_pack','packer',packer),/approve this bill/);
+test('Picking starts before review; bill approval, exact packing and assignment guard dispatch atomically',async()=>{
+ await act('start_pack','packer',packer);
+ const parallel=(await db.query<{status:string;approval_status:string}>('select status,approval_status from orders where id=$1',[order])).rows[0];assert.equal(parallel.status,'Packing');assert.equal(parallel.approval_status,'pending');
+ await assert.rejects(()=>act('depart','manager',manager),/bill approval/);
  await assert.rejects(()=>act('approve','rider',rider),/not assigned/);
  await act('approve','manager',manager);
  await assert.rejects(()=>act('start_pack','packer',packer,{},0),/Order changed/);
- await act('start_pack','packer',packer);
+ assert.equal((await db.query<{status:string}>('select status from orders where id=$1',[order])).rows[0].status,'Packing');
  await assert.rejects(()=>act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:1}]}),/exact product and quantity/);
  await act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:2}]});
  await assert.rejects(()=>act('depart','packer',packer),/Rider or manager/);
@@ -58,4 +60,21 @@ test('Actual profit stays unknown without costs and becomes recorded revenue min
 test('Staff views omit financial secrets and public roles cannot reach staff, audit or owner cost data',async()=>{
  const row=(await db.query('select * from orders where id=$1',[order])).rows[0] as OperationalOrder;const visible=operationalView({...row,profit:100,credential_hash:'secret'} as OperationalOrder);assert.equal('profit' in visible,false);assert.equal('credential_hash' in visible,false);assert.equal('request_hash' in visible,false);
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);for(const table of ['store_staff','store_order_costs','store_product_costs','store_order_finance','store_expenses','store_audit_events'])await assert.rejects(()=>db.query('select * from '+table),/permission denied/);await assert.rejects(()=>db.query('select store_business_summary(0)'),/permission denied/);await assert.rejects(()=>db.query('select perform_store_order_action($1,$2,0,$3,null,$4::jsonb)',[order,'settle','owner','{}']),/permission denied/);await db.exec('reset role');}
+});
+test('Owner test resets are reversible, preserve receipts, reject stale snapshots and leave future sales included',async()=>{
+ const original=(await db.query<{s:any}>('select store_business_summary(0) s')).rows[0].s;
+ const state=(await db.query<{s:any}>('select preview_store_report_reset() s')).rows[0].s;
+ const id=crypto.randomUUID();await assert.rejects(()=>db.query('select reset_store_test_reports($1,$2)',[id,'wrong-snapshot']),/Orders changed/);
+ await db.query('select reset_store_test_reports($1,$2)',[id,state.snapshot]);
+ await db.query('select reset_store_test_reports($1,$2)',[id,state.snapshot]);
+ let summary=(await db.query<{s:any}>('select store_business_summary(0) s')).rows[0].s;
+ assert.equal(Number(summary.sales),0);assert.equal(Number(summary.cash_received),0);assert.equal(Number(summary.order_count),0);assert.equal(Number(summary.excluded_test_orders),Number(state.order_count));assert.equal(Number(summary.expenses),Number(original.expenses));assert.ok(summary.daily_sales.every((d:any)=>Number(d.sales)===0&&Number(d.orders)===0));
+ const receipt=(await db.query<{status:string;total_amount:number}>('select status,total_amount from orders where id=$1',[order])).rows[0];assert.equal(receipt.status,'Delivered');assert.equal(Number(receipt.total_amount),2150);
+ const customer={customer_name:'Future isolated order',customer_phone:'03001234567',delivery_area:'PGECHS',delivery_address:'Future isolated fixture',delivery_latitude:31.41216075,delivery_longitude:74.27587375};
+ const created=(await db.query<{o:{id:string}}>('select create_checkout_order($1::jsonb,$2::jsonb,$3,$4,1150) o',[JSON.stringify(customer),JSON.stringify([{product_id:product,quantity:1}]),crypto.randomUUID(),'future-reset-test'])).rows[0].o.id;
+ summary=(await db.query<{s:any}>('select store_business_summary(0) s')).rows[0].s;assert.equal(Number(summary.order_count),1);assert.equal(Number(summary.placed_value),1150);
+ await db.query('select restore_store_test_reports($1)',[id]);await db.query('select restore_store_test_reports($1)',[id]);
+ summary=(await db.query<{s:any}>('select store_business_summary(0) s')).rows[0].s;assert.equal(Number(summary.sales),Number(original.sales));assert.equal(Number(summary.order_count),Number(original.order_count)+1);assert.equal(Number(summary.excluded_test_orders),0);
+ assert.equal((await db.query('select * from orders where id=$1',[created])).rows.length,1);
+ for(const role of ['anon','authenticated']){await db.exec('set role '+role);for(const table of ['store_report_resets','store_report_exclusions'])await assert.rejects(()=>db.query('select * from '+table),/permission denied/);await assert.rejects(()=>db.query('select reset_store_test_reports($1,$2)',[crypto.randomUUID(),state.snapshot]),/permission denied/);await assert.rejects(()=>db.query('select restore_store_test_reports($1)',[id]),/permission denied/);await db.exec('reset role');}
 });

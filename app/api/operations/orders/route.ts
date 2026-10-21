@@ -10,6 +10,7 @@ export async function GET(request:Request){try{
  let cursor;try{cursor=p.has('before')?decodeOrderCursor(p.get('before')!):undefined;}catch{return NextResponse.json({error:'Invalid page cursor.'},{status:400,headers});}
  const orders=await listOperations(actor.role,actor.id,view,cursor);
  const {data:riders,error}=actor.role==='manager'?await database().from('store_staff').select('id,display_name').eq('role','rider').eq('active',true).order('display_name'):{data:[],error:null};if(error)throw error;
+ const waiting=actor.role==='packer'?await database().from('orders').select('id',{count:'exact',head:true}).eq('status','Pending').eq('approval_status','pending'):null;
  return NextResponse.json({...orderPage(orders),riders},{headers});
  }catch(e){const d=operationError(e);return NextResponse.json({error:d.error},{status:d.status,headers});}}
 export async function PATCH(request:Request){if(!staffMutationAllowed(request))return NextResponse.json({error:'Invalid request origin.'},{status:403,headers});try{

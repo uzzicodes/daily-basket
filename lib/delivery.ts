@@ -1,6 +1,6 @@
 // Store pin resolved from the owner's Google Maps link, 14 October 2026.
 export const DELIVERY_LOCATION={latitude:31.41216075,longitude:74.27587375};
-export const DELIVERY_RADIUS_KM=5;
+export const DELIVERY_RADIUS_KM=7;
 export const STORE_ADDRESS='84, Block C2, PGECHS Phase 1, Lahore';
 export const STORE_MAP_URL='https://maps.app.goo.gl/Qezc8HXgwTKg2Hk66?g_st=ic';
 export type DeliveryPoint={latitude:number;longitude:number};
