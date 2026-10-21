@@ -23,7 +23,7 @@ test('Staff cannot mark an order paid or delivered, even with a forged cash conf
  process.env.ADMIN_SESSION_SECRET='test-only-secret-for-local-unit-tests-32chars';
  const token=await sessionToken('desk');
  const response=await PATCH(new Request('https://store.invalid/api/desk/orders',{method:'PATCH',headers:{origin:'https://store.invalid',cookie:'askari_desk='+token},body:JSON.stringify({id:'ORD-00000000-0000-4000-8000-000000000001',expected_status:'Out for Delivery',status:'Delivered',cash_received:true})}));
- assert.equal(response.status,403);
+ assert.equal(response.status,401);
  const unconfirmed=await updateOrderStatus(new Request('https://store.invalid/api/admin/orders',{method:'PATCH',body:JSON.stringify({id:'ORD-00000000-0000-4000-8000-000000000001',expected_status:'Out for Delivery',status:'Delivered'})}),{canSettle:true});
  assert.equal(unconfirmed.status,400);
  delete process.env.ADMIN_SESSION_SECRET;

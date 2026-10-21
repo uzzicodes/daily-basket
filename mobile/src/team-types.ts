@@ -1,0 +1,3 @@
+export type TeamActor={id:string;username:string;display_name:string;role:'packer'|'rider'|'manager'};
+export type TeamItem={product_id:string;name:string;unit:string;image_url:string;quantity:number;price:number};
+export type TeamOrder={id:string;customer_name:string;customer_phone:string;delivery_area:string;delivery_address:string;delivery_latitude:number|null;delivery_longitude:number|null;created_at:string;status:string;subtotal:number;delivery_fee:number;total_amount:number;items:TeamItem[];operation_version:number;approval_status:string;packed_at:string|null;assigned_rider_id:string|null;cash_confirmed:boolean;settled_at:string|null};

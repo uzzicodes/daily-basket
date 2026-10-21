@@ -1,4 +1,4 @@
 import type { Metadata } from 'next';
-import AdminDashboard from '@/components/AdminDashboard';
+import OwnerWorkspace from '@/components/OwnerWorkspace';
 export const metadata:Metadata={title:'Owner Dashboard | Daily Basket',robots:{index:false,follow:false}};
-export default function AdminPage(){return <AdminDashboard/>;}
+export default function AdminPage(){return <OwnerWorkspace/>;}

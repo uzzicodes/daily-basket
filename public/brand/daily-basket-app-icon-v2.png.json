@@ -1,0 +1,4 @@
+{
+  "source": "OpenAI built-in image generation; Daily Basket original mark used as the sole reference",
+  "prompt": "Create the Android launcher icon for Daily Basket from the referenced original 3D basket logo. Preserve the exact teal/mint sculpted basket, handle, cream grocery parcel and two leaves, same shape and materials. Center this exact symbol at 62 percent of the square canvas width, with generous uniform clear space around it so Android adaptive icon masks never crop it. Solid warm ivory background #f7f9f6 fully opaque. No text, no retailer names, no Askari elements, no border, no extra icons, no outer rounded-square frame (the operating system supplies the icon mask). Soft refined studio lighting and crisp edges; original logo identity must remain unchanged. One square app icon image.\n"
+}

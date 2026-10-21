@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-18T18:58:42.984Z",
+  "generatedAt": "2026-10-21T12:05:45.759Z",
   "title": "Design System: Daily Basket (temporary customer identity)",
   "extensions": {
     "colorMeta": {
@@ -570,6 +570,342 @@
           "oklch(84% 0 0)",
           "oklch(95% 0 0)"
         ]
+      },
+      "operations-teal": {
+        "role": "primary",
+        "displayName": "Operations teal",
+        "tonalRamp": [
+          "oklch(15% 0.0913 188.9)",
+          "oklch(26% 0.0913 188.9)",
+          "oklch(38% 0.0913 188.9)",
+          "oklch(49% 0.0913 188.9)",
+          "oklch(61% 0.0913 188.9)",
+          "oklch(72% 0.0913 188.9)",
+          "oklch(84% 0.0913 188.9)",
+          "oklch(95% 0.0913 188.9)"
+        ]
+      },
+      "operations-deep": {
+        "role": "primary",
+        "displayName": "Operations deep",
+        "tonalRamp": [
+          "oklch(15% 0.0562 180.4)",
+          "oklch(26% 0.0562 180.4)",
+          "oklch(38% 0.0562 180.4)",
+          "oklch(49% 0.0562 180.4)",
+          "oklch(61% 0.0562 180.4)",
+          "oklch(72% 0.0562 180.4)",
+          "oklch(84% 0.0562 180.4)",
+          "oklch(95% 0.0562 180.4)"
+        ]
+      },
+      "operations-ink": {
+        "role": "neutral",
+        "displayName": "Operations ink",
+        "tonalRamp": [
+          "oklch(15% 0.0401 177.2)",
+          "oklch(26% 0.0401 177.2)",
+          "oklch(38% 0.0401 177.2)",
+          "oklch(49% 0.0401 177.2)",
+          "oklch(61% 0.0401 177.2)",
+          "oklch(72% 0.0401 177.2)",
+          "oklch(84% 0.0401 177.2)",
+          "oklch(95% 0.0401 177.2)"
+        ]
+      },
+      "operations-muted": {
+        "role": "neutral",
+        "displayName": "Operations muted",
+        "tonalRamp": [
+          "oklch(15% 0.0261 172.1)",
+          "oklch(26% 0.0261 172.1)",
+          "oklch(38% 0.0261 172.1)",
+          "oklch(49% 0.0261 172.1)",
+          "oklch(61% 0.0261 172.1)",
+          "oklch(72% 0.0261 172.1)",
+          "oklch(84% 0.0261 172.1)",
+          "oklch(95% 0.0261 172.1)"
+        ]
+      },
+      "operations-line": {
+        "role": "neutral",
+        "displayName": "Operations line",
+        "tonalRamp": [
+          "oklch(15% 0.0125 157.0)",
+          "oklch(26% 0.0125 157.0)",
+          "oklch(38% 0.0125 157.0)",
+          "oklch(49% 0.0125 157.0)",
+          "oklch(61% 0.0125 157.0)",
+          "oklch(72% 0.0125 157.0)",
+          "oklch(84% 0.0125 157.0)",
+          "oklch(95% 0.0125 157.0)"
+        ]
+      },
+      "operations-soft": {
+        "role": "neutral",
+        "displayName": "Operations soft",
+        "tonalRamp": [
+          "oklch(15% 0.0099 155.1)",
+          "oklch(26% 0.0099 155.1)",
+          "oklch(38% 0.0099 155.1)",
+          "oklch(49% 0.0099 155.1)",
+          "oklch(61% 0.0099 155.1)",
+          "oklch(72% 0.0099 155.1)",
+          "oklch(84% 0.0099 155.1)",
+          "oklch(95% 0.0099 155.1)"
+        ]
+      },
+      "operations-paper": {
+        "role": "neutral",
+        "displayName": "Operations paper",
+        "tonalRamp": [
+          "oklch(15% 0.0045 134.8)",
+          "oklch(26% 0.0045 134.8)",
+          "oklch(38% 0.0045 134.8)",
+          "oklch(49% 0.0045 134.8)",
+          "oklch(61% 0.0045 134.8)",
+          "oklch(72% 0.0045 134.8)",
+          "oklch(84% 0.0045 134.8)",
+          "oklch(95% 0.0045 134.8)"
+        ]
+      },
+      "operations-white": {
+        "role": "neutral",
+        "displayName": "Operations white",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.9)",
+          "oklch(26% 0.0000 89.9)",
+          "oklch(38% 0.0000 89.9)",
+          "oklch(49% 0.0000 89.9)",
+          "oklch(61% 0.0000 89.9)",
+          "oklch(72% 0.0000 89.9)",
+          "oklch(84% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
+        ]
+      },
+      "operations-focus": {
+        "role": "neutral",
+        "displayName": "Operations focus",
+        "tonalRamp": [
+          "oklch(15% 0.0933 181.6)",
+          "oklch(26% 0.0933 181.6)",
+          "oklch(38% 0.0933 181.6)",
+          "oklch(49% 0.0933 181.6)",
+          "oklch(61% 0.0933 181.6)",
+          "oklch(72% 0.0933 181.6)",
+          "oklch(84% 0.0933 181.6)",
+          "oklch(95% 0.0933 181.6)"
+        ]
+      },
+      "operations-danger": {
+        "role": "tertiary",
+        "displayName": "Operations danger",
+        "tonalRamp": [
+          "oklch(15% 0.1175 29.6)",
+          "oklch(26% 0.1175 29.6)",
+          "oklch(38% 0.1175 29.6)",
+          "oklch(49% 0.1175 29.6)",
+          "oklch(61% 0.1175 29.6)",
+          "oklch(72% 0.1175 29.6)",
+          "oklch(84% 0.1175 29.6)",
+          "oklch(95% 0.1175 29.6)"
+        ]
+      },
+      "operations-error-surface": {
+        "role": "tertiary",
+        "displayName": "Operations error surface",
+        "tonalRamp": [
+          "oklch(15% 0.0172 35.3)",
+          "oklch(26% 0.0172 35.3)",
+          "oklch(38% 0.0172 35.3)",
+          "oklch(49% 0.0172 35.3)",
+          "oklch(61% 0.0172 35.3)",
+          "oklch(72% 0.0172 35.3)",
+          "oklch(84% 0.0172 35.3)",
+          "oklch(95% 0.0172 35.3)"
+        ]
+      },
+      "operations-error-text": {
+        "role": "tertiary",
+        "displayName": "Operations error text",
+        "tonalRamp": [
+          "oklch(15% 0.1068 30.2)",
+          "oklch(26% 0.1068 30.2)",
+          "oklch(38% 0.1068 30.2)",
+          "oklch(49% 0.1068 30.2)",
+          "oklch(61% 0.1068 30.2)",
+          "oklch(72% 0.1068 30.2)",
+          "oklch(84% 0.1068 30.2)",
+          "oklch(95% 0.1068 30.2)"
+        ]
+      },
+      "operations-notice-surface": {
+        "role": "neutral",
+        "displayName": "Operations notice surface",
+        "tonalRamp": [
+          "oklch(15% 0.0273 83.5)",
+          "oklch(26% 0.0273 83.5)",
+          "oklch(38% 0.0273 83.5)",
+          "oklch(49% 0.0273 83.5)",
+          "oklch(61% 0.0273 83.5)",
+          "oklch(72% 0.0273 83.5)",
+          "oklch(84% 0.0273 83.5)",
+          "oklch(95% 0.0273 83.5)"
+        ]
+      },
+      "operations-notice-text": {
+        "role": "neutral",
+        "displayName": "Operations notice text",
+        "tonalRamp": [
+          "oklch(15% 0.0681 73.5)",
+          "oklch(26% 0.0681 73.5)",
+          "oklch(38% 0.0681 73.5)",
+          "oklch(49% 0.0681 73.5)",
+          "oklch(61% 0.0681 73.5)",
+          "oklch(72% 0.0681 73.5)",
+          "oklch(84% 0.0681 73.5)",
+          "oklch(95% 0.0681 73.5)"
+        ]
+      },
+      "operations-review-surface": {
+        "role": "neutral",
+        "displayName": "Operations review surface",
+        "tonalRamp": [
+          "oklch(15% 0.0266 80.3)",
+          "oklch(26% 0.0266 80.3)",
+          "oklch(38% 0.0266 80.3)",
+          "oklch(49% 0.0266 80.3)",
+          "oklch(61% 0.0266 80.3)",
+          "oklch(72% 0.0266 80.3)",
+          "oklch(84% 0.0266 80.3)",
+          "oklch(95% 0.0266 80.3)"
+        ]
+      },
+      "operations-review-text": {
+        "role": "neutral",
+        "displayName": "Operations review text",
+        "tonalRamp": [
+          "oklch(15% 0.0783 72.1)",
+          "oklch(26% 0.0783 72.1)",
+          "oklch(38% 0.0783 72.1)",
+          "oklch(49% 0.0783 72.1)",
+          "oklch(61% 0.0783 72.1)",
+          "oklch(72% 0.0783 72.1)",
+          "oklch(84% 0.0783 72.1)",
+          "oklch(95% 0.0783 72.1)"
+        ]
+      },
+      "operations-done-surface": {
+        "role": "neutral",
+        "displayName": "Operations done surface",
+        "tonalRamp": [
+          "oklch(15% 0.0266 152.4)",
+          "oklch(26% 0.0266 152.4)",
+          "oklch(38% 0.0266 152.4)",
+          "oklch(49% 0.0266 152.4)",
+          "oklch(61% 0.0266 152.4)",
+          "oklch(72% 0.0266 152.4)",
+          "oklch(84% 0.0266 152.4)",
+          "oklch(95% 0.0266 152.4)"
+        ]
+      },
+      "operations-done-text": {
+        "role": "neutral",
+        "displayName": "Operations done text",
+        "tonalRamp": [
+          "oklch(15% 0.0803 156.3)",
+          "oklch(26% 0.0803 156.3)",
+          "oklch(38% 0.0803 156.3)",
+          "oklch(49% 0.0803 156.3)",
+          "oklch(61% 0.0803 156.3)",
+          "oklch(72% 0.0803 156.3)",
+          "oklch(84% 0.0803 156.3)",
+          "oklch(95% 0.0803 156.3)"
+        ]
+      },
+      "operations-selected-surface": {
+        "role": "neutral",
+        "displayName": "Operations selected surface",
+        "tonalRamp": [
+          "oklch(15% 0.0125 149.3)",
+          "oklch(26% 0.0125 149.3)",
+          "oklch(38% 0.0125 149.3)",
+          "oklch(49% 0.0125 149.3)",
+          "oklch(61% 0.0125 149.3)",
+          "oklch(72% 0.0125 149.3)",
+          "oklch(84% 0.0125 149.3)",
+          "oklch(95% 0.0125 149.3)"
+        ]
+      },
+      "operations-cash-surface": {
+        "role": "neutral",
+        "displayName": "Operations cash surface",
+        "tonalRamp": [
+          "oklch(15% 0.0184 86.1)",
+          "oklch(26% 0.0184 86.1)",
+          "oklch(38% 0.0184 86.1)",
+          "oklch(49% 0.0184 86.1)",
+          "oklch(61% 0.0184 86.1)",
+          "oklch(72% 0.0184 86.1)",
+          "oklch(84% 0.0184 86.1)",
+          "oklch(95% 0.0184 86.1)"
+        ]
+      },
+      "operations-owner-cash-surface": {
+        "role": "neutral",
+        "displayName": "Operations owner cash surface",
+        "tonalRamp": [
+          "oklch(15% 0.0181 142.8)",
+          "oklch(26% 0.0181 142.8)",
+          "oklch(38% 0.0181 142.8)",
+          "oklch(49% 0.0181 142.8)",
+          "oklch(61% 0.0181 142.8)",
+          "oklch(72% 0.0181 142.8)",
+          "oklch(84% 0.0181 142.8)",
+          "oklch(95% 0.0181 142.8)"
+        ]
+      },
+      "operations-chart": {
+        "role": "neutral",
+        "displayName": "Operations chart",
+        "tonalRamp": [
+          "oklch(15% 0.0873 165.5)",
+          "oklch(26% 0.0873 165.5)",
+          "oklch(38% 0.0873 165.5)",
+          "oklch(49% 0.0873 165.5)",
+          "oklch(61% 0.0873 165.5)",
+          "oklch(72% 0.0873 165.5)",
+          "oklch(84% 0.0873 165.5)",
+          "oklch(95% 0.0873 165.5)"
+        ]
+      },
+      "operations-nav-selected": {
+        "role": "neutral",
+        "displayName": "Operations nav selected",
+        "tonalRamp": [
+          "oklch(15% 0.0190 157.9)",
+          "oklch(26% 0.0190 157.9)",
+          "oklch(38% 0.0190 157.9)",
+          "oklch(49% 0.0190 157.9)",
+          "oklch(61% 0.0190 157.9)",
+          "oklch(72% 0.0190 157.9)",
+          "oklch(84% 0.0190 157.9)",
+          "oklch(95% 0.0190 157.9)"
+        ]
+      },
+      "operations-nav-hover": {
+        "role": "neutral",
+        "displayName": "Operations nav hover",
+        "tonalRamp": [
+          "oklch(15% 0.0636 174.2)",
+          "oklch(26% 0.0636 174.2)",
+          "oklch(38% 0.0636 174.2)",
+          "oklch(49% 0.0636 174.2)",
+          "oklch(61% 0.0636 174.2)",
+          "oklch(72% 0.0636 174.2)",
+          "oklch(84% 0.0636 174.2)",
+          "oklch(95% 0.0636 174.2)"
+        ]
       }
     },
     "typographyMeta": {
@@ -635,18 +971,34 @@
         "scope": "mobile native extension; no explicit fontFamily"
       },
       "customer-wordmark": {
-        "purpose": "Daily Basket text beside the simple basket mark; Poppins on the website.",
+        "purpose": "Daily Basket text beside the original 3D teal raster mark; Poppins on the website.",
         "displayName": "Temporary customer wordmark"
       },
       "mobile-wordmark": {
         "displayName": "Native temporary wordmark",
         "scope": "mobile native extension; no explicit fontFamily",
-        "purpose": "Daily Basket text beside the basket icon; platform system font, weight 700."
+        "purpose": "Daily Basket text beside the original 3D teal raster mark; platform system font, weight 700."
       },
       "mobile-campaign-heading": {
         "displayName": "Native campaign heading",
         "purpose": "White campaign title; 24 logical units, 30 line height, weight 700, letter spacing -0.5.",
         "scope": "native extension; no explicit fontFamily"
+      },
+      "operations-headline": {
+        "displayName": "Operations headline",
+        "purpose": "Workspace heading, stepping down on compact windows."
+      },
+      "operations-body": {
+        "displayName": "Operations body",
+        "purpose": "Compact Poppins desk content, with explicit item/quantity hierarchy."
+      },
+      "operations-action": {
+        "displayName": "Operations action",
+        "purpose": "Primary and secondary desk actions."
+      },
+      "operations-number": {
+        "displayName": "Owner number",
+        "purpose": "Owner summary values; tabular numerals are set in source."
       }
     },
     "shadows": [
@@ -711,6 +1063,11 @@
         "name": "native-campaign-autoplay",
         "value": "6000ms interval; platform scroll animation when reduced motion is off",
         "purpose": "Only while visible, navigation-focused and app-active. Touch, swipe or direct pagination pauses until Play. Reduced motion and native screen readers prevent autoplay; browser hover and keyboard focus pause it. React Native Web screen-reader query is a constant stub; native accessibility needs device QA."
+      },
+      {
+        "name": "operations-action-transition",
+        "value": "background 160ms ease-out, opacity 160ms ease-out",
+        "purpose": "Web operations buttons. Reduced motion disables transitions and refresh spinning."
       }
     ],
     "breakpoints": [
@@ -753,6 +1110,31 @@
         "name": "native-android-rail",
         "value": "768 logical units",
         "purpose": "Android window at least this switches tabs to the left; iOS keeps bottom tabs."
+      },
+      {
+        "name": "operations-wide",
+        "value": "1600px",
+        "purpose": "Queue becomes 390px and content gutters widen."
+      },
+      {
+        "name": "operations-compact",
+        "value": "1200px",
+        "purpose": "Narrow sidebar and owner overview stack."
+      },
+      {
+        "name": "operations-header",
+        "value": "1000px",
+        "purpose": "Sidebar becomes horizontal header navigation."
+      },
+      {
+        "name": "operations-phone",
+        "value": "720px",
+        "purpose": "Queue/detail become separate views with Back to queue."
+      },
+      {
+        "name": "operations-apps-phone",
+        "value": "620px",
+        "purpose": "Two app downloads stack."
       }
     ],
     "native": {
@@ -765,7 +1147,7 @@
       "source": "mobile/src/theme.tsx, mobile/src/ui.tsx, mobile/src/shop.tsx and mobile/App.tsx",
       "primitives": "Root DESIGN.md mobile-* colors, typography, rounded and components; native-* spacing. Existing unprefixed web tokens retain their scope.",
       "units": "React Native numeric logical units; DESIGN.md uses pixel strings for portable tooling. Browser translations render CSS pixels.",
-      "appearance": "System/light/dark preference selects theme roles. Exact pack photos keep white image surfaces; the temporary basket mark follows tint/on-tint.",
+      "appearance": "Customer system/light/dark preference selects role colors. Team follows system appearance. Exact pack photos keep white image surfaces; the original teal/mint raster mark retains its artwork in both modes.",
       "type": "Platform system fonts, fontFamily unset. Scaling enabled. English/Urdu text uses alignment and writingDirection; full layout mirroring is not claimed.",
       "interaction": {
         "buttonMinHeight": 52,
@@ -795,8 +1177,7 @@
           "Native symbols",
           "Android Back and iOS gestures",
           "Safe areas and enlarged text",
-          "Device performance",
-          "Signing/accounts and installable distribution"
+          "Device performance"
         ]
       },
       "tokenAdvisories": "Wrapper detector advisories #e5ebe7, #11231c, #f7f9f6 belong to the preview/native extension, not a replacement web palette.",
@@ -804,7 +1185,7 @@
       "narrative": {
         "overview": "The approved Everyday Market native refinement carries the temporary Daily Basket basket mark, teal role colors and real grocery photography into Expo/React Native. Native tokens retain mobile- names; unrelated web tokens retain their scope.",
         "dos": [
-          "Use the temporary Daily Basket wordmark and simple basket mark.",
+          "Use the temporary Daily Basket wordmark with its original 3D teal basket raster.",
           "Preserve real pack photography and catalog identities.",
           "Use native role colors and system typography.",
           "Keep guest checkout and server-authoritative totals explicit."
@@ -820,9 +1201,9 @@
         "slug": "daily-basket-shopping",
         "scheme": "dailybasket",
         "supplier": "Askari is inventory provenance, not the customer identity",
-        "mark": "Simple basket icon and text; website Lucide ShoppingBasket, native basket-outline",
+        "mark": "Original independently generated 3D teal/mint basket raster, no supplier reference; source/derivative prompts in public/brand/*.png.json and mobile/assets/*.png.json and embedded PNG metadata.",
         "workingName": "Daily Basket",
-        "releaseGate": "Confirm final identity and identifiers before the first production signing/EAS project.",
+        "releaseGate": "Signed customer build is authorized and finished. Confirm the final temporary name before store publication; preserve current signing identifiers and storage compatibility.",
         "productionIdentifier": "pk.dailybasket.shopping"
       },
       "refinement": {
@@ -835,12 +1216,77 @@
           "Configured delivery-fee progress",
           "Server-status steps and private customer receipt-PDF sharing"
         ],
-        "nativeRelease": "Device/simulator QA, permissions, symbols, safe areas, enlarged text, gestures/Back, performance, signing, Expo/EAS account/project setup and APK/AAB/IPA distribution remain open.",
+        "nativeRelease": "Customer 1.0.2/code3 signed build 266afa8a-853a-4fad-9862-f809fcd0d4c7 and Team 1.0.0/code1 signed build 19ecf595-9678-4bad-9064-b58d1385d6a7 finished. Both APKs downloaded and ZIP/signing-block structural checks passed; final URLs/captures completed. Installed native QA and store publication remain unverified.",
         "review": "Initial market disposition fix: mobile website invitation and stale identity docs. Documentation updated; reviewer owns final disposition.",
         "approved": "2026-10-18",
         "captures": ".impeccable/review/market/*.png; browser evidence only",
         "direction": "Everyday Market",
-        "rasterProvenance": "No new raster for this refinement. Existing grocery/department photos: public/images/README.md; catalog sources: work/image-sources.json."
+        "rasterProvenance": "Original 21 October 3D teal basket and matching launcher artwork: public/brand/*.png.json and mobile/assets/*.png.json plus embedded PNG metadata; mobile/assets/README.md. Existing grocery/department photos retain public/images/README.md and catalog sources."
+      }
+    },
+    "operations": {
+      "source": [
+        "components/OperationsPortal.tsx",
+        "components/OwnerWorkspace.tsx",
+        "app/operations.css",
+        "app/brand.css",
+        "app/apps/page.tsx",
+        "mobile/TeamApp.tsx",
+        "mobile/src/ui.tsx",
+        "mobile/src/theme.tsx",
+        "components/OwnerSecurity.tsx",
+        "components/OwnerRecovery.tsx"
+      ],
+      "scope": "operations-* frontmatter primitives document scoped --ops-* properties and reused literals. Existing unrelated web/native tokens and pre-existing sidecar drift are preserved.",
+      "appearance": "Web workspaces/apps intentionally light; Team follows system native light/dark roles.",
+      "depth": "Flat one-pixel borders and tonal groups; original raster brand artwork contains its own dimensional shading.",
+      "focus": "3px solid #49a99a; outline-offset 3px on web workspace controls.",
+      "layout": "238px sidebar; minmax(270px,.74fr) / minmax(0,1.5fr) workbench; maximum content width 1800px. Phone queue/detail replace each other.",
+      "authority": "Manager or owner receives exact rider cash and closes payment. Packers/riders cannot settle. Delivered and cash_confirmed are separate. Owner alone sees actual costs, expenses, sales/profit. Every staff action identifies its actor.",
+      "finance": "Costs frozen per order; missing cost leaves profit unknown; only recorded expenses deducted; periods use order placement date in Asia/Karachi.",
+      "team": "One Android Team app; packer/rider views by individual owner-created account. Foreground refresh 10 seconds and resume; native background push not configured, keep-open copy explicit.",
+      "distribution": {
+        "customer": {
+          "version": "1.0.2",
+          "androidCode": 3,
+          "buildId": "266afa8a-853a-4fad-9862-f809fcd0d4c7",
+          "status": "finished; downloaded APK and ZIP/signing-block structural checks passed; no native phone run"
+        },
+        "team": {
+          "version": "1.0.0",
+          "androidCode": 1,
+          "projectId": "08a1661d-69fc-4f99-af37-b82e17b16762",
+          "buildId": "19ecf595-9678-4bad-9064-b58d1385d6a7",
+          "status": "finished; downloaded APK and ZIP/signing-block structural checks passed; no native phone run"
+        },
+        "links": "Verified customer/Team APK URLs in lib/app-downloads.ts, exposed at /apps. Final apps captures show both links. docs/OPERATIONS.md handoff."
+      },
+      "review": {
+        "status": "Original documentation and final APK-link material fixes completed; final reviewer disposition and added account-security review remain separate.",
+        "reviewer": ".impeccable/review/operations-reviewer.md",
+        "detector": ".impeccable/review/operations-detector.md",
+        "detectorScope": "One changed-web pass only; tonal palette/compact-radius advisories; native detector skipped.",
+        "evidence": "13 named operations captures indexed in .impeccable/surfaces/operations.md. Customer/Team phone images are web previews. No Android SDK, emulator/device or installed-native UX QA."
+      },
+      "rasterProvenance": {
+        "master": "public/brand/daily-basket-mark-v2.png",
+        "launcher": "public/brand/daily-basket-app-icon-v2.png",
+        "web": "public/brand/daily-basket-mark-192.png",
+        "nativeMark": "mobile/assets/brand-mark-144.png",
+        "nativeLauncher": "mobile/assets/app-icon-1024-v2.png",
+        "lineage": "Adjacent .png.json exact prompts and derivative records, embedded PNG metadata, mobile/assets/README.md. Original generation used no supplier reference."
+      },
+      "security": {
+        "surface": "Owner Account security navigation and /owner/recover login link. Existing operational/login form language, long recovery email wraps.",
+        "email": "uzair.business.2003@gmail.com",
+        "channel": "email only; phone recovery disabled",
+        "change": "Owner authority plus current password; at least 12 new characters; atomic auth-version update invalidates older sessions and replacement session keeps current browser signed in.",
+        "recovery": "Server-fixed email; server-only Resend sending key; 256-bit secret URL-fragment token, SHA-256 hash stored, expiry 15 minutes, single-use, global/IP limits; atomic reset consumes token and invalidates previous owner sessions.",
+        "status": "User explicitly deferred Resend/email setup until later. No sending key saved and no email sent. Email recovery requests stay disabled until the user resumes setup and verifies a live send; phone recovery disabled.",
+        "evidence": "Hosted migration 20261021114407 applied and local tests passed per parent; real owner password unchanged in tests. owner-security-desktop/mobile and owner-recovery-desktop browser captures exist; recovery phone capture pending.",
+        "staffPasswordControl": "Owner Team access has dedicated Change password per manager/packer/rider row, new-password confirmation and success notice. Existing owner-only team API hashes password, increments auth_version and revokes older sessions, preserving role/access. Owner own password still requires current password in Account security.",
+        "staffPasswordVerification": "Parent live HTTP check created temporary packer, reset via owner API, proved old-password rejection, old bearer-session revocation, new-password acceptance, role preservation and disable revocation; temporary staff removed. No customer orders or real owner password changed.",
+        "staffPreview": "Three clearly fictional practice manager/packer/rider fixtures. Password controls can be reviewed, but inputs/save disabled and save handler exits in preview."
       }
     }
   },
@@ -969,10 +1415,10 @@
     },
     {
       "refersTo": "customer-mark",
-      "css": ".ds-customer-wordmark{display:inline-flex;align-items:center;gap:12px;color:var(--ink,#021c19);text-decoration:none}.ds-customer-wordmark span{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:var(--action,#087e78);color:#fff}.ds-customer-wordmark strong{font:600 25px/1.2 Poppins,sans-serif;letter-spacing:-.035em;white-space:nowrap}.ds-customer-wordmark:hover{opacity:.85}.ds-customer-wordmark:active{opacity:.75}.ds-customer-wordmark:focus-visible{outline:3px solid var(--action,#087e78);outline-offset:4px}@media(max-width:600px){.ds-customer-wordmark{gap:9px}.ds-customer-wordmark strong{font-size:21px}.ds-customer-wordmark span{width:42px;height:42px}}",
+      "css": ".ds-customer-wordmark{display:inline-flex;align-items:center;color:#021c19;text-decoration:none}.ds-customer-wordmark strong{font:600 25px/1.2 Poppins,sans-serif;letter-spacing:-.035em;white-space:nowrap}.ds-customer-wordmark:hover{opacity:.85}.ds-customer-wordmark:active{opacity:.75}.ds-customer-wordmark:focus-visible{outline:3px solid #087e78;outline-offset:4px}@media(max-width:600px){.ds-customer-wordmark strong{font-size:21px}}",
       "kind": "custom",
-      "description": "Daily Basket working identity. Simple icon geometry; final name pending.",
-      "html": "<a class=\"ds-customer-wordmark\" href=\"#\" aria-label=\"Daily Basket home\"><span><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 11-1 9M19 11l-4-7M2 11h20M3.5 11l1.6 7.4A2 2 0 0 0 7.1 20h9.8a2 2 0 0 0 2-1.6l1.6-7.4M4.5 15.5h15M5 11l4-7M9 11l1 9\"/></svg></span><strong>Daily Basket</strong></a>",
+      "description": "Daily Basket temporary wordmark. Live headers pair it with the original 3D raster. This text-only specimen deliberately omits the raster rather than substituting a flat icon.",
+      "html": "<a class=\"ds-customer-wordmark\" href=\"#\" aria-label=\"Daily Basket home\"><strong>Daily Basket</strong></a>",
       "name": "Temporary Customer Wordmark"
     },
     {
@@ -983,11 +1429,58 @@
       "html": "<button class=\"ds-native-campaign\"><strong>Good groceries.<br>Close to home.</strong><span>Shop essentials</span></button>",
       "css": ".ds-native-campaign{display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:194px;width:240px;padding:18px;border:0;border-radius:16px;background:#073f37;color:#fff;text-align:left;cursor:pointer}.ds-native-campaign strong{font:700 24px/30px system-ui,sans-serif;letter-spacing:-.5px}.ds-native-campaign span{display:flex;align-items:center;min-height:40px;font:700 14px/20px system-ui,sans-serif}.ds-native-campaign:hover{opacity:.95}.ds-native-campaign:active{opacity:.9}.ds-native-campaign:focus-visible{outline:3px solid #087e78;outline-offset:3px}",
       "scope": "native extension browser translation"
+    },
+    {
+      "name": "Operations Primary Button",
+      "kind": "button",
+      "refersTo": "operations-button-primary",
+      "description": "Manager bill approval or exact cash closure; labels state the action.",
+      "html": "<button class=\"ds-ops-primary\">Confirm cash and close bill</button>",
+      "css": ".ds-ops-primary{font-family:Poppins,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 17px;border:0;border-radius:10px;background:#087e78;color:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:background 160ms ease-out,opacity 160ms ease-out}.ds-ops-primary:hover{background:#06675f}.ds-ops-primary:active{opacity:.8}.ds-ops-primary:disabled{opacity:.45;cursor:not-allowed}.ds-ops-primary:focus-visible{outline:3px solid #49a99a;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-ops-primary{transition:none}}"
+    },
+    {
+      "name": "Operations Secondary Button",
+      "kind": "button",
+      "refersTo": "operations-button-secondary",
+      "description": "Print, refresh and secondary desk actions.",
+      "html": "<button class=\"ds-ops-secondary\">Print bill</button>",
+      "css": ".ds-ops-secondary{font-family:Poppins,sans-serif;min-height:46px;padding:12px 17px;border:0;border-radius:10px;background:#edf4ef;color:#073f37;font-size:12px;font-weight:600;cursor:pointer;transition:background 160ms ease-out}.ds-ops-secondary:hover{background:#dcebe2}.ds-ops-secondary:active{opacity:.8}.ds-ops-secondary:disabled{opacity:.45;cursor:not-allowed}.ds-ops-secondary:focus-visible{outline:3px solid #49a99a;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-ops-secondary{transition:none}}"
+    },
+    {
+      "name": "Operations Amount Field",
+      "kind": "input",
+      "refersTo": "operations-field",
+      "description": "Explicitly labelled PKR field, exact cash remains a server-validated action.",
+      "html": "<label class=\"ds-ops-field\">Amount physically received (PKR)<input type=\"number\" min=\"0\" step=\"0.01\" placeholder=\"Exact bill amount\"/></label>",
+      "css": ".ds-ops-field{font-family:Poppins,sans-serif;display:flex;flex-direction:column;gap:6px;color:#15352e;font-size:11px;font-weight:500}.ds-ops-field input{font-family:Poppins,sans-serif;min-height:44px;padding:10px 12px;border:1px solid #cddcd0;border-radius:8px;background:#fff;color:#15352e;font-size:12px}.ds-ops-field input:hover{border-color:#087e78}.ds-ops-field input:focus-visible{outline:3px solid #49a99a;outline-offset:3px}"
+    },
+    {
+      "name": "Operations Status",
+      "kind": "chip",
+      "refersTo": "operations-status-review",
+      "description": "Compact informational state; explicit text accompanies review color.",
+      "html": "<span class=\"ds-ops-status\">Needs approval</span>",
+      "css": ".ds-ops-status{font-family:Poppins,sans-serif;display:inline-flex;background:#f8eddb;color:#7a5728;font-size:9px;line-height:1.5;font-weight:500;border-radius:5px;padding:4px 7px;white-space:nowrap}"
+    },
+    {
+      "name": "Operations Navigation",
+      "kind": "nav",
+      "description": "Deep teal web navigation with a pale selected destination.",
+      "html": "<nav class=\"ds-ops-nav\" aria-label=\"Workspace\"><a href=\"#\" aria-current=\"page\">Order desk</a><a href=\"#\">Phone apps</a><a href=\"#\">Customer store</a></nav>",
+      "css": ".ds-ops-nav{font-family:Poppins,sans-serif;display:flex;flex-direction:column;gap:7px;background:#073f37;padding:22px}.ds-ops-nav a{display:flex;align-items:center;min-height:46px;padding:13px 12px;border-radius:10px;color:#c4dcd0;font-size:12px;text-decoration:none}.ds-ops-nav a[aria-current]{background:#e4f2e9;color:#073f37;font-weight:600}.ds-ops-nav a:hover{background:#245c4e;color:#fff}.ds-ops-nav a[aria-current]:hover{background:#e4f2e9;color:#073f37}.ds-ops-nav a:active{opacity:.8}.ds-ops-nav a:focus-visible{outline:3px solid #49a99a;outline-offset:3px}"
+    },
+    {
+      "name": "Operations Detail Panel",
+      "kind": "card",
+      "refersTo": "operations-order-detail",
+      "description": "Flat exact-order information surface. This specimen contains no invented customer or financial record.",
+      "html": "<section class=\"ds-ops-detail\"><h2>Exact products</h2><p>Check the photo. Check the pack. Check the quantity.</p></section>",
+      "css": ".ds-ops-detail{font-family:Poppins,sans-serif;padding:26px 28px;border:1px solid #dfe8e2;border-radius:16px;background:#fff;color:#15352e;min-width:0}.ds-ops-detail h2{font-size:23px;line-height:1.4;font-weight:600;letter-spacing:-.025em;margin:0}.ds-ops-detail p{font-size:12px;line-height:1.8;color:#5e726b;margin-top:10px}"
     }
   ],
   "narrative": {
     "northStar": "Everyday Market",
-    "overview": "Daily Basket is a temporary customer identity: a simple teal basket icon beside a readable wordmark. The user clarified that Askari supplies inventory and revoked its customer-facing name/logo. Historical supplier artwork remains source provenance; future work must follow the customer identity shown in `components/StoreLogo.tsx` and `mobile/src/ui.tsx`. The final name is pending.\n\nThe established website uses white shelves, pale aqua fields, teal controls and Poppins typography. The approved Everyday Market native refinement carries the same grocery clarity through compact system typography, photographic browsing and exact pack identity. Native tokens use `mobile-` names and `native-` spacing; unrelated incumbent web tokens retain their scope. The preview frame belongs only to the labelled browser wrapper.",
+    "overview": "Daily Basket is a temporary customer identity: an original dimensional 3D teal basket mark beside a readable wordmark. The user clarified that Askari supplies inventory and revoked its customer-facing name/logo. The mark was generated without a supplier image or logo reference. No supplier logo ships; future work must follow the customer identity shown in `components/StoreLogo.tsx` and `mobile/src/ui.tsx`. The final name is pending.\n\nThe established website uses white shelves, pale aqua fields, teal controls and Poppins typography. The approved Everyday Market native refinement carries the same grocery clarity through compact system typography, photographic browsing and exact pack identity. Native tokens use `mobile-` names and `native-` spacing; unrelated incumbent web tokens retain their scope. The preview frame belongs only to the labelled browser wrapper. The approved operations extension uses deliberately light work surfaces, deep teal navigation and role-focused actions. Its tokens use operations- names and do not replace the web or native scopes.",
     "keyCharacteristics": [
       "Real pack photographs and visible pack sizes.",
       "Teal actions, quiet bordered surfaces and explicit stock states.",
@@ -1002,6 +1495,11 @@
         "body": "Display imported selling prices and actual stock. No invented markup, discount, rating or availability may be added to customer screens."
       },
       {
+        "name": "The Separate State Rule",
+        "section": "colors",
+        "body": "Delivery and returned cash must have separate labels and actions; color alone cannot communicate either state."
+      },
+      {
         "name": "The Familiar Name Rule",
         "section": "typography",
         "body": "Keep real package names, brands and variants in ordinary case; package photography carries their own lettering."
@@ -1013,7 +1511,7 @@
       }
     ],
     "dos": [
-      "**Do** use Daily Basket as a temporary customer wordmark and simple basket mark until the final name is confirmed.",
+      "**Do** use Daily Basket as a temporary customer wordmark with the original 3D teal basket artwork until the final name is confirmed.",
       "**Do** preserve exact pack photography, real brand/variant labels, imported prices and explicit stock states.",
       "**Do** scope native light/dark roles to the app and its identified preview/privacy wrappers.",
       "**Do** keep guest checkout, current-stock list/reorder checks and server-confirmed totals clear.",
@@ -1024,7 +1522,7 @@
       "**Don't** import reference-store names, logos, promotions or unrelated departments.",
       "**Don't** invent selling prices, discounts, rewards, live tracking or payment confirmation.",
       "**Don't** present browser captures or JavaScript exports as native-device QA, signed installations or app-store publication.",
-      "**Don't** finalize the temporary name or production identifiers without the owner's confirmation before the first production signing/EAS project."
+      "**Don't** treat the temporary name as final before store publication; preserve the already authorized signing identifiers and compatibility namespaces."
     ]
   }
 }

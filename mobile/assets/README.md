@@ -1,9 +1,7 @@
-# Daily Basket working artwork
+# Daily Basket original artwork
 
-The customer interface uses a simple basket icon and Daily Basket text wordmark in `src/ui.tsx`; the final business name and distribution artwork remain to be chosen.
+The basket mark is original artwork generated for Daily Basket; no supplier logo or name was used as a reference. The transparent master is `brand-mark-v2.png`; native headers use its resized `brand-mark-144.png`. `app-icon-v2.png` is the matching opaque icon master, and `app-icon-1024-v2.png` is its launcher-size derivative. Resizing uses Sharp without changing the design.
 
-`askari-logo.png` is a historical, unchanged copy of the supplier logo from `public/askari-logo.png`. It is retained as source provenance and is not referenced by the customer interface or native app bundle.
+Exact image generation prompts and derivative provenance accompany each PNG in its `.png.json` file and are embedded in the PNG. The same artwork ships in `public/brand/` and the web app icons. Supplier-logo copies were removed from deployed source; the user's original file is untouched.
 
-`icon.png` and `favicon.png` reuse the existing generic teal basket icons from `public/desk-icon-512.png` and `public/desk-icon-192.png`. Their pixels and embedded source provenance are preserved. These working app icons contain no supplier lettering.
-
-Photographic banners and department images are served by the connected storefront. Exact generation prompts and provenance sidecars are in `public/images/`. Product photography uses the catalogue’s existing image URLs and attribution register `public/product-image-sources.json`.
+Photographic banners and department images come from the connected storefront; their prompt and source records are in `public/images/`. Product images retain the catalogue attribution register `public/product-image-sources.json`.
