@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-21T18:00:18.667Z",
+  "generatedAt": "2026-10-21T22:42:05.981Z",
   "title": "Design System: Daily Basket (temporary customer identity)",
   "extensions": {
     "colorMeta": {
@@ -1203,7 +1203,7 @@
         "supplier": "Askari is inventory provenance, not the customer identity",
         "mark": "Original independently generated 3D teal/mint basket raster, no supplier reference; source/derivative prompts in public/brand/*.png.json and mobile/assets/*.png.json and embedded PNG metadata.",
         "workingName": "Daily Basket",
-        "releaseGate": "Customer 1.0.3 / Android code 4 build 3999a36e-8225-4597-bd02-abac055eeb63 is FINISHED. The parent downloaded its 81,654,449-byte APK to outputs/daily-basket-customer-1.0.3.apk and verified ZIP CRC, AndroidManifest, DEX and APK signing-block presence. Its current download is promoted in lib/app-downloads.ts. Final Team 1.0.1 / Android code 2 build e301fd88-635f-4328-aec6-6bd581c4aad3 is submitted/pending; its APK is not ready or download-verified. Team build 9833f54e-9cb4-4773-aa33-915b07b6634e was canceled as superseded. /apps shows the current customer download, exact Team build-status link and web Packing desk fallback. Neither build evidence nor browser captures establish native installation or phone UX. Website publication is the next handoff; no completed publication is claimed here.",
+        "releaseGate": "Current feature versions are customer 1.0.4 / Android code 5 and Team 1.0.2 / Android code 3. Customer build 1c36143e-b496-4da4-ba18-c7a37bfe25b1 and Team build d21fc79a-b915-4bd2-88c0-004fc9f3295e are FINISHED. The parent downloaded customer outputs/daily-basket-customer-1.0.4.apk (81,658,849 bytes) and Team outputs/daily-basket-team-1.0.2.apk (81,545,961 bytes), verifying ZIP CRC, AndroidManifest, DEX and APK signing-block presence for both. These structural checks do not establish cryptographic signature validation or installed-device behavior. Historical submission checkpoint: both initially returned NEW with artifacts unavailable; this is superseded by the finished/download-verified state. Customer status: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/1c36143e-b496-4da4-ba18-c7a37bfe25b1. Team status: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-team/builds/d21fc79a-b915-4bd2-88c0-004fc9f3295e. Prior customer 1.0.3/code4 build 3999a36e-8225-4597-bd02-abac055eeb63 and Team 1.0.1/code2 build e301fd88-635f-4328-aec6-6bd581c4aad3 are FINISHED historical artifacts, superseded for this feature and not the latest feature downloads. lib/app-downloads.ts now promotes both verified official Expo artifact URLs, with appBuildPages retaining the exact new IDs. The final website build with both new download URLs passed. Source commit 108e records previous work and is not deployment evidence. Historical connection interruption: Sites transport failed; a later retry restored the connection and refreshed source access. Publication is the next step at this saved-source checkpoint. Native installation/device QA remains unavailable.",
         "productionIdentifier": "pk.dailybasket.shopping"
       },
       "refinement": {
@@ -1216,7 +1216,7 @@
           "Configured delivery-fee progress",
           "Server-status steps and private customer receipt-PDF sharing"
         ],
-        "nativeRelease": "Customer 1.0.3 / Android code 4 build 3999a36e-8225-4597-bd02-abac055eeb63 is FINISHED. The parent downloaded its 81,654,449-byte APK to outputs/daily-basket-customer-1.0.3.apk and verified ZIP CRC, AndroidManifest, DEX and APK signing-block presence. Its current download is promoted in lib/app-downloads.ts. Final Team 1.0.1 / Android code 2 build e301fd88-635f-4328-aec6-6bd581c4aad3 is submitted/pending; its APK is not ready or download-verified. Team build 9833f54e-9cb4-4773-aa33-915b07b6634e was canceled as superseded. /apps shows the current customer download, exact Team build-status link and web Packing desk fallback. Neither build evidence nor browser captures establish native installation or phone UX. Website publication is the next handoff; no completed publication is claimed here.",
+        "nativeRelease": "Current feature versions are customer 1.0.4 / Android code 5 and Team 1.0.2 / Android code 3. Customer build 1c36143e-b496-4da4-ba18-c7a37bfe25b1 and Team build d21fc79a-b915-4bd2-88c0-004fc9f3295e are FINISHED. The parent downloaded customer outputs/daily-basket-customer-1.0.4.apk (81,658,849 bytes) and Team outputs/daily-basket-team-1.0.2.apk (81,545,961 bytes), verifying ZIP CRC, AndroidManifest, DEX and APK signing-block presence for both. These structural checks do not establish cryptographic signature validation or installed-device behavior. Historical submission checkpoint: both initially returned NEW with artifacts unavailable; this is superseded by the finished/download-verified state. Customer status: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/1c36143e-b496-4da4-ba18-c7a37bfe25b1. Team status: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-team/builds/d21fc79a-b915-4bd2-88c0-004fc9f3295e. Prior customer 1.0.3/code4 build 3999a36e-8225-4597-bd02-abac055eeb63 and Team 1.0.1/code2 build e301fd88-635f-4328-aec6-6bd581c4aad3 are FINISHED historical artifacts, superseded for this feature and not the latest feature downloads. lib/app-downloads.ts now promotes both verified official Expo artifact URLs, with appBuildPages retaining the exact new IDs. The final website build with both new download URLs passed. Source commit 108e records previous work and is not deployment evidence. Historical connection interruption: Sites transport failed; a later retry restored the connection and refreshed source access. Publication is the next step at this saved-source checkpoint. Native installation/device QA remains unavailable.",
         "review": "Initial market disposition fix: mobile website invitation and stale identity docs. Documentation updated; reviewer owns final disposition.",
         "approved": "2026-10-18",
         "captures": ".impeccable/review/market/*.png; browser evidence only",
@@ -1242,32 +1242,35 @@
       "depth": "Flat one-pixel borders and tonal groups; original raster brand artwork contains its own dimensional shading.",
       "focus": "3px solid #49a99a; outline-offset 3px on web workspace controls.",
       "layout": "238px sidebar; minmax(270px,.74fr) / minmax(0,1.5fr) workbench; maximum content width 1800px. Phone queue/detail replace each other.",
-      "authority": "New orders reach the manager and picker/packer together immediately. Incoming order and bill approval are removed. The picker starts Pending orders and checks every exact product and quantity; dispatch requires completed packing and an assigned active rider, with no approval gate. The assigned rider reports Delivered after customer delivery. Only after that report may the manager or owner verify delivery and the exact cash physically returned, then close payment. Packers and riders cannot settle store cash. Delivered and cash_confirmed remain separate states; short or extra cash leaves the bill open. Hosted migration 20261021175134_delivery_before_final_cash_verification.sql requires Delivered, payload.delivery_verified=true and cash_received exactly equal to the bill for settlement. Active-staff identity, role, assigned-rider and operation_version guards remain enforced; successful actions record the actor in the audit trail. Incoming approve is absent from the API action schema and rejected by the SQL RPC. The legacy Delivered/cash shortcut returns HTTP 409 for authorized requests; unauthorized requests remain denied. Legacy internal cancellation with a reason is retained. This change does not automatically edit existing orders or money.",
+      "authority": "New orders reach manager and picker/packer together immediately, without incoming order or bill approval. The packer checks every exact product and quantity, chooses Order packed, assigns an active rider and chooses Send for delivery. Dispatch requires completed exact-pack checks and the saved active-rider assignment. Assigned riders choose Order delivered after handing groceries to the customer; packers cannot deliver, cancel or settle. Before dispatch only, the manager or owner can use Item unavailable or Cancel order to cancel the whole order with an explicit reason. Item unavailable selects an order product and records that reason; it does not change global stock, remove a line or change other orders. Only after Delivered may the manager or owner verify actual delivery and exact physically returned cash, attest to both and choose Payment received. Short or extra cash leaves payment open. Delivered and cash_confirmed remain separate. Current hosted migration 20261021221228_packing_dispatch_and_manager_cancellation.sql adds packer rider-assignment/dispatch authority and retains manager/owner-only reasoned cancellation before dispatch. Packer cancellation, delivery and settlement remain forbidden; rider reads/actions remain assignment-bound. Active-rider, staff identity, role, operation_version and audit guards remain. Payment received requires Delivered, payload.delivery_verified=true and cash_received exactly matching the bill. Incoming approve is retired/rejected; the authorized legacy direct Delivered/cash shortcut returns HTTP 409. No real orders, money or global stock were automatically edited by this work.",
       "finance": "Costs frozen per order; missing cost leaves profit unknown; only recorded expenses deducted; periods use order placement date in Asia/Karachi. Owner Reset test earnings previews counts/sales and requires explicit confirmation; exclusions affect every financial period, preserving receipts/history/jobs and expenses. New orders count normally; Undo last reset restores only its batch. Owner API, snapshot guard, idempotency, private RLS/grants and audit enforce the action. No actual orders left excluded during verification.",
       "deliveryMap": "Final 7 km straight-line radius from original store pin, 14 km across; road-routing choice superseded. App validation uses config.radius_km. Native/browser wrappers load public /delivery-map with server constants, circle fitBounds, main OSM tile URL, real document/referrer policy and restrictive CSP. Native user-agent identifies the app, limits navigation to the map route and sends initial pin on load without URL coordinates. Browser 390px tiles verified; no native phone QA.",
       "team": "One Android Team app; packer/rider views by individual owner-created account. Foreground refresh 10 seconds and resume; native background push not configured, keep-open copy explicit.",
       "distribution": {
         "customer": {
-          "version": "1.0.3",
-          "androidCode": 4,
-          "buildId": "3999a36e-8225-4597-bd02-abac055eeb63",
-          "status": "FINISHED; 81,654,449-byte APK download verified by parent with ZIP CRC, AndroidManifest, DEX and APK signing-block checks; current link promoted; no installed-native QA"
+          "version": "1.0.4",
+          "androidCode": 5,
+          "buildId": "1c36143e-b496-4da4-ba18-c7a37bfe25b1",
+          "status": "FINISHED; downloaded 81,658,849-byte outputs/daily-basket-customer-1.0.4.apk; ZIP CRC/manifest/DEX/signing-block presence verified; official artifact URL promoted; no cryptographic/device-install verification",
+          "sourceCommit": "cf688cdfdb282dee7f13f16927e4a1d3e54df5a1"
         },
         "team": {
-          "version": "1.0.1",
-          "androidCode": 2,
+          "version": "1.0.2",
+          "androidCode": 3,
           "projectId": "08a1661d-69fc-4f99-af37-b82e17b16762",
-          "buildId": "e301fd88-635f-4328-aec6-6bd581c4aad3",
-          "status": "submitted/pending; artifact not ready or download-verified; previous 9833f54e-9cb4-4773-aa33-915b07b6634e canceled/superseded; no native phone run"
+          "buildId": "d21fc79a-b915-4bd2-88c0-004fc9f3295e",
+          "status": "FINISHED; downloaded 81,545,961-byte outputs/daily-basket-team-1.0.2.apk; ZIP CRC/manifest/DEX/signing-block presence verified; official artifact URL promoted; no cryptographic/device-install verification",
+          "sourceCommit": "d83047e8c82f8eb21ee0a9b89db2f07b2b10b556"
         },
-        "links": "Customer 1.0.3 / Android code 4 build 3999a36e-8225-4597-bd02-abac055eeb63 is FINISHED. The parent downloaded its 81,654,449-byte APK to outputs/daily-basket-customer-1.0.3.apk and verified ZIP CRC, AndroidManifest, DEX and APK signing-block presence. Its current download is promoted in lib/app-downloads.ts. Final Team 1.0.1 / Android code 2 build e301fd88-635f-4328-aec6-6bd581c4aad3 is submitted/pending; its APK is not ready or download-verified. Team build 9833f54e-9cb4-4773-aa33-915b07b6634e was canceled as superseded. /apps shows the current customer download, exact Team build-status link and web Packing desk fallback. Neither build evidence nor browser captures establish native installation or phone UX. Website publication is the next handoff; no completed publication is claimed here."
+        "links": "Current feature versions are customer 1.0.4 / Android code 5 and Team 1.0.2 / Android code 3. Customer build 1c36143e-b496-4da4-ba18-c7a37bfe25b1 and Team build d21fc79a-b915-4bd2-88c0-004fc9f3295e are FINISHED. The parent downloaded customer outputs/daily-basket-customer-1.0.4.apk (81,658,849 bytes) and Team outputs/daily-basket-team-1.0.2.apk (81,545,961 bytes), verifying ZIP CRC, AndroidManifest, DEX and APK signing-block presence for both. These structural checks do not establish cryptographic signature validation or installed-device behavior. Historical submission checkpoint: both initially returned NEW with artifacts unavailable; this is superseded by the finished/download-verified state. Customer status: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/1c36143e-b496-4da4-ba18-c7a37bfe25b1. Team status: https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-team/builds/d21fc79a-b915-4bd2-88c0-004fc9f3295e. Prior customer 1.0.3/code4 build 3999a36e-8225-4597-bd02-abac055eeb63 and Team 1.0.1/code2 build e301fd88-635f-4328-aec6-6bd581c4aad3 are FINISHED historical artifacts, superseded for this feature and not the latest feature downloads. lib/app-downloads.ts now promotes both verified official Expo artifact URLs, with appBuildPages retaining the exact new IDs. The final website build with both new download URLs passed. Source commit 108e records previous work and is not deployment evidence. Historical connection interruption: Sites transport failed; a later retry restored the connection and refreshed source access. Publication is the next step at this saved-source checkpoint. Native installation/device QA remains unavailable.",
+        "submissionHistory": "Historical/superseded: both new builds initially returned NEW with no available artifact and downloads cleared. Both are now FINISHED and structurally download-verified."
       },
       "review": {
-        "status": "Final reviewer requested canonical documentation reconciliation only; this pass records the source workflow and exact release limits. Reviewer owns final disposition.",
-        "reviewer": ".impeccable/review/final-verification-reviewer.md",
+        "status": "Three-phase reviewer requested canonical persistence reconciliation only; this documenter records the current workflow and current finished-artifact and pending-publication limits. Reviewer owns final disposition.",
+        "reviewer": ".impeccable/review/three-phase-reviewer.md",
         "detector": ".impeccable/review/operations-detector.md",
         "detectorScope": "Parent reports the single final changed-scope detector returned []; native-device QA remains separate.",
-        "evidence": "The parent reports 70/70 tests, root and mobile TypeScript, Team web export and a complete rollback-only hosted workflow check passing, without changing real orders or money. Hosted advisors reported INFO private-RLS notices only. The final changed-scope detector returned []. The reviewer inspected six valid populated JPEG captures with .png suffixes: final-manager-new-desktop.png, final-manager-delivery-desktop.png, final-manager-verify-desktop.png, final-manager-delivery-mobile.png, final-manager-verify-mobile.png and final-team-packer-mobile.png. final-apps-desktop.png and final-apps-mobile.png show the customer download and Team queue fallback. These establish source/browser and build-artifact evidence only; no native-device QA is claimed."
+        "evidence": "Parent reports 73/73 tests, root/mobile TypeScript and customer/Team web exports passing. A hosted rollback-only full packer assignment/dispatch → assigned rider delivery → manager payment workflow passed without real order changes; advisors reported INFO private-RLS notices only. One changed-scope detector returned []; metadata scan checked two rasters with zero missing provenance; the seven-file public-export secret scan found no secrets. The reviewer validated nine populated JPEG browser captures with .png suffixes: three-manager-cancel-desktop.png, three-manager-payment-desktop.png, three-manager-cancel-mobile.png, three-manager-payment-mobile.png, three-customer-dispatched-mobile.png, three-customer-delivered-mobile.png, three-packer-packed-mobile.png, three-packer-dispatch-mobile.png and three-rider-delivered-mobile.png. The last five are scoped scrolled action viewports with a browser-preview header. Practice orders/tracking are fictional and live mutations are disabled. These are source/browser checks, not installed Android/iPhone QA."
       },
       "rasterProvenance": {
         "master": "public/brand/daily-basket-mark-v2.png",
@@ -1288,6 +1291,20 @@
         "staffPasswordControl": "Owner Team access has dedicated Change password per manager/packer/rider row, new-password confirmation and success notice. Existing owner-only team API hashes password, increments auth_version and revokes older sessions, preserving role/access. Owner own password still requires current password in Account security.",
         "staffPasswordVerification": "Parent live HTTP check created temporary packer, reset via owner API, proved old-password rejection, old bearer-session revocation, new-password acceptance, role preservation and disable revocation; temporary staff removed. No customer orders or real owner password changed.",
         "staffPreview": "Three clearly fictional practice manager/packer/rider fixtures. Password controls can be reviewed, but inputs/save disabled and save handler exits in preview."
+      },
+      "customerTracking": {
+        "mapping": "Pending/Packing → Confirmed; Out for Delivery/Dispatched → Dispatched; Delivered → Delivered; Cancelled separate",
+        "languages": [
+          "en",
+          "ur"
+        ],
+        "refresh": "Customer tracking has three English/Urdu stages: Order confirmed → Order dispatched → Order delivered. Pending and Packing map to Confirmed; Out for Delivery/Dispatched maps to Dispatched; Delivered maps to Delivered. Cancelled is separate and does not show a completed timeline. AppProvider refreshes all locally saved active orders every 15 seconds while foregrounded and on resume, even outside the order detail. Refresh uses each saved private receipt authorization, coalesces requests by order ID and skips Delivered/Cancelled orders during periodic checks. Order detail retains manual refresh, updated time and visible errors. This is foreground polling, not background push or live rider tracking.",
+        "source": [
+          "mobile/src/order-progress.ts",
+          "mobile/src/OrderTimeline.tsx",
+          "mobile/src/account.tsx",
+          "mobile/src/state.tsx"
+        ]
       }
     }
   },
@@ -1435,8 +1452,8 @@
       "name": "Operations Primary Button",
       "kind": "button",
       "refersTo": "operations-button-primary",
-      "description": "Manager/owner final delivery and exact returned-cash verification after Delivered; label states the action.",
-      "html": "<button class=\"ds-ops-primary\">Verify delivery &amp; close bill</button>",
+      "description": "Manager/owner Payment received after Delivered and exact returned-cash/delivery attestation.",
+      "html": "<button class=\"ds-ops-primary\">Payment received</button>",
       "css": ".ds-ops-primary{font-family:Poppins,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 17px;border:0;border-radius:10px;background:#087e78;color:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:background 160ms ease-out,opacity 160ms ease-out}.ds-ops-primary:hover{background:#06675f}.ds-ops-primary:active{opacity:.8}.ds-ops-primary:disabled{opacity:.45;cursor:not-allowed}.ds-ops-primary:focus-visible{outline:3px solid #49a99a;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-ops-primary{transition:none}}"
     },
     {

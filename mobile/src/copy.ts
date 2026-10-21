@@ -1,4 +1,5 @@
 export const extraEn={
+ orderPacked:'Order packed',orderDelivered:'Order delivered',sendDelivery:'Send for delivery',assignRider:'Save rider assignment',
  pauseBanners:'Pause banners',playBanners:'Play banners',showBanner:'Show banner',bannerPages:'Banner pages',
  home:'Home',more:'More',viewBasket:'View basket',items:'items',products:'products',selected:'Selected',allCategories:'All categories',categoryCopy:'Find the right aisle for your everyday essentials.',
  bannerEveryday:'Good groceries.\nClose to home.',bannerEverydayAction:'Shop essentials',bannerBreakfast:'A better start\nto your day.',bannerBreakfastAction:'Shop breakfast',bannerHome:'A little care.\nA happier home.',bannerHomeAction:'Shop home care',
@@ -11,6 +12,7 @@ export const extraEn={
 };
 export const extraUr:Record<keyof typeof extraEn,string>={
  ...extraEn,
+ orderPacked:'آرڈر پیک ہو گیا',orderDelivered:'آرڈر ڈیلیور ہو گیا',sendDelivery:'ڈیلیوری کے لیے روانہ کریں',assignRider:'رائیڈر کا انتخاب محفوظ کریں',
  pauseBanners:'بینرز روکیں',playBanners:'بینرز چلائیں',showBanner:'بینر دکھائیں',bannerPages:'بینرز',
  home:'خریداری',more:'مزید',viewBasket:'ٹوکری دیکھیں',items:'اشیاء',products:'مصنوعات',selected:'منتخب',allCategories:'تمام کیٹیگریز',categoryCopy:'اپنی روزمرہ کی اشیاء کی صحیح کیٹیگری منتخب کریں۔',
  bannerEveryday:'روزمرہ کی گروسری۔\nآپ کے قریب۔',bannerEverydayAction:'ضروری اشیاء دیکھیں',bannerBreakfast:'دن کا آغاز\nبہتر بنائیں۔',bannerBreakfastAction:'ناشتے کی اشیاء',bannerHome:'گھر کا خیال۔\nآسان خریداری۔',bannerHomeAction:'گھر کی ضروریات',

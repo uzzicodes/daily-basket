@@ -36,10 +36,10 @@ test('Orders pack and dispatch without approval; delivery must be reported befor
  assert.equal((await db.query<{status:string}>('select status from orders where id=$1',[order])).rows[0].status,'Packing');
  await assert.rejects(()=>act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:1}]}),/exact product and quantity/);
  await act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:2}]});
- await assert.rejects(()=>act('depart','packer',packer),/Rider or manager/);
- await act('assign_rider','manager',manager,{rider_id:rider});
+ await assert.rejects(()=>act('depart','packer',packer),/Packing must be checked and a rider assigned/);
+ await act('assign_rider','packer',packer,{rider_id:rider});
  await assert.rejects(()=>act('depart','rider',other),/not assigned/);
- await act('depart','rider',rider);
+ await act('depart','packer',packer);
  await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/Delivery must be reported/);
  await act('deliver','rider',rider);
  const row=(await db.query<{status:string;cash_confirmed:boolean;cash_received:number}>('select status,cash_confirmed,cash_received from orders where id=$1',[order])).rows[0];assert.equal(row.status,'Delivered');assert.equal(row.cash_confirmed,false);assert.equal(row.cash_received,null);
@@ -52,6 +52,18 @@ test('Only manager/owner can close exact cash once; inactive staff lose authorit
  await db.query('update store_staff set active=false where id=$1',[manager]);await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/revoked/);await db.query('update store_staff set active=true where id=$1',[manager]);
  await act('settle','manager',manager,{cash_received:2150,delivery_verified:true});await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/not awaiting cash/);
  const events=await db.query<{actor_role:string;action:string}>('select actor_role,action from store_audit_events where order_id=$1 and action=$2',[order,'settle']);assert.equal(events.rows.length,1);assert.equal(events.rows[0].actor_role,'manager');
+});
+
+test('Unavailable-item cancellation is manager-only and a cancelled order cannot be dispatched or paid',async()=>{
+ const saved=(await db.query<{o:{id:string}}>('select create_checkout_order($1::jsonb,$2::jsonb,$3::uuid,$4::text,1150) o',[JSON.stringify({customer_name:'Cancellation fixture',customer_phone:'03001234567',delivery_area:'PGECHS',delivery_address:'Isolated fixture',delivery_latitude:31.41216075,delivery_longitude:74.27587375}),JSON.stringify([{product_id:product,quantity:1}]),crypto.randomUUID(),'cancellation-fixture'])).rows[0].o.id;
+ const call=(action:string,role:string,staff:string,version=0,payload:unknown={})=>db.query('select perform_store_order_action($1,$2,$3,$4,$5::uuid,$6::jsonb)',[saved,action,version,role,staff,JSON.stringify(payload)]);
+ await assert.rejects(()=>call('reject','packer',packer,0,{reason:'Item unavailable'}),/manager or owner/);
+ await call('reject','manager',manager,0,{reason:'Item unavailable: exact fixture pack'});
+ await assert.rejects(()=>call('start_pack','packer',packer,1),/not awaiting packing/);
+ await assert.rejects(()=>call('depart','packer',packer,1),/Packing must be checked/);
+ await assert.rejects(()=>call('settle','manager',manager,1,{cash_received:1150,delivery_verified:true}),/Delivery must be reported/);
+ const row=(await db.query<{status:string;rejection_reason:string;cash_confirmed:boolean}>('select status,rejection_reason,cash_confirmed from orders where id=$1',[saved])).rows[0];assert.equal(row.status,'Cancelled');assert.match(row.rejection_reason,/Item unavailable/);assert.equal(row.cash_confirmed,false);
+ assert.equal(canPerform('packer','deliver'),false);assert.equal(canPerform('packer','reject'),false);assert.equal(canPerform('packer','depart'),true);
 });
 test('Actual profit stays unknown without costs and becomes recorded revenue minus costs and expenses',async()=>{
  let summary=(await db.query<{s:{recorded_profit:number|null;missing_cost_orders:number;cash_received:number}}>('select store_business_summary(0) s')).rows[0].s;assert.equal(summary.recorded_profit,null);assert.equal(summary.missing_cost_orders,1);assert.equal(Number(summary.cash_received),2150);
@@ -81,3 +93,4 @@ test('Owner test resets are reversible, preserve receipts, reject stale snapshot
  assert.equal((await db.query('select * from orders where id=$1',[created])).rows.length,1);
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);for(const table of ['store_report_resets','store_report_exclusions'])await assert.rejects(()=>db.query('select * from '+table),/permission denied/);await assert.rejects(()=>db.query('select reset_store_test_reports($1,$2)',[crypto.randomUUID(),state.snapshot]),/permission denied/);await assert.rejects(()=>db.query('select restore_store_test_reports($1)',[id]),/permission denied/);await db.exec('reset role');}
 });
+

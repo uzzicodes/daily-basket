@@ -2,7 +2,7 @@
   "name": "daily-basket-shopping-app",
   "description": "Daily Basket customer shopping app for Android and iPhone",
   "license": "0BSD",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.ts",
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",

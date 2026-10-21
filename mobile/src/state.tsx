@@ -1,5 +1,6 @@
 import React,{createContext,useContext,useEffect,useRef,useState} from 'react';
-import {Alert} from 'react-native';
+import {Alert,AppState} from 'react-native';
+import {refreshActiveReceipts} from './order-progress';
 import * as Crypto from 'expo-crypto';
 import {api,AppError} from './api';
 import {available,refreshedLines,totals,rejectedAttempt,receiptOrder,rememberQuery,mergeProducts,displayName} from './domain';
@@ -12,6 +13,8 @@ function useAppState(){
  const [language,setLanguage]=useState<Language>('en'),[cart,setCart]=useState<CartLine[]>([]),[favourites,setFavourites]=useState<string[]>([]),[orders,setOrders]=useState<SavedOrder[]>([]);
  const [appearance,setAppearance]=useState<'system'|'light'|'dark'>('system'),[recent,setRecent]=useState<string[]>([]),[searches,setSearches]=useState<string[]>([]),[lists,setLists]=useState<ShoppingList[]>([]);
  const cartRef=useRef(cart);cartRef.current=cart;
+ const ordersRef=useRef(orders);ordersRef.current=orders;const statusRequests=useRef(new Map<string,Promise<unknown>>());
+ const [orderSync,setOrderSync]=useState<Record<string,{updatedAt:number;error:string}>>({});
  const [point,setPoint]=useState<Point|null>(null),[savedCustomer,setSavedCustomer]=useState<Customer|null>(null),[pending,setPending]=useState<Attempt|null>(null),[pendingError,setPendingError]=useState(''),[busy,setBusy]=useState(false);
  const lock=useRef(false);const guard=useRef({pending,pendingError});guard.current={pending,pendingError};
  async function connect(){setError('');try{setConfig(await api.config());}catch(e){setError((e as Error).message);}}
@@ -65,10 +68,11 @@ function useAppState(){
    return {order:saved,savedLocally};
   }finally{lock.current=false;setBusy(false);}
  }
- async function updateOrder(id:string){const token=await storage.secret('receipt.'+id);if(!token)throw Error('This receipt is not saved on this phone. Contact the store with your order reference.');const {order}=await api.status(id,token);setOrders(history=>{const next=history.map(o=>o.id===id?receiptOrder(order,o.items):o);void storage.write('orders',next).catch(()=>{});return next;});return order;}
+ const updateOrder=React.useCallback((id:string)=>{const current=statusRequests.current.get(id);if(current)return current;const task=(async()=>{try{const token=await storage.secret('receipt.'+id);if(!token)throw Error('This receipt is not saved on this phone. Contact the store with your order reference.');const {order}=await api.status(id,token);setOrders(history=>{const next=history.map(o=>o.id===id?receiptOrder(order,o.items):o);void storage.write('orders',next).catch(()=>{});return next;});setOrderSync(previous=>({...previous,[id]:{updatedAt:Date.now(),error:''}}));return order;}catch(e){setOrderSync(previous=>({...previous,[id]:{updatedAt:previous[id]?.updatedAt||0,error:(e as Error).message}}));throw e;}finally{statusRequests.current.delete(id);}})();statusRequests.current.set(id,task);return task;},[]);
+ useEffect(()=>{if(!ready)return;const refresh=()=>{if(AppState.currentState==='active')void refreshActiveReceipts(ordersRef.current,updateOrder);};refresh();const timer=setInterval(refresh,15000),listener=AppState.addEventListener('change',state=>{if(state==='active')refresh();});return()=>{clearInterval(timer);listener.remove();};},[ready,updateOrder]);
  async function forgetAddress(){await storage.saveCustomer('address',null);setSavedCustomer(null);setPoint(null);}
  async function clear(){if(lock.current||guard.current.pending||guard.current.pendingError)throw Error('Please contact the store to resolve your pending order before clearing this phone.');await storage.clearDeviceData();setCart([]);setFavourites([]);setOrders([]);setRecent([]);setSearches([]);setLists([]);setSavedCustomer(null);setPoint(null);}
- return {ready,config,error,connect,language,setLanguage,appearance,setAppearance,cart,change,favourites,favourite,orders,point,setPoint,savedCustomer,pending,pendingError,busy,refreshBasket,reorder,place,updateOrder,forgetAddress,clear,recent,viewProduct,searches,search,clearSearches:()=>setSearches([]),lists,createList,saveBasket,addToList,toggleListItem,removeListItem,removeList,addListToBasket};
+ return {ready,config,error,connect,language,setLanguage,appearance,setAppearance,cart,change,favourites,favourite,orders,point,setPoint,savedCustomer,pending,pendingError,busy,refreshBasket,reorder,place,updateOrder,orderSync,forgetAddress,clear,recent,viewProduct,searches,search,clearSearches:()=>setSearches([]),lists,createList,saveBasket,addToList,toggleListItem,removeListItem,removeList,addListToBasket};
 }
 const AppContext=createContext<ReturnType<typeof useAppState>|null>(null);
 export function AppProvider({children}:{children:React.ReactNode}){const state=useAppState();return <AppContext.Provider value={state}><LanguageContext.Provider value={{language:state.language,setLanguage:state.setLanguage,appearance:state.appearance,setAppearance:state.setAppearance}}>{children}</LanguageContext.Provider></AppContext.Provider>;}

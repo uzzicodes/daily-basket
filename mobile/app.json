@@ -3,7 +3,7 @@
     "name": "Daily Basket",
     "slug": "daily-basket-shopping",
     "scheme": "dailybasket",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "icon": "./assets/app-icon-1024-v2.png",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -14,7 +14,7 @@
       }
     },
     "android": {
-      "versionCode": 4,
+      "versionCode": 5,
       "package": "pk.dailybasket.shopping",
       "predictiveBackGestureEnabled": true,
       "blockedPermissions": [
