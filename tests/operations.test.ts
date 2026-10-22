@@ -26,20 +26,20 @@ test('Staff credentials are salted and staff tokens cannot become owner or desk 
  assert.equal(actionSchema.safeParse({id:order,action:'settle',expected_version:0,payload:{cash_received:2150,delivery_verified:true},role:'owner'}).success,false);
  delete process.env.ADMIN_SESSION_SECRET;
 });
-test('Orders pack and dispatch without approval; delivery must be reported before cash verification',async()=>{
- await act('start_pack','packer',packer);
- const parallel=(await db.query<{status:string;approval_status:string}>('select status,approval_status from orders where id=$1',[order])).rows[0];assert.equal(parallel.status,'Packing');assert.equal(parallel.approval_status,'pending');
- await assert.rejects(()=>act('depart','manager',manager),/Packing must be checked/);
- await assert.rejects(()=>act('approve','rider',rider),/not assigned/);
+test('Packed publishes a ready order; only a rider can claim pickup, then report delivery before manager payment',async()=>{
+ await assert.rejects(()=>act('depart','packer',packer),/Only a rider/);
+ await assert.rejects(()=>act('depart','manager',manager),/Only a rider/);
+ await assert.rejects(()=>act('depart','rider',rider),/not assigned/);
  await assert.rejects(()=>act('approve','manager',manager),/do not require approval/);
- await assert.rejects(()=>act('start_pack','packer',packer,{},0),/Order changed/);
- assert.equal((await db.query<{status:string}>('select status from orders where id=$1',[order])).rows[0].status,'Packing');
  await assert.rejects(()=>act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:1}]}),/exact product and quantity/);
  await act('finish_pack','packer',packer,{checked_items:[{product_id:product,quantity:2}]});
- await assert.rejects(()=>act('depart','packer',packer),/Packing must be checked and a rider assigned/);
- await act('assign_rider','packer',packer,{rider_id:rider});
+ const ready=(await db.query<{status:string;packed_at:string;assigned_rider_id:string|null}>('select status,packed_at,assigned_rider_id from orders where id=$1',[order])).rows[0];assert.equal(ready.status,'Packing');assert.ok(ready.packed_at);assert.equal(ready.assigned_rider_id,null);
+ await assert.rejects(()=>act('finish_pack','packer',packer,{},0),/Order changed/);
+ await assert.rejects(()=>act('assign_rider','packer',packer,{rider_id:rider}),/Only the owner/);
+ await assert.rejects(()=>act('depart','packer',packer),/Only a rider/);
+ await act('depart','rider',rider);
+ assert.equal((await db.query<{assigned_rider_id:string}>('select assigned_rider_id from orders where id=$1',[order])).rows[0].assigned_rider_id,rider);
  await assert.rejects(()=>act('depart','rider',other),/not assigned/);
- await act('depart','packer',packer);
  await assert.rejects(()=>act('settle','manager',manager,{cash_received:2150,delivery_verified:true}),/Delivery must be reported/);
  await act('deliver','rider',rider);
  const row=(await db.query<{status:string;cash_confirmed:boolean;cash_received:number}>('select status,cash_confirmed,cash_received from orders where id=$1',[order])).rows[0];assert.equal(row.status,'Delivered');assert.equal(row.cash_confirmed,false);assert.equal(row.cash_received,null);
@@ -60,10 +60,10 @@ test('Unavailable-item cancellation is manager-only and a cancelled order cannot
  await assert.rejects(()=>call('reject','packer',packer,0,{reason:'Item unavailable'}),/manager or owner/);
  await call('reject','manager',manager,0,{reason:'Item unavailable: exact fixture pack'});
  await assert.rejects(()=>call('start_pack','packer',packer,1),/not awaiting packing/);
- await assert.rejects(()=>call('depart','packer',packer,1),/Packing must be checked/);
+ await assert.rejects(()=>call('depart','packer',packer,1),/Only a rider/);
  await assert.rejects(()=>call('settle','manager',manager,1,{cash_received:1150,delivery_verified:true}),/Delivery must be reported/);
  const row=(await db.query<{status:string;rejection_reason:string;cash_confirmed:boolean}>('select status,rejection_reason,cash_confirmed from orders where id=$1',[saved])).rows[0];assert.equal(row.status,'Cancelled');assert.match(row.rejection_reason,/Item unavailable/);assert.equal(row.cash_confirmed,false);
- assert.equal(canPerform('packer','deliver'),false);assert.equal(canPerform('packer','reject'),false);assert.equal(canPerform('packer','depart'),true);
+ assert.equal(canPerform('packer','deliver'),false);assert.equal(canPerform('packer','reject'),false);assert.equal(canPerform('packer','depart'),false);
 });
 test('Actual profit stays unknown without costs and becomes recorded revenue minus costs and expenses',async()=>{
  let summary=(await db.query<{s:{recorded_profit:number|null;missing_cost_orders:number;cash_received:number}}>('select store_business_summary(0) s')).rows[0].s;assert.equal(summary.recorded_profit,null);assert.equal(summary.missing_cost_orders,1);assert.equal(Number(summary.cash_received),2150);
@@ -94,3 +94,12 @@ test('Owner test resets are reversible, preserve receipts, reject stale snapshot
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);for(const table of ['store_report_resets','store_report_exclusions'])await assert.rejects(()=>db.query('select * from '+table),/permission denied/);await assert.rejects(()=>db.query('select reset_store_test_reports($1,$2)',[crypto.randomUUID(),state.snapshot]),/permission denied/);await assert.rejects(()=>db.query('select restore_store_test_reports($1)',[id]),/permission denied/);await db.exec('reset role');}
 });
 
+
+test('Two riders cannot claim the same pickup or take another rider’s delivery',async()=>{
+ const id=(await db.query<{o:{id:string}}>('select create_checkout_order($1::jsonb,$2::jsonb,$3::uuid,$4::text,1150) o',[JSON.stringify({customer_name:'Pickup race fixture',customer_phone:'03001234567',delivery_area:'PGECHS',delivery_address:'Isolated fixture',delivery_latitude:31.41216075,delivery_longitude:74.27587375}),JSON.stringify([{product_id:product,quantity:1}]),crypto.randomUUID(),'pickup-race'])).rows[0].o.id;
+ await db.query('select perform_store_order_action($1,$2,0,$3,$4::uuid,$5::jsonb)',[id,'finish_pack','packer',packer,JSON.stringify({checked_items:[{product_id:product,quantity:1}]})]);
+ const pickup=(who:string)=>db.query('select perform_store_order_action($1,$2,1,$3,$4::uuid,$5::jsonb)',[id,'depart','rider',who,'{}']);
+ const results=await Promise.allSettled([pickup(rider),pickup(other)]);assert.equal(results.filter(r=>r.status==='fulfilled').length,1);assert.equal(results.filter(r=>r.status==='rejected').length,1);
+ const row=(await db.query<{assigned_rider_id:string;status:string;operation_version:number}>('select assigned_rider_id,status,operation_version from orders where id=$1',[id])).rows[0];assert.equal(row.status,'Out for Delivery');assert.equal(row.operation_version,2);assert.ok([rider,other].includes(row.assigned_rider_id));
+ const loser=row.assigned_rider_id===rider?other:rider;await assert.rejects(()=>db.query('select perform_store_order_action($1,$2,2,$3,$4::uuid,$5::jsonb)',[id,'deliver','rider',loser,'{}']),/not assigned/);
+});

@@ -17,7 +17,7 @@ test('Staff HTTP routes give pickers pending orders, restrict rider assignments 
   if(url.pathname.endsWith('/store_staff'))return Response.json({...actor,active});
   if(url.pathname.endsWith('/orders')){
    orderRead=true;assert.equal(options?.method??'GET','GET');assert.doesNotMatch(url.searchParams.get('select')||'',/cost|profit|request_hash|idempotency/);
-   if(actor.role==='rider')assert.equal(url.searchParams.get('assigned_rider_id'),'eq.'+actor.id);
+   if(actor.role==='rider')assert.match(url.searchParams.get('or')||'',new RegExp('assigned_rider_id.eq.'+actor.id));
    if(actor.role==='packer')assert.equal(url.searchParams.has('approval_status'),false);
    return Response.json(url.searchParams.has('id')?null:actor.role==='packer'?[{id:orderId,items:[],status:'Pending',approval_status:'pending',operation_version:0,total_amount:100,subtotal:100,delivery_fee:0}]:[]);
   }
@@ -36,7 +36,30 @@ test('Staff HTTP routes give pickers pending orders, restrict rider assignments 
  assert.equal((await receipt(new Request('https://store.invalid/api/operations/receipt/'+orderId),{params:Promise.resolve({id:orderId})})).status,401);
  // Native sessions live solely in SecureStore; browser sessions remain HttpOnly.
  const credentials={credential_salt:'isolated-salt',credential_hash:await staffPassword('isolated-password','isolated-salt')};
- globalThis.fetch=async input=>{const url=new URL(typeof input==='string'?input:input instanceof URL?input.href:input.url);if(url.pathname.endsWith('/consume_rate_limit'))return Response.json(true);if(url.pathname.endsWith('/store_staff'))return Response.json({...actor,active:true,...credentials});throw Error('Unexpected login request');};
+ globalThis.fetch=async input=>{const url=new URL(typeof input==='string'?input:input instanceof URL?input.href:input.url);if(url.pathname.endsWith('/consume_rate_limit'))return Response.json(true);if(url.pathname.endsWith('/api_limits'))return new Response(null,{status:204});if(url.pathname.endsWith('/store_staff'))return Response.json({...actor,active:true,...credentials});throw Error('Unexpected login request');};
  const native=await signIn(new Request('https://store.invalid/api/operations/session',{method:'POST',headers:{'X-Daily-Basket-Client':'staff-v1'},body:JSON.stringify({username:actor.username,password:'isolated-password'})}));assert.equal(native.status,200);assert.equal(native.headers.has('set-cookie'),false);assert.equal(typeof (await native.json() as {token:string}).token,'string');
  const web=await signIn(new Request('https://store.invalid/api/operations/session',{method:'POST',headers:{Origin:'https://store.invalid'},body:JSON.stringify({username:actor.username,password:'isolated-password'})}));assert.equal(web.status,200);assert.match(web.headers.get('set-cookie')||'',/HttpOnly/i);assert.equal('token' in (await web.json() as object),false);
+});
+
+test('Staff lockouts stay with one account and password version, and successful sign-in clears its counter',async t=>{
+ const originalFetch=globalThis.fetch,env={...process.env};
+ process.env.ADMIN_SESSION_SECRET='isolated-api-test-signing-secret-longer-than-32';process.env.SUPABASE_URL='https://isolated-database.invalid';process.env.SUPABASE_SERVICE_ROLE_KEY='isolated-test-key';
+ t.after(()=>{globalThis.fetch=originalFetch;for(const key of ['ADMIN_SESSION_SECRET','SUPABASE_URL','SUPABASE_SERVICE_ROLE_KEY']){if(env[key]===undefined)delete process.env[key];else process.env[key]=env[key];}});
+ const counters=new Map<string,number>(),salt='isolated-lockout-salt',hash=await staffPassword('correct-fixture-password',salt);let version=1;
+ globalThis.fetch=async(input,options)=>{
+  const url=new URL(typeof input==='string'?input:input instanceof URL?input.href:input.url);
+  if(url.pathname.endsWith('/consume_rate_limit')){const args=JSON.parse(String(options?.body));const count=(counters.get(args.p_key)||0)+1;counters.set(args.p_key,count);return Response.json(count<=args.p_limit);}
+  if(url.pathname.endsWith('/api_limits')){assert.equal(options?.method,'DELETE');counters.delete((url.searchParams.get('key')||'').replace(/^eq\./,''));return new Response(null,{status:204});}
+  if(url.pathname.endsWith('/store_staff'))return Response.json({id:'00000000-0000-4000-8000-000000000011',username:(url.searchParams.get('username')||'').replace(/^eq\./,''),display_name:'Isolated fixture',role:'packer',auth_version:version,active:true,credential_salt:salt,credential_hash:hash});
+  throw Error('Unexpected database request');
+ };
+ const attempt=(username:string,password:string)=>signIn(new Request('https://store.invalid/api/operations/session',{method:'POST',headers:{'X-Daily-Basket-Client':'staff-v1','CF-Connecting-IP':'192.0.2.10'},body:JSON.stringify({username,password})}));
+ for(let i=0;i<8;i++)assert.equal((await attempt('fixture.one','wrong-fixture-password')).status,401);
+ assert.equal((await attempt('fixture.one','correct-fixture-password')).status,429);
+ assert.equal((await attempt('fixture.two','correct-fixture-password')).status,200,'One account must not lock out another on the same connection');
+ version++;
+ assert.equal((await attempt('fixture.one','correct-fixture-password')).status,200,'Owner password reset must permit the new credential version');
+ for(let i=0;i<6;i++)assert.equal((await attempt('fixture.one','wrong-fixture-password')).status,401);
+ assert.equal((await attempt('fixture.one','correct-fixture-password')).status,200);
+ for(let i=0;i<7;i++)assert.equal((await attempt('fixture.one','wrong-fixture-password')).status,401,'A successful sign-in must clear earlier failed attempts');
 });
