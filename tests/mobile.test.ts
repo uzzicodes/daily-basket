@@ -8,6 +8,7 @@ import {GET as config} from '../app/api/mobile/config/route';
 import {available,covered,distanceKm,refreshedLines,totals,rejectedAttempt,receiptOrder} from '../mobile/src/domain';
 import type {Product,StoreConfig} from '../mobile/src/types';
 import {AppError,requestJSON} from '../mobile/src/transport';
+import {downloadAvailable} from '../lib/app-downloads';
 const id='ORD-01234567-1234-4567-89ab-0123456789ab';
 test('Native checkout permits identified native clients but keeps browser origin checks',()=>{
  const request=(headers:Record<string,string>)=>new Request('https://store.test/api/mobile/checkout',{headers});
@@ -80,4 +81,12 @@ test('Native transport works without AbortSignal.timeout and preserves uncertain
  await assert.rejects(()=>requestJSON('https://store.test','/api/mobile/checkout'),error=>error instanceof AppError&&error.status===503&&!rejectedAttempt(error));
  context.mock.method(globalThis,'fetch',async()=>Response.json({departments:[]}));
  assert.deepEqual(await requestJSON('https://store.test','/api/mobile/config'),{departments:[]});
+});
+
+test('The Android download is offered only before its Expo artifact expires',()=>{
+ const download={url:'https://expo.dev/artifacts/eas/sample.apk',expiresAt:'2026-12-07T10:00:00Z',buildPage:''};
+ assert.equal(downloadAvailable(download,Date.parse('2026-12-07T09:59:59Z')),true);
+ assert.equal(downloadAvailable(download,Date.parse('2026-12-07T10:00:00Z')),false);
+ assert.equal(downloadAvailable({...download,url:''},0),false);
+ assert.equal(downloadAvailable({...download,expiresAt:''},0),false);
 });

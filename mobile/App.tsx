@@ -12,6 +12,8 @@ import {ShopScreen,CategoriesScreen,CatalogScreen,ProductScreen,SearchScreen} fr
 import {BasketScreen,CheckoutScreen,DeliveryScreen} from './src/checkout';
 import {OrdersScreen,OrderScreen,HelpScreen,ListScreen,ListsScreen,ShoppingListScreen,PreferencesScreen} from './src/account';
 import type {RootParams} from './src/types';
+import {StaffEntryContext} from './src/staff-entry';
+import {StaffArea,useStaffSession} from './TeamApp';
 const Stack=createNativeStackNavigator<RootParams>();
 const Tabs=createBottomTabNavigator();
 function Main(){const {c,t}=useTheme(),app=useApp(),{width}=useWindowDimensions();const count=app.cart.reduce((n,l)=>n+l.quantity,0);return <Tabs.Navigator screenOptions={{headerShown:false,tabBarActiveTintColor:c.tint,tabBarInactiveTintColor:c.muted,tabBarStyle:{backgroundColor:c.surface,borderTopColor:c.line,...(Platform.OS==='web'?{height:68,paddingBottom:8,paddingTop:6}:{})},tabBarLabelStyle:{fontSize:12,fontWeight:'600'},tabBarHideOnKeyboard:true,tabBarPosition:Platform.OS==='android'&&width>=768?'left':'bottom'}}>
@@ -35,4 +37,6 @@ function Navigation(){const {c,t,dark}=useTheme(),app=useApp();const [reduced,se
  <Stack.Screen name="List" component={ListScreen} options={{title:t('sendList')}}/>
  </Stack.Navigator></NavigationContainer></>;}
 class ErrorBoundary extends React.Component<{children:React.ReactNode},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return {failed:true};}render(){return this.state.failed?<SafeAreaView style={{flex:1}}><Page><Notice text="The app could not open this screen. Your store orders are safe. Close and reopen the app, or contact 0308 4555567." error/><Button title="Try again" onPress={()=>this.setState({failed:false})}/></Page></SafeAreaView>:this.props.children;}}
-export default function App(){return <SafeAreaProvider><AppProvider><ErrorBoundary><Navigation/></ErrorBoundary></AppProvider></SafeAreaProvider>;}
+// One app for everyone: customers shop without an account; a staff sign-in swaps in that person's role screens.
+function Root(){const staff=useStaffSession();return <ErrorBoundary>{staff.open?<StaffArea session={staff}/>:<StaffEntryContext.Provider value={staff.show}><Navigation/></StaffEntryContext.Provider>}</ErrorBoundary>;}
+export default function App(){return <SafeAreaProvider><AppProvider><Root/></AppProvider></SafeAreaProvider>;}

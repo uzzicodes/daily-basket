@@ -3,6 +3,6 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": ["App.tsx", "TeamApp.tsx", "index.ts", "team-index.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["App.tsx", "TeamApp.tsx", "index.ts", "src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist-web", "dist-native", "android", "ios"]
 }

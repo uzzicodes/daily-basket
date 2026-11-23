@@ -1,3 +1,7 @@
-// Only completed, verified artifacts may be promoted as current downloads.
-export const appDownloads={"customer":"https://expo.dev/artifacts/eas/1w7qRfgMsGij48BgPLbHH6w3oEMoEqs7GAP93c-R03Y.apk","team":"https://expo.dev/artifacts/eas/JdjQVIkHVP0IbAzDJ9crXfE9NQHMB1DT-8ZsouOFstA.apk"};
-export const appBuildPages={customer:'https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/1c36143e-b496-4da4-ba18-c7a37bfe25b1',team:'https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-team/builds/776e6432-bd55-4d08-a3cb-15344ca21090'};
+// One Android app serves customers and staff (staff sign in from Help → Staff sign in).
+// Only completed, verified artifacts may be promoted. Expo internal-distribution APKs expire,
+// so record the artifact's expiry: after it, /apps stops linking to the dead file.
+export type AppDownload={url:string;expiresAt:string;buildPage:string};
+// Daily Basket 1.0.5 / Android code 6, EAS build 3e6d4cc2 (finished 23 Nov 2026).
+export const appDownload:AppDownload={url:'https://expo.dev/artifacts/eas/xu2wAD_yq6ajs-2g9U7FCmxI8oaC5XfVhciTuN2U9BU.apk',expiresAt:'2026-12-07T11:02:32.004Z',buildPage:'https://expo.dev/accounts/daily-basket-lahore/projects/daily-basket-shopping/builds/3e6d4cc2-a3c1-4c2f-a28d-d4e82f10869d'};
+export function downloadAvailable(download:AppDownload,now=Date.now()){const end=Date.parse(download.expiresAt);return !!download.url&&Number.isFinite(end)&&now<end;}
