@@ -103,3 +103,23 @@ test('Two riders cannot claim the same pickup or take another rider’s delivery
  const row=(await db.query<{assigned_rider_id:string;status:string;operation_version:number}>('select assigned_rider_id,status,operation_version from orders where id=$1',[id])).rows[0];assert.equal(row.status,'Out for Delivery');assert.equal(row.operation_version,2);assert.ok([rider,other].includes(row.assigned_rider_id));
  const loser=row.assigned_rider_id===rider?other:rider;await assert.rejects(()=>db.query('select perform_store_order_action($1,$2,2,$3,$4::uuid,$5::jsonb)',[id,'deliver','rider',loser,'{}']),/not assigned/);
 });
+test('A rider can pack an unclaimed order and keeps it for pickup; the owner can pack and deliver without a rider',async()=>{
+ const fixture=async(name:string)=>(await db.query<{o:{id:string}}>('select create_checkout_order($1::jsonb,$2::jsonb,$3::uuid,$4::text,1150) o',[JSON.stringify({customer_name:name,customer_phone:'03001234567',delivery_area:'PGECHS',delivery_address:'Isolated fixture',delivery_latitude:31.41216075,delivery_longitude:74.27587375}),JSON.stringify([{product_id:product,quantity:1}]),crypto.randomUUID(),name])).rows[0].o.id;
+ const call=async(id:string,action:string,role:string,staff:string|null,payload:unknown={})=>{const v=(await db.query<{operation_version:number}>('select operation_version from orders where id=$1',[id])).rows[0].operation_version;return db.query('select perform_store_order_action($1,$2,$3,$4,$5::uuid,$6::jsonb)',[id,action,v,role,staff,JSON.stringify(payload)]);};
+ const row=async(id:string)=>(await db.query<{status:string;packed_at:string|null;assigned_rider_id:string|null}>('select status,packed_at,assigned_rider_id from orders where id=$1',[id])).rows[0];
+ const packed={checked_items:[{product_id:product,quantity:1}]};
+ const solo=await fixture('Rider packs fixture');
+ await call(solo,'start_pack','rider',rider);
+ await call(solo,'finish_pack','rider',rider,packed);
+ assert.equal((await row(solo)).assigned_rider_id,rider);
+ await assert.rejects(()=>call(solo,'depart','rider',other),/not assigned/);
+ await call(solo,'depart','rider',rider);await call(solo,'deliver','rider',rider);
+ assert.equal((await row(solo)).status,'Delivered');
+ assert.equal(canPerform('rider','finish_pack'),true);assert.equal(canPerform('rider','settle'),false);
+ const owner=await fixture('Owner does everything fixture');
+ await call(owner,'finish_pack','owner',null,packed);
+ await call(owner,'depart','owner',null);
+ assert.equal((await row(owner)).status,'Out for Delivery');assert.equal((await row(owner)).assigned_rider_id,null);
+ await call(owner,'deliver','owner',null);
+ assert.equal((await row(owner)).status,'Delivered');
+});

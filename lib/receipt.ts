@@ -1,4 +1,5 @@
 import {money,STORE} from './constants';
+import {storeBillHtml,type BillPaper} from './store-bill';
 import type {Order} from './types';
 const date=(value:string)=>new Date(value).toLocaleString('en-PK',{timeZone:'Asia/Karachi',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
 export function receiptSummary(order:Order){return {reference:order.id,placed:date(order.created_at),units:order.items.reduce((n,i)=>n+i.quantity,0),items:order.items.map(i=>({...i,lineTotal:i.quantity*i.price})),subtotal:order.subtotal,delivery:order.delivery_fee,total:order.total_amount};}
@@ -35,3 +36,18 @@ export async function createReceiptImage(order:Order):Promise<File>{
 }
 function saveFile(file:File,doc=document){const url=URL.createObjectURL(file);const a=doc.createElement('a');a.href=url;a.download=file.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);}
 export async function downloadReceiptImage(order:Order){saveFile(await createReceiptImage(order));}
+// Prints the customer's store bill on the counter's receipt printer. The paper width is remembered
+// on this computer; the screen-only bar switches between 80 mm and 58 mm rolls before printing.
+export function openStoreBill(order:Order){
+ // Inside the Daily Basket phone app the desk runs in a web view: hand the bill to the app, which prints it with Android printing.
+ const app=(window as unknown as {ReactNativeWebView?:{postMessage:(data:string)=>void}}).ReactNativeWebView;
+ if(app){const {id,created_at,customer_name,delivery_area,items,subtotal,delivery_fee,total_amount}=order;app.postMessage(JSON.stringify({type:'daily-basket-print-bill',order:{id,created_at,customer_name,delivery_area,items:items.map(({name,unit,quantity,price})=>({name,unit,quantity,price})),subtotal,delivery_fee,total_amount}}));return true;}
+ const popup=window.open('','_blank','width=440,height=780');if(!popup)return false;popup.opener=null;
+ const key='dailybasket.bill.paper';let paper:BillPaper='80';try{if(localStorage.getItem(key)==='58')paper='58';}catch{}
+ const render=()=>{const doc=popup.document;doc.open();doc.write(storeBillHtml(order,paper));doc.close();
+  const style=doc.createElement('style');style.textContent='@media print{.bill-bar{display:none!important}}.bill-bar{position:sticky;top:0;display:flex;gap:6px;justify-content:center;padding:8px;background:#f2f4f3;border-bottom:1px solid #ccc;font:600 13px Arial,sans-serif}.bill-bar button{font:inherit;padding:7px 12px;border:1px solid #087e78;border-radius:8px;background:#fff;color:#087e78;cursor:pointer}.bill-bar button[aria-pressed=true],.bill-bar .go{background:#087e78;color:#fff}';doc.head.appendChild(style);
+  const bar=doc.createElement('div');bar.className='bill-bar';
+  for(const size of ['80','58'] as const){const b=doc.createElement('button');b.textContent=size+' mm';b.setAttribute('aria-pressed',String(size===paper));b.onclick=()=>{paper=size;try{localStorage.setItem(key,size);}catch{}render();};bar.appendChild(b);}
+  const go=doc.createElement('button');go.className='go';go.textContent='Print bill';go.onclick=()=>popup.print();bar.appendChild(go);doc.body.insertBefore(bar,doc.body.firstChild);};
+ render();setTimeout(()=>{try{popup.focus();popup.print();}catch{}},350);return true;
+}

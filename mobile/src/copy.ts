@@ -1,4 +1,4 @@
-export const extraEn={
+export const extraEn={addressFilled:'Address filled from your location. Check it and add your house number.',findingAddress:'Finding your address…',
  orderPacked:'Packed',pickUpOrder:'Pick up order',readyForPickup:'Packed. This order appears on the rider pickup screen automatically. Save or print the bill if needed.',orderDelivered:'Order delivered',sendDelivery:'Send for delivery',assignRider:'Save rider assignment',
  pauseBanners:'Pause banners',playBanners:'Play banners',showBanner:'Show banner',bannerPages:'Banner pages',
  home:'Home',more:'More',viewBasket:'View basket',items:'items',item:'item',listFallback:'Can’t find it? Send your list and the store will check.',pinNotSet:'Set your delivery pin',withinKm:'within {n} km',pinOutside:'Pin is outside our delivery area',kmFromStore:'{n} km from the store',products:'products',selected:'Selected',allCategories:'All categories',categoryCopy:'Find the right aisle for your everyday essentials.',
@@ -11,7 +11,7 @@ export const extraEn={
  allLoaded:'You’ve reached the end of this shelf.',unavailableRelated:'Browse the catalogue for more options.',photoList:'Send a photo or written list',viewOrders:'View your orders',keepReference:'Keep this reference for order enquiries.',removeBasket:'Remove all products?',emptyBasketAction:'Clear basket',helpList:'Send us your grocery list',brandPending:'Final business name to be chosen',
 };
 export const extraUr:Record<keyof typeof extraEn,string>={
- ...extraEn,
+ ...extraEn,addressFilled:'پتہ آپ کی لوکیشن سے لکھ دیا گیا ہے۔ چیک کریں اور گھر نمبر شامل کریں۔',findingAddress:'آپ کا پتہ تلاش ہو رہا ہے…',
  orderPacked:'پیک ہو گیا',pickUpOrder:'آرڈر پک اپ کریں',readyForPickup:'پیک شدہ آرڈر رائیڈر کے پک اپ اسکرین پر خود آ جاتا ہے۔ ضرورت ہو تو بل محفوظ کریں۔',orderDelivered:'آرڈر ڈیلیور ہو گیا',sendDelivery:'ڈیلیوری کے لیے روانہ کریں',assignRider:'رائیڈر کا انتخاب محفوظ کریں',
  pauseBanners:'بینرز روکیں',playBanners:'بینرز چلائیں',showBanner:'بینر دکھائیں',bannerPages:'بینرز',
  home:'خریداری',more:'مزید',viewBasket:'ٹوکری دیکھیں',items:'اشیاء',item:'شے',listFallback:'نہیں ملا؟ اپنی فہرست بھیجیں، اسٹور چیک کر لے گا۔',pinNotSet:'اپنی ڈیلیوری کی جگہ منتخب کریں',withinKm:'{n} کلومیٹر کے اندر',pinOutside:'یہ جگہ ہمارے ڈیلیوری علاقے سے باہر ہے',kmFromStore:'اسٹور سے {n} کلومیٹر',products:'مصنوعات',selected:'منتخب',allCategories:'تمام کیٹیگریز',categoryCopy:'اپنی روزمرہ کی اشیاء کی صحیح کیٹیگری منتخب کریں۔',
